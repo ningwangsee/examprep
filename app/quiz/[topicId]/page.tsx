@@ -15,7 +15,13 @@ export default async function QuizPage(props: { params: Promise<{ topicId: strin
       translations: true,
       category: { include: { translations: true } },
       questions: {
-        include: { options: { orderBy: { id: "asc" } } },
+        include: {
+          translations: true,
+          options: {
+            include: { translations: true },
+            orderBy: { id: "asc" },
+          },
+        },
         orderBy: { id: "asc" },
       },
     },
@@ -26,17 +32,23 @@ export default async function QuizPage(props: { params: Promise<{ topicId: strin
   const topicName = tr(topic.name, topic.translations, lang, "name");
   const catName = tr(topic.category.name, topic.category.translations, lang, "name");
 
-  const questions = topic.questions.map((q) => ({
-    id: q.id,
-    content: q.content,
-    explanation: q.explanation,
-    handbookSection: q.handbookSection ?? undefined,
-    options: q.options.map((o) => ({
-      id: o.id,
-      content: o.content,
-      isCorrect: o.isCorrect,
-    })),
-  }));
+  const questions = topic.questions.map((q) => {
+    const qTrans = q.translations.find((t) => t.language === lang);
+    return {
+      id: q.id,
+      content: qTrans?.content ?? q.content,
+      explanation: qTrans?.explanation ?? q.explanation,
+      handbookSection: q.handbookSection ?? undefined,
+      options: q.options.map((o) => {
+        const oTrans = o.translations.find((t) => t.language === lang);
+        return {
+          id: o.id,
+          content: oTrans?.content ?? o.content,
+          isCorrect: o.isCorrect,
+        };
+      }),
+    };
+  });
 
   return (
     <div className="max-w-5xl mx-auto px-4 py-8">

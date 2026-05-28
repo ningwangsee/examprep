@@ -8,7 +8,9 @@
     "start": "next start",
     "lint": "eslint",
     "db:seed": "npx tsx prisma/seed.ts",
-    "db:import": "npx tsx prisma/seeds/import.ts"
+    "db:import": "npx tsx prisma/seeds/import.ts",
+    "db:translate": "npx tsx prisma/scripts/translate-questions.ts",
+    "db:populate": "npx tsx prisma/scripts/populate-translations.ts"
   },
   "prisma": {
     "seed": "npx tsx prisma/seed.ts"
@@ -22,6 +24,7 @@
     "react-dom": "19.2.4"
   },
   "devDependencies": {
+    "@anthropic-ai/sdk": "^0.99.0",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",

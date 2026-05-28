@@ -41,11 +41,18 @@ async function importCategory(data: typeof californiaDMV) {
             questions: {
               create: questions.map((q) => {
                 totalQuestions++;
-                const { options, ...questionData } = q;
+                const { options, translations: qTranslations, ...questionData } = q;
                 return {
                   ...questionData,
+                  ...(qTranslations?.length ? { translations: { create: qTranslations } } : {}),
                   options: {
-                    create: options,
+                    create: options.map((o) => {
+                      const { translations: oTranslations, ...optionData } = o as typeof o & { translations?: { language: string; content: string }[] };
+                      return {
+                        ...optionData,
+                        ...(oTranslations?.length ? { translations: { create: oTranslations } } : {}),
+                      };
+                    }),
                   },
                 };
               }),
