@@ -154,7 +154,7 @@ export default async function CategoryPage(props: { params: Promise<{ id: string
           <div>
             <h2 className="font-semibold text-gray-800 mb-2">📚 {t.handbookChaptersTitle}</h2>
             <p className="text-sm text-gray-500 mb-4">{t.handbookChaptersIntro}</p>
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
               {guide.handbookChapters.map((ch) => (
                 <a
                   key={ch.url}

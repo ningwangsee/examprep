@@ -196,14 +196,34 @@ const californiaDMV: ExamGuide = {
 
   handbookChapters: [
     {
-      title: { en: "Getting Your License", zh: "获取驾照", es: "Obtener su Licencia" },
-      url: "https://www.dmv.ca.gov/portal/handbook/california-driver-handbook/getting-your-license/",
+      title: { en: "The CA Driver's License", zh: "加州驾照介绍", es: "La Licencia de CA" },
+      url: "https://www.dmv.ca.gov/portal/handbook/california-driver-handbook/the-california-driver-license/",
       emoji: "🪪",
     },
     {
-      title: { en: "Traffic Controls", zh: "交通控制", es: "Controles de Tráfico" },
-      url: "https://www.dmv.ca.gov/portal/handbook/california-driver-handbook/traffic-controls/",
+      title: { en: "Getting Your License", zh: "考取驾照流程", es: "Obtener su Licencia" },
+      url: "https://www.dmv.ca.gov/portal/handbook/california-driver-handbook/getting-an-instruction-permit-and-drivers-license/",
+      emoji: "📝",
+    },
+    {
+      title: { en: "Navigating the Roads", zh: "道路驾驶基础", es: "Navegando las Vías" },
+      url: "https://www.dmv.ca.gov/portal/handbook/california-driver-handbook/navigating-the-roads/",
+      emoji: "🗺️",
+    },
+    {
+      title: { en: "Traffic Signs & Lanes", zh: "交通标志与车道", es: "Señales y Carriles" },
+      url: "https://www.dmv.ca.gov/portal/handbook/california-driver-handbook/navigating-the-roads-cont1/",
       emoji: "🚦",
+    },
+    {
+      title: { en: "Laws & Rules of the Road", zh: "交通法规", es: "Leyes de Tráfico" },
+      url: "https://www.dmv.ca.gov/portal/handbook/california-driver-handbook/laws-and-rules-of-the-road/",
+      emoji: "⚖️",
+    },
+    {
+      title: { en: "Right-of-Way & Speed", zh: "行车优先权与速限", es: "Prioridad y Velocidad" },
+      url: "https://www.dmv.ca.gov/portal/handbook/california-driver-handbook/laws-and-rules-of-the-road-cont1/",
+      emoji: "🛣️",
     },
     {
       title: { en: "Safe Driving", zh: "安全驾驶", es: "Conducción Segura" },
@@ -211,28 +231,18 @@ const californiaDMV: ExamGuide = {
       emoji: "🛡️",
     },
     {
-      title: { en: "Sharing the Road", zh: "共享道路", es: "Compartir la Vía" },
-      url: "https://www.dmv.ca.gov/portal/handbook/california-driver-handbook/sharing-the-road/",
-      emoji: "🚲",
-    },
-    {
-      title: { en: "Alcohol and Drugs", zh: "酒精与毒品", es: "Alcohol y Drogas" },
+      title: { en: "Alcohol and Drugs", zh: "酒驾与毒驾", es: "Alcohol y Drogas" },
       url: "https://www.dmv.ca.gov/portal/handbook/california-driver-handbook/alcohol-and-drugs/",
       emoji: "🚫",
     },
     {
-      title: { en: "Emergencies", zh: "紧急情况", es: "Emergencias" },
-      url: "https://www.dmv.ca.gov/portal/handbook/california-driver-handbook/emergencies/",
-      emoji: "🆘",
-    },
-    {
-      title: { en: "Vehicle Safety", zh: "车辆安全", es: "Seguridad del Vehículo" },
-      url: "https://www.dmv.ca.gov/portal/handbook/california-driver-handbook/vehicle-safety/",
+      title: { en: "Driver Safety", zh: "驾驶员安全", es: "Seguridad del Conductor" },
+      url: "https://www.dmv.ca.gov/portal/handbook/california-driver-handbook/driver-safety/",
       emoji: "🔧",
     },
     {
-      title: { en: "Financial Responsibility", zh: "财务责任", es: "Responsabilidad Financiera" },
-      url: "https://www.dmv.ca.gov/portal/handbook/california-driver-handbook/financial-responsibility/",
+      title: { en: "Financial Responsibility", zh: "保险与财务责任", es: "Responsabilidad Financiera" },
+      url: "https://www.dmv.ca.gov/portal/handbook/california-driver-handbook/financial-responsibility-insurance-requirements-and-collisions/",
       emoji: "📋",
     },
   ],
