@@ -19,7 +19,7 @@ export default async function CategoryPage(props: { params: Promise<{ id: string
   return (
     <div className="max-w-3xl mx-auto px-4 py-10">
       <Link href="/" className="text-sm text-gray-400 hover:text-gray-600 mb-6 inline-block">
-        ← 返回所有考试
+        ← All Exams
       </Link>
 
       <div className="flex items-center gap-4 mb-8">
@@ -50,7 +50,7 @@ export default async function CategoryPage(props: { params: Promise<{ id: string
             </div>
             <div className="flex items-center gap-3 shrink-0 ml-4">
               <span className="text-sm text-gray-400">
-                {topic._count.questions} 题
+                {topic._count.questions} questions
               </span>
               <span className="text-gray-300 text-lg">→</span>
             </div>

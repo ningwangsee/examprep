@@ -7,43 +7,101 @@ datasource db {
   provider = "sqlite"
 }
 
+// ─── Exam Category ────────────────────────────────────────────────────────────
+
 model ExamCategory {
-  id          Int         @id @default(autoincrement())
-  name        String
-  nameEn      String
-  description String
-  icon        String
-  color       String      @default("#3B82F6")
-  topics      ExamTopic[]
-  createdAt   DateTime    @default(now())
+  id           Int                   @id @default(autoincrement())
+  name         String                // English display name
+  nameEn       String
+  description  String                // English description
+  icon         String
+  color        String                @default("#3B82F6")
+  hasAiTutor   Boolean               @default(false)
+  topics       ExamTopic[]
+  translations CategoryTranslation[]
+  createdAt    DateTime              @default(now())
 }
+
+model CategoryTranslation {
+  id          Int          @id @default(autoincrement())
+  category    ExamCategory @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+  categoryId  Int
+  language    String       // "es" | "zh"
+  name        String
+  description String
+
+  @@unique([categoryId, language])
+}
+
+// ─── Exam Topic ───────────────────────────────────────────────────────────────
 
 model ExamTopic {
-  id          Int          @id @default(autoincrement())
-  name        String
-  nameEn      String
-  description String
-  category    ExamCategory @relation(fields: [categoryId], references: [id])
-  categoryId  Int
-  questions   Question[]
-  createdAt   DateTime     @default(now())
+  id           Int               @id @default(autoincrement())
+  name         String            // English
+  nameEn       String
+  description  String            // English
+  handbookUrl  String?           // Link to relevant handbook section
+  category     ExamCategory      @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+  categoryId   Int
+  questions    Question[]
+  translations TopicTranslation[]
+  createdAt    DateTime          @default(now())
 }
+
+model TopicTranslation {
+  id          Int       @id @default(autoincrement())
+  topic       ExamTopic @relation(fields: [topicId], references: [id], onDelete: Cascade)
+  topicId     Int
+  language    String
+  name        String
+  description String
+
+  @@unique([topicId, language])
+}
+
+// ─── Question ─────────────────────────────────────────────────────────────────
 
 model Question {
-  id          Int      @id @default(autoincrement())
-  content     String
-  explanation String
-  topic       ExamTopic @relation(fields: [topicId], references: [id])
-  topicId     Int
-  options     Option[]
-  difficulty  Int      @default(1)
-  createdAt   DateTime @default(now())
+  id               Int                   @id @default(autoincrement())
+  content          String                // English
+  explanation      String                // English
+  handbookSection  String?               // e.g. "Speed Limits" — shown when answer is wrong
+  topic            ExamTopic             @relation(fields: [topicId], references: [id], onDelete: Cascade)
+  topicId          Int
+  options          Option[]
+  translations     QuestionTranslation[]
+  difficulty       Int                   @default(1)
+  createdAt        DateTime              @default(now())
 }
 
+model QuestionTranslation {
+  id          Int      @id @default(autoincrement())
+  question    Question @relation(fields: [questionId], references: [id], onDelete: Cascade)
+  questionId  Int
+  language    String   // "es" | "zh"
+  content     String
+  explanation String
+
+  @@unique([questionId, language])
+}
+
+// ─── Option ───────────────────────────────────────────────────────────────────
+
 model Option {
-  id         Int      @id @default(autoincrement())
-  content    String
-  isCorrect  Boolean  @default(false)
-  question   Question @relation(fields: [questionId], references: [id])
-  questionId Int
+  id           Int                @id @default(autoincrement())
+  content      String             // English
+  isCorrect    Boolean            @default(false)
+  question     Question           @relation(fields: [questionId], references: [id], onDelete: Cascade)
+  questionId   Int
+  translations OptionTranslation[]
+}
+
+model OptionTranslation {
+  id       Int    @id @default(autoincrement())
+  option   Option @relation(fields: [optionId], references: [id], onDelete: Cascade)
+  optionId Int
+  language String
+  content  String
+
+  @@unique([optionId, language])
 }

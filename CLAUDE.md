@@ -6,7 +6,9 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-**ExamPrep** — a free exam preparation platform covering US securities (FINRA), AWS certification, China CPA, and more. Built with Next.js 16, Prisma 7, SQLite, Tailwind CSS v4, and Claude AI for tutoring.
+**DMV Practice** — a free driver's license written test preparation platform. Currently covers California DMV (89 questions, 6 topics). Built with Next.js 16, Prisma 7, SQLite, and Tailwind CSS v4. Supports multilingual content (English, Spanish, Chinese) via translation tables.
+
+**Scope:** Driver's license exams only (no AI tutoring — wrong answers show handbook section references instead). Professional certification exams (AWS, FINRA, etc.) may be added later with AI tutoring.
 
 ## Commands
 
@@ -14,7 +16,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 npm run dev          # Start dev server (http://localhost:3000)
 npm run build        # Production build
 npm run lint         # ESLint
-npm run db:seed      # Reset and re-seed the SQLite database with sample data
+npm run db:seed      # Clear DB and re-seed with all data
+npm run db:import    # Incrementally import one seed file (skips if already exists)
 npx prisma db push   # Apply schema changes to dev.db (no migration files)
 npx prisma generate  # Regenerate Prisma client after schema changes
 npx prisma studio    # Open Prisma Studio GUI
@@ -25,7 +28,7 @@ npx prisma studio    # Open Prisma Studio GUI
 Required in `.env`:
 ```
 DATABASE_URL="file:./dev.db"
-ANTHROPIC_API_KEY=sk-ant-...   # Optional; AI chat is disabled without it
+ANTHROPIC_API_KEY=sk-ant-...   # Only needed for future AI tutor exams (not DMV)
 ```
 
 ## Architecture
@@ -43,7 +46,7 @@ SQLite (dev.db)
               └── Server Components / API Routes
 ```
 
-Server Components query the DB directly via `lib/prisma.ts`. No REST layer is needed for read operations.
+Server Components query the DB directly via `lib/prisma.ts`. No REST layer needed for read operations.
 
 ### Key Prisma 7 Conventions
 
@@ -80,20 +83,60 @@ export default async function Page(props: { params: Promise<{ id: string }> }) {
 | `/` | `app/page.tsx` | Server Component — lists all `ExamCategory` |
 | `/category/[id]` | `app/category/[id]/page.tsx` | Server Component — lists `ExamTopic` for a category |
 | `/quiz/[topicId]` | `app/quiz/[topicId]/page.tsx` | Server Component — fetches questions, renders `QuizClient` |
-| `POST /api/ai/chat` | `app/api/ai/chat/route.ts` | Route Handler — proxies to Anthropic API |
+| `POST /api/ai/chat` | `app/api/ai/chat/route.ts` | Route Handler — proxies to Anthropic API (future use) |
 
 ### Quiz Page Split
 
-`app/quiz/[topicId]/page.tsx` is a Server Component that fetches all questions with options from DB, then passes them as props to `QuizClient.tsx` (`"use client"`). The client component owns all interactive state: selected answer, score, AI chat messages.
+`app/quiz/[topicId]/page.tsx` is a Server Component that:
+1. Fetches topic + questions + options from DB
+2. Passes `hasAiTutor` (from `category.hasAiTutor`) and `handbookUrl` (from `topic.handbookUrl`)
+3. Renders `QuizClient.tsx` (`"use client"`)
 
-### AI Chat
+`QuizClient.tsx` behavior based on `hasAiTutor`:
+- **`false` (DMV)**: Right panel shows handbook reference. After a wrong answer, shows `question.handbookSection` (e.g. `"Traffic Controls — Speed Limits"`) with link to `handbookUrl`.
+- **`true` (future professional exams)**: Right panel shows AI chat connected to `/api/ai/chat`.
 
-`/api/ai/chat` calls `https://api.anthropic.com/v1/messages` directly (no SDK) using `claude-haiku-4-5-20251001`. It receives the current question, its explanation, and the full chat history, and returns `{ reply: string }`. The endpoint gracefully degrades if `ANTHROPIC_API_KEY` is unset.
+### Multilingual Architecture
+
+All text stored in English base fields; translations in separate tables:
+- `CategoryTranslation` (language, name, description)
+- `TopicTranslation` (language, name, description)
+- `QuestionTranslation` (language, content, explanation)
+- `OptionTranslation` (language, content)
+
+Supported languages: `"en"` (base), `"zh"` (Chinese), `"es"` (Spanish)
+
+CA DMV officially offers tests in all three languages — all question content was designed with this in mind. Language switcher UI not yet implemented.
+
+### Question Schema (key fields)
+
+- `question.handbookSection` — e.g. `"Traffic Controls — Speed Limits"` — shown when user answers incorrectly
+- `topic.handbookUrl` — URL to the specific CA DMV handbook section for this topic
+- `category.hasAiTutor` — `false` for all DMV exams; `true` would activate AI chat panel
+
+### Database Seeding
+
+Two approaches:
+1. **Full reset**: `npm run db:seed` — clears all data, re-imports California DMV
+2. **Incremental**: `npm run db:import` — imports from `prisma/seeds/import.ts`, skips if category already exists
+
+Seed files live in `prisma/seeds/[state-name].ts`. Each exports a typed object with the full category+topics+questions structure. Add a new state by:
+1. Creating `prisma/seeds/[state]-dmv.ts`
+2. Importing it in `prisma/seeds/import.ts`
+3. Running `npm run db:import`
 
 ### Styling
 
 Tailwind CSS v4 — uses `@import "tailwindcss"` in `globals.css` (not `@tailwind base/components/utilities`). No `tailwind.config.js` file needed.
 
-### Database Seeding
+## Current Content
 
-`prisma/seed.ts` deletes all rows and recreates 3 exam categories with topics and questions. Run `npm run db:seed` after any schema reset or to restore sample data. The seed script imports `dotenv/config` directly since it runs outside Next.js.
+| State | Questions | Topics | Status |
+|---|---|---|---|
+| California | 89 | 6 | ✅ Live |
+
+Next planned: Texas DMV
+
+## GitHub
+
+Repository: https://github.com/ningwangsee/examprep

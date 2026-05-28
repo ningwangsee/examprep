@@ -10,9 +10,9 @@ export default async function HomePage() {
   return (
     <div className="max-w-5xl mx-auto px-4 py-12">
       <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold mb-3">免费备考，从这里开始</h1>
+        <h1 className="text-4xl font-bold mb-3">Free DMV Practice Tests</h1>
         <p className="text-gray-500 text-lg">
-          覆盖美国证券、AWS 认证、中国 CPA 等主流考试，AI 辅导随时答疑
+          Prepare for your driver&apos;s license written test — practice questions based on official handbooks
         </p>
       </div>
 
@@ -36,7 +36,7 @@ export default async function HomePage() {
               {cat.description}
             </p>
             <span className="text-xs text-gray-400">
-              {cat._count.topics} 个专题
+              {cat._count.topics} topics
             </span>
           </Link>
         ))}
