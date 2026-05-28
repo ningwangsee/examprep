@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
+import type { UiStrings } from "@/lib/lang";
 
 type Option = { id: number; content: string; isCorrect: boolean };
 type Question = {
@@ -18,9 +19,10 @@ type Props = {
   topicName: string;
   hasAiTutor: boolean;
   handbookUrl?: string;
+  t: UiStrings;
 };
 
-export default function QuizClient({ questions, topicName, hasAiTutor, handbookUrl }: Props) {
+export default function QuizClient({ questions, topicName, hasAiTutor, handbookUrl, t }: Props) {
   const [current, setCurrent] = useState(0);
   const [selected, setSelected] = useState<number | null>(null);
   const [isCorrect, setIsCorrect] = useState<boolean | null>(null);
@@ -91,13 +93,14 @@ export default function QuizClient({ questions, topicName, hasAiTutor, handbookU
 
   if (finished) {
     const pct = Math.round((score / questions.length) * 100);
-    const passed = pct >= 83; // CA DMV passing threshold
+    const passed = pct >= 83;
     return (
       <div className="flex flex-col items-center justify-center py-20 text-center">
         <div className="text-6xl mb-4">{passed ? "🎉" : "📖"}</div>
-        <h2 className="text-2xl font-bold mb-2">Practice Complete!</h2>
+        <h2 className="text-2xl font-bold mb-2">{t.practiceComplete}</h2>
         <p className="text-gray-500 mb-1">
-          Correct: <span className="font-semibold text-gray-800">{score}</span> / {questions.length}
+          {t.correctCount}:{" "}
+          <span className="font-semibold text-gray-800">{score}</span> / {questions.length}
         </p>
         <p
           className="text-3xl font-bold mt-2 mb-3"
@@ -106,9 +109,7 @@ export default function QuizClient({ questions, topicName, hasAiTutor, handbookU
           {pct}%
         </p>
         {!passed && (
-          <p className="text-sm text-gray-400 mb-6">
-            CA DMV requires 83% to pass (38/46 correct). Keep practicing!
-          </p>
+          <p className="text-sm text-gray-400 mb-6">{t.keepPracticing}</p>
         )}
         <button
           onClick={() => {
@@ -122,11 +123,13 @@ export default function QuizClient({ questions, topicName, hasAiTutor, handbookU
           }}
           className="bg-blue-600 text-white px-8 py-3 rounded-xl font-medium hover:bg-blue-700 transition-colors"
         >
-          Try Again
+          {t.tryAgain}
         </button>
       </div>
     );
   }
+
+  const answeredCount = current + (selected !== null ? 1 : 0);
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-5 gap-6">
@@ -182,9 +185,7 @@ export default function QuizClient({ questions, topicName, hasAiTutor, handbookU
         {showExplanation && (
           <div
             className={`rounded-2xl p-5 border ${
-              isCorrect
-                ? "bg-green-50 border-green-200"
-                : "bg-amber-50 border-amber-200"
+              isCorrect ? "bg-green-50 border-green-200" : "bg-amber-50 border-amber-200"
             }`}
           >
             <p
@@ -192,7 +193,7 @@ export default function QuizClient({ questions, topicName, hasAiTutor, handbookU
                 isCorrect ? "text-green-800" : "text-amber-800"
               }`}
             >
-              {isCorrect ? "✓ Correct!" : "✗ Incorrect"}
+              {isCorrect ? t.correctLabel : t.incorrectLabel}
             </p>
             <p
               className={`text-sm leading-relaxed ${
@@ -209,25 +210,21 @@ export default function QuizClient({ questions, topicName, hasAiTutor, handbookU
             onClick={handleNext}
             className="w-full bg-blue-600 text-white py-3 rounded-xl font-medium hover:bg-blue-700 transition-colors"
           >
-            {current + 1 < questions.length ? "Next Question →" : "See Results"}
+            {current + 1 < questions.length ? t.nextQuestion : t.seeResults}
           </button>
         )}
       </div>
 
-      {/* Right panel: Handbook reference OR AI chat */}
+      {/* Right panel: AI chat or Handbook reference */}
       {hasAiTutor ? (
-        // AI tutor panel (for professional exams)
         <div className="lg:col-span-2 bg-white rounded-2xl border border-gray-200 flex flex-col h-[520px]">
           <div className="px-4 py-3 border-b border-gray-100">
             <p className="text-sm font-semibold">🤖 AI Tutor</p>
             <p className="text-xs text-gray-400 mt-0.5">Ask anything about this question</p>
           </div>
-
           <div className="flex-1 overflow-y-auto p-4 space-y-3">
             {messages.length === 0 && (
-              <p className="text-sm text-gray-400 text-center mt-8">
-                Have a question? Ask me anything!
-              </p>
+              <p className="text-sm text-gray-400 text-center mt-8">Have a question? Ask me!</p>
             )}
             {messages.map((msg, i) => (
               <div key={i} className={`flex ${msg.role === "user" ? "justify-end" : "justify-start"}`}>
@@ -242,14 +239,11 @@ export default function QuizClient({ questions, topicName, hasAiTutor, handbookU
             ))}
             {loading && (
               <div className="flex justify-start">
-                <div className="bg-gray-100 text-gray-400 text-sm px-3 py-2 rounded-xl">
-                  Thinking...
-                </div>
+                <div className="bg-gray-100 text-gray-400 text-sm px-3 py-2 rounded-xl">...</div>
               </div>
             )}
             <div ref={chatEndRef} />
           </div>
-
           <div className="p-3 border-t border-gray-100 flex gap-2">
             <input
               value={input}
@@ -263,19 +257,16 @@ export default function QuizClient({ questions, topicName, hasAiTutor, handbookU
               disabled={loading || !input.trim()}
               className="bg-blue-600 text-white text-sm px-4 py-2 rounded-lg hover:bg-blue-700 disabled:opacity-40 transition-colors"
             >
-              Send
+              →
             </button>
           </div>
         </div>
       ) : (
-        // Handbook reference panel (for DMV exams)
         <div className="lg:col-span-2 space-y-4">
+          {/* Handbook info */}
           <div className="bg-white rounded-2xl border border-gray-200 p-5">
-            <p className="text-sm font-semibold text-gray-700 mb-1">📚 CA Driver Handbook</p>
-            <p className="text-xs text-gray-400 leading-relaxed">
-              All questions are based on the official California Driver Handbook. Study the relevant
-              section to reinforce your knowledge.
-            </p>
+            <p className="text-sm font-semibold text-gray-700 mb-1">📚 {t.handbookTitle}</p>
+            <p className="text-xs text-gray-400 leading-relaxed">{t.handbookDesc}</p>
             {handbookUrl && (
               <a
                 href={handbookUrl}
@@ -283,18 +274,16 @@ export default function QuizClient({ questions, topicName, hasAiTutor, handbookU
                 rel="noopener noreferrer"
                 className="mt-3 inline-flex items-center gap-1.5 text-xs text-blue-600 hover:text-blue-700 font-medium"
               >
-                Open Handbook Section ↗
+                {t.openHandbook}
               </a>
             )}
           </div>
 
-          {/* Show specific section reference after answering */}
+          {/* Handbook section reference — shown after answering */}
           {selected !== null && question.handbookSection && (
             <div
-              className={`rounded-2xl border p-5 transition-all ${
-                isCorrect
-                  ? "bg-green-50 border-green-200"
-                  : "bg-blue-50 border-blue-200"
+              className={`rounded-2xl border p-5 ${
+                isCorrect ? "bg-green-50 border-green-200" : "bg-blue-50 border-blue-200"
               }`}
             >
               <p
@@ -302,7 +291,7 @@ export default function QuizClient({ questions, topicName, hasAiTutor, handbookU
                   isCorrect ? "text-green-600" : "text-blue-600"
                 }`}
               >
-                Handbook Reference
+                {t.handbookRef}
               </p>
               <p
                 className={`text-sm font-medium ${
@@ -318,29 +307,28 @@ export default function QuizClient({ questions, topicName, hasAiTutor, handbookU
                   rel="noopener noreferrer"
                   className="mt-3 inline-flex items-center gap-1.5 text-xs text-blue-600 hover:text-blue-700 font-medium"
                 >
-                  Review this section →
+                  {t.reviewSection}
                 </a>
               )}
             </div>
           )}
 
+          {/* Session progress */}
           <div className="bg-gray-50 rounded-2xl border border-gray-100 p-5">
-            <p className="text-sm font-semibold text-gray-700 mb-3">📊 Session Progress</p>
+            <p className="text-sm font-semibold text-gray-700 mb-3">📊 {t.sessionProgress}</p>
             <div className="space-y-2">
               <div className="flex justify-between text-sm">
-                <span className="text-gray-500">Answered</span>
-                <span className="font-medium">{current + (selected !== null ? 1 : 0)} / {questions.length}</span>
+                <span className="text-gray-500">{t.answered}</span>
+                <span className="font-medium">{answeredCount} / {questions.length}</span>
               </div>
               <div className="flex justify-between text-sm">
-                <span className="text-gray-500">Correct</span>
+                <span className="text-gray-500">{t.correctCount}</span>
                 <span className="font-medium text-green-600">{score}</span>
               </div>
               <div className="flex justify-between text-sm">
-                <span className="text-gray-500">Accuracy</span>
+                <span className="text-gray-500">{t.accuracy}</span>
                 <span className="font-medium">
-                  {current + (selected !== null ? 1 : 0) === 0
-                    ? "—"
-                    : `${Math.round((score / (current + (selected !== null ? 1 : 0))) * 100)}%`}
+                  {answeredCount === 0 ? "—" : `${Math.round((score / answeredCount) * 100)}%`}
                 </span>
               </div>
             </div>
