@@ -53,12 +53,12 @@ export default async function CategoryPage(props: { params: Promise<{ id: string
             {/* Stat chips */}
             {guide && (
               <div className="flex flex-wrap gap-2">
-                {guide.stats.map((s) => (
+                {guide.stats.map((s, i) => (
                   <span
-                    key={s.label}
+                    key={i}
                     className="inline-flex items-center gap-1.5 bg-gray-100 text-gray-700 text-xs px-3 py-1.5 rounded-full"
                   >
-                    <span className="text-gray-400 font-medium">{s.label}</span>
+                    <span className="text-gray-400 font-medium">{s.label[lang]}</span>
                     <span className="font-semibold">{s.value}</span>
                   </span>
                 ))}
@@ -74,45 +74,44 @@ export default async function CategoryPage(props: { params: Promise<{ id: string
               href="#practice"
               className="bg-blue-600 text-white text-sm px-5 py-2.5 rounded-xl font-medium hover:bg-blue-700 transition-colors"
             >
-              🎯 Start Practicing
+              🎯 {t.startPracticing}
             </a>
             <a
-              href={guide.officialLinks.find((l) => l.label === "Driver Handbook (Online)")?.url}
+              href={guide.officialLinks.find((l) => l.label.en === "Driver Handbook (Online)")?.url}
               target="_blank"
               rel="noopener noreferrer"
               className="bg-white border border-gray-200 text-gray-700 text-sm px-5 py-2.5 rounded-xl font-medium hover:bg-gray-50 transition-colors"
             >
-              📖 Read Handbook
+              📖 {t.readHandbook}
             </a>
             <a
-              href={guide.officialLinks.find((l) => l.label === "Schedule Appointment")?.url}
+              href={guide.officialLinks.find((l) => l.label.en === "Schedule Appointment")?.url}
               target="_blank"
               rel="noopener noreferrer"
               className="bg-white border border-gray-200 text-gray-700 text-sm px-5 py-2.5 rounded-xl font-medium hover:bg-gray-50 transition-colors"
             >
-              📅 Schedule Test
+              📅 {t.scheduleTest}
             </a>
           </div>
         )}
       </div>
 
-      {/* ── Exam Guide (only when guide data exists) ──────────── */}
+      {/* ── Exam Guide ────────────────────────────────────────── */}
       {guide && (
         <>
           {/* What to Bring + How to Schedule */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
 
-            {/* What to Bring */}
             <div className="bg-white rounded-2xl border border-gray-200 p-6">
-              <h2 className="font-semibold text-gray-800 mb-4">📋 What to Bring</h2>
+              <h2 className="font-semibold text-gray-800 mb-4">📋 {t.whatToBring}</h2>
               <ul className="space-y-3">
                 {guide.whatToBring.map((item, i) => (
                   <li key={i} className="flex items-start gap-2.5">
                     <span className="text-green-500 mt-0.5 shrink-0 text-sm">✓</span>
                     <div>
-                      <p className="text-sm font-medium text-gray-800">{item.item}</p>
+                      <p className="text-sm font-medium text-gray-800">{item.item[lang]}</p>
                       {item.note && (
-                        <p className="text-xs text-gray-400 mt-0.5">{item.note}</p>
+                        <p className="text-xs text-gray-400 mt-0.5">{item.note[lang]}</p>
                       )}
                     </div>
                   </li>
@@ -120,9 +119,8 @@ export default async function CategoryPage(props: { params: Promise<{ id: string
               </ul>
             </div>
 
-            {/* How to Schedule */}
             <div className="bg-white rounded-2xl border border-gray-200 p-6">
-              <h2 className="font-semibold text-gray-800 mb-4">📅 How to Schedule</h2>
+              <h2 className="font-semibold text-gray-800 mb-4">📅 {t.howToSchedule}</h2>
               <ol className="space-y-4">
                 {guide.howToSchedule.map((s, i) => (
                   <li key={i} className="flex items-start gap-3">
@@ -130,8 +128,8 @@ export default async function CategoryPage(props: { params: Promise<{ id: string
                       {i + 1}
                     </span>
                     <div>
-                      <p className="text-sm font-medium text-gray-800">{s.step}</p>
-                      <p className="text-xs text-gray-400 mt-0.5">{s.detail}</p>
+                      <p className="text-sm font-medium text-gray-800">{s.step[lang]}</p>
+                      <p className="text-xs text-gray-400 mt-0.5">{s.detail[lang]}</p>
                     </div>
                   </li>
                 ))}
@@ -141,12 +139,12 @@ export default async function CategoryPage(props: { params: Promise<{ id: string
 
           {/* Test Day Tips */}
           <div className="bg-amber-50 border border-amber-200 rounded-2xl p-6">
-            <h2 className="font-semibold text-amber-900 mb-4">💡 Test Day Tips</h2>
+            <h2 className="font-semibold text-amber-900 mb-4">💡 {t.testDayTips}</h2>
             <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
               {guide.tips.map((tip, i) => (
                 <li key={i} className="flex items-start gap-2 text-sm text-amber-800">
                   <span className="shrink-0 mt-0.5">•</span>
-                  <span>{tip}</span>
+                  <span>{tip[lang]}</span>
                 </li>
               ))}
             </ul>
@@ -154,10 +152,8 @@ export default async function CategoryPage(props: { params: Promise<{ id: string
 
           {/* Handbook Chapters */}
           <div>
-            <h2 className="font-semibold text-gray-800 mb-4">📚 California Driver Handbook</h2>
-            <p className="text-sm text-gray-500 mb-4">
-              All practice questions are based on the chapters below. Click any chapter to read it on the official DMV website.
-            </p>
+            <h2 className="font-semibold text-gray-800 mb-2">📚 {t.handbookChaptersTitle}</h2>
+            <p className="text-sm text-gray-500 mb-4">{t.handbookChaptersIntro}</p>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
               {guide.handbookChapters.map((ch) => (
                 <a
@@ -169,7 +165,7 @@ export default async function CategoryPage(props: { params: Promise<{ id: string
                 >
                   <div className="text-2xl mb-2">{ch.emoji}</div>
                   <p className="text-xs font-medium text-gray-700 group-hover:text-blue-700 leading-snug">
-                    {ch.title}
+                    {ch.title[lang]}
                   </p>
                 </a>
               ))}
@@ -180,7 +176,7 @@ export default async function CategoryPage(props: { params: Promise<{ id: string
 
       {/* ── Practice Topics ───────────────────────────────────── */}
       <div id="practice">
-        <h2 className="font-semibold text-gray-800 mb-4">🎯 Practice by Topic</h2>
+        <h2 className="font-semibold text-gray-800 mb-4">🎯 {t.practiceByTopic}</h2>
         <div className="space-y-3">
           {category.topics.map((topic) => {
             const topicName = tr(topic.name, topic.translations, lang, "name");
@@ -209,14 +205,14 @@ export default async function CategoryPage(props: { params: Promise<{ id: string
         </div>
       </div>
 
-      {/* ── Official Links ─────────────────────────────────────── */}
+      {/* ── Official Resources ─────────────────────────────────── */}
       {guide && (
         <div>
-          <h2 className="font-semibold text-gray-800 mb-4">🔗 Official Resources</h2>
+          <h2 className="font-semibold text-gray-800 mb-4">🔗 {t.officialResources}</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-            {guide.officialLinks.map((link) => (
+            {guide.officialLinks.map((link, i) => (
               <a
-                key={link.url + link.label}
+                key={i}
                 href={link.url}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -225,10 +221,10 @@ export default async function CategoryPage(props: { params: Promise<{ id: string
                 <span className="text-xl shrink-0">{link.emoji}</span>
                 <div>
                   <p className="text-sm font-medium text-gray-800 group-hover:text-blue-600 transition-colors">
-                    {link.label} ↗
+                    {link.label[lang]} ↗
                   </p>
                   <p className="text-xs text-gray-400 mt-0.5 leading-relaxed">
-                    {link.description}
+                    {link.description[lang]}
                   </p>
                 </div>
               </a>

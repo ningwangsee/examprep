@@ -38,6 +38,17 @@ export const ui = {
     handbookRef: "Handbook Reference",
     reviewSection: "Review this section →",
     footerText: "Free practice tests based on official state handbooks",
+    // Category exam guide
+    whatToBring: "What to Bring",
+    howToSchedule: "How to Schedule",
+    testDayTips: "Test Day Tips",
+    handbookChaptersTitle: "Driver Handbook",
+    handbookChaptersIntro: "All practice questions are based on the chapters below. Click any chapter to read it on the official DMV website.",
+    officialResources: "Official Resources",
+    startPracticing: "Start Practicing",
+    readHandbook: "Read Handbook",
+    scheduleTest: "Schedule Test",
+    practiceByTopic: "Practice by Topic",
   },
   zh: {
     siteTitle: "驾照练习",
@@ -64,6 +75,17 @@ export const ui = {
     handbookRef: "手册参考",
     reviewSection: "查看此章节 →",
     footerText: "基于各州官方手册的免费练习题",
+    // Category exam guide
+    whatToBring: "需要携带",
+    howToSchedule: "如何预约",
+    testDayTips: "考试提示",
+    handbookChaptersTitle: "驾照手册",
+    handbookChaptersIntro: "所有练习题均基于以下章节，点击章节可在 DMV 官网直接阅读原文。",
+    officialResources: "官方资源",
+    startPracticing: "开始练习",
+    readHandbook: "阅读手册",
+    scheduleTest: "预约考试",
+    practiceByTopic: "按专题练习",
   },
   es: {
     siteTitle: "Práctica DMV",
@@ -93,6 +115,17 @@ export const ui = {
     handbookRef: "Referencia del Manual",
     reviewSection: "Revisar esta sección →",
     footerText: "Exámenes de práctica basados en manuales oficiales",
+    // Category exam guide
+    whatToBring: "Lo que Debes Llevar",
+    howToSchedule: "Cómo Programar",
+    testDayTips: "Consejos para el Examen",
+    handbookChaptersTitle: "Manual del Conductor",
+    handbookChaptersIntro: "Todas las preguntas están basadas en los capítulos siguientes. Haz clic para leerlos en el sitio oficial del DMV.",
+    officialResources: "Recursos Oficiales",
+    startPracticing: "Comenzar a Practicar",
+    readHandbook: "Leer el Manual",
+    scheduleTest: "Programar el Examen",
+    practiceByTopic: "Practicar por Tema",
   },
 } satisfies Record<Lang, Record<string, string>>;
 
