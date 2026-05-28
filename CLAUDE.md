@@ -147,7 +147,7 @@ Tailwind CSS v4 — uses `@import "tailwindcss"` in `globals.css` (not `@tailwin
 
 | State | Questions | Topics | Status |
 |---|---|---|---|
-| California | 89 | 6 | ✅ Live |
+| California | 111 | 6 | ✅ Live |
 
 Next planned: Texas DMV
 
