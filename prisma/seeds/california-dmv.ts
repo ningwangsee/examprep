@@ -31,7 +31,7 @@ export const californiaDMV = {
       name: "Traffic Signs & Signals",
       nameEn: "Traffic Signs & Signals",
       description: "Road signs, traffic signals, pavement markings",
-      handbookUrl: "https://www.dmv.ca.gov/portal/handbook/california-driver-handbook/traffic-controls/",
+      handbookUrl: "https://www.dmv.ca.gov/portal/handbook/california-driver-handbook/introduction-to-driving/",
       translations: [
         { language: "zh", name: "交通标志与信号灯", description: "道路标志、信号灯、路面标线" },
         { language: "es", name: "Señales de Tráfico y Semáforos", description: "Señales viales, semáforos y marcas en el pavimento" },
