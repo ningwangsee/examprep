@@ -519,6 +519,54 @@ export const californiaDMV = {
             { content: "No, always wait until the intersection clears completely", isCorrect: false },
           ],
         },
+        {
+          content: "When entering a roundabout, you must yield to:",
+          explanation: "Always yield to traffic already circulating inside the roundabout before you enter. Once inside, you have the right-of-way over vehicles waiting to enter.",
+          handbookSection: "Laws and Rules — Roundabouts",
+          difficulty: 1,
+          translations: [
+            { language: "zh", content: "进入环形交叉路口时，您必须让行于：", explanation: "进入环形路口前，必须始终让已在路口内环行的车辆先行。一旦进入路口，您对等待驶入的车辆享有优先通行权。" },
+            { language: "es", content: "Al entrar a una glorieta, debe ceder el paso a:", explanation: "Siempre ceda el paso al tráfico que ya está circulando dentro de la glorieta antes de entrar. Una vez adentro, usted tiene preferencia sobre los vehículos que esperan para ingresar." },
+          ],
+          options: [
+            { content: "Vehicles entering from your right", isCorrect: false, translations: [{ language: "zh", content: "从您右侧驶入的车辆" }, { language: "es", content: "Los vehículos que entran por su derecha" }] },
+            { content: "Traffic already inside the roundabout", isCorrect: true, translations: [{ language: "zh", content: "已在环形路口内行驶的车辆" }, { language: "es", content: "El tráfico que ya circula dentro de la glorieta" }] },
+            { content: "The largest vehicle in the roundabout", isCorrect: false, translations: [{ language: "zh", content: "环形路口内最大的车辆" }, { language: "es", content: "El vehículo más grande dentro de la glorieta" }] },
+            { content: "No one — roundabouts are first-come, first-served", isCorrect: false, translations: [{ language: "zh", content: "无需让行——环形路口先到先行" }, { language: "es", content: "Nadie — en las glorietas se aplica el orden de llegada" }] },
+          ],
+        },
+        {
+          content: "In a roundabout, traffic flows in which direction?",
+          explanation: "In the United States, traffic in a roundabout always flows counterclockwise (to the right as you enter). You must turn right to enter and travel around the central island.",
+          handbookSection: "Laws and Rules — Roundabouts",
+          difficulty: 1,
+          translations: [
+            { language: "zh", content: "在环形交叉路口，车辆沿哪个方向行驶？", explanation: "在美国，环形交叉路口内的车辆始终沿逆时针方向行驶（进入时向右转）。驾驶人须右转进入，并绕中央岛行驶。" },
+            { language: "es", content: "En una glorieta, el tráfico fluye en qué dirección:", explanation: "En los Estados Unidos, el tráfico dentro de una glorieta siempre fluye en sentido contrario a las manecillas del reloj (hacia la derecha al entrar). Debe girar a la derecha para entrar y circular alrededor de la isla central." },
+          ],
+          options: [
+            { content: "Clockwise", isCorrect: false, translations: [{ language: "zh", content: "顺时针方向" }, { language: "es", content: "En sentido de las manecillas del reloj" }] },
+            { content: "Either direction, depending on the lane", isCorrect: false, translations: [{ language: "zh", content: "根据车道不同，两个方向均可" }, { language: "es", content: "En cualquier dirección, según el carril" }] },
+            { content: "Counterclockwise", isCorrect: true, translations: [{ language: "zh", content: "逆时针方向" }, { language: "es", content: "En sentido contrario a las manecillas del reloj" }] },
+            { content: "Straight through only", isCorrect: false, translations: [{ language: "zh", content: "仅直行通过" }, { language: "es", content: "Solo en línea recta" }] },
+          ],
+        },
+        {
+          content: "When should you NOT enter a roundabout?",
+          explanation: "If an emergency vehicle with lights and sirens is approaching, do not enter the roundabout. If you are already in the roundabout, exit at the nearest opportunity and pull to the right to allow the emergency vehicle to pass.",
+          handbookSection: "Laws and Rules — Roundabouts",
+          difficulty: 2,
+          translations: [
+            { language: "zh", content: "在什么情况下不应进入环形交叉路口？", explanation: "若有开启警灯和警报器的紧急车辆正在驶近，不得进入环形路口。若您已在路口内，应在最近的出口驶出，并靠右停车，为紧急车辆让路。" },
+            { language: "es", content: "¿Cuándo NO debe entrar a una glorieta?", explanation: "Si se aproxima un vehículo de emergencia con luces y sirenas encendidas, no entre a la glorieta. Si ya está dentro, salga en la primera salida disponible y orille a la derecha para dejar pasar al vehículo de emergencia." },
+          ],
+          options: [
+            { content: "When emergency vehicles are approaching", isCorrect: true, translations: [{ language: "zh", content: "有紧急车辆正在驶近时" }, { language: "es", content: "Cuando se aproxima un vehículo de emergencia" }] },
+            { content: "When there are two lanes in the roundabout", isCorrect: false, translations: [{ language: "zh", content: "环形路口有两条车道时" }, { language: "es", content: "Cuando la glorieta tiene dos carriles" }] },
+            { content: "When traffic is light", isCorrect: false, translations: [{ language: "zh", content: "路口交通流量较少时" }, { language: "es", content: "Cuando el tráfico es ligero" }] },
+            { content: "After 10 PM", isCorrect: false, translations: [{ language: "zh", content: "晚上 10 点以后" }, { language: "es", content: "Después de las 10 PM" }] },
+          ],
+        },
       ],
     },
 
