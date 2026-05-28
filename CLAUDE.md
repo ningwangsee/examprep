@@ -61,10 +61,20 @@ const adapter = new PrismaBetterSqlite3({ url: process.env.DATABASE_URL ?? "file
 const prisma = new PrismaClient({ adapter });
 ```
 
-After any change to `prisma/schema.prisma`, run **both**:
+After any change to `prisma/schema.prisma`, run **all three**:
 ```bash
-npx prisma db push    # sync DB
+npx prisma db push    # sync DB schema
 npx prisma generate   # sync client types
+# Then restart the dev server (Ctrl+C → npm run dev)
+```
+
+⚠️ **Critical:** The dev server caches the Prisma client in memory. If you skip the restart, the running process uses the old client and throws `PrismaClientValidationError: Unknown field` even though TypeScript types look correct. Always restart after schema or seed changes.
+
+If the server seems stuck with stale errors, also clear the Next.js cache:
+```bash
+Remove-Item -Recurse -Force .next   # PowerShell
+# or: rm -rf .next                  # bash
+npm run dev
 ```
 
 ### Next.js 16 Page Params Convention
@@ -106,7 +116,9 @@ All text stored in English base fields; translations in separate tables:
 
 Supported languages: `"en"` (base), `"zh"` (Chinese), `"es"` (Spanish)
 
-CA DMV officially offers tests in all three languages — all question content was designed with this in mind. Language switcher UI not yet implemented.
+CA DMV officially offers tests in all three languages. Category and topic translations are seeded. Question/option translations not yet seeded (quiz content stays in English until added).
+
+**Language selection** is stored in a `lang` cookie (1-year expiry, set by `LanguageSwitcher`). Server components read it via `getLang()` from `lib/lang.ts`. UI strings live in the `ui{}` dict in `lib/lang.ts`. Translated DB values are resolved with the `tr()` helper: `tr(base, translations, lang, field)`.
 
 ### Question Schema (key fields)
 
@@ -118,12 +130,14 @@ CA DMV officially offers tests in all three languages — all question content w
 
 Two approaches:
 1. **Full reset**: `npm run db:seed` — clears all data, re-imports California DMV
-2. **Incremental**: `npm run db:import` — imports from `prisma/seeds/import.ts`, skips if category already exists
+2. **Incremental**: `npm run db:import` — imports from `prisma/seeds/import.ts`, skips if category already exists (checks by `nameEn`)
 
 Seed files live in `prisma/seeds/[state-name].ts`. Each exports a typed object with the full category+topics+questions structure. Add a new state by:
 1. Creating `prisma/seeds/[state]-dmv.ts`
-2. Importing it in `prisma/seeds/import.ts`
+2. Importing and calling it in `prisma/seeds/import.ts`
 3. Running `npm run db:import`
+
+After re-seeding, DB auto-increments restart — so topic/category IDs change. **Restart the dev server** after seeding, otherwise pages may show stale 404s for old IDs.
 
 ### Styling
 
