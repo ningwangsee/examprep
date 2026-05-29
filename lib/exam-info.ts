@@ -389,16 +389,16 @@ const texasDMV: ExamGuide = {
   ],
 
   handbookChapters: [
-    { title: { en: "Ch.1 Your License to Drive", zh: "第1章：驾驶执照", es: "Cap.1 Su Licencia para Conducir" }, url: "https://www.dps.texas.gov/internetforms/Forms/DL-7.pdf#page=1", emoji: "🪪" },
-    { title: { en: "Ch.4 Right-of-Way", zh: "第4章：优先通行权", es: "Cap.4 Derecho de Paso" }, url: "https://www.dps.texas.gov/internetforms/Forms/DL-7.pdf#page=23", emoji: "🔄" },
-    { title: { en: "Ch.5 Signals, Signs & Markers", zh: "第5章：信号、标志与标记", es: "Cap.5 Señales y Marcas Viales" }, url: "https://www.dps.texas.gov/internetforms/Forms/DL-7.pdf#page=28", emoji: "🚦" },
-    { title: { en: "Ch.6 Turning, Passing & Lanes", zh: "第6章：转弯、超车与车道", es: "Cap.6 Giros, Adelantamiento y Carriles" }, url: "https://www.dps.texas.gov/internetforms/Forms/DL-7.pdf#page=41", emoji: "↪️" },
-    { title: { en: "Ch.7 Parking & Stopping", zh: "第7章：停车规定", es: "Cap.7 Estacionamiento y Paradas" }, url: "https://www.dps.texas.gov/internetforms/Forms/DL-7.pdf#page=45", emoji: "🅿️" },
-    { title: { en: "Ch.8 Speed & Speed Limits", zh: "第8章：速度与限速规定", es: "Cap.8 Velocidad y Límites" }, url: "https://www.dps.texas.gov/internetforms/Forms/DL-7.pdf#page=48", emoji: "🛣️" },
-    { title: { en: "Ch.9 Special Driving Situations", zh: "第9章：特殊驾驶情况", es: "Cap.9 Situaciones Especiales" }, url: "https://www.dps.texas.gov/internetforms/Forms/DL-7.pdf#page=50", emoji: "⚠️" },
-    { title: { en: "Ch.10 Alcohol & Drugs", zh: "第10章：酒精与药物", es: "Cap.10 Alcohol y Drogas" }, url: "https://www.dps.texas.gov/internetforms/Forms/DL-7.pdf#page=58", emoji: "🚫" },
-    { title: { en: "Ch.11 Motor Vehicle Crashes", zh: "第11章：交通事故处理", es: "Cap.11 Accidentes de Tránsito" }, url: "https://www.dps.texas.gov/internetforms/Forms/DL-7.pdf#page=62", emoji: "🚗" },
-    { title: { en: "Ch.12–13 Pedestrian & Bicycle Safety", zh: "第12-13章：行人与自行车安全", es: "Cap.12–13 Seguridad Peatonal y Ciclista" }, url: "https://www.dps.texas.gov/internetforms/Forms/DL-7.pdf#page=64", emoji: "🚶" },
+    { title: { en: "Ch.1 Your License to Drive", zh: "第1章：驾驶执照", es: "Cap.1 Su Licencia para Conducir" }, url: "https://www.dps.texas.gov/internetforms/Forms/DL-7.pdf#page=7", emoji: "🪪" },
+    { title: { en: "Ch.4 Right-of-Way", zh: "第4章：优先通行权", es: "Cap.4 Derecho de Paso" }, url: "https://www.dps.texas.gov/internetforms/Forms/DL-7.pdf#page=26", emoji: "🔄" },
+    { title: { en: "Ch.5 Signals, Signs & Markers", zh: "第5章：信号、标志与标记", es: "Cap.5 Señales y Marcas Viales" }, url: "https://www.dps.texas.gov/internetforms/Forms/DL-7.pdf#page=31", emoji: "🚦" },
+    { title: { en: "Ch.6 Turning, Passing & Lanes", zh: "第6章：转弯、超车与车道", es: "Cap.6 Giros, Adelantamiento y Carriles" }, url: "https://www.dps.texas.gov/internetforms/Forms/DL-7.pdf#page=44", emoji: "↪️" },
+    { title: { en: "Ch.7 Parking & Stopping", zh: "第7章：停车规定", es: "Cap.7 Estacionamiento y Paradas" }, url: "https://www.dps.texas.gov/internetforms/Forms/DL-7.pdf#page=48", emoji: "🅿️" },
+    { title: { en: "Ch.8 Speed & Speed Limits", zh: "第8章：速度与限速规定", es: "Cap.8 Velocidad y Límites" }, url: "https://www.dps.texas.gov/internetforms/Forms/DL-7.pdf#page=51", emoji: "🛣️" },
+    { title: { en: "Ch.9 Special Driving Situations", zh: "第9章：特殊驾驶情况", es: "Cap.9 Situaciones Especiales" }, url: "https://www.dps.texas.gov/internetforms/Forms/DL-7.pdf#page=53", emoji: "⚠️" },
+    { title: { en: "Ch.10 Alcohol & Drugs", zh: "第10章：酒精与药物", es: "Cap.10 Alcohol y Drogas" }, url: "https://www.dps.texas.gov/internetforms/Forms/DL-7.pdf#page=61", emoji: "🚫" },
+    { title: { en: "Ch.11 Motor Vehicle Crashes", zh: "第11章：交通事故处理", es: "Cap.11 Accidentes de Tránsito" }, url: "https://www.dps.texas.gov/internetforms/Forms/DL-7.pdf#page=65", emoji: "🚗" },
+    { title: { en: "Ch.12–13 Pedestrian & Bicycle Safety", zh: "第12-13章：行人与自行车安全", es: "Cap.12–13 Seguridad Peatonal y Ciclista" }, url: "https://www.dps.texas.gov/internetforms/Forms/DL-7.pdf#page=67", emoji: "🚶" },
   ],
 
   officialLinks: [
