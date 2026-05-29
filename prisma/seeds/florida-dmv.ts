@@ -1239,6 +1239,182 @@ export const floridaDMV = {
             },
           ],
         },
+        {
+          content: "When entering a roundabout in Florida, who has the right-of-way?",
+          explanation: "In a roundabout, vehicles already inside the circle have the right-of-way. Entering vehicles must yield to all traffic already circulating. Slow down when approaching, yield, then enter when a safe gap exists.",
+          handbookSection: "Right-of-Way — Uncontrolled Intersections",
+          difficulty: 1,
+          translations: [
+            { language: "zh", content: "在佛罗里达州进入环形交叉路口时，谁有先行权？", explanation: "在环形交叉路口，已在圆圈内行驶的车辆享有先行权。进入的车辆必须让行给所有已在环内行驶的车辆。接近时要减速，让行，然后在有安全间隙时进入。" },
+            { language: "es", content: "Al entrar a una rotonda en Florida, ¿quién tiene el derecho de paso?", explanation: "En una rotonda, los vehículos que ya están dentro del círculo tienen el derecho de paso. Los vehículos que ingresan deben ceder el paso a todo el tráfico que ya circula. Reduzca la velocidad al acercarse, ceda el paso y luego ingrese cuando exista un espacio seguro." },
+          ],
+          options: [
+            {
+              content: "Vehicles already inside the roundabout",
+              isCorrect: true,
+              translations: [
+                { language: "zh", content: "已在环形交叉路口内的车辆" },
+                { language: "es", content: "Los vehículos que ya están dentro de la rotonda" },
+              ],
+            },
+            {
+              content: "Vehicles entering the roundabout from the right",
+              isCorrect: false,
+              translations: [
+                { language: "zh", content: "从右侧进入环形路口的车辆" },
+                { language: "es", content: "Los vehículos que ingresan a la rotonda desde la derecha" },
+              ],
+            },
+            {
+              content: "The largest vehicle in the roundabout",
+              isCorrect: false,
+              translations: [
+                { language: "zh", content: "环形路口中最大的车辆" },
+                { language: "es", content: "El vehículo más grande en la rotonda" },
+              ],
+            },
+            {
+              content: "Vehicles entering from the main road always have priority",
+              isCorrect: false,
+              translations: [
+                { language: "zh", content: "从主干道进入的车辆总是优先" },
+                { language: "es", content: "Los vehículos que ingresan desde la vía principal siempre tienen prioridad" },
+              ],
+            },
+          ],
+        },
+        {
+          content: "At an uncontrolled T-intersection, who has the right-of-way?",
+          explanation: "At a T-intersection with no signs or signals, the vehicle on the terminating road (the road that ends) must yield to vehicles on the through road. The through road traffic does not have to stop.",
+          handbookSection: "Right-of-Way — Uncontrolled Intersections",
+          difficulty: 2,
+          translations: [
+            { language: "zh", content: "在无控制的T形交叉路口，谁有先行权？", explanation: "在没有标志或信号的T形交叉路口，终止道路（即道路终端）上的车辆必须让行给通行道路上的车辆。通行道路上的车辆无需停车。" },
+            { language: "es", content: "En una intersección en T sin control, ¿quién tiene el derecho de paso?", explanation: "En una intersección en T sin señales, el vehículo en la vía que termina debe ceder el paso a los vehículos en la vía de paso. El tráfico en la vía de paso no tiene que detenerse." },
+          ],
+          options: [
+            {
+              content: "Vehicles on the through road",
+              isCorrect: true,
+              translations: [
+                { language: "zh", content: "通行道路上的车辆" },
+                { language: "es", content: "Los vehículos en la vía de paso" },
+              ],
+            },
+            {
+              content: "Vehicles on the terminating road",
+              isCorrect: false,
+              translations: [
+                { language: "zh", content: "终止道路上的车辆" },
+                { language: "es", content: "Los vehículos en la vía que termina" },
+              ],
+            },
+            {
+              content: "Whichever vehicle arrives first",
+              isCorrect: false,
+              translations: [
+                { language: "zh", content: "先到达的车辆" },
+                { language: "es", content: "El vehículo que llega primero" },
+              ],
+            },
+            {
+              content: "Both vehicles must stop and take turns",
+              isCorrect: false,
+              translations: [
+                { language: "zh", content: "两辆车都必须停车并轮流通行" },
+                { language: "es", content: "Ambos vehículos deben detenerse y turnarse" },
+              ],
+            },
+          ],
+        },
+        {
+          content: "In Florida, when must a driver yield to a pedestrian in a crosswalk?",
+          explanation: "Florida law requires drivers to stop and remain stopped for pedestrians in any crosswalk — both marked and unmarked. This applies even at intersections without a stop sign or traffic light. Pedestrians in a crosswalk always have the right-of-way.",
+          handbookSection: "Right-of-Way — Pedestrians",
+          difficulty: 1,
+          translations: [
+            { language: "zh", content: "在佛罗里达州，驾驶员何时必须让行给人行横道上的行人？", explanation: "佛罗里达州法律要求驾驶员在任何人行横道（包括标示和未标示的）中为行人停车并保持停止状态。这适用于没有停车标志或交通信号灯的路口。人行横道上的行人始终享有先行权。" },
+            { language: "es", content: "En Florida, ¿cuándo debe un conductor ceder el paso a un peatón en un cruce peatonal?", explanation: "La ley de Florida requiere que los conductores se detengan y permanezcan detenidos para los peatones en cualquier cruce peatonal, tanto marcado como no marcado. Esto se aplica incluso en intersecciones sin señal de pare o semáforo. Los peatones en un cruce peatonal siempre tienen el derecho de paso." },
+          ],
+          options: [
+            {
+              content: "Always — whenever a pedestrian is in any crosswalk, marked or unmarked",
+              isCorrect: true,
+              translations: [
+                { language: "zh", content: "始终——只要行人在任何人行横道（标示或未标示），无论如何" },
+                { language: "es", content: "Siempre — cuando un peatón está en cualquier cruce peatonal, marcado o no marcado" },
+              ],
+            },
+            {
+              content: "Only when there is a marked crosswalk with painted lines",
+              isCorrect: false,
+              translations: [
+                { language: "zh", content: "仅当有漆线标示的人行横道时" },
+                { language: "es", content: "Solo cuando hay un cruce peatonal marcado con líneas pintadas" },
+              ],
+            },
+            {
+              content: "Only when a pedestrian is already halfway across the road",
+              isCorrect: false,
+              translations: [
+                { language: "zh", content: "仅当行人已经走到路中央时" },
+                { language: "es", content: "Solo cuando un peatón ya está a mitad del camino" },
+              ],
+            },
+            {
+              content: "Only when a traffic signal specifically shows a walk signal",
+              isCorrect: false,
+              translations: [
+                { language: "zh", content: "仅当交通信号灯特别显示行人通行信号时" },
+                { language: "es", content: "Solo cuando una señal de tráfico muestra específicamente una señal de paso" },
+              ],
+            },
+          ],
+        },
+        {
+          content: "When making a left turn at an intersection, you must yield to:",
+          explanation: "When turning left, you must yield to all oncoming traffic that is close enough to be a hazard, as well as to pedestrians crossing the road you are turning onto. Oncoming traffic does not need to slow down for your left turn.",
+          handbookSection: "Right-of-Way — Turning",
+          difficulty: 1,
+          translations: [
+            { language: "zh", content: "在路口左转时，您必须让行给：", explanation: "左转时，您必须让行给所有足够近以构成危险的对向来车，以及穿越您转入道路的行人。对向来车无需为您的左转减速。" },
+            { language: "es", content: "Al girar a la izquierda en una intersección, debe ceder el paso a:", explanation: "Al girar a la izquierda, debe ceder el paso a todo el tráfico en sentido contrario que esté lo suficientemente cerca como para ser un peligro, así como a los peatones que cruzan la vía hacia la que va a girar. El tráfico en sentido contrario no necesita reducir la velocidad para su giro a la izquierda." },
+          ],
+          options: [
+            {
+              content: "All oncoming traffic and pedestrians crossing the road you are turning onto",
+              isCorrect: true,
+              translations: [
+                { language: "zh", content: "所有对向来车和穿越您转入道路的行人" },
+                { language: "es", content: "Todo el tráfico en sentido contrario y los peatones que cruzan la vía hacia la que va a girar" },
+              ],
+            },
+            {
+              content: "Only vehicles directly in the intersection",
+              isCorrect: false,
+              translations: [
+                { language: "zh", content: "仅限直接在路口的车辆" },
+                { language: "es", content: "Solo los vehículos directamente en la intersección" },
+              ],
+            },
+            {
+              content: "Only pedestrians, not oncoming vehicles",
+              isCorrect: false,
+              translations: [
+                { language: "zh", content: "仅限行人，不包括对向来车" },
+                { language: "es", content: "Solo los peatones, no los vehículos en sentido contrario" },
+              ],
+            },
+            {
+              content: "No one — you have the right-of-way when turning left with a green light",
+              isCorrect: false,
+              translations: [
+                { language: "zh", content: "无需让行——绿灯左转时您有先行权" },
+                { language: "es", content: "Nadie — usted tiene el derecho de paso al girar a la izquierda con luz verde" },
+              ],
+            },
+          ],
+        },
       ],
     },
     // ─── SPEED LIMITS & SPECIAL ZONES ─────────────────────────────────────────
@@ -1688,6 +1864,314 @@ export const floridaDMV = {
               translations: [
                 { language: "zh", content: "仅在能见度降至100英尺以下时才减速" },
                 { language: "es", content: "Solo reducir la velocidad si la visibilidad cae por debajo de 100 pies" },
+              ],
+            },
+          ],
+        },
+        {
+          content: "What is the default speed limit in Florida for residential areas and business districts unless otherwise posted?",
+          explanation: "Unless otherwise posted, the default speed limit in Florida is 30 mph in residential areas and business districts. Always look for posted signs, as they may set a different limit.",
+          handbookSection: "Speed Limits — Default Limits",
+          difficulty: 1,
+          translations: [
+            { language: "zh", content: "在佛罗里达州，除非另有标示，住宅区和商业区的默认限速是多少？", explanation: "除非另有标示，佛罗里达州住宅区和商业区的默认限速为每小时30英里。请务必注意路牌，因为标示可能会设定不同的限速。" },
+            { language: "es", content: "¿Cuál es el límite de velocidad predeterminado en Florida para áreas residenciales y distritos comerciales, a menos que se indique lo contrario?", explanation: "A menos que se indique lo contrario, el límite de velocidad predeterminado en Florida es de 30 mph en áreas residenciales y distritos comerciales. Siempre busque señales colocadas, ya que pueden establecer un límite diferente." },
+          ],
+          options: [
+            {
+              content: "30 mph",
+              isCorrect: true,
+              translations: [
+                { language: "zh", content: "每小时30英里" },
+                { language: "es", content: "30 mph" },
+              ],
+            },
+            {
+              content: "25 mph",
+              isCorrect: false,
+              translations: [
+                { language: "zh", content: "每小时25英里" },
+                { language: "es", content: "25 mph" },
+              ],
+            },
+            {
+              content: "35 mph",
+              isCorrect: false,
+              translations: [
+                { language: "zh", content: "每小时35英里" },
+                { language: "es", content: "35 mph" },
+              ],
+            },
+            {
+              content: "45 mph",
+              isCorrect: false,
+              translations: [
+                { language: "zh", content: "每小时45英里" },
+                { language: "es", content: "45 mph" },
+              ],
+            },
+          ],
+        },
+        {
+          content: "In a Florida school zone, what is the speed limit when the flashing yellow light is active?",
+          explanation: "When a school zone's flashing yellow beacon is active, drivers must reduce speed to 20 mph. This typically applies during school hours when children are present. Fines in school zones are doubled.",
+          handbookSection: "Speed Limits — School Zones",
+          difficulty: 1,
+          translations: [
+            { language: "zh", content: "在佛罗里达州学校区域，当闪烁的黄灯亮起时，限速是多少？", explanation: "当学校区域的闪烁黄色信号灯亮起时，驾驶员必须将车速降至每小时20英里。这通常适用于有儿童出现的上学时间。学校区域内的罚款加倍。" },
+            { language: "es", content: "En una zona escolar de Florida, ¿cuál es el límite de velocidad cuando la luz amarilla intermitente está activa?", explanation: "Cuando la baliza amarilla intermitente de una zona escolar está activa, los conductores deben reducir la velocidad a 20 mph. Esto generalmente se aplica durante el horario escolar cuando hay niños presentes. Las multas en zonas escolares se duplican." },
+          ],
+          options: [
+            {
+              content: "20 mph",
+              isCorrect: true,
+              translations: [
+                { language: "zh", content: "每小时20英里" },
+                { language: "es", content: "20 mph" },
+              ],
+            },
+            {
+              content: "15 mph",
+              isCorrect: false,
+              translations: [
+                { language: "zh", content: "每小时15英里" },
+                { language: "es", content: "15 mph" },
+              ],
+            },
+            {
+              content: "25 mph",
+              isCorrect: false,
+              translations: [
+                { language: "zh", content: "每小时25英里" },
+                { language: "es", content: "25 mph" },
+              ],
+            },
+            {
+              content: "30 mph",
+              isCorrect: false,
+              translations: [
+                { language: "zh", content: "每小时30英里" },
+                { language: "es", content: "30 mph" },
+              ],
+            },
+          ],
+        },
+        {
+          content: "What happens to traffic fines in Florida construction (work) zones?",
+          explanation: "In Florida, fines for moving violations in active construction zones are doubled. This is to protect road workers. You must obey posted speed limits in work zones even if workers are not immediately visible.",
+          handbookSection: "Speed Limits — Work Zones",
+          difficulty: 2,
+          translations: [
+            { language: "zh", content: "在佛罗里达州的施工（工作）区域，交通罚款会怎样？", explanation: "在佛罗里达州，在活跃施工区域内违反交通规则的罚款加倍。这是为了保护道路工人。即使工人不在眼前，您也必须遵守施工区域内的限速标示。" },
+            { language: "es", content: "¿Qué sucede con las multas de tráfico en las zonas de construcción (trabajo) de Florida?", explanation: "En Florida, las multas por infracciones de tránsito en zonas de construcción activas se duplican. Esto es para proteger a los trabajadores viales. Debe obedecer los límites de velocidad señalizados en las zonas de trabajo, incluso si los trabajadores no son visibles de inmediato." },
+          ],
+          options: [
+            {
+              content: "Fines are doubled for moving violations",
+              isCorrect: true,
+              translations: [
+                { language: "zh", content: "行驶违规罚款加倍" },
+                { language: "es", content: "Las multas se duplican por infracciones de tránsito" },
+              ],
+            },
+            {
+              content: "Fines are the same as on regular roads",
+              isCorrect: false,
+              translations: [
+                { language: "zh", content: "罚款与普通道路相同" },
+                { language: "es", content: "Las multas son las mismas que en las carreteras regulares" },
+              ],
+            },
+            {
+              content: "Fines are tripled for all violations",
+              isCorrect: false,
+              translations: [
+                { language: "zh", content: "所有违规罚款三倍" },
+                { language: "es", content: "Las multas se triplican por todas las infracciones" },
+              ],
+            },
+            {
+              content: "Fines only apply if workers are present",
+              isCorrect: false,
+              translations: [
+                { language: "zh", content: "仅当工人在场时罚款才适用" },
+                { language: "es", content: "Las multas solo se aplican si hay trabajadores presentes" },
+              ],
+            },
+          ],
+        },
+        {
+          content: "What is the recommended following distance rule for most driving conditions in Florida?",
+          explanation: "The 3-second rule is the standard recommended following distance. Pick a fixed object ahead; when the vehicle in front passes it, count 3 seconds before you reach that same object. Increase to 4 or more seconds in bad weather or when following large trucks.",
+          handbookSection: "Speed Limits — Following Distance",
+          difficulty: 2,
+          translations: [
+            { language: "zh", content: "在佛罗里达州大多数驾驶条件下，建议的跟车距离规则是什么？", explanation: "3秒规则是标准推荐的跟车距离。选择前方一个固定物体；当前车经过它时，数3秒后您才到达同一物体。在恶劣天气或跟随大型卡车时，将时间增加到4秒或更多。" },
+            { language: "es", content: "¿Cuál es la regla de distancia de seguimiento recomendada para la mayoría de las condiciones de manejo en Florida?", explanation: "La regla de los 3 segundos es la distancia de seguimiento estándar recomendada. Elija un objeto fijo adelante; cuando el vehículo de adelante lo pase, cuente 3 segundos antes de llegar a ese mismo objeto. Aumente a 4 o más segundos en mal tiempo o al seguir camiones grandes." },
+          ],
+          options: [
+            {
+              content: "3-second following distance",
+              isCorrect: true,
+              translations: [
+                { language: "zh", content: "3秒跟车距离" },
+                { language: "es", content: "Distancia de seguimiento de 3 segundos" },
+              ],
+            },
+            {
+              content: "1-second following distance",
+              isCorrect: false,
+              translations: [
+                { language: "zh", content: "1秒跟车距离" },
+                { language: "es", content: "Distancia de seguimiento de 1 segundo" },
+              ],
+            },
+            {
+              content: "2-second following distance",
+              isCorrect: false,
+              translations: [
+                { language: "zh", content: "2秒跟车距离" },
+                { language: "es", content: "Distancia de seguimiento de 2 segundos" },
+              ],
+            },
+            {
+              content: "5-car-length following distance",
+              isCorrect: false,
+              translations: [
+                { language: "zh", content: "5辆车身长度的跟车距离" },
+                { language: "es", content: "Distancia de seguimiento de 5 longitudes de vehículo" },
+              ],
+            },
+          ],
+        },
+        {
+          content: "At what speed must you drive when passing within 100 feet of a bridge, tunnel, or railroad crossing in Florida?",
+          explanation: "Florida law requires drivers to reduce speed to no more than 15 mph when passing within 100 feet of a railroad crossing. Bridges and tunnels may have their own posted limits. Always look for posted signs near these structures.",
+          handbookSection: "Speed Limits — Default Limits",
+          difficulty: 3,
+          translations: [
+            { language: "zh", content: "在佛罗里达州，经过铁路道口100英尺范围内时，您必须以多快的速度行驶？", explanation: "佛罗里达州法律要求驾驶员在铁路道口100英尺范围内将车速降至不超过每小时15英里。桥梁和隧道可能有自己的标示限速。请务必注意这些设施附近的路牌。" },
+            { language: "es", content: "¿A qué velocidad debe conducir cuando pasa dentro de 100 pies de un puente, túnel o cruce ferroviario en Florida?", explanation: "La ley de Florida requiere que los conductores reduzcan la velocidad a no más de 15 mph al pasar dentro de los 100 pies de un cruce ferroviario. Los puentes y túneles pueden tener sus propios límites señalizados. Siempre busque señales cerca de estas estructuras." },
+          ],
+          options: [
+            {
+              content: "No more than 15 mph near railroad crossings",
+              isCorrect: true,
+              translations: [
+                { language: "zh", content: "在铁路道口附近不超过每小时15英里" },
+                { language: "es", content: "No más de 15 mph cerca de los cruces ferroviarios" },
+              ],
+            },
+            {
+              content: "No more than 25 mph",
+              isCorrect: false,
+              translations: [
+                { language: "zh", content: "不超过每小时25英里" },
+                { language: "es", content: "No más de 25 mph" },
+              ],
+            },
+            {
+              content: "No more than 30 mph",
+              isCorrect: false,
+              translations: [
+                { language: "zh", content: "不超过每小时30英里" },
+                { language: "es", content: "No más de 30 mph" },
+              ],
+            },
+            {
+              content: "There is no special speed requirement",
+              isCorrect: false,
+              translations: [
+                { language: "zh", content: "没有特殊的速度要求" },
+                { language: "es", content: "No hay requisito especial de velocidad" },
+              ],
+            },
+          ],
+        },
+        {
+          content: "You are driving at night on a road with no streetlights. What is the safest approach to speed?",
+          explanation: "At night, your headlights illuminate only about 350 feet ahead with high beams. You should drive at a speed that allows you to stop within the distance illuminated — this is called 'driving within the range of your headlights.' Overdriving your headlights is dangerous.",
+          handbookSection: "Speed Limits — Night Driving",
+          difficulty: 2,
+          translations: [
+            { language: "zh", content: "您在没有路灯的道路上夜间行驶。最安全的速度方法是什么？", explanation: "夜间，您的远光灯只能照亮约350英尺前方。您应该以能在照明范围内停车的速度行驶——这称为「在车灯照射范围内驾驶」。超出车灯照射范围行驶是危险的。" },
+            { language: "es", content: "Está conduciendo de noche en una carretera sin alumbrado público. ¿Cuál es el enfoque más seguro de velocidad?", explanation: "De noche, sus faros iluminan solo unos 350 pies hacia adelante con luces altas. Debe conducir a una velocidad que le permita detenerse dentro de la distancia iluminada — esto se llama 'conducir dentro del alcance de sus faros'. Conducir más allá del alcance de sus faros es peligroso." },
+          ],
+          options: [
+            {
+              content: "Drive at a speed that allows stopping within the distance lit by headlights",
+              isCorrect: true,
+              translations: [
+                { language: "zh", content: "以能在车灯照射范围内停车的速度行驶" },
+                { language: "es", content: "Conduzca a una velocidad que permita detenerse dentro de la distancia iluminada por los faros" },
+              ],
+            },
+            {
+              content: "Always use the posted speed limit regardless of visibility",
+              isCorrect: false,
+              translations: [
+                { language: "zh", content: "无论能见度如何，始终遵守限速标示" },
+                { language: "es", content: "Siempre use el límite de velocidad señalizado independientemente de la visibilidad" },
+              ],
+            },
+            {
+              content: "Drive faster to spend less time on dark roads",
+              isCorrect: false,
+              translations: [
+                { language: "zh", content: "加快速度以减少在黑暗道路上的时间" },
+                { language: "es", content: "Conduzca más rápido para pasar menos tiempo en carreteras oscuras" },
+              ],
+            },
+            {
+              content: "Reduce speed by exactly 10 mph from the posted limit",
+              isCorrect: false,
+              translations: [
+                { language: "zh", content: "从限速标示减少恰好10英里的时速" },
+                { language: "es", content: "Reduzca la velocidad exactamente 10 mph del límite señalizado" },
+              ],
+            },
+          ],
+        },
+        {
+          content: "What is the default speed limit on Florida state roads (non-interstate) in rural areas?",
+          explanation: "The default speed limit on Florida state roads (not limited-access) in rural areas is 65 mph unless otherwise posted. On limited-access highways (interstates) it is 70 mph. Urban state roads typically have lower posted limits.",
+          handbookSection: "Speed Limits — Maximum Limits",
+          difficulty: 2,
+          translations: [
+            { language: "zh", content: "在佛罗里达州农村地区的州道（非州际公路）上，默认限速是多少？", explanation: "除非另有标示，佛罗里达州农村地区州道（非限制通行）的默认限速为每小时65英里。限制通行高速公路（州际公路）为每小时70英里。城市州道通常有较低的标示限速。" },
+            { language: "es", content: "¿Cuál es el límite de velocidad predeterminado en las carreteras estatales de Florida (no interestatales) en áreas rurales?", explanation: "El límite de velocidad predeterminado en las carreteras estatales de Florida (sin acceso limitado) en áreas rurales es de 65 mph a menos que se indique lo contrario. En autopistas de acceso limitado (interestatales) es de 70 mph. Las carreteras estatales urbanas generalmente tienen límites más bajos señalizados." },
+          ],
+          options: [
+            {
+              content: "65 mph",
+              isCorrect: true,
+              translations: [
+                { language: "zh", content: "每小时65英里" },
+                { language: "es", content: "65 mph" },
+              ],
+            },
+            {
+              content: "55 mph",
+              isCorrect: false,
+              translations: [
+                { language: "zh", content: "每小时55英里" },
+                { language: "es", content: "55 mph" },
+              ],
+            },
+            {
+              content: "70 mph",
+              isCorrect: false,
+              translations: [
+                { language: "zh", content: "每小时70英里" },
+                { language: "es", content: "70 mph" },
+              ],
+            },
+            {
+              content: "60 mph",
+              isCorrect: false,
+              translations: [
+                { language: "zh", content: "每小时60英里" },
+                { language: "es", content: "60 mph" },
               ],
             },
           ],
@@ -2233,6 +2717,182 @@ export const floridaDMV = {
             },
           ],
         },
+        {
+          content: "What is the legal BAC limit for commercial vehicle drivers in Florida?",
+          explanation: "Commercial drivers are held to a stricter standard. The legal BAC limit for commercial vehicle (CDL) drivers in Florida is 0.04%, which is half the limit for regular adult drivers. A CDL driver found with a BAC of 0.04% or higher while operating a commercial vehicle will be disqualified.",
+          handbookSection: "Alcohol & Drugs — BAC Limits",
+          difficulty: 2,
+          translations: [
+            { language: "zh", content: "在佛罗里达州，商业车辆驾驶员的合法血液酒精含量限制是多少？", explanation: "商业驾驶员受到更严格的标准约束。佛罗里达州商业车辆（CDL）驾驶员的合法血液酒精含量限制为0.04%，是普通成年驾驶员限制的一半。驾驶商业车辆时血液酒精含量达到或超过0.04%的CDL驾驶员将被取消资格。" },
+            { language: "es", content: "¿Cuál es el límite legal de BAC para los conductores de vehículos comerciales en Florida?", explanation: "Los conductores comerciales están sujetos a un estándar más estricto. El límite legal de BAC para los conductores de vehículos comerciales (CDL) en Florida es del 0.04%, que es la mitad del límite para los conductores adultos regulares. Un conductor CDL que tenga un BAC del 0.04% o más mientras opera un vehículo comercial será descalificado." },
+          ],
+          options: [
+            {
+              content: "0.04%",
+              isCorrect: true,
+              translations: [
+                { language: "zh", content: "0.04%" },
+                { language: "es", content: "0.04%" },
+              ],
+            },
+            {
+              content: "0.08%",
+              isCorrect: false,
+              translations: [
+                { language: "zh", content: "0.08%" },
+                { language: "es", content: "0.08%" },
+              ],
+            },
+            {
+              content: "0.02%",
+              isCorrect: false,
+              translations: [
+                { language: "zh", content: "0.02%" },
+                { language: "es", content: "0.02%" },
+              ],
+            },
+            {
+              content: "0.10%",
+              isCorrect: false,
+              translations: [
+                { language: "zh", content: "0.10%" },
+                { language: "es", content: "0.10%" },
+              ],
+            },
+          ],
+        },
+        {
+          content: "What are the minimum penalties for a first DUI conviction in Florida?",
+          explanation: "A first DUI conviction in Florida carries: a fine of $500–$1,000, up to 6 months in jail, 1 year of probation, 50 hours of community service, and license revocation for at least 180 days. With BAC of 0.15% or higher, penalties increase significantly.",
+          handbookSection: "Alcohol & Drugs — DUI Penalties",
+          difficulty: 2,
+          translations: [
+            { language: "zh", content: "在佛罗里达州，首次DUI定罪的最低处罚是什么？", explanation: "佛罗里达州首次DUI定罪的处罚包括：罚款500至1000美元，最多6个月监禁，1年缓刑，50小时社区服务，以及至少180天的驾照吊销。血液酒精含量达0.15%或更高时，处罚会显著增加。" },
+            { language: "es", content: "¿Cuáles son las penalidades mínimas por una primera condena de DUI en Florida?", explanation: "Una primera condena de DUI en Florida conlleva: una multa de $500–$1,000, hasta 6 meses de cárcel, 1 año de libertad condicional, 50 horas de servicio comunitario y revocación de licencia por al menos 180 días. Con un BAC del 0.15% o más, las penalidades aumentan significativamente." },
+          ],
+          options: [
+            {
+              content: "Fine of $500–$1,000, up to 6 months jail, and at least 180-day license revocation",
+              isCorrect: true,
+              translations: [
+                { language: "zh", content: "罚款500至1000美元，最多6个月监禁，以及至少180天驾照吊销" },
+                { language: "es", content: "Multa de $500–$1,000, hasta 6 meses de cárcel y revocación de licencia por al menos 180 días" },
+              ],
+            },
+            {
+              content: "Only a fine — no jail time for a first offense",
+              isCorrect: false,
+              translations: [
+                { language: "zh", content: "仅罚款——首次违规不监禁" },
+                { language: "es", content: "Solo una multa — sin tiempo en cárcel para una primera infracción" },
+              ],
+            },
+            {
+              content: "Automatic 5-year license suspension",
+              isCorrect: false,
+              translations: [
+                { language: "zh", content: "自动暂停驾照5年" },
+                { language: "es", content: "Suspensión automática de licencia por 5 años" },
+              ],
+            },
+            {
+              content: "Mandatory ignition interlock for 1 year",
+              isCorrect: false,
+              translations: [
+                { language: "zh", content: "强制安装点火互锁装置1年" },
+                { language: "es", content: "Interruptor de encendido obligatorio por 1 año" },
+              ],
+            },
+          ],
+        },
+        {
+          content: "Under Florida's implied consent law, what happens if you refuse to submit to a lawful breath test?",
+          explanation: "Under Florida's implied consent law, by driving on Florida roads you agree to chemical testing if lawfully requested. Refusing a breath test results in an automatic 1-year license suspension for a first refusal, and 18 months for a subsequent refusal. The refusal can also be used as evidence against you in court.",
+          handbookSection: "Alcohol & Drugs — Implied Consent",
+          difficulty: 3,
+          translations: [
+            { language: "zh", content: "根据佛罗里达州的默示同意法，如果您拒绝接受合法的呼气测试，会发生什么？", explanation: "根据佛罗里达州的默示同意法，在佛罗里达州道路上驾驶即表示您同意在合法要求时接受化学测试。拒绝呼气测试将导致首次拒绝时自动暂停驾照1年，后续拒绝则为18个月。拒绝行为也可作为法庭上的不利证据。" },
+            { language: "es", content: "Bajo la ley de consentimiento implícito de Florida, ¿qué sucede si se niega a someterse a una prueba de aliento legal?", explanation: "Bajo la ley de consentimiento implícito de Florida, al conducir en las carreteras de Florida acepta las pruebas químicas si se le solicita legalmente. Negarse a una prueba de aliento resulta en una suspensión automática de licencia de 1 año por una primera negativa, y 18 meses por una negativa posterior. La negativa también puede usarse como evidencia en su contra en el tribunal." },
+          ],
+          options: [
+            {
+              content: "Automatic 1-year license suspension (18 months for a repeat refusal)",
+              isCorrect: true,
+              translations: [
+                { language: "zh", content: "自动暂停驾照1年（再次拒绝则为18个月）" },
+                { language: "es", content: "Suspensión automática de licencia por 1 año (18 meses por una negativa repetida)" },
+              ],
+            },
+            {
+              content: "No penalty — you have the right to refuse any test",
+              isCorrect: false,
+              translations: [
+                { language: "zh", content: "无处罚——您有权拒绝任何测试" },
+                { language: "es", content: "Sin penalidad — tiene derecho a negarse a cualquier prueba" },
+              ],
+            },
+            {
+              content: "A small fine but no license suspension",
+              isCorrect: false,
+              translations: [
+                { language: "zh", content: "小额罚款但不暂停驾照" },
+                { language: "es", content: "Una pequeña multa pero sin suspensión de licencia" },
+              ],
+            },
+            {
+              content: "Immediate arrest for obstruction of justice",
+              isCorrect: false,
+              translations: [
+                { language: "zh", content: "以妨碍司法罪立即逮捕" },
+                { language: "es", content: "Arresto inmediato por obstrucción a la justicia" },
+              ],
+            },
+          ],
+        },
+        {
+          content: "When is an ignition interlock device required after a DUI conviction in Florida?",
+          explanation: "In Florida, a court may order an ignition interlock device for a first DUI. For a second DUI conviction, an ignition interlock device is mandatory for at least 1 year. For a third or subsequent conviction, it is required for at least 2 years. The device prevents the vehicle from starting if alcohol is detected.",
+          handbookSection: "Alcohol & Drugs — DUI Penalties",
+          difficulty: 3,
+          translations: [
+            { language: "zh", content: "在佛罗里达州，DUI定罪后何时需要安装点火互锁装置？", explanation: "在佛罗里达州，法院可能会在首次DUI时命令安装点火互锁装置。第二次DUI定罪时，必须强制安装点火互锁装置至少1年。第三次或后续定罪时，需要安装至少2年。该装置在检测到酒精时会阻止车辆启动。" },
+            { language: "es", content: "¿Cuándo se requiere un dispositivo interruptor de encendido después de una condena por DUI en Florida?", explanation: "En Florida, un tribunal puede ordenar un dispositivo interruptor de encendido por un primer DUI. Para una segunda condena por DUI, un dispositivo interruptor de encendido es obligatorio por al menos 1 año. Para una tercera condena o posterior, se requiere por al menos 2 años. El dispositivo evita que el vehículo arranque si se detecta alcohol." },
+          ],
+          options: [
+            {
+              content: "Mandatory for at least 1 year on a second DUI conviction",
+              isCorrect: true,
+              translations: [
+                { language: "zh", content: "第二次DUI定罪时强制安装至少1年" },
+                { language: "es", content: "Obligatorio por al menos 1 año en una segunda condena por DUI" },
+              ],
+            },
+            {
+              content: "Only required if the driver's BAC was above 0.15%",
+              isCorrect: false,
+              translations: [
+                { language: "zh", content: "仅当驾驶员的血液酒精含量超过0.15%时才需要" },
+                { language: "es", content: "Solo se requiere si el BAC del conductor estaba por encima del 0.15%" },
+              ],
+            },
+            {
+              content: "Never required — it is always optional",
+              isCorrect: false,
+              translations: [
+                { language: "zh", content: "从不需要——始终是可选的" },
+                { language: "es", content: "Nunca se requiere — siempre es opcional" },
+              ],
+            },
+            {
+              content: "Required for all drivers regardless of DUI history",
+              isCorrect: false,
+              translations: [
+                { language: "zh", content: "无论DUI历史如何，所有驾驶员都需要" },
+                { language: "es", content: "Requerido para todos los conductores independientemente del historial de DUI" },
+              ],
+            },
+          ],
+        },
       ],
     },
     // ─── DRIVER LICENSE & FLORIDA LAWS ─────────────────────────────────────────
@@ -2774,6 +3434,182 @@ export const floridaDMV = {
             },
           ],
         },
+        {
+          content: "Under Florida's Graduated Driver License (GDL) program, what curfew applies to a 16-year-old with a learner's license?",
+          explanation: "A 16-year-old with a learner's license (permit) in Florida must be accompanied by a licensed driver age 21 or older at all times. There is no independent nighttime driving — all driving must be supervised.",
+          handbookSection: "Driver License — GDL Program",
+          difficulty: 2,
+          translations: [
+            { language: "zh", content: "根据佛罗里达州的渐进式驾照（GDL）项目，持有学习驾照的16岁青少年有什么宵禁规定？", explanation: "佛罗里达州持有学习驾照（许可证）的16岁青少年必须始终有21岁或以上的持照驾驶员陪同。不允许独自夜间驾驶——所有驾驶都必须在监督下进行。" },
+            { language: "es", content: "Bajo el programa de Licencia de Conductor Graduada (GDL) de Florida, ¿qué toque de queda se aplica a un joven de 16 años con licencia de aprendizaje?", explanation: "Un joven de 16 años con licencia de aprendizaje (permiso) en Florida debe ir acompañado por un conductor licenciado de 21 años o más en todo momento. No se permite conducir de forma independiente por la noche — toda conducción debe ser supervisada." },
+          ],
+          options: [
+            {
+              content: "All driving must be supervised by a licensed adult age 21 or older",
+              isCorrect: true,
+              translations: [
+                { language: "zh", content: "所有驾驶必须由21岁或以上的持照成年人监督" },
+                { language: "es", content: "Toda conducción debe ser supervisada por un adulto con licencia de 21 años o más" },
+              ],
+            },
+            {
+              content: "No driving allowed after 10 PM without a parent",
+              isCorrect: false,
+              translations: [
+                { language: "zh", content: "没有家长陪同不得在晚上10点后驾驶" },
+                { language: "es", content: "No se permite conducir después de las 10 PM sin un padre" },
+              ],
+            },
+            {
+              content: "No restrictions — the permit allows full independent driving",
+              isCorrect: false,
+              translations: [
+                { language: "zh", content: "无限制——许可证允许完全独立驾驶" },
+                { language: "es", content: "Sin restricciones — el permiso permite conducir de forma totalmente independiente" },
+              ],
+            },
+            {
+              content: "No driving after midnight unless accompanied by a parent",
+              isCorrect: false,
+              translations: [
+                { language: "zh", content: "除非有家长陪同，否则午夜后不得驾驶" },
+                { language: "es", content: "No se permite conducir después de la medianoche a menos que vaya acompañado de un padre" },
+              ],
+            },
+          ],
+        },
+        {
+          content: "Florida's Move Over Law requires drivers to do what when approaching a stopped emergency vehicle with flashing lights on the roadside?",
+          explanation: "Florida's Move Over Law requires drivers approaching a stationary emergency or law enforcement vehicle with flashing lights to move over one lane away from the vehicle (if safe) or slow to 20 mph below the posted speed limit (minimum 5 mph on roads posted at 20 mph or less). This applies to tow trucks and sanitation vehicles too.",
+          handbookSection: "Driver License — Points System",
+          difficulty: 2,
+          translations: [
+            { language: "zh", content: "佛罗里达州的「让路法」要求驾驶员在接近路边有闪烁灯光的停靠紧急车辆时应该怎么做？", explanation: "佛罗里达州的「让路法」要求驾驶员在接近有闪烁灯光的静止紧急或执法车辆时，向远离该车辆的一个车道移动（如果安全）或减速到低于限速20英里（在限速20英里或以下的道路上最低5英里）。这也适用于拖车和环卫车辆。" },
+            { language: "es", content: "La ley Move Over de Florida requiere que los conductores hagan qué cuando se acercan a un vehículo de emergencia detenido con luces intermitentes en el borde de la carretera?", explanation: "La ley Move Over de Florida requiere que los conductores que se acercan a un vehículo de emergencia o de aplicación de la ley estacionario con luces intermitentes se cambien a un carril alejándose del vehículo (si es seguro) o disminuyan la velocidad a 20 mph por debajo del límite señalizado (mínimo 5 mph en carreteras con límite de 20 mph o menos). Esto también se aplica a grúas y vehículos de saneamiento." },
+          ],
+          options: [
+            {
+              content: "Move over one lane or slow to 20 mph below the posted speed limit",
+              isCorrect: true,
+              translations: [
+                { language: "zh", content: "移动到一个车道外或减速到低于限速20英里" },
+                { language: "es", content: "Cambiar a un carril o reducir la velocidad a 20 mph por debajo del límite señalizado" },
+              ],
+            },
+            {
+              content: "Simply honk to warn the emergency personnel",
+              isCorrect: false,
+              translations: [
+                { language: "zh", content: "只需鸣喇叭警告紧急人员" },
+                { language: "es", content: "Simplemente tocar el claxon para advertir al personal de emergencia" },
+              ],
+            },
+            {
+              content: "Come to a complete stop behind the emergency vehicle",
+              isCorrect: false,
+              translations: [
+                { language: "zh", content: "在紧急车辆后面完全停车" },
+                { language: "es", content: "Detenerse completamente detrás del vehículo de emergencia" },
+              ],
+            },
+            {
+              content: "Continue at normal speed since the vehicle is already stopped",
+              isCorrect: false,
+              translations: [
+                { language: "zh", content: "以正常速度继续行驶，因为车辆已经停止" },
+                { language: "es", content: "Continuar a velocidad normal ya que el vehículo ya está detenido" },
+              ],
+            },
+          ],
+        },
+        {
+          content: "Florida law prohibits texting while driving. What does this mean for drivers?",
+          explanation: "Florida law makes texting while driving a primary offense — police can stop you just for texting. Using a handheld device to text in a school zone or active work zone is also a primary offense. Hands-free use is permitted.",
+          handbookSection: "Driver License — Points System",
+          difficulty: 1,
+          translations: [
+            { language: "zh", content: "佛罗里达州法律禁止驾驶时发短信。这对驾驶员意味着什么？", explanation: "佛罗里达州法律将驾驶时发短信定为主要违规——警察可以仅因发短信而拦截您。在学校区域或活跃施工区域使用手持设备发短信也是主要违规。免提使用是允许的。" },
+            { language: "es", content: "La ley de Florida prohíbe enviar mensajes de texto mientras se conduce. ¿Qué significa esto para los conductores?", explanation: "La ley de Florida convierte el envío de mensajes de texto mientras se conduce en una infracción primaria: la policía puede detenerte solo por enviar mensajes de texto. Usar un dispositivo de mano para enviar mensajes de texto en una zona escolar o zona de trabajo activa también es una infracción primaria. El uso con manos libres está permitido." },
+          ],
+          options: [
+            {
+              content: "Texting while driving is a primary offense — police can stop you for it alone",
+              isCorrect: true,
+              translations: [
+                { language: "zh", content: "驾驶时发短信是主要违规——警察可以单独因此拦截您" },
+                { language: "es", content: "Enviar mensajes de texto mientras se conduce es una infracción primaria — la policía puede detenerte solo por eso" },
+              ],
+            },
+            {
+              content: "Texting is only illegal if you cause an accident",
+              isCorrect: false,
+              translations: [
+                { language: "zh", content: "只有造成事故时发短信才是违法的" },
+                { language: "es", content: "Enviar mensajes de texto solo es ilegal si causa un accidente" },
+              ],
+            },
+            {
+              content: "Texting is a secondary offense — police can only cite you if stopped for another reason",
+              isCorrect: false,
+              translations: [
+                { language: "zh", content: "发短信是次要违规——警察只能在因其他原因停车时才能对您开罚单" },
+                { language: "es", content: "Enviar mensajes de texto es una infracción secundaria: la policía solo puede multarte si te detiene por otra razón" },
+              ],
+            },
+            {
+              content: "Texting is only prohibited for drivers under 18",
+              isCorrect: false,
+              translations: [
+                { language: "zh", content: "发短信仅对18岁以下的驾驶员禁止" },
+                { language: "es", content: "Enviar mensajes de texto solo está prohibido para conductores menores de 18 años" },
+              ],
+            },
+          ],
+        },
+        {
+          content: "What does Florida's Financial Responsibility Law require after a crash resulting in bodily injury or property damage over $500?",
+          explanation: "After a crash in Florida that causes bodily injury, death, or property damage exceeding $500, you must be able to show proof of financial responsibility (insurance). Failure to carry the required PIP and PDL insurance can result in license suspension.",
+          handbookSection: "Driver License — Insurance Requirements",
+          difficulty: 3,
+          translations: [
+            { language: "zh", content: "佛罗里达州的财务责任法在导致人身伤害或500美元以上财产损失的事故后要求什么？", explanation: "在佛罗里达州发生导致人身伤害、死亡或超过500美元财产损失的事故后，您必须能够出示财务责任证明（保险）。未携带所需的PIP和PDL保险可能导致驾照被暂停。" },
+            { language: "es", content: "¿Qué requiere la Ley de Responsabilidad Financiera de Florida después de un accidente que resulte en lesiones corporales o daños a la propiedad superiores a $500?", explanation: "Después de un accidente en Florida que cause lesiones corporales, muerte o daños a la propiedad superiores a $500, debe poder mostrar prueba de responsabilidad financiera (seguro). No llevar el seguro PIP y PDL requerido puede resultar en la suspensión de la licencia." },
+          ],
+          options: [
+            {
+              content: "You must show proof of insurance (financial responsibility)",
+              isCorrect: true,
+              translations: [
+                { language: "zh", content: "您必须出示保险证明（财务责任）" },
+                { language: "es", content: "Debe mostrar prueba de seguro (responsabilidad financiera)" },
+              ],
+            },
+            {
+              content: "No insurance is required in Florida",
+              isCorrect: false,
+              translations: [
+                { language: "zh", content: "佛罗里达州不要求保险" },
+                { language: "es", content: "No se requiere seguro en Florida" },
+              ],
+            },
+            {
+              content: "Only liability insurance is required — not PIP",
+              isCorrect: false,
+              translations: [
+                { language: "zh", content: "只需要责任险——不需要PIP" },
+                { language: "es", content: "Solo se requiere seguro de responsabilidad civil, no PIP" },
+              ],
+            },
+            {
+              content: "Insurance requirements only apply to commercial vehicles",
+              isCorrect: false,
+              translations: [
+                { language: "zh", content: "保险要求仅适用于商业车辆" },
+                { language: "es", content: "Los requisitos de seguro solo se aplican a los vehículos comerciales" },
+              ],
+            },
+          ],
+        },
       ],
     },
     // ─── SAFE DRIVING & CRASH PREVENTION ─────────────────────────────────────────
@@ -3311,6 +4147,182 @@ export const floridaDMV = {
               translations: [
                 { language: "zh", content: "加速驶出打滑" },
                 { language: "es", content: "Acelere para salir del derrape" },
+              ],
+            },
+          ],
+        },
+        {
+          content: "When must you report a crash to the Florida Department of Highway Safety and Motor Vehicles (DHSMV)?",
+          explanation: "In Florida, you must report a crash to DHSMV within 10 days if the crash resulted in injury, death, or property damage of $500 or more and a law enforcement officer did NOT investigate the crash. If police investigated the scene, they file the report.",
+          handbookSection: "Safe Driving — Crash Procedures",
+          difficulty: 3,
+          translations: [
+            { language: "zh", content: "何时必须向佛罗里达州公路安全和机动车辆部（DHSMV）报告事故？", explanation: "在佛罗里达州，如果事故造成人身伤害、死亡或财产损失达500美元或以上，且执法人员没有调查该事故，您必须在10天内向DHSMV报告。如果警察在现场进行了调查，则由他们提交报告。" },
+            { language: "es", content: "¿Cuándo debe reportar un accidente al Departamento de Seguridad Vial y Vehículos de Motor de Florida (DHSMV)?", explanation: "En Florida, debe reportar un accidente al DHSMV dentro de los 10 días si el accidente resultó en lesiones, muerte o daños a la propiedad de $500 o más y un oficial de la ley NO investigó el accidente. Si la policía investigó la escena, ellos presentan el informe." },
+          ],
+          options: [
+            {
+              content: "Within 10 days if the crash caused injury, death, or $500+ damage and police did not investigate",
+              isCorrect: true,
+              translations: [
+                { language: "zh", content: "如果事故造成伤害、死亡或500美元以上损失且警察未调查，则在10天内报告" },
+                { language: "es", content: "Dentro de los 10 días si el accidente causó lesiones, muerte o daños de $500+ y la policía no investigó" },
+              ],
+            },
+            {
+              content: "Only if someone was injured — property damage does not require a report",
+              isCorrect: false,
+              translations: [
+                { language: "zh", content: "仅当有人受伤时——财产损失不需要报告" },
+                { language: "es", content: "Solo si alguien resultó herido — los daños a la propiedad no requieren un informe" },
+              ],
+            },
+            {
+              content: "Within 24 hours for all crashes regardless of severity",
+              isCorrect: false,
+              translations: [
+                { language: "zh", content: "所有事故无论严重程度均在24小时内报告" },
+                { language: "es", content: "Dentro de las 24 horas para todos los accidentes independientemente de la gravedad" },
+              ],
+            },
+            {
+              content: "You are never required to report a crash — that is the police's job",
+              isCorrect: false,
+              translations: [
+                { language: "zh", content: "您永远不需要报告事故——那是警察的工作" },
+                { language: "es", content: "Nunca está obligado a reportar un accidente — ese es el trabajo de la policía" },
+              ],
+            },
+          ],
+        },
+        {
+          content: "Leaving the scene of a crash in Florida where someone was injured or killed is:",
+          explanation: "Leaving the scene of a crash involving injury or death (hit and run) is a felony in Florida. Penalties include up to 15 years in prison for leaving after a fatal crash. You are legally required to stop, identify yourself, and render aid.",
+          handbookSection: "Safe Driving — Crash Procedures",
+          difficulty: 2,
+          translations: [
+            { language: "zh", content: "在佛罗里达州，离开有人受伤或死亡的事故现场是：", explanation: "在佛罗里达州，离开涉及受伤或死亡的事故现场（肇事逃逸）是重罪。在致命事故后离开现场最高可判15年监禁。您在法律上有义务停车、表明身份并提供援助。" },
+            { language: "es", content: "Abandonar la escena de un accidente en Florida donde alguien resultó herido o muerto es:", explanation: "Abandonar la escena de un accidente que involucra lesiones o muerte (fuga) es un delito grave en Florida. Las penalidades incluyen hasta 15 años de prisión por abandonar la escena después de un accidente fatal. Está legalmente obligado a detenerse, identificarse y prestar ayuda." },
+          ],
+          options: [
+            {
+              content: "A felony — punishable by up to 15 years in prison for a fatal crash",
+              isCorrect: true,
+              translations: [
+                { language: "zh", content: "重罪——致命事故肇事逃逸最高可判15年监禁" },
+                { language: "es", content: "Un delito grave — punible con hasta 15 años de prisión por un accidente fatal" },
+              ],
+            },
+            {
+              content: "A minor traffic infraction with a small fine",
+              isCorrect: false,
+              translations: [
+                { language: "zh", content: "只是小额罚款的轻微交通违规" },
+                { language: "es", content: "Una infracción de tráfico menor con una pequeña multa" },
+              ],
+            },
+            {
+              content: "Only illegal if the damage exceeds $1,000",
+              isCorrect: false,
+              translations: [
+                { language: "zh", content: "仅当损失超过1000美元时才违法" },
+                { language: "es", content: "Solo es ilegal si el daño supera $1,000" },
+              ],
+            },
+            {
+              content: "A misdemeanor regardless of injury severity",
+              isCorrect: false,
+              translations: [
+                { language: "zh", content: "无论伤害严重程度均为轻罪" },
+                { language: "es", content: "Un delito menor independientemente de la gravedad de las lesiones" },
+              ],
+            },
+          ],
+        },
+        {
+          content: "What should a driver do when experiencing tire failure (blowout) on a Florida highway?",
+          explanation: "If you have a tire blowout, do NOT brake suddenly. Instead, hold the steering wheel firmly, ease off the gas gradually to slow down, steer straight, and gently guide the vehicle to the shoulder before stopping. Sudden braking during a blowout can cause a loss of control.",
+          handbookSection: "Safe Driving — Crash Procedures",
+          difficulty: 2,
+          translations: [
+            { language: "zh", content: "在佛罗里达州高速公路上发生轮胎爆胎时，驾驶员应该怎么做？", explanation: "如果您的轮胎爆胎，不要突然刹车。应该紧握方向盘，逐渐松开油门减速，保持直线行驶，然后轻轻将车辆引导到路肩后停车。爆胎时突然刹车可能导致失控。" },
+            { language: "es", content: "¿Qué debe hacer un conductor cuando experimenta una falla de neumático (pinchazo) en una autopista de Florida?", explanation: "Si tiene un reventón de neumático, NO frene repentinamente. En su lugar, sostenga firmemente el volante, quite el pie del acelerador gradualmente para reducir la velocidad, mantenga el rumbo recto y guíe suavemente el vehículo hacia el arcén antes de detenerse. Frenar bruscamente durante un reventón puede causar pérdida de control." },
+          ],
+          options: [
+            {
+              content: "Hold the wheel firmly, ease off the gas, steer straight, and pull to the shoulder",
+              isCorrect: true,
+              translations: [
+                { language: "zh", content: "紧握方向盘，逐渐松开油门，保持直线行驶，并驶向路肩" },
+                { language: "es", content: "Sostenga el volante firmemente, quite el pie del acelerador, mantenga el rumbo y diríjase al arcén" },
+              ],
+            },
+            {
+              content: "Apply the brakes hard and stop immediately",
+              isCorrect: false,
+              translations: [
+                { language: "zh", content: "猛踩刹车立即停车" },
+                { language: "es", content: "Aplique los frenos con fuerza y detenga inmediatamente" },
+              ],
+            },
+            {
+              content: "Accelerate to maintain speed until you can pull over safely",
+              isCorrect: false,
+              translations: [
+                { language: "zh", content: "加速保持车速直到可以安全靠边停车" },
+                { language: "es", content: "Acelere para mantener la velocidad hasta que pueda detenerse de forma segura" },
+              ],
+            },
+            {
+              content: "Turn on hazard lights and continue driving to the next exit",
+              isCorrect: false,
+              translations: [
+                { language: "zh", content: "打开危险警示灯并继续行驶到下一个出口" },
+                { language: "es", content: "Encienda las luces de emergencia y continúe conduciendo hasta la próxima salida" },
+              ],
+            },
+          ],
+        },
+        {
+          content: "In Florida, when must you use your headlights while driving?",
+          explanation: "Florida law requires headlights from sunset to sunrise. You must also use headlights when visibility is less than 1,000 feet ahead, during rain (when wipers are in use), and in other conditions of insufficient light. Running lights alone do not satisfy this requirement.",
+          handbookSection: "Safe Driving — Headlight Laws",
+          difficulty: 1,
+          translations: [
+            { language: "zh", content: "在佛罗里达州，驾驶时何时必须使用前大灯？", explanation: "佛罗里达州法律要求从日落到日出使用前大灯。当前方能见度不足1000英尺、雨中（使用雨刮器时）以及其他光线不足的情况下，也必须使用前大灯。仅使用行车灯不满足此要求。" },
+            { language: "es", content: "En Florida, ¿cuándo debe usar los faros delanteros mientras conduce?", explanation: "La ley de Florida requiere faros delanteros desde el atardecer hasta el amanecer. También debe usar faros cuando la visibilidad sea inferior a 1,000 pies hacia adelante, durante la lluvia (cuando los limpiaparabrisas estén en uso) y en otras condiciones de luz insuficiente. Las luces de circulación diurna solas no cumplen con este requisito." },
+          ],
+          options: [
+            {
+              content: "From sunset to sunrise and whenever visibility is less than 1,000 feet",
+              isCorrect: true,
+              translations: [
+                { language: "zh", content: "从日落到日出以及能见度不足1000英尺时" },
+                { language: "es", content: "Desde el atardecer hasta el amanecer y cuando la visibilidad sea inferior a 1,000 pies" },
+              ],
+            },
+            {
+              content: "Only after midnight when it is completely dark",
+              isCorrect: false,
+              translations: [
+                { language: "zh", content: "仅在完全黑暗的午夜之后" },
+                { language: "es", content: "Solo después de la medianoche cuando está completamente oscuro" },
+              ],
+            },
+            {
+              content: "Only during rain — headlights are optional at night",
+              isCorrect: false,
+              translations: [
+                { language: "zh", content: "仅在雨天——夜间前大灯是可选的" },
+                { language: "es", content: "Solo durante la lluvia — los faros son opcionales de noche" },
+              ],
+            },
+            {
+              content: "Running lights (daytime running lights) are sufficient at night",
+              isCorrect: false,
+              translations: [
+                { language: "zh", content: "夜间行车灯（日间行车灯）就足够了" },
+                { language: "es", content: "Las luces de circulación diurna son suficientes de noche" },
               ],
             },
           ],
