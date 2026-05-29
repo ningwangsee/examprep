@@ -210,6 +210,7 @@ Tailwind CSS v4 — uses `@import "tailwindcss"` in `globals.css` (not `@tailwin
 | Texas | 98 | 6 | ✅ Live |
 | New York | 100 | 6 | ✅ Live |
 | Florida | 73 | 6 | ✅ Live |
+| Pennsylvania | 65 | 6 | ✅ Live |
 
 **CA DMV topics breakdown:**
 | Topic | nameEn | Questions |
@@ -251,7 +252,17 @@ Tailwind CSS v4 — uses `@import "tailwindcss"` in `globals.css` (not `@tailwin
 | 5 | Driver License & Florida Laws | 12 | ✅ |
 | 6 | Safe Driving & Crash Prevention | 12 | ✅ |
 
-**Target question count:** ~90–100 per state (≈3–5× the actual test length). TX complete at 98 questions. NY complete at 100 questions. FL complete at 73 questions.
+**PA PennDOT topics breakdown (Pennsylvania Driver's Manual):**
+| Topic | nameEn | Questions | Status |
+|---|---|---|---|
+| 1 | Traffic Signals, Signs & Markings | 15 | ✅ |
+| 2 | Right-of-Way, Turns & Intersections | 10 | ✅ |
+| 3 | Speed, Space & Defensive Driving | 10 | ✅ |
+| 4 | Alcohol, Drugs & DUI | 10 | ✅ |
+| 5 | Driver License & PA Laws | 10 | ✅ |
+| 6 | Safe Driving & Sharing the Road | 10 | ✅ |
+
+**Target question count:** ~90–100 per state (≈3–5× the actual test length). TX complete at 98 questions. NY complete at 100 questions. FL complete at 73 questions. PA complete at 65 questions.
 
 ## Known Gotchas & Lessons Learned
 
@@ -322,6 +333,12 @@ All one-off insertion scripts live in `prisma/scripts/`. Existing scripts (for r
 | Script | Purpose |
 |---|---|
 | `gen-fl-seed.ts` | Generates `florida-dmv.ts` seed via Claude API auto-translation (73 questions, 6 topics) |
+
+**PA scripts** (all in `prisma/scripts/`):
+
+| Script | Purpose |
+|---|---|
+| `gen-pa-seed.ts` | Generates `pennsylvania-dmv.ts` seed via Claude API auto-translation (65 questions, 6 topics) |
 
 **TX scripts** (all in `prisma/scripts/`):
 

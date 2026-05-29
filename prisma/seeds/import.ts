@@ -5,6 +5,7 @@ import { californiaDMV } from "./california-dmv";
 import { texasDMV } from "./texas-dmv";
 import { newYorkDMV } from "./new-york-dmv";
 import { floridaDMV } from "./florida-dmv";
+import { pennsylvaniaDMV } from "./pennsylvania-dmv";
 
 const adapter = new PrismaBetterSqlite3({
   url: process.env.DATABASE_URL ?? "file:./dev.db",
@@ -80,6 +81,7 @@ async function main() {
   await importCategory(texasDMV);
   await importCategory(newYorkDMV);
   await importCategory(floridaDMV);
+  await importCategory(pennsylvaniaDMV);
   console.log("\n🎉 Import complete!");
 }
 
