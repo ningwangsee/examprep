@@ -182,7 +182,7 @@ export default function QuizClient({ questions, topicName, hasAiTutor, handbookU
                     {selected !== null && opt.id === selected && !opt.isCorrect && (
                       <span className="text-red-500 mt-0.5 shrink-0">✗</span>
                     )}
-                    {opt.content}
+                    <span>{opt.content}</span>
                   </span>
                 </button>
               );
