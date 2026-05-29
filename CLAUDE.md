@@ -142,7 +142,10 @@ Three approaches:
 Seed files live in `prisma/seeds/[state-name].ts`. Each exports a typed object with the full category+topics+questions structure. Add a new state by:
 1. Creating `prisma/seeds/[state]-dmv.ts`
 2. Importing and calling it in `prisma/seeds/import.ts`
-3. Running `npm run db:import`
+3. Adding an `ExamGuide` entry in `lib/exam-info.ts` (keyed by `category.nameEn`) — **do not skip this step**
+4. Running `npm run db:import`
+
+⚠️ **`lib/exam-info.ts` is required for every new state.** Missing it silently omits the entire category page guide (stats, What to Bring, How to Schedule, Tips, Handbook Chapters, Official Resources) and causes the quiz to show wrong pass/fail thresholds and California-hardcoded strings for all other states.
 
 After re-seeding, DB auto-increments restart — so topic/category IDs change. **Restart the dev server** after seeding, otherwise pages may show stale 404s for old IDs.
 
@@ -302,6 +305,7 @@ Tailwind CSS v4 — uses `@import "tailwindcss"` in `globals.css` (not `@tailwin
 - **Difficulty spread**: aim for ~40% easy (difficulty=1), ~40% medium (difficulty=2), ~20% hard (difficulty=3).
 - **handbookSection format**: `"Topic Name — Subtopic"` e.g. `"Traffic Controls — School Buses"`. Shown to users after wrong answers.
 - **Translation workflow (new states)**: Use `prisma/scripts/gen-ny-seed.ts` as a template. Script defines English questions → calls Claude API (`claude-opus-4-5`) to translate all topics in batches → writes complete trilingual seed file. Set `$env:ANTHROPIC_API_KEY` before running. See `gen-ny-seed.ts` for the pattern.
+- **After generating the seed**, also add an `ExamGuide` entry to `lib/exam-info.ts`. Required fields: `passThreshold` (integer), `keepPracticing` (I18n), `handbookTitle` (I18n), `handbookDesc` (I18n), plus `stats`, `whatToBring`, `howToSchedule`, `tips`, `handbookChapters`, `officialLinks`. The registry key must match `category.nameEn` exactly.
 - **Translation workflow (CA/TX legacy)**: Generate English questions → translate externally (Anthropic Chat / ChatGPT) → paste back translations → run insertion script → update seed file.
 
 ### Incremental Script File Locations

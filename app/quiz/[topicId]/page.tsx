@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { prisma } from "@/lib/prisma";
 import { getLang, ui, tr } from "@/lib/lang";
+import { examGuides } from "@/lib/exam-info";
 import QuizClient from "./QuizClient";
 
 export default async function QuizPage(props: { params: Promise<{ topicId: string }> }) {
@@ -31,6 +32,7 @@ export default async function QuizPage(props: { params: Promise<{ topicId: strin
 
   const topicName = tr(topic.name, topic.translations, lang, "name");
   const catName = tr(topic.category.name, topic.category.translations, lang, "name");
+  const guide = examGuides[topic.category.nameEn];
 
   const questions = topic.questions.map((q) => {
     const qTrans = q.translations.find((t) => t.language === lang);
@@ -68,6 +70,10 @@ export default async function QuizPage(props: { params: Promise<{ topicId: strin
         hasAiTutor={topic.category.hasAiTutor}
         handbookUrl={topic.handbookUrl ?? undefined}
         t={t}
+        passThreshold={guide?.passThreshold}
+        keepPracticing={guide?.keepPracticing[lang]}
+        handbookTitle={guide?.handbookTitle[lang]}
+        handbookDesc={guide?.handbookDesc[lang]}
       />
     </div>
   );

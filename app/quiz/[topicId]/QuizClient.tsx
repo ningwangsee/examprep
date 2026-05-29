@@ -20,9 +20,17 @@ type Props = {
   hasAiTutor: boolean;
   handbookUrl?: string;
   t: UiStrings;
+  /** State-specific pass threshold (0–100). Defaults to 83 if not provided. */
+  passThreshold?: number;
+  /** State-specific "keep practicing" message shown on results screen when not passed. */
+  keepPracticing?: string;
+  /** State-specific handbook title shown in right panel. */
+  handbookTitle?: string;
+  /** State-specific handbook description shown in right panel. */
+  handbookDesc?: string;
 };
 
-export default function QuizClient({ questions, topicName, hasAiTutor, handbookUrl, t }: Props) {
+export default function QuizClient({ questions, topicName, hasAiTutor, handbookUrl, t, passThreshold, keepPracticing, handbookTitle, handbookDesc }: Props) {
   const [current, setCurrent] = useState(0);
   const [selected, setSelected] = useState<number | null>(null);
   const [isCorrect, setIsCorrect] = useState<boolean | null>(null);
@@ -93,7 +101,7 @@ export default function QuizClient({ questions, topicName, hasAiTutor, handbookU
 
   if (finished) {
     const pct = Math.round((score / questions.length) * 100);
-    const passed = pct >= 83;
+    const passed = pct >= (passThreshold ?? 83);
     return (
       <div className="flex flex-col items-center justify-center py-20 text-center">
         <div className="text-6xl mb-4">{passed ? "🎉" : "📖"}</div>
@@ -109,7 +117,7 @@ export default function QuizClient({ questions, topicName, hasAiTutor, handbookU
           {pct}%
         </p>
         {!passed && (
-          <p className="text-sm text-gray-400 mb-6">{t.keepPracticing}</p>
+          <p className="text-sm text-gray-400 mb-6">{keepPracticing ?? t.keepPracticing}</p>
         )}
         <button
           onClick={() => {
@@ -265,8 +273,8 @@ export default function QuizClient({ questions, topicName, hasAiTutor, handbookU
         <div className="lg:col-span-2 space-y-4">
           {/* Handbook info */}
           <div className="bg-white rounded-2xl border border-gray-200 p-5">
-            <p className="text-sm font-semibold text-gray-700 mb-1">📚 {t.handbookTitle}</p>
-            <p className="text-xs text-gray-400 leading-relaxed">{t.handbookDesc}</p>
+            <p className="text-sm font-semibold text-gray-700 mb-1">📚 {handbookTitle ?? t.handbookTitle}</p>
+            <p className="text-xs text-gray-400 leading-relaxed">{handbookDesc ?? t.handbookDesc}</p>
             {handbookUrl && (
               <a
                 href={handbookUrl}
