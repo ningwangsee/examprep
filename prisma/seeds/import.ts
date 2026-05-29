@@ -1,5 +1,4 @@
 import "dotenv/config";
-import { PrismaBetterSqlite3 } from "@prisma/adapter-better-sqlite3";
 import { PrismaClient } from "../../app/generated/prisma/client";
 import { californiaDMV } from "./california-dmv";
 import { texasDMV } from "./texas-dmv";
@@ -7,10 +6,22 @@ import { newYorkDMV } from "./new-york-dmv";
 import { floridaDMV } from "./florida-dmv";
 import { pennsylvaniaDMV } from "./pennsylvania-dmv";
 
-const adapter = new PrismaBetterSqlite3({
-  url: process.env.DATABASE_URL ?? "file:./dev.db",
-});
-const prisma = new PrismaClient({ adapter });
+function createPrismaClient(): PrismaClient {
+  if (process.env.TURSO_DATABASE_URL) {
+    const { PrismaLibSql } = require("@prisma/adapter-libsql");
+    const adapter = new PrismaLibSql({
+      url: process.env.TURSO_DATABASE_URL,
+      authToken: process.env.TURSO_AUTH_TOKEN,
+    });
+    return new PrismaClient({ adapter });
+  }
+  const { PrismaBetterSqlite3 } = require("@prisma/adapter-better-sqlite3");
+  return new PrismaClient({
+    adapter: new PrismaBetterSqlite3({ url: process.env.DATABASE_URL ?? "file:./dev.db" }),
+  });
+}
+
+const prisma = createPrismaClient();
 
 async function importCategory(data: typeof californiaDMV) {
   // Check if already exists
