@@ -10,7 +10,11 @@
     "db:seed": "npx tsx prisma/seed.ts",
     "db:import": "npx tsx prisma/seeds/import.ts",
     "db:translate": "npx tsx prisma/scripts/translate-questions.ts",
-    "db:populate": "npx tsx prisma/scripts/populate-translations.ts"
+    "db:populate": "npx tsx prisma/scripts/populate-translations.ts",
+    "db:shuffle": "npx tsx prisma/scripts/shuffle-options.ts",
+    "validate:links": "npx tsx prisma/scripts/validate-links.ts",
+    "validate:db": "npx tsx prisma/scripts/validate-db.ts",
+    "validate": "npm run validate:db && npm run validate:links"
   },
   "prisma": {
     "seed": "npx tsx prisma/seed.ts"
