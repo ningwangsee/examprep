@@ -77,7 +77,7 @@ export default async function CategoryPage(props: { params: Promise<{ id: string
               🎯 {t.startPracticing}
             </a>
             <a
-              href={guide.officialLinks.find((l) => l.label.en === "Driver Handbook (Online)")?.url}
+              href={guide.handbookUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="bg-white border border-gray-200 text-gray-700 text-sm px-5 py-2.5 rounded-xl font-medium hover:bg-gray-50 transition-colors"

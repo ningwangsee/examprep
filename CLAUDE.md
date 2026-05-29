@@ -117,7 +117,7 @@ All text stored in English base fields; translations in separate tables:
 
 Supported languages: `"en"` (base), `"zh"` (Chinese), `"es"` (Spanish)
 
-CA DMV officially offers tests in all three languages. All 111 CA DMV questions (content, explanation, all options) have zh + es translations stored in the DB.
+CA DMV officially offers tests in all three languages. All CA DMV questions (content, explanation, all options) have zh + es translations stored in the DB.
 
 **Language selection** is stored in a `lang` cookie (1-year expiry, set by `LanguageSwitcher`). Server components read it via `getLang()` from `lib/lang.ts`. UI strings live in the `ui{}` dict in `lib/lang.ts`. Translated DB values are resolved with the `tr()` helper: `tr(base, translations, lang, field)`.
 
@@ -209,21 +209,22 @@ Tailwind CSS v4 — uses `@import "tailwindcss"` in `globals.css` (not `@tailwin
 
 | State | Questions | Topics | Status |
 |---|---|---|---|
-| California | 111 | 6 | ✅ Live |
+| California | 126 | 7 | ✅ Live |
 | Texas | 98 | 6 | ✅ Live |
-| New York | 100 | 6 | ✅ Live |
-| Florida | 73 | 6 | ✅ Live |
+| New York | 106 | 6 | ✅ Live |
+| Florida | 96 | 6 | ✅ Live |
 | Pennsylvania | 136 | 8 | ✅ Live |
 
 **CA DMV topics breakdown:**
 | Topic | nameEn | Questions |
 |---|---|---|
-| 1 | Traffic Signs & Signals | ~20 |
-| 2 | Right-of-Way Rules | ~20 |
-| 3 | Speed Limits | ~15 |
-| 4 | Alcohol & Drugs | ~15 |
-| 5 | License Requirements | ~10 |
-| 6 | Safe Driving & Parking | ~31 |
+| 1 | Traffic Signs & Signals | 23 |
+| 2 | Right-of-Way Rules | 18 |
+| 3 | Speed Limits | 15 |
+| 4 | DUI & Alcohol Laws | 12 |
+| 5 | Lane Usage & Passing | 12 |
+| 6 | Safe Driving & Parking | 31 |
+| 7 | Getting Your License | 15 |
 
 **TX DMV topics breakdown (DL-7 Jan 2026):**
 | Topic | nameEn | Questions | Status |
@@ -241,19 +242,19 @@ Tailwind CSS v4 — uses `@import "tailwindcss"` in `globals.css` (not `@tailwin
 | 1 | Traffic Control & Road Signs | 20 | ✅ |
 | 2 | Right-of-Way, Intersections & Turns | 18 | ✅ |
 | 3 | Speed, Space & Defensive Driving | 17 | ✅ |
-| 4 | Alcohol & Other Drugs | 15 | ✅ |
-| 5 | Driver Licensing & Vehicle Laws | 15 | ✅ |
-| 6 | Sharing the Road & Crash Procedures | 15 | ✅ |
+| 4 | Alcohol & Other Drugs | 17 | ✅ |
+| 5 | Driver Licensing & Vehicle Laws | 17 | ✅ |
+| 6 | Sharing the Road & Crash Procedures | 17 | ✅ |
 
 **FL DHSMV topics breakdown (Florida Driver License Handbook):**
 | Topic | nameEn | Questions | Status |
 |---|---|---|---|
 | 1 | Road Signs & Traffic Controls | 15 | ✅ |
-| 2 | Right-of-Way & Intersections | 12 | ✅ |
-| 3 | Speed Limits & Special Zones | 10 | ✅ |
-| 4 | Alcohol, Drugs & DUI | 12 | ✅ |
-| 5 | Driver License & Florida Laws | 12 | ✅ |
-| 6 | Safe Driving & Crash Prevention | 12 | ✅ |
+| 2 | Right-of-Way & Intersections | 16 | ✅ |
+| 3 | Speed Limits & Special Zones | 17 | ✅ |
+| 4 | Alcohol, Drugs & DUI | 16 | ✅ |
+| 5 | Driver License & Florida Laws | 16 | ✅ |
+| 6 | Safe Driving & Crash Prevention | 16 | ✅ |
 
 **PA PennDOT topics breakdown (Pennsylvania Driver's Manual):**
 | Topic | nameEn | Questions | Status |
@@ -267,7 +268,7 @@ Tailwind CSS v4 — uses `@import "tailwindcss"` in `globals.css` (not `@tailwin
 | 7 | Driving Record Information | 16 | ✅ |
 | 8 | Laws and Related Issues | 16 | ✅ |
 
-**Target question count:** 90–140 per state (≈3–5× the actual test length). TX: 98q ✅. NY: 100q ✅. CA: 111q ✅. FL: 73q (needs expansion to 90+). PA: 136q ✅.
+**Target question count:** 90–140 per state (≈3–5× the actual test length). TX: 98q ✅. NY: 106q ✅. CA: 126q ✅. FL: 96q ✅. PA: 136q ✅.
 
 ## Quality & Validation
 

@@ -33,6 +33,8 @@ export type ExamGuide = {
   handbookTitle: I18n;
   /** Shown in quiz right panel body. */
   handbookDesc: I18n;
+  /** Direct URL for the "Read Handbook" button on the category page. */
+  handbookUrl: string;
   stats: { label: I18n; value: string }[];
   whatToBring: { item: I18n; note?: I18n }[];
   howToSchedule: { step: I18n; detail: I18n }[];
@@ -60,6 +62,7 @@ const californiaDMV: ExamGuide = {
     zh: "所有题目均基于加州官方驾照手册，答错时请查阅对应章节加强记忆。",
     es: "Todas las preguntas están basadas en el Manual oficial del Conductor de California.",
   },
+  handbookUrl: "https://www.dmv.ca.gov/portal/handbook/california-driver-handbook/",
 
   stats: [
     {
@@ -327,6 +330,7 @@ const texasDMV: ExamGuide = {
     zh: "所有题目均基于德州官方驾驶员手册（DL-7），答错时请查阅对应章节加强记忆。",
     es: "Todas las preguntas están basadas en el Manual oficial del Conductor de Texas (DL-7).",
   },
+  handbookUrl: "https://www.dps.texas.gov/internetforms/Forms/DL-7.pdf",
 
   stats: [
     {
@@ -474,6 +478,7 @@ const newYorkDMV: ExamGuide = {
     zh: "所有题目均基于纽约州官方驾驶员手册，答错时请查阅对应章节加强记忆。",
     es: "Todas las preguntas están basadas en el Manual oficial del Conductor del Estado de Nueva York.",
   },
+  handbookUrl: "https://dmv.ny.gov/new-york-state-drivers-manual-practice-tests",
 
   stats: [
     {
@@ -741,6 +746,7 @@ const floridaDMV: ExamGuide = {
     zh: "所有题目均基于佛罗里达州官方驾照手册，答错时请查阅对应章节加强记忆。",
     es: "Todas las preguntas están basadas en el Manual oficial de Licencia de Conducir de Florida.",
   },
+  handbookUrl: "https://www.flhsmv.gov/resources/handbooks-manuals/",
 
   stats: [
     {
@@ -998,6 +1004,7 @@ const pennsylvaniaDMV: ExamGuide = {
     zh: "所有题目均基于宾夕法尼亚州官方驾驶员手册，答错时请查阅对应章节加强记忆。",
     es: "Todas las preguntas están basadas en el Manual oficial del Conductor de Pennsylvania.",
   },
+  handbookUrl: "https://www.pa.gov/agencies/dmv/driver-services/pennsylvania-drivers-manual/online-drivers-manual/",
 
   stats: [
     {
