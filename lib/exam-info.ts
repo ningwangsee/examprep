@@ -549,9 +549,9 @@ const newYorkDMV: ExamGuide = {
     {
       step: { en: "Make an appointment online (recommended)", zh: "在线预约（推荐）", es: "Hacer una cita en línea (recomendado)" },
       detail: {
-        en: "Visit dmv.ny.gov/offices/make-appointment-dmv to book a knowledge test appointment at your local DMV.",
-        zh: "访问 dmv.ny.gov/offices/make-appointment-dmv 在当地 DMV 预约笔试。",
-        es: "Visite dmv.ny.gov/offices/make-appointment-dmv para reservar una cita en su DMV local.",
+        en: "Visit dmv.ny.gov/appointment to book a knowledge test appointment at your local DMV.",
+        zh: "访问 dmv.ny.gov/appointment 在当地 DMV 预约笔试。",
+        es: "Visite dmv.ny.gov/appointment para reservar una cita en su DMV local.",
       },
     },
     {
@@ -612,8 +612,8 @@ const newYorkDMV: ExamGuide = {
       emoji: "🪪",
     },
     {
-      title: { en: "Ch.2 Before You Get Your License", zh: "第2章：考证前准备", es: "Cap.2 Antes de Obtener su Licencia" },
-      url: "https://dmv.ny.gov/new-york-state-drivers-manual-and-practice-tests/chapter-2-before-you-get-your-license",
+      title: { en: "Ch.2 How to Keep Your License", zh: "第2章：如何保留驾照", es: "Cap.2 Cómo Mantener su Licencia" },
+      url: "https://dmv.ny.gov/new-york-state-drivers-manual-and-practice-tests/chapter-2-how-to-keep-your-license",
       emoji: "📝",
     },
     {
@@ -627,8 +627,8 @@ const newYorkDMV: ExamGuide = {
       emoji: "↪️",
     },
     {
-      title: { en: "Ch.7 Passing & Lane Changes", zh: "第7章：超车与变道", es: "Cap.7 Adelantamiento y Cambio de Carril" },
-      url: "https://dmv.ny.gov/new-york-state-drivers-manual-and-practice-tests/chapter-7-passing",
+      title: { en: "Ch.6 Passing", zh: "第6章：超车", es: "Cap.6 Adelantamiento" },
+      url: "https://dmv.ny.gov/new-york-state-drivers-manual-and-practice-tests/chapter-6-passing",
       emoji: "🛣️",
     },
     {
@@ -642,8 +642,8 @@ const newYorkDMV: ExamGuide = {
       emoji: "🚫",
     },
     {
-      title: { en: "Ch.10 Vehicle & Equipment", zh: "第10章：车辆与设备", es: "Cap.10 Vehículo y Equipos" },
-      url: "https://dmv.ny.gov/new-york-state-drivers-manual-and-practice-tests/chapter-10-vehicle-and-equipment",
+      title: { en: "Ch.10 Special Driving Conditions", zh: "第10章：特殊驾驶条件", es: "Cap.10 Condiciones Especiales de Manejo" },
+      url: "https://dmv.ny.gov/new-york-state-drivers-manual-and-practice-tests/chapter-10-special-driving-conditions",
       emoji: "🔧",
     },
     {
@@ -652,8 +652,8 @@ const newYorkDMV: ExamGuide = {
       emoji: "🚶",
     },
     {
-      title: { en: "Ch.12 Special Conditions", zh: "第12章：特殊驾驶条件", es: "Cap.12 Condiciones Especiales" },
-      url: "https://dmv.ny.gov/new-york-state-drivers-manual-and-practice-tests/chapter-12-special-conditions",
+      title: { en: "Ch.12 Traffic Crashes", zh: "第12章：交通事故", es: "Cap.12 Accidentes de Tránsito" },
+      url: "https://dmv.ny.gov/new-york-state-drivers-manual-and-practice-tests/chapter-12-if-you-are-traffic-crash",
       emoji: "⛈️",
     },
   ],
@@ -671,7 +671,7 @@ const newYorkDMV: ExamGuide = {
     },
     {
       label: { en: "Driver's Manual (Online)", zh: "驾驶员手册（在线版）", es: "Manual del Conductor (En línea)" },
-      url: "https://dmv.ny.gov/new-york-state-drivers-manual-and-practice-tests/",
+      url: "https://dmv.ny.gov/new-york-state-drivers-manual-practice-tests",
       description: {
         en: "Full New York State Driver's Manual with practice tests — read chapter by chapter",
         zh: "完整的纽约州驾驶员手册（含练习题）——按章节在线阅读",
@@ -681,7 +681,7 @@ const newYorkDMV: ExamGuide = {
     },
     {
       label: { en: "Schedule Appointment", zh: "预约考试", es: "Programar Cita" },
-      url: "https://dmv.ny.gov/offices/make-appointment-dmv",
+      url: "https://dmv.ny.gov/appointment",
       description: {
         en: "Book your knowledge test appointment at a local NY DMV office",
         zh: "在当地纽约 DMV 办公室预约笔试",
@@ -691,7 +691,7 @@ const newYorkDMV: ExamGuide = {
     },
     {
       label: { en: "Find a DMV Office", zh: "查找 DMV 办公室", es: "Encontrar una Oficina DMV" },
-      url: "https://dmv.ny.gov/offices/find-dmv-office",
+      url: "https://dmv.ny.gov/office-locations",
       description: {
         en: "Find the NY DMV office nearest to you",
         zh: "查找离您最近的纽约 DMV 办公室",
@@ -701,7 +701,7 @@ const newYorkDMV: ExamGuide = {
     },
     {
       label: { en: "6-Point ID Guide", zh: "6分身份证明指南", es: "Guía de ID de 6 Puntos" },
-      url: "https://dmv.ny.gov/id-document-requirements",
+      url: "https://dmv.ny.gov/driver-license/finding-enough-proof-of-id",
       description: {
         en: "Learn which documents qualify and how many points each is worth",
         zh: "了解哪些文件符合条件以及各文件的分值",
@@ -711,7 +711,7 @@ const newYorkDMV: ExamGuide = {
     },
     {
       label: { en: "Check Office Wait Times", zh: "查看办公室等待时间", es: "Ver Tiempos de Espera" },
-      url: "https://dmv.ny.gov/offices/find-dmv-office",
+      url: "https://dmv.ny.gov/office-locations",
       description: {
         en: "See current wait times at NY DMV offices before you go",
         zh: "出发前查看各纽约 DMV 办公室当前等待时长",
@@ -968,7 +968,7 @@ const floridaDMV: ExamGuide = {
     },
     {
       label: { en: "FL Traffic Laws (FLHSMV)", zh: "佛州交通法规", es: "Leyes de Tránsito de FL" },
-      url: "https://www.flhsmv.gov/safety-programs/",
+      url: "https://www.flhsmv.gov/driver-licenses-id-cards/",
       description: {
         en: "Florida traffic safety programs and driving laws",
         zh: "佛罗里达州交通安全计划与驾驶法规",
@@ -1162,12 +1162,12 @@ const pennsylvaniaDMV: ExamGuide = {
     },
     {
       title: { en: "Sharing the Road", zh: "共享道路", es: "Compartir la Vía" },
-      url: "https://www.pa.gov/agencies/dmv/driver-services/pennsylvania-drivers-manual/online-drivers-manual/sharing-the-road",
+      url: "https://www.pa.gov/agencies/dmv/driver-services/pennsylvania-drivers-manual/online-drivers-manual/#sharing",
       emoji: "🚶",
     },
     {
       title: { en: "Vehicle Inspection & Insurance", zh: "车辆检验与保险", es: "Inspección del Vehículo y Seguro" },
-      url: "https://www.pa.gov/agencies/dmv/driver-services/pennsylvania-drivers-manual/online-drivers-manual/insurance-and-financial-responsibility",
+      url: "https://www.pa.gov/agencies/dmv/driver-services/pennsylvania-drivers-manual/online-drivers-manual/#insurance",
       emoji: "📋",
     },
   ],
@@ -1205,7 +1205,7 @@ const pennsylvaniaDMV: ExamGuide = {
     },
     {
       label: { en: "Find a Driver License Center", zh: "查找驾照中心", es: "Encontrar un Centro de Licencias" },
-      url: "https://www.pa.gov/agencies/dmv/driver-services/driver-license-centers/",
+      url: "https://www.pa.gov/agencies/dmv/driver-services/",
       description: {
         en: "Find the PennDOT Driver License Center nearest to you",
         zh: "查找离您最近的 PennDOT 驾照中心",
@@ -1215,7 +1215,7 @@ const pennsylvaniaDMV: ExamGuide = {
     },
     {
       label: { en: "PA Point System", zh: "宾州积分制度", es: "Sistema de Puntos de PA" },
-      url: "https://www.pa.gov/agencies/dmv/driver-services/driver-licensing/points-and-suspensions/",
+      url: "https://www.pa.gov/agencies/dmv/driver-services/driver-licensing/",
       description: {
         en: "Learn about PA's driver point system and how violations affect your license",
         zh: "了解宾州驾驶积分制度及违规对驾照的影响",
