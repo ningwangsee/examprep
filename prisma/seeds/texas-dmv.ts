@@ -32,7 +32,7 @@ export const texasDMV = {
       name: "Road Signs & Markers",
       nameEn: "Road Signs & Markers",
       description: "Sign shapes, colors, regulatory signs, warning signs, guide signs, railroad signs",
-      handbookUrl: "https://www.dps.texas.gov/internetforms/Forms/DL-7.pdf",
+      handbookUrl: "https://www.dps.texas.gov/internetforms/Forms/DL-7.pdf#page=31",
       translations: [
         { language: "zh", name: "道路标志与标记", description: "标志形状、颜色、法规标志、警告标志、指引标志、铁路标志" },
         { language: "es", name: "Señales y Marcas Viales", description: "Formas y colores de señales, señales regulatorias, preventivas, informativas y ferroviarias" },
@@ -366,7 +366,7 @@ export const texasDMV = {
       name: "Traffic Laws & Right-of-Way",
       nameEn: "Traffic Laws & Right-of-Way",
       description: "Right-of-way rules, turning, passing, lane changes, parking restrictions",
-      handbookUrl: "https://www.dps.texas.gov/internetforms/Forms/DL-7.pdf",
+      handbookUrl: "https://www.dps.texas.gov/internetforms/Forms/DL-7.pdf#page=26",
       translations: [
         { language: "zh", name: "交通法规与优先通行权", description: "优先通行规则、转弯、超车、变道、停车限制" },
         { language: "es", name: "Leyes de Tránsito y Derecho de Paso", description: "Reglas de preferencia, giros, adelantamiento, cambios de carril, restricciones de estacionamiento" },
@@ -686,7 +686,7 @@ export const texasDMV = {
       name: "Speed Limits & Special Situations",
       nameEn: "Speed Limits & Special Situations",
       description: "Texas speed laws, school zones, work zones, night driving, special road conditions",
-      handbookUrl: "https://www.dps.texas.gov/internetforms/Forms/DL-7.pdf",
+      handbookUrl: "https://www.dps.texas.gov/internetforms/Forms/DL-7.pdf#page=51",
       translations: [
         { language: "zh", name: "限速规定与特殊驾驶情况", description: "德州限速法规、学区、施工区、夜间驾驶、特殊路况" },
         { language: "es", name: "Límites de Velocidad y Situaciones Especiales", description: "Leyes de velocidad de Texas, zonas escolares, zonas de obras, conducción nocturna, condiciones especiales" },
@@ -955,7 +955,7 @@ export const texasDMV = {
       name: "Alcohol & Drugs",
       nameEn: "Alcohol & Drugs",
       description: "DWI laws, BAC limits, ALR program, zero tolerance for minors, penalties",
-      handbookUrl: "https://www.dps.texas.gov/internetforms/Forms/DL-7.pdf",
+      handbookUrl: "https://www.dps.texas.gov/internetforms/Forms/DL-7.pdf#page=61",
       translations: [
         { language: "zh", name: "酒精与药物", description: "醉驾法规、BAC 限制、ALR 行政吊销程序、未成年人零容忍、处罚规定" },
         { language: "es", name: "Alcohol y Drogas", description: "Leyes de DWI, límites de BAC, programa ALR, tolerancia cero para menores, penalidades" },
@@ -1224,7 +1224,7 @@ export const texasDMV = {
       name: "Licensing & Responsibilities",
       nameEn: "Licensing & Responsibilities",
       description: "License requirements, provisional license rules, vehicle inspection, safety responsibility, accident reporting",
-      handbookUrl: "https://www.dps.texas.gov/internetforms/Forms/DL-7.pdf",
+      handbookUrl: "https://www.dps.texas.gov/internetforms/Forms/DL-7.pdf#page=7",
       translations: [
         { language: "zh", name: "驾照要求与驾驶人责任", description: "驾照申请要求、临时驾照规则、车辆检验、安全责任、事故报告" },
         { language: "es", name: "Licencia y Responsabilidades", description: "Requisitos de licencia, reglas de licencia provisional, inspección vehicular, responsabilidad de seguridad, reporte de accidentes" },
@@ -1493,7 +1493,7 @@ export const texasDMV = {
       name: "Safety: Pedestrians, Bicycles & Crashes",
       nameEn: "Safety: Pedestrians, Bicycles & Crashes",
       description: "Pedestrian right-of-way, bicycle laws, crash procedures, Move Over law, child safety seats",
-      handbookUrl: "https://www.dps.texas.gov/internetforms/Forms/DL-7.pdf",
+      handbookUrl: "https://www.dps.texas.gov/internetforms/Forms/DL-7.pdf#page=65",
       translations: [
         { language: "zh", name: "安全：行人、自行车与事故处理", description: "行人优先权、自行车法规、事故处理程序、避让执法车辆法规、儿童安全座椅" },
         { language: "es", name: "Seguridad: Peatones, Bicicletas y Accidentes", description: "Prioridad peatonal, leyes de bicicletas, procedimientos de accidentes, ley de ceder el paso, sillas de seguridad infantiles" },
