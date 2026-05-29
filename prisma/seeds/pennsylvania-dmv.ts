@@ -41,7 +41,7 @@ export const pennsylvaniaDMV = {
         {
           content: "What is the only octagon-shaped (8-sided) sign you will see on the road?",
           explanation: "The STOP sign is the only octagon-shaped sign. Its unique shape allows drivers to recognize it even when it is covered by snow or obscured by vegetation.",
-          handbookSection: "Signs — Sign Shapes",
+          handbookSection: "Signals, Signs & Markings — Sign Shapes",
           difficulty: 1,
           translations: [
             { language: "zh", content: "在道路上唯一的八边形标志是什么？", explanation: "「停车」标志是唯一的八边形标志。其独特的形状使驾驶员即使在标志被积雪覆盖或被植被遮挡时也能识别它。" },
@@ -85,7 +85,7 @@ export const pennsylvaniaDMV = {
         {
           content: "What is the only pennant-shaped (horizontal triangle) warning sign?",
           explanation: "The NO PASSING ZONE sign is the only pennant-shaped (like a pennant flag, horizontal triangle) sign. It marks the beginning of a no-passing zone and is placed on the left side of the road.",
-          handbookSection: "Signs — Sign Shapes",
+          handbookSection: "Signals, Signs & Markings — Sign Shapes",
           difficulty: 2,
           translations: [
             { language: "zh", content: "唯一的三角旗形（水平三角形）警告标志是什么？", explanation: "「禁止超车区」标志是唯一的三角旗形（类似三角旗，水平三角形）标志。它标示禁止超车区的起点，并设置在道路左侧。" },
@@ -129,7 +129,7 @@ export const pennsylvaniaDMV = {
         {
           content: "What shape and color are warning signs in Pennsylvania?",
           explanation: "Warning signs are diamond-shaped with a yellow background and black symbols or text. They warn drivers of potentially hazardous conditions or situations ahead.",
-          handbookSection: "Signs — Sign Shapes",
+          handbookSection: "Signals, Signs & Markings — Sign Shapes",
           difficulty: 1,
           translations: [
             { language: "zh", content: "宾夕法尼亚州的警告标志是什么形状和颜色？", explanation: "警告标志为菱形，黄色背景配黑色符号或文字。它们警告驾驶员前方可能存在危险状况或情况。" },
@@ -173,7 +173,7 @@ export const pennsylvaniaDMV = {
         {
           content: "What shape and color are work zone signs in Pennsylvania?",
           explanation: "Work zone signs are diamond-shaped with an orange background and black symbols. Orange specifically indicates construction and maintenance work zones.",
-          handbookSection: "Signs — Work Zones",
+          handbookSection: "Signals, Signs & Markings — Work Zones",
           difficulty: 1,
           translations: [
             { language: "zh", content: "宾夕法尼亚州的施工区标志是什么形状和颜色？", explanation: "施工区标志为菱形，橙色背景配黑色符号。橙色专门表示施工和维护作业区。" },
@@ -217,7 +217,7 @@ export const pennsylvaniaDMV = {
         {
           content: "What does a flashing yellow traffic signal mean in Pennsylvania?",
           explanation: "A flashing yellow signal means CAUTION. You should slow down, look carefully in all directions, and proceed with care. You are not required to stop.",
-          handbookSection: "Signals — Flashing Signals",
+          handbookSection: "Signals, Signs & Markings — Flashing Signals",
           difficulty: 1,
           translations: [
             { language: "zh", content: "在宾夕法尼亚州，闪烁的黄色交通信号灯表示什么？", explanation: "闪烁的黄色信号灯表示「注意」。您应减速，仔细观察各个方向，然后小心通过。您不需要停车。" },
@@ -261,7 +261,7 @@ export const pennsylvaniaDMV = {
         {
           content: "What does a flashing red traffic signal mean?",
           explanation: "A flashing red signal must be treated the same as a stop sign. You must come to a complete stop, yield to all cross traffic and pedestrians, and proceed when safe.",
-          handbookSection: "Signals — Flashing Signals",
+          handbookSection: "Signals, Signs & Markings — Flashing Signals",
           difficulty: 1,
           translations: [
             { language: "zh", content: "闪烁的红色交通信号灯表示什么？", explanation: "闪烁的红色信号灯必须视同停车标志处理。您必须完全停车，让行所有横向交通和行人，安全时方可通过。" },
@@ -305,7 +305,7 @@ export const pennsylvaniaDMV = {
         {
           content: "What does a flashing yellow arrow signal mean?",
           explanation: "A flashing yellow arrow means you may turn in the arrow's direction but you must first yield to oncoming traffic and pedestrians. It is a permissive turn signal, not protected.",
-          handbookSection: "Signals — Arrow Signals",
+          handbookSection: "Signals, Signs & Markings — Arrow Signals",
           difficulty: 2,
           translations: [
             { language: "zh", content: "闪烁的黄色箭头信号灯表示什么？", explanation: "闪烁的黄色箭头表示您可以按箭头方向转弯，但必须先让行对向来车和行人。这是允许转弯信号，而非受保护转弯。" },
@@ -349,7 +349,7 @@ export const pennsylvaniaDMV = {
         {
           content: "If a traffic signal is not functioning, how should you treat the intersection?",
           explanation: "When a traffic signal is not functioning, treat the intersection as a four-way stop. All drivers must stop and yield the right-of-way based on stop sign rules.",
-          handbookSection: "Signals — Non-Functioning Signals",
+          handbookSection: "Signals, Signs & Markings — Non-Functioning Signals",
           difficulty: 2,
           translations: [
             { language: "zh", content: "如果交通信号灯不工作，您应该如何处理该路口？", explanation: "当交通信号灯不工作时，应将该路口视为四向停车。所有驾驶员必须停车，并根据停车标志规则让行。" },
@@ -393,7 +393,7 @@ export const pennsylvaniaDMV = {
         {
           content: "What does a solid yellow center line on your side of the road mean?",
           explanation: "A solid yellow center line on your side of the road means you may not cross the line to pass vehicles. The line on your side dictates whether you may pass.",
-          handbookSection: "Pavement Markings — Center Lines",
+          handbookSection: "Signals, Signs & Markings — Center Lines",
           difficulty: 1,
           translations: [
             { language: "zh", content: "您这侧道路上的实线黄色中心线表示什么？", explanation: "您这侧道路上的实线黄色中心线表示您不得越线超车。您这侧的线决定了您是否可以超车。" },
@@ -437,7 +437,7 @@ export const pennsylvaniaDMV = {
         {
           content: "In Pennsylvania, what color lines separate traffic moving in opposite directions?",
           explanation: "Yellow lines separate traffic moving in opposite directions. White lines separate lanes of traffic moving in the same direction.",
-          handbookSection: "Pavement Markings — Lane Lines",
+          handbookSection: "Signals, Signs & Markings — Lane Lines",
           difficulty: 1,
           translations: [
             { language: "zh", content: "在宾夕法尼亚州，什么颜色的线分隔相向行驶的车流？", explanation: "黄色线分隔相向行驶的车流。白色线分隔同向行驶的车道。" },
@@ -481,7 +481,7 @@ export const pennsylvaniaDMV = {
         {
           content: "What does the pentagon (five-sided) shaped sign indicate?",
           explanation: "The pentagon-shaped sign is the only five-sided sign used on roadways. It indicates a school zone or school crossing, alerting drivers to watch for children.",
-          handbookSection: "Signs — Sign Shapes",
+          handbookSection: "Signals, Signs & Markings — Sign Shapes",
           difficulty: 1,
           translations: [
             { language: "zh", content: "五边形标志表示什么？", explanation: "五边形标志是道路上唯一使用的五边形标志。它表示学校区域或学校过路区，提醒驾驶员注意儿童。" },
@@ -525,7 +525,7 @@ export const pennsylvaniaDMV = {
         {
           content: "What do green signs with white lettering indicate?",
           explanation: "Green guide signs with white text provide direction and distance information. They show routes to destinations, exits, distances, and highway route markers.",
-          handbookSection: "Signs — Guide Signs",
+          handbookSection: "Signals, Signs & Markings — Guide Signs",
           difficulty: 1,
           translations: [
             { language: "zh", content: "带有白色字母的绿色标志表示什么？", explanation: "带有白色文字的绿色指路标志提供方向和距离信息。它们显示通往目的地的路线、出口、距离和公路路线标记。" },
@@ -569,7 +569,7 @@ export const pennsylvaniaDMV = {
         {
           content: "What must you do when a pedestrian signal shows a steady DON'T WALK (or hand) indicator?",
           explanation: "A steady DON'T WALK signal or hand means you should not begin crossing the street. If you are already in the street when it changes to flashing, you should finish crossing.",
-          handbookSection: "Signals — Pedestrian Signals",
+          handbookSection: "Signals, Signs & Markings — Pedestrian Signals",
           difficulty: 1,
           translations: [
             { language: "zh", content: "当行人信号灯显示稳定的「禁止通行」（或手形）指示时，您必须怎么做？", explanation: "稳定的「禁止通行」信号或手形图案表示您不应开始过马路。如果您已经在街上且信号变为闪烁，您应完成过马路。" },
@@ -613,7 +613,7 @@ export const pennsylvaniaDMV = {
         {
           content: "On Interstate highways in Pennsylvania, what do even-numbered routes generally indicate?",
           explanation: "Even-numbered Interstate routes run east-west. Odd-numbered routes run north-south. This system helps drivers navigate directionally across the country.",
-          handbookSection: "Signs — Interstate Routes",
+          handbookSection: "Signals, Signs & Markings — Interstate Routes",
           difficulty: 2,
           translations: [
             { language: "zh", content: "在宾夕法尼亚州的州际公路上，偶数编号的路线通常表示什么？", explanation: "偶数编号的州际公路为东西走向。奇数编号的路线为南北走向。这一系统帮助驾驶员在全国范围内进行方向导航。" },
@@ -657,7 +657,7 @@ export const pennsylvaniaDMV = {
         {
           content: "When driving in a posted work zone in Pennsylvania, what additional requirement applies to headlights?",
           explanation: "In Pennsylvania, headlights are required to be on in all posted work zones, even during daylight. Failure to use headlights in a work zone results in an additional $25 fine.",
-          handbookSection: "Signs — Work Zones",
+          handbookSection: "Signals, Signs & Markings — Work Zones",
           difficulty: 2,
           translations: [
             { language: "zh", content: "在宾夕法尼亚州的指定施工区内驾驶时，关于车头灯有什么额外要求？", explanation: "在宾夕法尼亚州，在所有指定施工区内必须始终开启车头灯，即使在白天也是如此。在施工区内未使用车头灯将被额外罚款25美元。" },
@@ -714,7 +714,7 @@ export const pennsylvaniaDMV = {
         {
           content: "At an uncontrolled intersection where two vehicles arrive at the same time, who must yield?",
           explanation: "At an uncontrolled intersection where vehicles arrive simultaneously, the driver on the left must yield to the driver on the right. The vehicle on the right has the right-of-way.",
-          handbookSection: "Driving Skills — Right-of-Way",
+          handbookSection: "Everyday Driving Skills — Right-of-Way",
           difficulty: 1,
           translations: [
             { language: "zh", content: "在无控制交叉路口，两辆车同时到达时，谁必须让行？", explanation: "在无控制交叉路口，当车辆同时到达时，左侧的驾驶员必须让行给右侧的驾驶员。右侧车辆拥有优先通行权。" },
@@ -758,7 +758,7 @@ export const pennsylvaniaDMV = {
         {
           content: "When turning left at an intersection, you must yield to:",
           explanation: "When making a left turn, you must yield to all oncoming traffic (vehicles going straight or turning right) and to pedestrians in the crosswalk you are crossing.",
-          handbookSection: "Driving Skills — Right-of-Way",
+          handbookSection: "Everyday Driving Skills — Right-of-Way",
           difficulty: 1,
           translations: [
             { language: "zh", content: "在交叉路口左转时，您必须让行给：", explanation: "左转时，您必须让行给所有对向车辆（直行或右转的车辆）以及您即将穿越的人行横道上的行人。" },
@@ -802,7 +802,7 @@ export const pennsylvaniaDMV = {
         {
           content: "In Pennsylvania, how far in advance must you signal before turning or changing lanes?",
           explanation: "Pennsylvania law requires signaling at least 100 feet before turning or changing lanes in urban areas. On rural highways and higher-speed roads, more warning distance is required.",
-          handbookSection: "Driving Skills — Signaling",
+          handbookSection: "Everyday Driving Skills — Signaling",
           difficulty: 1,
           translations: [
             { language: "zh", content: "在宾夕法尼亚州，转弯或变道前必须提前多远打转向灯？", explanation: "宾夕法尼亚州法律要求在城市地区转弯或变道前至少提前100英尺打转向灯。在乡村公路和高速道路上，需要更长的提前警示距离。" },
@@ -846,7 +846,7 @@ export const pennsylvaniaDMV = {
         {
           content: "You must yield to pedestrians at crosswalks. Which of the following is true about pedestrian right-of-way?",
           explanation: "Drivers must yield to pedestrians in marked and unmarked crosswalks. You must also yield to blind pedestrians carrying white canes or using guide dogs at any location.",
-          handbookSection: "Driving Skills — Pedestrian Right-of-Way",
+          handbookSection: "Everyday Driving Skills — Pedestrian Right-of-Way",
           difficulty: 1,
           translations: [
             { language: "zh", content: "您必须在人行横道处让行给行人。以下关于行人优先通行权的说法，哪项是正确的？", explanation: "驾驶员必须在有标志和无标志的人行横道处让行给行人。您还必须在任何地点让行给携带白色手杖或使用导盲犬的盲人行人。" },
@@ -890,7 +890,7 @@ export const pennsylvaniaDMV = {
         {
           content: "When must you pull over and stop for an emergency vehicle in Pennsylvania?",
           explanation: "When an emergency vehicle uses sirens or flashing red or red-blue lights, you must pull to the right curb or edge and stop. You must remain stopped until the vehicle passes and you must maintain 500 feet following distance after it passes.",
-          handbookSection: "Driving Skills — Emergency Vehicles",
+          handbookSection: "Everyday Driving Skills — Emergency Vehicles",
           difficulty: 1,
           translations: [
             { language: "zh", content: "在宾夕法尼亚州，您何时必须靠边停车为紧急车辆让路？", explanation: "当紧急车辆使用警笛或红色或红蓝闪烁灯光时，您必须靠右边路缘或路边停车。您必须保持停止状态直到该车辆通过，并且在其通过后必须保持500英尺的跟车距离。" },
@@ -934,7 +934,7 @@ export const pennsylvaniaDMV = {
         {
           content: "What does Pennsylvania's Steer Clear (Move Over) law require?",
           explanation: "Pennsylvania's Steer Clear law requires drivers to move to a non-adjacent lane when passing emergency responders or highway workers. If changing lanes is not possible, you must reduce speed. Fines start at $250 for a first offense.",
-          handbookSection: "Driving Skills — Move Over Law",
+          handbookSection: "Everyday Driving Skills — Move Over Law",
           difficulty: 2,
           translations: [
             { language: "zh", content: "宾夕法尼亚州的「让道法」（Steer Clear/Move Over法）要求什么？", explanation: "宾夕法尼亚州的「让道法」要求驾驶员在经过紧急救援人员或公路工作人员时移至非相邻车道。如果无法变道，您必须减速。初犯罚款起价为250美元。" },
@@ -978,7 +978,7 @@ export const pennsylvaniaDMV = {
         {
           content: "What is the proper lane position when turning right?",
           explanation: "When making a right turn, approach in the right lane, move as close to the right curb as possible, and turn into the right lane of the destination road.",
-          handbookSection: "Driving Skills — Turning",
+          handbookSection: "Everyday Driving Skills — Turning",
           difficulty: 1,
           translations: [
             { language: "zh", content: "右转时正确的车道位置是什么？", explanation: "右转时，应在右侧车道接近，尽可能靠近右侧路缘，然后转入目标道路的右侧车道。" },
@@ -1022,7 +1022,7 @@ export const pennsylvaniaDMV = {
         {
           content: "When must you yield to a vehicle on a through road when entering from an alley or driveway?",
           explanation: "When entering a highway from an alley, driveway, or private road, you must stop and yield to ALL traffic on the highway and to pedestrians on the sidewalk before entering.",
-          handbookSection: "Driving Skills — Right-of-Way",
+          handbookSection: "Everyday Driving Skills — Right-of-Way",
           difficulty: 1,
           translations: [
             { language: "zh", content: "从小巷或车道进入主干道时，您何时必须让行给主干道上的车辆？", explanation: "从小巷、车道或私人道路进入公路时，您必须停车并让行给公路上的所有车辆以及人行道上的行人，然后再进入。" },
@@ -1066,7 +1066,7 @@ export const pennsylvaniaDMV = {
         {
           content: "In Pennsylvania, when are you allowed to pass another vehicle on the right?",
           explanation: "In Pennsylvania, you may pass on the right only when the vehicle ahead is turning left and there is a clear lane to the right, or on a one-way street with multiple lanes. Passing on the shoulder is illegal.",
-          handbookSection: "Driving Skills — Passing",
+          handbookSection: "Everyday Driving Skills — Passing",
           difficulty: 2,
           translations: [
             { language: "zh", content: "在宾夕法尼亚州，您何时可以从右侧超车？", explanation: "在宾夕法尼亚州，只有当前方车辆正在左转且右侧有畅通车道时，或在有多条车道的单行道上，您才可以从右侧超车。在路肩上超车是违法的。" },
@@ -1110,7 +1110,7 @@ export const pennsylvaniaDMV = {
         {
           content: "What should you do when approaching a roundabout (traffic circle)?",
           explanation: "When approaching a roundabout, yield to traffic already circulating inside. Enter when there is a safe gap, travel counterclockwise, and exit at your desired street.",
-          handbookSection: "Driving Skills — Roundabouts",
+          handbookSection: "Everyday Driving Skills — Roundabouts",
           difficulty: 1,
           translations: [
             { language: "zh", content: "接近环形交叉路口（交通环岛）时应该怎么做？", explanation: "接近环形交叉路口时，让行给已在环内行驶的车辆。在有安全间隙时进入，逆时针方向行驶，然后在您要去的街道出口驶出。" },
@@ -1167,7 +1167,7 @@ export const pennsylvaniaDMV = {
         {
           content: "What is the default speed limit in a Pennsylvania urban district when no sign is posted?",
           explanation: "In Pennsylvania, the default speed limit in an urban district is 35 mph. In residential areas, the limit may be lower. You must always drive at a safe speed for conditions.",
-          handbookSection: "Speed — Urban Speed Limits",
+          handbookSection: "Everyday Driving Skills — Urban Speed Limits",
           difficulty: 2,
           translations: [
             { language: "zh", content: "在宾夕法尼亚州城市地区，未设置限速标志时，默认限速是多少？", explanation: "在宾夕法尼亚州，城市地区的默认限速为每小时35英里。在住宅区，限速可能更低。您必须始终以适合路况的安全速度驾驶。" },
@@ -1211,7 +1211,7 @@ export const pennsylvaniaDMV = {
         {
           content: "How far back must you stop from a school bus with flashing red lights and stop arm extended?",
           explanation: "Pennsylvania law requires you to stop at least 10 feet from a school bus when its red lights flash and the stop arm is extended. You must stop whether you are behind or approaching from the front.",
-          handbookSection: "Speed — School Buses",
+          handbookSection: "Everyday Driving Skills — School Buses",
           difficulty: 2,
           translations: [
             { language: "zh", content: "当校车闪烁红灯并伸出停车臂时，您必须在距离校车多远处停车？", explanation: "宾夕法尼亚州法律要求，当校车红灯闪烁且停车臂伸出时，您必须在距离校车至少10英尺处停车。无论您是在校车后方还是从前方驶来，都必须停车。" },
@@ -1255,7 +1255,7 @@ export const pennsylvaniaDMV = {
         {
           content: "Illegally passing a stopped school bus in Pennsylvania results in:",
           explanation: "Passing a stopped school bus in Pennsylvania results in a 60-day license suspension, 5 points on your driving record, and significant fines. This offense is taken very seriously to protect children.",
-          handbookSection: "Speed — School Buses",
+          handbookSection: "Everyday Driving Skills — School Buses",
           difficulty: 2,
           translations: [
             { language: "zh", content: "在宾夕法尼亚州非法超越停止的校车将导致：", explanation: "在宾夕法尼亚州超越停止的校车将导致驾照暂停60天、驾驶记录扣5分以及高额罚款。此违规行为被视为非常严重，旨在保护儿童安全。" },
@@ -1299,7 +1299,7 @@ export const pennsylvaniaDMV = {
         {
           content: "When following a large truck or bus, what is the recommended following distance?",
           explanation: "When following large trucks or buses, maintain at least a 4-second following distance. This keeps you out of their rear blind spot and gives you adequate stopping distance. Increase this in poor conditions.",
-          handbookSection: "Speed — Following Distance",
+          handbookSection: "Everyday Driving Skills — Following Distance",
           difficulty: 2,
           translations: [
             { language: "zh", content: "跟随大型卡车或公共汽车行驶时，建议保持多少跟车距离？", explanation: "跟随大型卡车或公共汽车时，至少保持4秒的跟车距离。这样可以使您远离其后方盲区，并有足够的刹车距离。在恶劣条件下应增加此距离。" },
@@ -1343,7 +1343,7 @@ export const pennsylvaniaDMV = {
         {
           content: "On a divided highway in Pennsylvania where the two roadways are physically separated, must you stop for an oncoming school bus with flashing lights?",
           explanation: "On a divided highway where the two roadways are separated by a physical barrier, you do NOT need to stop for a school bus traveling in the opposite direction. However, you must still stop if traveling in the same direction as the bus.",
-          handbookSection: "Speed — School Buses",
+          handbookSection: "Everyday Driving Skills — School Buses",
           difficulty: 3,
           translations: [
             { language: "zh", content: "在宾夕法尼亚州的分隔公路上，如果两条车道被物理隔离分开，您是否必须为闪烁灯光的对向校车停车？", explanation: "在两条车道被物理隔离带分开的分隔公路上，您不需要为对向行驶的校车停车。但是，如果您与校车同向行驶，仍必须停车。" },
@@ -1387,7 +1387,7 @@ export const pennsylvaniaDMV = {
         {
           content: "What must you do before passing another vehicle on a two-lane road?",
           explanation: "Before passing on a two-lane road, signal your intention, check that you can see far enough ahead to complete the pass safely, and check mirrors and blind spots. You need more distance than you might think — especially when passing trucks.",
-          handbookSection: "Speed — Passing",
+          handbookSection: "Everyday Driving Skills — Passing",
           difficulty: 2,
           translations: [
             { language: "zh", content: "在双车道道路上超车前，您必须做什么？", explanation: "在双车道道路上超车前，发出信号表明您的意图，确认您能看到足够远的距离以安全完成超车，并检查后视镜和盲区。您需要的距离可能比您想象的更长——特别是在超越卡车时。" },
@@ -1431,7 +1431,7 @@ export const pennsylvaniaDMV = {
         {
           content: "In adverse weather conditions (rain, snow, fog), how should you adjust your speed?",
           explanation: "In adverse conditions, you must reduce your speed below the posted limit to maintain control. The posted speed limit reflects ideal conditions. You must drive at a safe speed for the actual conditions.",
-          handbookSection: "Speed — Adverse Conditions",
+          handbookSection: "Everyday Driving Skills — Adverse Conditions",
           difficulty: 1,
           translations: [
             { language: "zh", content: "在恶劣天气条件下（雨、雪、雾），您应如何调整车速？", explanation: "在恶劣条件下，您必须将车速降至限速以下以保持车辆控制。限速标志反映的是理想条件。您必须根据实际条件以安全速度驾驶。" },
@@ -1475,7 +1475,7 @@ export const pennsylvaniaDMV = {
         {
           content: "When should you use your vehicle's horn in Pennsylvania?",
           explanation: "Use your horn only when necessary to warn other drivers or pedestrians of danger. Do not use it to express anger, frustration, or to greet other drivers. Unnecessary horn use is illegal.",
-          handbookSection: "Speed — Vehicle Controls",
+          handbookSection: "Everyday Driving Skills — Vehicle Controls",
           difficulty: 1,
           translations: [
             { language: "zh", content: "在宾夕法尼亚州，您应该在什么时候使用车辆喇叭？", explanation: "仅在必要时使用喇叭警告其他驾驶员或行人注意危险。不要用它来表达愤怒、沮丧或向其他驾驶员打招呼。不必要地使用喇叭是违法的。" },
@@ -1519,7 +1519,7 @@ export const pennsylvaniaDMV = {
         {
           content: "How far after an emergency vehicle passes must you maintain at least 500 feet of following distance?",
           explanation: "After an emergency vehicle passes with lights and sirens, you must stay at least 500 feet behind it until it clears the roadway. This protects the emergency responders and others near the vehicle.",
-          handbookSection: "Speed — Emergency Vehicles",
+          handbookSection: "Everyday Driving Skills — Emergency Vehicles",
           difficulty: 2,
           translations: [
             { language: "zh", content: "在紧急车辆通过后，您必须在多长距离内保持至少500英尺的跟车距离？", explanation: "当紧急车辆开着灯光和警笛通过后，您必须与其保持至少500英尺的距离，直到它驶离道路。这是为了保护紧急救援人员和车辆附近的其他人员。" },
@@ -1563,7 +1563,7 @@ export const pennsylvaniaDMV = {
         {
           content: "How much clearance must you give when passing a bicycle rider on a Pennsylvania road?",
           explanation: "Pennsylvania law requires motorists to give bicycle riders at least 4 feet of clearance when passing. You may cross the center line to do so if the way is clear.",
-          handbookSection: "Speed — Sharing the Road",
+          handbookSection: "Everyday Driving Skills — Sharing the Road",
           difficulty: 2,
           translations: [
             { language: "zh", content: "在宾夕法尼亚州道路上超越骑自行车者时，您必须保持多少间距？", explanation: "宾夕法尼亚州法律要求驾驶员在超越骑自行车者时至少保持4英尺的间距。如果道路畅通，您可以越过中心线来保持此距离。" },
@@ -1620,7 +1620,7 @@ export const pennsylvaniaDMV = {
         {
           content: "What blood alcohol content (BAC) is the legal limit for adult (21+) drivers in Pennsylvania?",
           explanation: "In Pennsylvania, a BAC of 0.08 or higher is illegal for adult drivers age 21 and over. This is the General Impairment level, and higher BAC levels trigger enhanced penalties.",
-          handbookSection: "Alcohol & Drugs — BAC Limits",
+          handbookSection: "Driver Factors — BAC Limits",
           difficulty: 1,
           translations: [
             { language: "zh", content: "在宾夕法尼亚州，成年（21岁及以上）驾驶员的法定血液酒精浓度（BAC）限制是多少？", explanation: "在宾夕法尼亚州，21岁及以上成年驾驶员的血液酒精浓度达到0.08或更高即属违法。这属于「一般损害」级别，更高的BAC水平将触发加重处罚。" },
@@ -1664,7 +1664,7 @@ export const pennsylvaniaDMV = {
         {
           content: "Pennsylvania has three tiers of DUI based on BAC. What BAC range is the \"High BAC\" tier?",
           explanation: "Pennsylvania's High BAC tier covers 0.10 to 0.159 BAC. General Impairment is 0.08–0.099, and Highest BAC is 0.16 or above. Higher tiers carry more severe penalties.",
-          handbookSection: "Alcohol & Drugs — DUI Tiers",
+          handbookSection: "Driver Factors — DUI Tiers",
           difficulty: 3,
           translations: [
             { language: "zh", content: "宾夕法尼亚州根据BAC将DUI分为三个等级。「高BAC」等级的BAC范围是多少？", explanation: "宾夕法尼亚州的「高BAC」等级涵盖0.10至0.159的BAC。「一般损害」等级为0.08-0.099，「最高BAC」等级为0.16或以上。等级越高，处罚越严重。" },
@@ -1708,7 +1708,7 @@ export const pennsylvaniaDMV = {
         {
           content: "Under Pennsylvania's Zero Tolerance Law, what BAC is illegal for drivers under age 21?",
           explanation: "Pennsylvania's Zero Tolerance Law makes any measurable amount of alcohol illegal for drivers under 21. A BAC of 0.02 or higher triggers the underage DUI law.",
-          handbookSection: "Alcohol & Drugs — Zero Tolerance",
+          handbookSection: "Driver Factors — Zero Tolerance",
           difficulty: 1,
           translations: [
             { language: "zh", content: "根据宾夕法尼亚州的「零容忍法」，未满21岁的驾驶员血液酒精浓度达到多少即属违法？", explanation: "宾夕法尼亚州的「零容忍法」规定，未满21岁的驾驶员体内含有任何可测量的酒精量均属违法。BAC达到0.02或更高将触发未成年人DUI法律。" },
@@ -1752,7 +1752,7 @@ export const pennsylvaniaDMV = {
         {
           content: "Even before your BAC reaches 0.08, alcohol affects your driving ability. At what level does research show crash risk roughly doubles?",
           explanation: "Research shows that even at 0.04 BAC (half the legal limit), a driver is between two and seven times more likely to be in a crash. Alcohol impairs judgment and reaction time well before the legal limit.",
-          handbookSection: "Alcohol & Drugs — Effects of Alcohol",
+          handbookSection: "Driver Factors — Effects of Alcohol",
           difficulty: 2,
           translations: [
             { language: "zh", content: "即使您的BAC尚未达到0.08，酒精也会影响您的驾驶能力。研究表明，在什么水平时事故风险大约会翻倍？", explanation: "研究表明，即使BAC仅为0.04（法定限制的一半），驾驶员发生事故的可能性也会增加两到七倍。酒精在远低于法定限制时就会损害判断力和反应时间。" },
@@ -1796,7 +1796,7 @@ export const pennsylvaniaDMV = {
         {
           content: "What does Pennsylvania's Implied Consent Law require of drivers?",
           explanation: "By driving in Pennsylvania, you implicitly agree to submit to chemical testing (breath, blood, or urine) if a police officer has reasonable grounds to believe you are DUI. Refusal leads to automatic license suspension.",
-          handbookSection: "Alcohol & Drugs — Implied Consent",
+          handbookSection: "Driver Factors — Implied Consent",
           difficulty: 1,
           translations: [
             { language: "zh", content: "宾夕法尼亚州的「默示同意法」要求驾驶员做什么？", explanation: "在宾夕法尼亚州驾驶即表示您默示同意在警察有合理理由认为您酒驾时接受化学检测（呼气、血液或尿液）。拒绝检测将导致自动吊销驾照。" },
@@ -1840,7 +1840,7 @@ export const pennsylvaniaDMV = {
         {
           content: "Approximately how much of Pennsylvania traffic deaths involve alcohol-impaired drivers?",
           explanation: "According to Pennsylvania's driver manual, approximately 40% of traffic deaths involve drinking drivers. This underscores why impaired driving is such a serious issue.",
-          handbookSection: "Alcohol & Drugs — Statistics",
+          handbookSection: "Driver Factors — Statistics",
           difficulty: 2,
           translations: [
             { language: "zh", content: "宾夕法尼亚州大约有多少交通死亡事故涉及酒后驾驶？", explanation: "根据宾夕法尼亚州驾驶员手册，大约40%的交通死亡事故涉及饮酒驾驶者。这说明了为什么酒后驾驶是一个如此严重的问题。" },
@@ -1884,7 +1884,7 @@ export const pennsylvaniaDMV = {
         {
           content: "Being awake for 18 consecutive hours impairs your driving to a level equivalent to a BAC of approximately:",
           explanation: "Research in Pennsylvania's manual shows that being awake for 18 hours is equivalent to a BAC of approximately 0.05, and being awake for 24 hours is equivalent to 0.10 BAC. Drowsy driving is dangerous.",
-          handbookSection: "Alcohol & Drugs — Drowsy Driving",
+          handbookSection: "Driver Factors — Drowsy Driving",
           difficulty: 2,
           translations: [
             { language: "zh", content: "连续清醒18小时会使您的驾驶能力受损，相当于大约多少的BAC水平？", explanation: "宾夕法尼亚州手册中的研究表明，清醒18小时相当于大约0.05的BAC，清醒24小时相当于0.10的BAC。疲劳驾驶是危险的。" },
@@ -1928,7 +1928,7 @@ export const pennsylvaniaDMV = {
         {
           content: "Which of the following is a primary offense under Pennsylvania's anti-texting law?",
           explanation: "Texting while driving is a primary offense in Pennsylvania. Officers can stop you solely for texting while driving. The fine is $50. It applies to all interactive wireless communication devices.",
-          handbookSection: "Alcohol & Drugs — Distracted Driving",
+          handbookSection: "Driver Factors — Distracted Driving",
           difficulty: 2,
           translations: [
             { language: "zh", content: "以下哪项是宾夕法尼亚州反发短信法律规定的主要违法行为？", explanation: "在宾夕法尼亚州，驾驶时发短信是主要违法行为。警察可以仅因驾驶时发短信而拦停您。罚款为50美元。该法律适用于所有交互式无线通信设备。" },
@@ -1972,7 +1972,7 @@ export const pennsylvaniaDMV = {
         {
           content: "A safe drinking guideline (for of-age drivers who plan to drive) is:",
           explanation: "Pennsylvania's manual states: do not drink more than one drink per hour if you plan to drive. The body processes approximately one drink per hour. However, the safest choice is not to drink before driving at all.",
-          handbookSection: "Alcohol & Drugs — Effects of Alcohol",
+          handbookSection: "Driver Factors — Effects of Alcohol",
           difficulty: 2,
           translations: [
             { language: "zh", content: "对于计划驾驶的成年驾驶员，安全饮酒指南是：", explanation: "宾夕法尼亚州手册规定：如果您计划驾驶，每小时饮酒不要超过一杯。人体大约每小时代谢一杯酒。然而，最安全的选择是驾驶前完全不饮酒。" },
@@ -2016,7 +2016,7 @@ export const pennsylvaniaDMV = {
         {
           content: "Can you be charged with DUI in Pennsylvania for driving while impaired by a legally prescribed medication?",
           explanation: "Yes. Pennsylvania's DUI law applies to any substance that impairs your ability to drive — including legally prescribed drugs, over-the-counter medications, or any controlled substance. Being prescribed the drug is not a defense to DUI.",
-          handbookSection: "Alcohol & Drugs — Drug Impairment",
+          handbookSection: "Driver Factors — Drug Impairment",
           difficulty: 2,
           translations: [
             { language: "zh", content: "在宾夕法尼亚州，因服用合法处方药物而导致驾驶能力受损，您是否会被指控DUI？", explanation: "是的。宾夕法尼亚州的DUI法律适用于任何损害您驾驶能力的物质——包括合法处方药物、非处方药物或任何受管制物质。药物是处方开具的这一事实不能作为DUI的辩护理由。" },
@@ -2526,7 +2526,7 @@ export const pennsylvaniaDMV = {
         {
           content: "What information must you exchange after a traffic crash in Pennsylvania?",
           explanation: "After a crash, you must exchange your name, address, vehicle registration, and driver's license number with the other driver. You must also show your insurance information. Render aid to injured persons.",
-          handbookSection: "Safe Driving — Crash Procedures",
+          handbookSection: "Choosing Safety First — Crash Procedures",
           difficulty: 1,
           translations: [
             { language: "zh", content: "在宾夕法尼亚州发生交通事故后，您必须交换哪些信息？", explanation: "发生事故后，您必须与对方驾驶员交换您的姓名、地址、车辆登记信息和驾照号码。您还必须出示保险信息。同时要对伤者进行救助。" },
@@ -2570,7 +2570,7 @@ export const pennsylvaniaDMV = {
         {
           content: "When are you required to use your headlights in Pennsylvania?",
           explanation: "Pennsylvania requires headlights from sunset to sunrise, and any time conditions such as rain, snow, or fog reduce visibility. Headlights must also be on in all posted work zones.",
-          handbookSection: "Safe Driving — Headlight Laws",
+          handbookSection: "Choosing Safety First — Headlight Laws",
           difficulty: 1,
           translations: [
             { language: "zh", content: "在宾夕法尼亚州，何时必须使用车头灯？", explanation: "宾夕法尼亚州要求从日落到日出期间必须开启车头灯，以及在雨、雪或雾等降低能见度的条件下也必须开灯。在所有标示的施工区域内也必须开启车头灯。" },
@@ -2614,7 +2614,7 @@ export const pennsylvaniaDMV = {
         {
           content: "What must you do when a vehicle approaching from behind is attempting to pass you?",
           explanation: "When a vehicle signals to pass you, you should keep your speed steady or slow down slightly to help them complete the pass safely. Do not speed up while being passed.",
-          handbookSection: "Safe Driving — Being Passed",
+          handbookSection: "Choosing Safety First — Being Passed",
           difficulty: 1,
           translations: [
             { language: "zh", content: "当后方车辆试图超越您时，您应该怎么做？", explanation: "当车辆示意要超越您时，您应保持稳定车速或稍微减速，以帮助他们安全完成超车。在被超车时不要加速。" },
@@ -2658,7 +2658,7 @@ export const pennsylvaniaDMV = {
         {
           content: "When should you use your high-beam headlights?",
           explanation: "Use high beams on rural roads or wherever you need maximum visibility and there is no oncoming traffic. Dim to low beams within 500 feet of an oncoming vehicle and within 300 feet when following another vehicle.",
-          handbookSection: "Safe Driving — Headlight Usage",
+          handbookSection: "Choosing Safety First — Headlight Usage",
           difficulty: 2,
           translations: [
             { language: "zh", content: "何时应该使用远光灯？", explanation: "在乡村道路上或任何需要最大能见度且没有对向来车的地方使用远光灯。在距离对向来车500英尺以内和跟随前车300英尺以内时，应切换为近光灯。" },
@@ -2702,7 +2702,7 @@ export const pennsylvaniaDMV = {
         {
           content: "What is the proper technique for dealing with a skid on a slippery surface?",
           explanation: "If your vehicle skids, ease off the gas pedal and do not hit the brakes hard. Steer in the direction you want the vehicle to go. This technique is sometimes called steering into the skid.",
-          handbookSection: "Safe Driving — Skid Recovery",
+          handbookSection: "Choosing Safety First — Skid Recovery",
           difficulty: 2,
           translations: [
             { language: "zh", content: "在湿滑路面上处理车辆打滑的正确技巧是什么？", explanation: "如果车辆打滑，松开油门踏板，不要猛踩刹车。将方向盘转向您希望车辆行驶的方向。这种技术有时被称为「顺着打滑方向转向」。" },
@@ -2746,7 +2746,7 @@ export const pennsylvaniaDMV = {
         {
           content: "When following a large truck or bus, why should you stay back farther than you would for a passenger car?",
           explanation: "Large trucks have extensive blind spots. If you cannot see the truck driver's mirrors, they cannot see you. Larger vehicles also require more stopping distance, and debris or tire blowouts are more common.",
-          handbookSection: "Safe Driving — Sharing the Road with Trucks",
+          handbookSection: "Choosing Safety First — Sharing the Road with Trucks",
           difficulty: 1,
           translations: [
             { language: "zh", content: "跟随大型卡车或公共汽车时，为什么应该比跟随普通轿车时保持更远的距离？", explanation: "大型卡车有很大的盲区。如果您看不到卡车司机的后视镜，他们也看不到您。大型车辆还需要更长的制动距离，而且更容易出现碎片飞溅或轮胎爆裂的情况。" },
@@ -2790,7 +2790,7 @@ export const pennsylvaniaDMV = {
         {
           content: "What is the \"Dutch Reach\" method for opening a car door?",
           explanation: "The Dutch Reach is a method of opening your car door by reaching across with the far hand. This causes you to naturally turn your body and look back, checking for approaching cyclists or traffic before opening the door.",
-          handbookSection: "Safe Driving — Bicycle Safety",
+          handbookSection: "Choosing Safety First — Bicycle Safety",
           difficulty: 2,
           translations: [
             { language: "zh", content: "什么是「荷兰式开门法」？", explanation: "「荷兰式开门法」是一种用远侧的手开车门的方法。这会使您自然地转动身体向后看，在开门前检查是否有靠近的骑行者或车辆。" },
@@ -2834,7 +2834,7 @@ export const pennsylvaniaDMV = {
         {
           content: "When parking on an uphill grade with a curb, how should you position your front wheels?",
           explanation: "When parking uphill with a curb, turn your front wheels away from the curb (toward the road). If the brakes fail, the curb will stop the vehicle from rolling into traffic.",
-          handbookSection: "Safe Driving — Parking on Grades",
+          handbookSection: "Choosing Safety First — Parking on Grades",
           difficulty: 2,
           translations: [
             { language: "zh", content: "在有路缘的上坡路段停车时，前轮应该如何摆放？", explanation: "在有路缘的上坡停车时，将前轮转向远离路缘的方向（朝向道路）。如果刹车失灵，路缘会阻止车辆滑入车流。" },
@@ -2878,7 +2878,7 @@ export const pennsylvaniaDMV = {
         {
           content: "What does Pennsylvania require for motorcycle riders regarding helmets?",
           explanation: "In Pennsylvania, all motorcycle riders and passengers under age 21 must wear a helmet. Riders age 21 and older are exempt from the helmet requirement if they have at least 2 years of experience or have completed a safety course.",
-          handbookSection: "Safe Driving — Motorcycles",
+          handbookSection: "Choosing Safety First — Motorcycles",
           difficulty: 2,
           translations: [
             { language: "zh", content: "宾夕法尼亚州对摩托车骑行者的头盔有什么要求？", explanation: "在宾夕法尼亚州，所有21岁以下的摩托车骑行者和乘客必须佩戴头盔。21岁及以上的骑行者如果拥有至少2年的骑行经验或已完成安全课程，可以免除头盔要求。" },
@@ -2922,7 +2922,7 @@ export const pennsylvaniaDMV = {
         {
           content: "Pennsylvania requires annual vehicle inspections. What does this inspection cover?",
           explanation: "Pennsylvania's annual vehicle safety inspection covers brakes, tires, lights, steering, windshield, and other safety systems. Emissions testing is also required in many counties. Vehicles must pass to remain legally on the road.",
-          handbookSection: "Safe Driving — Vehicle Maintenance",
+          handbookSection: "Choosing Safety First — Vehicle Maintenance",
           difficulty: 1,
           translations: [
             { language: "zh", content: "宾夕法尼亚州要求进行年度车辆检查。这项检查包括哪些内容？", explanation: "宾夕法尼亚州的年度车辆安全检查涵盖刹车、轮胎、车灯、转向系统、挡风玻璃和其他安全系统。在许多县还要求进行排放检测。车辆必须通过检查才能合法上路。" },
