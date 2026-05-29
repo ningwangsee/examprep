@@ -948,7 +948,7 @@ const floridaDMV: ExamGuide = {
     },
     {
       label: { en: "Find a DHSMV Office", zh: "查找 DHSMV 办公室", es: "Encontrar una Oficina DHSMV" },
-      url: "https://www.flhsmv.gov/offices/",
+      url: "https://www.flhsmv.gov/locations/",
       description: {
         en: "Find the DHSMV service center nearest to you",
         zh: "查找离您最近的 DHSMV 服务中心",
@@ -958,7 +958,7 @@ const floridaDMV: ExamGuide = {
     },
     {
       label: { en: "Schedule Appointment", zh: "预约办理", es: "Programar Cita" },
-      url: "https://www.flhsmv.gov/driver-licenses-id-cards/",
+      url: "https://www.flhsmv.gov/locations/",
       description: {
         en: "Most DHSMV knowledge tests are walk-in, but check for appointment options",
         zh: "大多数 DHSMV 笔试无需预约，但可查看是否有预约选项",
@@ -967,8 +967,8 @@ const floridaDMV: ExamGuide = {
       emoji: "🗓️",
     },
     {
-      label: { en: "FL Traffic Laws (FLHSMV)", zh: "佛州交通法规", es: "Leyes de Tránsito de FL" },
-      url: "https://www.flhsmv.gov/driver-licenses-id-cards/",
+      label: { en: "FL Traffic Laws (Florida Statutes)", zh: "佛州交通法规", es: "Leyes de Tránsito de FL" },
+      url: "https://www.flsenate.gov/Laws/Statutes/2024/Chapter316",
       description: {
         en: "Florida traffic safety programs and driving laws",
         zh: "佛罗里达州交通安全计划与驾驶法规",
