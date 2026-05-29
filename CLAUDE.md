@@ -1,4 +1,4 @@
-# CLAUDE.md
+﻿# CLAUDE.md
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
@@ -359,41 +359,102 @@ These require manual browser testing:
 
 ### Question Bank Design
 
-- **Optimal count**: ~3× the actual test length. CA test = 46 questions, target = ~150 questions.
-- **Difficulty spread**: aim for ~40% easy (difficulty=1), ~40% medium (difficulty=2), ~20% hard (difficulty=3).
-- **handbookSection format**: `"Chapter Title — Subtopic"` e.g. `"Traffic Control — School Buses"`. Shown to users after wrong answers.
-  - **The prefix (before ` — `) MUST be the exact chapter title from the table below**, not a free-form label.
-  - This is enforced by `validate:db` (Phase 3). A mismatch blocks the commit.
-  - For PDF-based states (TX, FL, CA) where there are no online chapter pages, use a consistent descriptive label per topic (not validated automatically — use your judgment).
+#### Core principle: one topic = one handbook chapter
 
-  **Required handbookSection prefixes per state/topic (online-chapter states only):**
+**Topics must follow each state's actual handbook chapter structure.** Do NOT use a fixed number of topics. Each state has a different number of topics matching its handbook chapters.
 
-  | State | Topic | Required prefix |
-  |---|---|---|
-  | California | Traffic Signs & Signals | `Introduction to Driving` |
-  | California | Right-of-Way Rules | `Laws and Rules of the Road` |
-  | California | Speed Limits | `Safe Driving` |
-  | California | DUI & Alcohol Laws | `Alcohol and Drugs` |
-  | California | Lane Usage & Passing | `Navigating the Roads` |
-  | California | Safe Driving & Parking | `Safe Driving` |
-  | New York | Traffic Control & Road Signs | `Traffic Control` |
-  | New York | Right-of-Way, Intersections & Turns | `Intersections and Turns` |
-  | New York | Speed, Space & Defensive Driving | `Defensive Driving` |
-  | New York | Alcohol & Other Drugs | `Alcohol and Other Drugs` |
-  | New York | Driver Licensing & Vehicle Laws | `Driver Licenses` |
-  | New York | Sharing the Road & Crash Procedures | `Sharing the Road` |
-  | Pennsylvania | Traffic Signals, Signs & Markings | `Signals, Signs & Markings` |
-  | Pennsylvania | Right-of-Way, Turns & Intersections | `Everyday Driving Skills` |
-  | Pennsylvania | Speed, Space & Defensive Driving | `Everyday Driving Skills` |
-  | Pennsylvania | Alcohol, Drugs & DUI | `Driver Factors` |
-  | Pennsylvania | Driver License & PA Laws | `Driver License` |
-  | Pennsylvania | Safe Driving & Sharing the Road | `Choosing Safety First` |
+- **handbookSection format**: `"Chapter Title — Subtopic"` e.g. `"Traffic Control — School Buses"`. Shown after wrong answers.
+  - Prefix (before ` — `) = **exact chapter title** from the handbook page or PDF section header.
+  - Enforced by `validate:db` Phase 3 on every commit (covers CA, NY, PA).
+- **Optimal questions per chapter**: 15–20. Thin chapters (<5 pages) may be merged.
+- **Difficulty spread**: ~40% easy (1), ~40% medium (2), ~20% hard (3).
 
-  When adding a new state with online chapters, add its mapping to `CHAPTER_TITLES` in `prisma/scripts/validate-db.ts`.
-- **Translation workflow (new states)**: Use `prisma/scripts/gen-ny-seed.ts` as a template. Script defines English questions → calls Claude API (`claude-opus-4-5`) to translate all topics in batches → writes complete trilingual seed file. Set `$env:ANTHROPIC_API_KEY` before running. See `gen-ny-seed.ts` for the pattern.
-- **After generating the seed**, also add an `ExamGuide` entry to `lib/exam-info.ts`. Required fields: `passThreshold` (integer), `keepPracticing` (I18n), `handbookTitle` (I18n), `handbookDesc` (I18n), plus `stats`, `whatToBring`, `howToSchedule`, `tips`, `handbookChapters`, `officialLinks`. The registry key must match `category.nameEn` exactly.
-- **Translation workflow (CA/TX legacy)**: Generate English questions → translate externally (Anthropic Chat / ChatGPT) → paste back translations → run insertion script → update seed file.
+#### Translation — write directly, no API calls
 
+All trilingual content (EN + ZH + ES) is written directly by Claude Code in the conversation.
+**Do not call the Anthropic API for translation.** The gen-*.ts scripts that called the API are legacy — do not use them as templates.
+
+Workflow for any new state or new chapter:
+1. Read the handbook chapter (online or PDF)
+2. Write EN questions + explanations + options directly in the seed file
+3. Write ZH and ES translations inline — no separate script, no API call
+4. In ZH strings: use `「」` corner brackets instead of ASCII `"`
+
+`ANTHROPIC_API_KEY` in `.env` is only needed for the future AI tutor feature — **not** for DMV content.
+
+#### Handbook chapter map (one topic per chapter)
+
+**California** (online: `dmv.ca.gov/portal/handbook/california-driver-handbook/`)
+
+| Topic nameEn | URL slug | handbookSection prefix |
+|---|---|---|
+| Navigating the Roads | `navigating-the-roads` | `Navigating the Roads` |
+| Laws and Rules of the Road | `laws-and-rules-of-the-road` | `Laws and Rules of the Road` |
+| Safe Driving | `safe-driving` | `Safe Driving` |
+| Alcohol and Drugs | `alcohol-and-drugs` | `Alcohol and Drugs` |
+| Financial Responsibility & Collisions | `financial-responsibility-insurance-requirements-and-collisions` | `Financial Responsibility` |
+| Getting Your License | `getting-an-instruction-permit-and-drivers-license` | `Getting Your License` |
+
+**New York** (online: `dmv.ny.gov/new-york-state-drivers-manual-and-practice-tests/`)
+
+| Topic nameEn | URL path | handbookSection prefix |
+|---|---|---|
+| Driver Licenses | `chapter-1-driver-licenses` | `Driver Licenses` |
+| How to Keep Your License | `chapter-2-how-to-keep-your-license` | `How to Keep Your License` |
+| Traffic Control | `chapter-4-traffic-control` | `Traffic Control` |
+| Intersections and Turns | `chapter-5-intersections-and-turns` | `Intersections and Turns` |
+| Defensive Driving | `chapter-8-defensive-driving` | `Defensive Driving` |
+| Alcohol and Other Drugs | `chapter-9-alcohol-and-other-drugs` | `Alcohol and Other Drugs` |
+| Special Driving Conditions | `chapter-10-special-driving-conditions` | `Special Driving Conditions` |
+| Sharing the Road | `chapter-11-sharing-the-road` | `Sharing the Road` |
+
+**Pennsylvania** (online: `pa.gov/agencies/dmv/.../online-drivers-manual/`)
+
+| Topic nameEn | URL slug | handbookSection prefix |
+|---|---|---|
+| Signals, Signs and Pavement Markings | `chapter-2-signals-signs-and-pavement-markings` | `Signals, Signs & Markings` |
+| Everyday Driving Skills | `everyday-driving-skills` | `Everyday Driving Skills` |
+| Special Circumstances and Emergencies | `special-circumstances-and-emergencies` | `Special Circumstances and Emergencies` |
+| Driver Factors | `driver-factors` | `Driver Factors` |
+| Driving Record Information | `chapter-4-driving-record-information` | `Driving Record Information` |
+| Laws and Related Issues | `chapter-5-laws-and-related-issues` | `Laws and Related Issues` |
+
+**Texas** (PDF: `dps.texas.gov/.../DL-7.pdf`)
+
+| Topic nameEn | PDF chapter | URL | handbookSection prefix |
+|---|---|---|---|
+| Your License to Drive | Ch.1 | `DL-7.pdf#page=8` | `Your License to Drive` |
+| Signals, Signs, and Markings | Ch.5 | `DL-7.pdf#page=34` | `Signals, Signs, and Markings` |
+| Right-of-Way and Traffic Laws | Ch.4+6 | `DL-7.pdf#page=30` | `Right-of-Way` |
+| Speed and Special Situations | Ch.8+9 | `DL-7.pdf#page=54` | `Speed and Special Situations` |
+| Alcohol and Drugs | Ch.10 | `DL-7.pdf#page=64` | `Alcohol and Drugs` |
+| Safety Tips | Ch.14 | `DL-7.pdf#page=74` | `Safety` |
+
+**Florida** (PDF: `flhsmv.gov/pdf/handbooks/englishdriverhandbook.pdf`)
+
+| Topic nameEn | PDF chapter | URL | handbookSection prefix |
+|---|---|---|---|
+| You — the Driver | Ch.2 | `englishdriverhandbook.pdf#page=7` | `You — the Driver` |
+| Traffic Controls | Ch.4 | `englishdriverhandbook.pdf#page=13` | `Traffic Controls` |
+| Driving Safely | Ch.5 | `englishdriverhandbook.pdf#page=27` | `Driving Safely` |
+| Sharing the Road | Ch.6 | `englishdriverhandbook.pdf#page=39` | `Sharing the Road` |
+| Handling Emergencies | Ch.8 | `englishdriverhandbook.pdf#page=51` | `Handling Emergencies` |
+| Your Driving Privilege | Ch.9 | `englishdriverhandbook.pdf#page=57` | `Your Driving Privilege` |
+| Getting Your License | Ch.10 | `englishdriverhandbook.pdf#page=69` | `Getting Your License` |
+
+#### Checklist: adding or rebuilding a state
+
+- [ ] 1. Read all handbook chapters. Note exact titles and URLs/page numbers.
+- [ ] 2. Decide which chapters warrant 15–20 questions. Merge thin chapters.
+- [ ] 3. Create `prisma/seeds/[state]-dmv.ts` — one topic block per chapter.
+      `topic.nameEn` ≈ chapter title | `topic.handbookUrl` = chapter URL or `PDF#page=N`
+- [ ] 4. Write 15–20 questions per chapter inline (EN + ZH + ES). No gen scripts.
+- [ ] 5. Add/update `ExamGuide` entry in `lib/exam-info.ts`.
+- [ ] 6. Add mappings to `CHAPTER_TITLES` in `prisma/scripts/validate-db.ts`.
+- [ ] 7. `npm run db:import` then `npm run validate:db`
+- [ ] 8. `npm run db:shuffle` if answer bias detected
+- [ ] 9. `npm run validate:links`
+- [ ] 10. Open quiz — answer wrong — verify "Review this section" opens the correct chapter.
 ### Incremental Script File Locations
 
 All one-off insertion scripts live in `prisma/scripts/`. Existing scripts (for reference):
