@@ -267,6 +267,64 @@ Tailwind CSS v4 — uses `@import "tailwindcss"` in `globals.css` (not `@tailwin
 
 **Target question count:** ~90–100 per state (≈3–5× the actual test length). TX complete at 98 questions. NY complete at 100 questions. FL complete at 73 questions. PA complete at 65 questions.
 
+## Quality & Validation
+
+### Automated Checks
+
+Two validation scripts prevent the most common recurring bugs:
+
+```bash
+npm run validate:db     # Fast (~2s): DB integrity — option counts, correct-answer distribution
+npm run validate:links  # Slow (~90s): All external URLs in exam-info.ts return 200
+npm run validate        # Runs both in sequence
+```
+
+**Pre-commit hook** (`.git/hooks/pre-commit`) runs `validate:db` automatically on every `git commit`. If the check fails, the commit is blocked. Fix the issue, then re-commit.
+
+### When to Run What
+
+| You changed… | Run |
+|---|---|
+| Questions/options in seed or DB | `npm run validate:db` (also runs automatically on commit) |
+| `lib/exam-info.ts` (any URL) | `npm run validate:links` |
+| Both | `npm run validate` |
+| After `db:import` or `db:seed` | `npm run validate:db` then `npm run db:shuffle` if answer bias detected |
+
+### Common Bug Patterns (and how they're caught)
+
+| Bug | Root Cause | Detected By |
+|---|---|---|
+| All correct answers at position 1 or 4 | Claude API generates questions with answers always in same slot | `validate:db` → answer bias >60% in one position |
+| "View chapter" opens PDF page 1 instead of chapter | `topic.handbookUrl` points to PDF root, not `#page=N` | Manual check: verify URL includes `#page=` for PDF links |
+| External links 404 | State government sites restructure URLs | `validate:links` |
+| Duplicate URLs in officialLinks | Copy-paste error during state guide creation | `validate:links` → duplicate URL warning |
+| Fragment anchors that don't exist (`#signs`, `#rules`) | Assuming online chapters exist when site only has PDF | `validate:links` (fragment-only pages get 200 from base URL — verify manually) |
+| Quiz shows wrong pass threshold or CA-hardcoded strings | Missing `ExamGuide` entry in `lib/exam-info.ts` | Manual check: visit the quiz page for the new state |
+
+### Checklist: Adding a New State
+
+Copy this checklist when adding a new state. **Do not skip any step.**
+
+- [ ] 1. Generate seed file: `npx tsx prisma/scripts/gen-XX-seed.ts`
+- [ ] 2. Import: `npm run db:import` (check console for question count)
+- [ ] 3. Add `ExamGuide` to `lib/exam-info.ts` — key must match `category.nameEn` exactly
+- [ ] 4. Check all `topic.handbookUrl` values:
+  - If linking to a PDF: include `#page=N` to jump to the right chapter, not just the root PDF
+  - If linking to an online chapter page: verify the URL is real (not a fragment anchor on a page that doesn't have sections)
+- [ ] 5. `npm run validate:db` — verify answer distribution (no single position >60%)
+- [ ] 6. If bias detected: `npm run db:shuffle`
+- [ ] 7. `npm run validate:links` — verify all external URLs return 200
+- [ ] 8. Open the category page in browser — verify all 6 guide sections appear
+- [ ] 9. Open a quiz topic — answer a question wrong — verify "View chapter" link goes to the correct section
+- [ ] 10. Commit
+
+### What `validate:links` Does NOT Catch
+
+These require manual browser testing:
+- Fragment anchors (`#page=61`, `#sharing`) — the base URL returns 200 even if the anchor doesn't scroll anywhere meaningful
+- PDF links that require authentication or show a download dialog instead of opening in browser
+- Pages that redirect to a login wall (return 200 but show wrong content)
+
 ## Known Gotchas & Lessons Learned
 
 ### Prisma 7 + SQLite
