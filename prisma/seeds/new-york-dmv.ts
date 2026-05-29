@@ -3114,6 +3114,94 @@ export const newYorkDMV = {
           ],
         },
         {
+          content: "Under New York's Zero Tolerance Law, what BAC level subjects a driver under 21 to a license suspension?",
+          explanation: "New York's Zero Tolerance Law applies to drivers under 21. Any measurable BAC between 0.02% and 0.07% results in a 6-month license suspension. A first violation also requires a $125 civil penalty plus a $100 suspension termination fee for re-licensing.",
+          handbookSection: "Alcohol and Other Drugs — Zero Tolerance",
+          difficulty: 2,
+          translations: [
+            { language: "zh", content: "根据纽约州「零容忍法」，21岁以下驾驶员的血液酒精含量达到多少会导致驾照被暂扣？", explanation: "纽约州「零容忍法」适用于21岁以下的驾驶员。任何可测量的血液酒精含量（0.02%至0.07%之间）将导致驾照被暂扣6个月。首次违规还需缴纳125美元民事罚款以及100美元暂扣终止费才能重新获得驾照。" },
+            { language: "es", content: "Según la Ley de Tolerancia Cero de Nueva York, ¿qué nivel de BAC sujeta a un conductor menor de 21 años a una suspensión de licencia?", explanation: "La Ley de Tolerancia Cero de Nueva York se aplica a conductores menores de 21 años. Cualquier BAC medible entre 0.02% y 0.07% resulta en una suspensión de licencia de 6 meses. Una primera infracción también requiere una multa civil de $125 más una tarifa de terminación de suspensión de $100 para volver a obtener la licencia." },
+          ],
+          options: [
+            {
+              content: "Any measurable BAC of 0.02% or higher (up to 0.07%)",
+              isCorrect: true,
+              translations: [
+                { language: "zh", content: "任何可测量的0.02%或以上（至0.07%）的血液酒精含量" },
+                { language: "es", content: "Cualquier BAC medible de 0.02% o más (hasta 0.07%)" },
+              ],
+            },
+            {
+              content: "BAC of 0.08% or higher",
+              isCorrect: false,
+              translations: [
+                { language: "zh", content: "0.08%或以上的血液酒精含量" },
+                { language: "es", content: "BAC de 0.08% o más" },
+              ],
+            },
+            {
+              content: "BAC of 0.05% or higher only",
+              isCorrect: false,
+              translations: [
+                { language: "zh", content: "仅0.05%或以上的血液酒精含量" },
+                { language: "es", content: "Solo BAC de 0.05% o más" },
+              ],
+            },
+            {
+              content: "BAC of 0.10% or higher",
+              isCorrect: false,
+              translations: [
+                { language: "zh", content: "0.10%或以上的血液酒精含量" },
+                { language: "es", content: "BAC de 0.10% o más" },
+              ],
+            },
+          ],
+        },
+        {
+          content: "In New York, what is the minimum BAC that classifies a driver as committing Aggravated DWI (Agg-DWI)?",
+          explanation: "Aggravated DWI requires a BAC of 0.18% or higher. This is a more serious offense than standard DWI (0.08% or higher). A first Agg-DWI offense carries a fine of $1,000–$2,500, up to 1 year in jail, and a minimum 1-year license revocation.",
+          handbookSection: "Alcohol and Other Drugs — DWI Penalties",
+          difficulty: 2,
+          translations: [
+            { language: "zh", content: "在纽约州，驾驶员的血液酒精含量达到多少会构成加重酒驾（Agg-DWI）？", explanation: "加重酒驾要求血液酒精含量为0.18%或以上。这比标准酒驾（0.08%或以上）更为严重。首次加重酒驾罚款为1,000至2,500美元，最高监禁1年，驾照最少被吊销1年。" },
+            { language: "es", content: "En Nueva York, ¿cuál es el BAC mínimo que clasifica a un conductor como DWI Agravado (Agg-DWI)?", explanation: "El DWI Agravado requiere un BAC de 0.18% o más. Es una infracción más grave que el DWI estándar (0.08% o más). Una primera infracción de Agg-DWI conlleva una multa de $1,000–$2,500, hasta 1 año de cárcel y una revocación de licencia de mínimo 1 año." },
+          ],
+          options: [
+            {
+              content: "0.18% BAC or higher",
+              isCorrect: true,
+              translations: [
+                { language: "zh", content: "血液酒精含量0.18%或以上" },
+                { language: "es", content: "BAC de 0.18% o más" },
+              ],
+            },
+            {
+              content: "0.08% BAC or higher",
+              isCorrect: false,
+              translations: [
+                { language: "zh", content: "血液酒精含量0.08%或以上" },
+                { language: "es", content: "BAC de 0.08% o más" },
+              ],
+            },
+            {
+              content: "0.15% BAC or higher",
+              isCorrect: false,
+              translations: [
+                { language: "zh", content: "血液酒精含量0.15%或以上" },
+                { language: "es", content: "BAC de 0.15% o más" },
+              ],
+            },
+            {
+              content: "0.10% BAC or higher",
+              isCorrect: false,
+              translations: [
+                { language: "zh", content: "血液酒精含量0.10%或以上" },
+                { language: "es", content: "BAC de 0.10% o más" },
+              ],
+            },
+          ],
+        },
+        {
           content: "Alcohol begins to impair driving ability:",
           explanation: "Alcohol starts to affect judgment, reaction time, and vision long before a person feels intoxicated. The New York DMV manual states that impairment begins with the very first drink.",
           handbookSection: "Alcohol and Other Drugs — Effects of Alcohol",
@@ -3830,6 +3918,94 @@ export const newYorkDMV = {
             },
           ],
         },
+        {
+          content: "Under New York's Graduated Driver Licensing (GDL) rules, what is the passenger restriction for a junior operator (Class DJ) driving outside New York City?",
+          explanation: "Junior operators (Class DJ) cannot drive with more than one passenger under age 21 unless the additional passengers are immediate family members. This restriction applies statewide and is meant to reduce distractions for new drivers.",
+          handbookSection: "Driver Licenses — Junior Driver Restrictions",
+          difficulty: 2,
+          translations: [
+            { language: "zh", content: "根据纽约州「分级驾照（GDL）」规定，初级驾驶员（DJ类）在纽约市以外驾驶时，乘客限制是什么？", explanation: "初级驾驶员（DJ类）不得携带超过一名21岁以下的乘客，除非额外乘客是直系家庭成员。此限制适用于全州，旨在减少新驾驶员的分心因素。" },
+            { language: "es", content: "Según las reglas de la Licencia de Conducir Graduada (GDL) de Nueva York, ¿cuál es la restricción de pasajeros para un operador junior (Clase DJ) que conduce fuera de la ciudad de Nueva York?", explanation: "Los operadores junior (Clase DJ) no pueden conducir con más de un pasajero menor de 21 años, a menos que los pasajeros adicionales sean miembros de la familia inmediata. Esta restricción aplica en todo el estado y está diseñada para reducir las distracciones de los nuevos conductores." },
+          ],
+          options: [
+            {
+              content: "No more than one passenger under 21, unless they are immediate family members",
+              isCorrect: true,
+              translations: [
+                { language: "zh", content: "不超过一名21岁以下的乘客，除非他们是直系家庭成员" },
+                { language: "es", content: "No más de un pasajero menor de 21 años, a menos que sean miembros de la familia inmediata" },
+              ],
+            },
+            {
+              content: "No passengers at all for the first 6 months",
+              isCorrect: false,
+              translations: [
+                { language: "zh", content: "前6个月完全不能载客" },
+                { language: "es", content: "Sin pasajeros en absoluto durante los primeros 6 meses" },
+              ],
+            },
+            {
+              content: "No more than two passengers of any age",
+              isCorrect: false,
+              translations: [
+                { language: "zh", content: "不超过两名任何年龄的乘客" },
+                { language: "es", content: "No más de dos pasajeros de cualquier edad" },
+              ],
+            },
+            {
+              content: "Passengers are unrestricted as long as all wear seat belts",
+              isCorrect: false,
+              translations: [
+                { language: "zh", content: "只要所有人系安全带，乘客不受限制" },
+                { language: "es", content: "Los pasajeros no tienen restricciones siempre que todos usen cinturón de seguridad" },
+              ],
+            },
+          ],
+        },
+        {
+          content: "In New York State, how many points accumulated within a 24-month period will result in a license suspension?",
+          explanation: "Accumulating 11 or more points on your driving record within any 24-month period will result in your license being suspended. The point count is based on the date of violation, not the date of conviction. Drivers can reduce up to 4 points by completing a DMV-approved Motor Vehicle Crash Prevention Course.",
+          handbookSection: "Driver Licenses — Point System",
+          difficulty: 2,
+          translations: [
+            { language: "zh", content: "在纽约州，24个月内积累多少分会导致驾照被暂扣？", explanation: "在任意24个月内驾驶记录上积累11分或以上，将导致驾照被暂扣。积分以违规日期为准，而非定罪日期。驾驶员可以通过完成DMV批准的「机动车事故预防课程」减少最多4分。" },
+            { language: "es", content: "En el estado de Nueva York, ¿cuántos puntos acumulados en un período de 24 meses resultarán en la suspensión de una licencia?", explanation: "Acumular 11 o más puntos en su récord de conducción dentro de cualquier período de 24 meses resultará en la suspensión de su licencia. El conteo de puntos se basa en la fecha de la infracción, no en la fecha de condena. Los conductores pueden reducir hasta 4 puntos completando un Curso de Prevención de Accidentes de Vehículos de Motor aprobado por el DMV." },
+          ],
+          options: [
+            {
+              content: "11 or more points",
+              isCorrect: true,
+              translations: [
+                { language: "zh", content: "11分或以上" },
+                { language: "es", content: "11 o más puntos" },
+              ],
+            },
+            {
+              content: "6 or more points",
+              isCorrect: false,
+              translations: [
+                { language: "zh", content: "6分或以上" },
+                { language: "es", content: "6 o más puntos" },
+              ],
+            },
+            {
+              content: "8 or more points",
+              isCorrect: false,
+              translations: [
+                { language: "zh", content: "8分或以上" },
+                { language: "es", content: "8 o más puntos" },
+              ],
+            },
+            {
+              content: "15 or more points",
+              isCorrect: false,
+              translations: [
+                { language: "zh", content: "15分或以上" },
+                { language: "es", content: "15 o más puntos" },
+              ],
+            },
+          ],
+        },
       ],
     },
     // ─── SHARING THE ROAD & CRASH PROCEDURES ─────────────────────────────────────────
@@ -4499,6 +4675,94 @@ export const newYorkDMV = {
               translations: [
                 { language: "zh", content: "在他们选择的任何车道内以提高能见度" },
                 { language: "es", content: "En cualquier carril que elijan para mayor visibilidad" },
+              ],
+            },
+          ],
+        },
+        {
+          content: "When a driver in New York is involved in a crash that results in death or serious injury, within how many days must a crash report be filed with the DMV?",
+          explanation: "New York law requires that crashes causing death or serious injury be reported to the DMV within 10 days. The report must be filed using Form MV-104C, which is available at motor vehicle offices or online. Failure to file a crash report can result in an indefinite license suspension.",
+          handbookSection: "Sharing the Road — Crash Reporting",
+          difficulty: 2,
+          translations: [
+            { language: "zh", content: "在纽约州，当驾驶员发生导致死亡或严重伤害的事故时，必须在多少天内向DMV提交事故报告？", explanation: "纽约州法律要求在事故造成死亡或严重伤害后10天内向DMV报告。报告必须使用MV-104C表格提交，该表格可在机动车办公室或网上获取。未提交事故报告可能导致驾照被无限期暂扣。" },
+            { language: "es", content: "Cuando un conductor en Nueva York está involucrado en un accidente que resulta en muerte o lesiones graves, ¿dentro de cuántos días debe presentarse un informe de accidente ante el DMV?", explanation: "La ley de Nueva York requiere que los accidentes que causen muerte o lesiones graves sean reportados al DMV dentro de 10 días. El informe debe presentarse usando el Formulario MV-104C, disponible en las oficinas de vehículos de motor o en línea. No presentar un informe de accidente puede resultar en una suspensión indefinida de la licencia." },
+          ],
+          options: [
+            {
+              content: "Within 10 days",
+              isCorrect: true,
+              translations: [
+                { language: "zh", content: "10天内" },
+                { language: "es", content: "Dentro de 10 días" },
+              ],
+            },
+            {
+              content: "Within 24 hours",
+              isCorrect: false,
+              translations: [
+                { language: "zh", content: "24小时内" },
+                { language: "es", content: "Dentro de 24 horas" },
+              ],
+            },
+            {
+              content: "Within 30 days",
+              isCorrect: false,
+              translations: [
+                { language: "zh", content: "30天内" },
+                { language: "es", content: "Dentro de 30 días" },
+              ],
+            },
+            {
+              content: "Within 5 business days",
+              isCorrect: false,
+              translations: [
+                { language: "zh", content: "5个工作日内" },
+                { language: "es", content: "Dentro de 5 días hábiles" },
+              ],
+            },
+          ],
+        },
+        {
+          content: "What must a driver do when approaching or passing a horse being ridden on the road in New York?",
+          explanation: "New York law prohibits drivers from sounding the horn when approaching or passing a horse. Horse riders are subject to and protected by the rules of the road. Honking can startle a horse and cause a dangerous accident. Drivers should approach at an acceptable speed and maintain a safe distance.",
+          handbookSection: "Sharing the Road — Horse Riders",
+          difficulty: 3,
+          translations: [
+            { language: "zh", content: "在纽约州，当驾驶员靠近或超过骑马者时必须怎么做？", explanation: "纽约州法律禁止驾驶员在靠近或超过马匹时按喇叭。骑马者受道路规则的约束和保护。按喇叭可能会惊吓马匹并引发危险事故。驾驶员应以适当的速度接近并保持安全距离。" },
+            { language: "es", content: "¿Qué debe hacer un conductor cuando se acerca o pasa a un caballo montado en la carretera en Nueva York?", explanation: "La ley de Nueva York prohíbe a los conductores tocar el claxon cuando se acercan o pasan a un caballo. Los jinetes están sujetos a y protegidos por las reglas de tránsito. Tocar el claxon puede asustar a un caballo y causar un accidente peligroso. Los conductores deben acercarse a una velocidad aceptable y mantener una distancia segura." },
+          ],
+          options: [
+            {
+              content: "Approach at an acceptable speed and distance; do not sound the horn",
+              isCorrect: true,
+              translations: [
+                { language: "zh", content: "以适当的速度和距离接近；不要按喇叭" },
+                { language: "es", content: "Acercarse a una velocidad y distancia aceptables; no tocar el claxon" },
+              ],
+            },
+            {
+              content: "Sound the horn briefly to alert the rider you are passing",
+              isCorrect: false,
+              translations: [
+                { language: "zh", content: "短暂按喇叭提醒骑手你要超过" },
+                { language: "es", content: "Tocar brevemente el claxon para alertar al jinete de que está pasando" },
+              ],
+            },
+            {
+              content: "Flash headlights to warn the rider before passing",
+              isCorrect: false,
+              translations: [
+                { language: "zh", content: "超车前闪烁大灯提醒骑手" },
+                { language: "es", content: "Destellar los faros para advertir al jinete antes de pasar" },
+              ],
+            },
+            {
+              content: "Stop completely and wait for the horse to leave the road",
+              isCorrect: false,
+              translations: [
+                { language: "zh", content: "完全停车等待马匹离开道路" },
+                { language: "es", content: "Detenerse completamente y esperar a que el caballo abandone la carretera" },
               ],
             },
           ],
