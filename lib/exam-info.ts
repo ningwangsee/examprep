@@ -1195,7 +1195,7 @@ const pennsylvaniaDMV: ExamGuide = {
     },
     {
       label: { en: "Schedule Appointment", zh: "预约考试", es: "Programar Cita" },
-      url: "https://www.pa.gov/agencies/dmv/driver-services/",
+      url: "https://www.dmv.pa.gov/DRIVER-LICENSING/KNOWLEDGE-TESTING/Pages/Knowledge-Testing-Locations.aspx",
       description: {
         en: "Schedule your knowledge test at a PennDOT Driver License Center",
         zh: "在 PennDOT 驾照中心预约笔试",
@@ -1205,7 +1205,7 @@ const pennsylvaniaDMV: ExamGuide = {
     },
     {
       label: { en: "Find a Driver License Center", zh: "查找驾照中心", es: "Encontrar un Centro de Licencias" },
-      url: "https://www.pa.gov/agencies/dmv/driver-services/",
+      url: "https://www.dmv.pa.gov/DRIVER-LICENSING/driver-services/Pages/Find-a-Driver-License-Center.aspx",
       description: {
         en: "Find the PennDOT Driver License Center nearest to you",
         zh: "查找离您最近的 PennDOT 驾照中心",
@@ -1215,7 +1215,7 @@ const pennsylvaniaDMV: ExamGuide = {
     },
     {
       label: { en: "PA Point System", zh: "宾州积分制度", es: "Sistema de Puntos de PA" },
-      url: "https://www.pa.gov/agencies/dmv/driver-services/driver-licensing/",
+      url: "https://www.dmv.pa.gov/DRIVER-LICENSING/Points-and-Suspensions/Pages/Point-Schedule.aspx",
       description: {
         en: "Learn about PA's driver point system and how violations affect your license",
         zh: "了解宾州驾驶积分制度及违规对驾照的影响",
@@ -1225,7 +1225,7 @@ const pennsylvaniaDMV: ExamGuide = {
     },
     {
       label: { en: "PA Traffic Laws & Safety", zh: "宾州交通法规与安全", es: "Leyes de Tránsito y Seguridad de PA" },
-      url: "https://www.pa.gov/agencies/dmv/driver-services/",
+      url: "https://penndot.pa.gov/TravelInPA/Safety/Pages/default.aspx",
       description: {
         en: "Pennsylvania traffic laws, safety programs, and driver resources",
         zh: "宾夕法尼亚州交通法规、安全计划和驾驶员资源",
