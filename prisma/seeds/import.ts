@@ -2,6 +2,7 @@ import "dotenv/config";
 import { PrismaBetterSqlite3 } from "@prisma/adapter-better-sqlite3";
 import { PrismaClient } from "../../app/generated/prisma/client";
 import { californiaDMV } from "./california-dmv";
+import { texasDMV } from "./texas-dmv";
 
 const adapter = new PrismaBetterSqlite3({
   url: process.env.DATABASE_URL ?? "file:./dev.db",
@@ -74,6 +75,7 @@ async function importCategory(data: typeof californiaDMV) {
 async function main() {
   console.log("🚀 Starting question bank import...\n");
   await importCategory(californiaDMV);
+  await importCategory(texasDMV);
   console.log("\n🎉 Import complete!");
 }
 
