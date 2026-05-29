@@ -361,7 +361,29 @@ These require manual browser testing:
 
 - **Optimal count**: ~3× the actual test length. CA test = 46 questions, target = ~150 questions.
 - **Difficulty spread**: aim for ~40% easy (difficulty=1), ~40% medium (difficulty=2), ~20% hard (difficulty=3).
-- **handbookSection format**: `"Topic Name — Subtopic"` e.g. `"Traffic Controls — School Buses"`. Shown to users after wrong answers.
+- **handbookSection format**: `"Chapter Title — Subtopic"` e.g. `"Traffic Control — School Buses"`. Shown to users after wrong answers.
+  - **The prefix (before ` — `) MUST be the exact chapter title from the table below**, not a free-form label.
+  - This is enforced by `validate:db` (Phase 3). A mismatch blocks the commit.
+  - For PDF-based states (TX, FL, CA) where there are no online chapter pages, use a consistent descriptive label per topic (not validated automatically — use your judgment).
+
+  **Required handbookSection prefixes per state/topic (online-chapter states only):**
+
+  | State | Topic | Required prefix |
+  |---|---|---|
+  | New York | Traffic Control & Road Signs | `Traffic Control` |
+  | New York | Right-of-Way, Intersections & Turns | `Intersections & Turns` |
+  | New York | Speed, Space & Defensive Driving | `Defensive Driving` |
+  | New York | Alcohol & Other Drugs | `Alcohol & Drugs` |
+  | New York | Driver Licensing & Vehicle Laws | `Driver Licenses` |
+  | New York | Sharing the Road & Crash Procedures | `Sharing the Road` |
+  | Pennsylvania | Traffic Signals, Signs & Markings | `Signals, Signs & Markings` |
+  | Pennsylvania | Right-of-Way, Turns & Intersections | `Everyday Driving Skills` |
+  | Pennsylvania | Speed, Space & Defensive Driving | `Everyday Driving Skills` |
+  | Pennsylvania | Alcohol, Drugs & DUI | `Driver Factors` |
+  | Pennsylvania | Driver License & PA Laws | `Driver License` |
+  | Pennsylvania | Safe Driving & Sharing the Road | `Choosing Safety First` |
+
+  When adding a new state with online chapters, add its mapping to `CHAPTER_TITLES` in `prisma/scripts/validate-db.ts`.
 - **Translation workflow (new states)**: Use `prisma/scripts/gen-ny-seed.ts` as a template. Script defines English questions → calls Claude API (`claude-opus-4-5`) to translate all topics in batches → writes complete trilingual seed file. Set `$env:ANTHROPIC_API_KEY` before running. See `gen-ny-seed.ts` for the pattern.
 - **After generating the seed**, also add an `ExamGuide` entry to `lib/exam-info.ts`. Required fields: `passThreshold` (integer), `keepPracticing` (I18n), `handbookTitle` (I18n), `handbookDesc` (I18n), plus `stats`, `whatToBring`, `howToSchedule`, `tips`, `handbookChapters`, `officialLinks`. The registry key must match `category.nameEn` exactly.
 - **Translation workflow (CA/TX legacy)**: Generate English questions → translate externally (Anthropic Chat / ChatGPT) → paste back translations → run insertion script → update seed file.

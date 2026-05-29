@@ -2,10 +2,11 @@
  * validate-db.ts
  *
  * Validates database integrity after import or shuffle:
- *   - Every question has exactly 4 options
- *   - Every question has exactly 1 correct option
- *   - Correct answer is NOT fixed to a single position (distribution check)
- *   - Every topic.handbookUrl returns a non-4xx/5xx HTTP status
+ *   1. Every question has exactly 4 options
+ *   2. Every question has exactly 1 correct option
+ *   3. Correct answer is NOT fixed to a single position (distribution check)
+ *   4. Every topic.handbookUrl returns a non-4xx/5xx HTTP status
+ *   5. Every question.handbookSection prefix matches the topic's expected chapter title
  *
  * Run after import or shuffle:  npx tsx prisma/scripts/validate-db.ts
  */
@@ -17,6 +18,31 @@ import { PrismaClient } from "../../app/generated/prisma/client";
 
 const adapter = new PrismaBetterSqlite3({ url: process.env.DATABASE_URL ?? "file:./dev.db" });
 const prisma = new PrismaClient({ adapter });
+
+// ── Chapter title map ─────────────────────────────────────────────────────────
+// Key:   "<category.nameEn>::<topic.nameEn>"
+// Value: expected handbookSection prefix (the part before " — ")
+//
+// Only add topics that link to a real online chapter page (not PDFs).
+// PDF-based states (TX, FL) have no strict chapter title to enforce.
+// Leave a topic out of this map to skip the prefix check for it.
+const CHAPTER_TITLES: Record<string, string> = {
+  // ── Pennsylvania (online chapter pages) ──────────────────────────────────
+  "Pennsylvania Driver's License::Traffic Signals, Signs & Markings":  "Signals, Signs & Markings",
+  "Pennsylvania Driver's License::Right-of-Way, Turns & Intersections": "Everyday Driving Skills",
+  "Pennsylvania Driver's License::Speed, Space & Defensive Driving":    "Everyday Driving Skills",
+  "Pennsylvania Driver's License::Alcohol, Drugs & DUI":                "Driver Factors",
+  "Pennsylvania Driver's License::Driver License & PA Laws":            "Driver License",
+  "Pennsylvania Driver's License::Safe Driving & Sharing the Road":     "Choosing Safety First",
+
+  // ── New York (online chapter pages) ──────────────────────────────────────
+  "New York Driver's License::Traffic Control & Road Signs":            "Traffic Control",
+  "New York Driver's License::Right-of-Way, Intersections & Turns":    "Intersections & Turns",
+  "New York Driver's License::Speed, Space & Defensive Driving":        "Defensive Driving",
+  "New York Driver's License::Alcohol & Other Drugs":                   "Alcohol & Drugs",
+  "New York Driver's License::Driver Licensing & Vehicle Laws":         "Driver Licenses",
+  "New York Driver's License::Sharing the Road & Crash Procedures":     "Sharing the Road",
+};
 
 function checkUrl(url: string, depth = 0): Promise<{ status: number | string; ok: boolean }> {
   if (depth > 5) return Promise.resolve({ status: "TOO_MANY_REDIRECTS", ok: false });
@@ -124,6 +150,42 @@ async function main() {
       }
     }
   }
+
+  // ── 3. handbookSection prefix check ──────────────────────────────────────
+  console.log("\n📖 Checking handbookSection prefixes vs chapter titles...\n");
+
+  let prefixErrors = 0;
+  let prefixChecked = 0;
+
+  for (const cat of categories) {
+    for (const topic of cat.topics) {
+      const key = `${cat.nameEn}::${topic.nameEn}`;
+      const expected = CHAPTER_TITLES[key];
+      if (!expected) continue; // PDF-based or not yet mapped — skip
+
+      const badQuestions: string[] = [];
+      for (const q of topic.questions) {
+        if (!q.handbookSection) continue;
+        prefixChecked++;
+        const prefix = q.handbookSection.split(" — ")[0];
+        if (prefix !== expected) {
+          badQuestions.push(`    Q${q.id}: "${q.handbookSection}" (expected prefix "${expected}")`);
+        }
+      }
+
+      const state = cat.nameEn.replace(" Driver's License", "");
+      if (badQuestions.length > 0) {
+        console.log(`  ❌ ${state} / ${topic.nameEn} — expected prefix: "${expected}"`);
+        badQuestions.forEach((l) => console.log(l));
+        prefixErrors += badQuestions.length;
+      } else {
+        console.log(`  ✅ ${state} / ${topic.nameEn}`);
+      }
+    }
+  }
+
+  if (prefixErrors > 0) totalErrors += prefixErrors;
+  console.log(`\n  ${prefixChecked} questions checked, ${prefixErrors} prefix mismatch(es)`);
 
   // ── Summary ───────────────────────────────────────────────────────────────
   console.log(`\n─────────────────────────────────────────`);
