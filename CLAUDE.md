@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-**DMV Practice** — a free driver's license written test preparation platform. Currently covers California DMV (89 questions, 6 topics). Built with Next.js 16, Prisma 7, SQLite, and Tailwind CSS v4. Supports multilingual content (English, Spanish, Chinese) via translation tables.
+**DMV Practice** — a free driver's license written test preparation platform. Currently covers California DMV (111 questions, 6 topics). Built with Next.js 16, Prisma 7, SQLite, and Tailwind CSS v4. Supports multilingual content (English, Spanish, Chinese) via translation tables.
 
 **Scope:** Driver's license exams only (no AI tutoring — wrong answers show handbook section references instead). Professional certification exams (AWS, FINRA, etc.) may be added later with AI tutoring.
 
@@ -18,6 +18,7 @@ npm run build        # Production build
 npm run lint         # ESLint
 npm run db:seed      # Clear DB and re-seed with all data
 npm run db:import    # Incrementally import one seed file (skips if already exists)
+npm run db:populate  # Backfill zh/es translations for existing questions (non-destructive)
 npx prisma db push   # Apply schema changes to dev.db (no migration files)
 npx prisma generate  # Regenerate Prisma client after schema changes
 npx prisma studio    # Open Prisma Studio GUI
@@ -116,9 +117,11 @@ All text stored in English base fields; translations in separate tables:
 
 Supported languages: `"en"` (base), `"zh"` (Chinese), `"es"` (Spanish)
 
-CA DMV officially offers tests in all three languages. Category and topic translations are seeded. Question/option translations not yet seeded (quiz content stays in English until added).
+CA DMV officially offers tests in all three languages. All 111 CA DMV questions (content, explanation, all options) have zh + es translations stored in the DB.
 
 **Language selection** is stored in a `lang` cookie (1-year expiry, set by `LanguageSwitcher`). Server components read it via `getLang()` from `lib/lang.ts`. UI strings live in the `ui{}` dict in `lib/lang.ts`. Translated DB values are resolved with the `tr()` helper: `tr(base, translations, lang, field)`.
+
+**Translation backfill**: If questions are added without translations, run `npm run db:populate` to backfill zh/es using the data already in the seed file. The script is non-destructive (skips questions that already have translations).
 
 ### Question Schema (key fields)
 
@@ -128,9 +131,13 @@ CA DMV officially offers tests in all three languages. Category and topic transl
 
 ### Database Seeding
 
-Two approaches:
-1. **Full reset**: `npm run db:seed` — clears all data, re-imports California DMV
-2. **Incremental**: `npm run db:import` — imports from `prisma/seeds/import.ts`, skips if category already exists (checks by `nameEn`)
+Three approaches:
+
+| Command | When to use |
+|---|---|
+| `npm run db:seed` | Full reset — wipes all data, re-seeds from scratch |
+| `npm run db:import` | Add a new state without touching existing data |
+| `npx tsx prisma/scripts/add-*.ts` | Add questions to an existing topic (incremental) |
 
 Seed files live in `prisma/seeds/[state-name].ts`. Each exports a typed object with the full category+topics+questions structure. Add a new state by:
 1. Creating `prisma/seeds/[state]-dmv.ts`
@@ -138,6 +145,58 @@ Seed files live in `prisma/seeds/[state-name].ts`. Each exports a typed object w
 3. Running `npm run db:import`
 
 After re-seeding, DB auto-increments restart — so topic/category IDs change. **Restart the dev server** after seeding, otherwise pages may show stale 404s for old IDs.
+
+### Adding Questions to Existing Topics (Incremental Scripts)
+
+Scripts in `prisma/scripts/add-*.ts` insert questions without touching other data. Pattern:
+
+```ts
+import "dotenv/config";
+import { PrismaBetterSqlite3 } from "@prisma/adapter-better-sqlite3";
+import { PrismaClient } from "../../app/generated/prisma/client";
+
+const adapter = new PrismaBetterSqlite3({ url: process.env.DATABASE_URL ?? "file:./dev.db" });
+const prisma = new PrismaClient({ adapter });
+
+async function main() {
+  // Always look up topic by nameEn — never hardcode IDs (they change on re-seed)
+  const topic = await prisma.examTopic.findFirst({ where: { nameEn: "Safe Driving & Parking" } });
+  if (!topic) throw new Error("Topic not found");
+
+  for (const q of newQuestions) {
+    // Duplicate check before insert — skipDuplicates is NOT supported in Prisma 7 + SQLite
+    const exists = await prisma.question.findFirst({ where: { content: q.content, topicId: topic.id } });
+    if (exists) { continue; }
+
+    await prisma.question.create({
+      data: {
+        content: q.content,
+        explanation: q.explanation,
+        handbookSection: q.handbookSection,
+        difficulty: q.difficulty,
+        topicId: topic.id,
+        translations: { create: q.translations },        // zh + es QuestionTranslations
+        options: {
+          create: q.options.map((o) => ({
+            content: o.content,
+            isCorrect: o.isCorrect,
+            translations: { create: [                    // zh + es OptionTranslations
+              { language: "zh", content: o.zh },
+              { language: "es", content: o.es },
+            ]},
+          })),
+        },
+      },
+    });
+  }
+}
+
+main().catch((e) => { console.error(e); process.exit(1); }).finally(() => prisma.$disconnect());
+```
+
+**After running a script, also add the questions to the seed file** (`prisma/seeds/california-dmv.ts`) so `npm run db:seed` stays in sync.
+
+After a data-only change (no schema change), **no server restart is needed** — Server Components re-query the DB on every request.
 
 ### Styling
 
@@ -149,7 +208,73 @@ Tailwind CSS v4 — uses `@import "tailwindcss"` in `globals.css` (not `@tailwin
 |---|---|---|---|
 | California | 111 | 6 | ✅ Live |
 
+**CA DMV topics breakdown:**
+| Topic | nameEn | Questions |
+|---|---|---|
+| 1 | Traffic Signs & Signals | ~20 |
+| 2 | Right-of-Way Rules | ~20 |
+| 3 | Speed Limits | ~15 |
+| 4 | Alcohol & Drugs | ~15 |
+| 5 | License Requirements | ~10 |
+| 6 | Safe Driving & Parking | ~31 |
+
+**Target question count:** ~150 per state (≈3× the actual 46-question test). Current 111 provides good but not full coverage.
+
 Next planned: Texas DMV
+
+## Known Gotchas & Lessons Learned
+
+### Prisma 7 + SQLite
+
+- **`skipDuplicates` is NOT supported** in `createMany()` with the better-sqlite3 adapter. Use `findFirst` check before each `create` instead.
+- **Never hardcode topic/category IDs** in scripts. IDs reset when `db:seed` is run. Always look up by `nameEn`.
+- **`createMany` vs nested `create`**: For question+translations+options in one call, use nested `create` inside `prisma.question.create()`. `createMany` does not support nested relations.
+
+### Chinese Text in TypeScript / TSX Files
+
+- **ASCII double quotes inside Chinese strings break esbuild/tsx.** If Chinese text contains `"quoted"` phrases using ASCII `"`, the string terminates early with a syntax error.
+- Fix: replace ASCII `"..."` with Chinese corner brackets `「...」` inside zh strings.
+- Example: `"禁止红灯转弯"` (broken) → `「禁止红灯转弯」` (correct)
+
+### PowerShell (Windows dev environment)
+
+- **`&&` is NOT supported** in PowerShell 5.1. Use `;` to chain commands unconditionally, or `if ($?) { cmd2 }` for conditional chaining.
+- **Heredoc syntax** for multi-line git commit messages: use `@'...'@` (single-quoted), not `$(cat <<'EOF'...EOF)` (bash syntax).
+  ```powershell
+  git commit -m @'
+  Your commit message here
+  Co-Authored-By: ...
+  '@
+  ```
+- **Path separator**: Always use `C:\Users\...` style in PowerShell. Bash-style paths (`C:/Users/...`) may work but avoid mixing.
+
+### DMV Handbook URLs
+
+- The CA DMV website restructures URLs periodically. Verify `topic.handbookUrl` links are still valid before adding a new state.
+- Topic 1 CA URL was fixed: `/traffic-controls/` → `/introduction-to-driving/` (outdated as of 2025).
+- If a handbook link 404s, update both the seed file and the DB directly via a one-off script in `prisma/scripts/`.
+
+### Question Bank Design
+
+- **Optimal count**: ~3× the actual test length. CA test = 46 questions, target = ~150 questions.
+- **Difficulty spread**: aim for ~40% easy (difficulty=1), ~40% medium (difficulty=2), ~20% hard (difficulty=3).
+- **handbookSection format**: `"Topic Name — Subtopic"` e.g. `"Traffic Controls — School Buses"`. Shown to users after wrong answers.
+- **Translation workflow**: Generate English questions → translate externally (Anthropic Chat / ChatGPT) → paste back translations → run insertion script → update seed file.
+
+### Incremental Script File Locations
+
+All one-off insertion scripts live in `prisma/scripts/`. Existing scripts (for reference):
+
+| Script | Knowledge point | Topic |
+|---|---|---|
+| `add-distracted-driving.ts` | Cell phone / distracted driving | 6 |
+| `add-seat-belts.ts` | Seat belts & child passenger safety | 6 |
+| `add-school-bus.ts` | School bus rules | 1 |
+| `add-roundabouts.ts` | Roundabout rules | 2 |
+| `add-headlights.ts` | Headlight requirements | 6 |
+| `add-accidents.ts` | Accident reporting | 6 |
+| `populate-translations.ts` | Backfill zh/es for all questions | all |
+| `fix-handbook-url.ts` | Fix Topic 1 handbookUrl | — |
 
 ## GitHub
 
