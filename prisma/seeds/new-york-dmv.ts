@@ -934,7 +934,7 @@ export const newYorkDMV = {
         {
           content: "At an uncontrolled intersection where two vehicles arrive at the same time, who has the right-of-way?",
           explanation: "At an uncontrolled intersection where vehicles arrive simultaneously, the driver on the left must yield to the driver on the right. This is the standard right-of-way rule at intersections without signals or signs.",
-          handbookSection: "Intersections & Turns — Right-of-Way",
+          handbookSection: "Intersections and Turns — Right-of-Way",
           difficulty: 1,
           translations: [
             { language: "zh", content: "在无管制的交叉路口，两辆车同时到达时，谁拥有先行权？", explanation: "在无管制的交叉路口，当车辆同时到达时，左侧的驾驶员必须让行给右侧的驾驶员。这是在没有信号灯或标志的交叉路口的标准先行权规则。" },
@@ -978,7 +978,7 @@ export const newYorkDMV = {
         {
           content: "When two vehicles approach from opposite directions and one driver wants to turn left, who must yield?",
           explanation: "A driver turning left must yield to all oncoming traffic going straight or turning right. Left-turning drivers must wait until it is safe to complete the turn.",
-          handbookSection: "Intersections & Turns — Right-of-Way",
+          handbookSection: "Intersections and Turns — Right-of-Way",
           difficulty: 1,
           translations: [
             { language: "zh", content: "当两辆车从相反方向接近，其中一名驾驶员想要左转时，谁必须让行？", explanation: "左转的驾驶员必须让行给所有直行或右转的对向车辆。左转驾驶员必须等到可以安全完成转弯时才能转弯。" },
@@ -1022,7 +1022,7 @@ export const newYorkDMV = {
         {
           content: "How far in advance must you signal before turning or changing lanes?",
           explanation: "New York law requires drivers to signal at least 100 feet (30 meters) before turning or changing lanes. This gives other drivers and pedestrians adequate warning of your intended movement.",
-          handbookSection: "Intersections & Turns — Signaling",
+          handbookSection: "Intersections and Turns — Signaling",
           difficulty: 1,
           translations: [
             { language: "zh", content: "转弯或变道前必须提前多远打转向灯？", explanation: "纽约州法律要求驾驶员在转弯或变道前至少提前100英尺（30米）打转向灯。这能让其他驾驶员和行人有足够的时间注意到您的行驶意图。" },
@@ -1066,7 +1066,7 @@ export const newYorkDMV = {
         {
           content: "What is the correct hand signal for a left turn?",
           explanation: "The correct hand signal for a left turn is to extend your left arm straight out horizontally through the window. This is the universal signal for a left turn.",
-          handbookSection: "Intersections & Turns — Hand Signals",
+          handbookSection: "Intersections and Turns — Hand Signals",
           difficulty: 1,
           translations: [
             { language: "zh", content: "左转的正确手势信号是什么？", explanation: "左转的正确手势信号是将左臂从车窗伸出并水平伸直。这是左转的通用信号。" },
@@ -1110,7 +1110,7 @@ export const newYorkDMV = {
         {
           content: "What is the correct hand signal for a right turn?",
           explanation: "The correct hand signal for a right turn is to extend your left arm out the window and bend it upward at a 90-degree angle. This indicates a right turn to drivers behind you.",
-          handbookSection: "Intersections & Turns — Hand Signals",
+          handbookSection: "Intersections and Turns — Hand Signals",
           difficulty: 1,
           translations: [
             { language: "zh", content: "右转的正确手势信号是什么？", explanation: "右转的正确手势信号是将左臂从车窗伸出并向上弯曲成90度角。这向后方驾驶员表示您要右转。" },
@@ -1154,7 +1154,7 @@ export const newYorkDMV = {
         {
           content: "When making a right turn at an intersection, you should:",
           explanation: "When turning right, get as far to the right as possible before turning. Turn into the right lane of the destination road. Do not make wide, sweeping right turns that enter the left lane.",
-          handbookSection: "Intersections & Turns — Turning",
+          handbookSection: "Intersections and Turns — Turning",
           difficulty: 1,
           translations: [
             { language: "zh", content: "在交叉路口右转时，您应该：", explanation: "右转时，转弯前尽量靠右行驶。转入目的地道路的右车道。不要大幅度转弯进入左车道。" },
@@ -1198,7 +1198,7 @@ export const newYorkDMV = {
         {
           content: "When must you yield to pedestrians in a crosswalk?",
           explanation: "Drivers must yield to pedestrians who are legally crossing at marked or unmarked crosswalks. You must slow down or stop if necessary to allow pedestrians to cross safely.",
-          handbookSection: "Intersections & Turns — Pedestrian Right-of-Way",
+          handbookSection: "Intersections and Turns — Pedestrian Right-of-Way",
           difficulty: 1,
           translations: [
             { language: "zh", content: "什么时候必须让行给人行横道上的行人？", explanation: "驾驶员必须让行给在有标记或无标记人行横道上合法过马路的行人。如有必要，您必须减速或停车，让行人安全通过。" },
@@ -1242,7 +1242,7 @@ export const newYorkDMV = {
         {
           content: "Why should you keep your wheels pointing straight ahead while waiting to make a left turn?",
           explanation: "Keeping your wheels straight while waiting prevents your car from being pushed into oncoming traffic if you are struck from behind. If your wheels are turned left and you are rear-ended, you could be pushed into oncoming traffic.",
-          handbookSection: "Intersections & Turns — Turning",
+          handbookSection: "Intersections and Turns — Turning",
           difficulty: 2,
           translations: [
             { language: "zh", content: "等待左转时为什么应该保持车轮指向正前方？", explanation: "等待时保持车轮指向正前方可以防止您被追尾时被推入对向车流。如果您的车轮已经向左打，被追尾时您可能会被推入对向车流。" },
@@ -1286,7 +1286,7 @@ export const newYorkDMV = {
         {
           content: "What must you do when you hear or see an emergency vehicle approaching with flashing lights and a siren?",
           explanation: "When an emergency vehicle approaches with lights and siren, you must safely pull over to the right edge of the road and stop. Remain stopped until the emergency vehicle has passed.",
-          handbookSection: "Intersections & Turns — Emergency Vehicles",
+          handbookSection: "Intersections and Turns — Emergency Vehicles",
           difficulty: 1,
           translations: [
             { language: "zh", content: "当您听到或看到一辆闪烁着灯光并鸣响警笛的紧急车辆接近时，您必须怎么做？", explanation: "当紧急车辆闪灯鸣笛接近时，您必须安全地靠右停到路边。保持停车状态直到紧急车辆通过。" },
@@ -1330,7 +1330,7 @@ export const newYorkDMV = {
         {
           content: "What does New York's Move Over Law require on multi-lane highways?",
           explanation: "The Move Over Law requires drivers on multi-lane parkways and interstates to move from the lane immediately adjacent to a stopped emergency vehicle that has its lights activated, unless it is unsafe to do so.",
-          handbookSection: "Intersections & Turns — Emergency Vehicles",
+          handbookSection: "Intersections and Turns — Emergency Vehicles",
           difficulty: 2,
           translations: [
             { language: "zh", content: "纽约州的「让道法」对多车道公路有什么要求？", explanation: "「让道法」要求在多车道公园大道和州际公路上行驶的驾驶员，如果安全的话，必须驶离紧邻已开启警示灯的停靠紧急车辆的车道。" },
@@ -1374,7 +1374,7 @@ export const newYorkDMV = {
         {
           content: "When must you yield to vehicles already in a traffic circle (roundabout)?",
           explanation: "Vehicles already circulating inside a roundabout have the right-of-way. Drivers entering the roundabout must yield to all traffic already in the circle before merging.",
-          handbookSection: "Intersections & Turns — Roundabouts",
+          handbookSection: "Intersections and Turns — Roundabouts",
           difficulty: 1,
           translations: [
             { language: "zh", content: "什么时候必须让行给已经在环岛内的车辆？", explanation: "已经在环岛内行驶的车辆拥有先行权。进入环岛的驾驶员必须在汇入前让行给所有已在环岛内的车辆。" },
@@ -1418,7 +1418,7 @@ export const newYorkDMV = {
         {
           content: "When exiting a driveway or alley, what must you do before entering the roadway?",
           explanation: "When exiting a driveway, alley, or private road, you must stop and yield the right-of-way to all traffic on the roadway and to pedestrians before proceeding.",
-          handbookSection: "Intersections & Turns — Right-of-Way",
+          handbookSection: "Intersections and Turns — Right-of-Way",
           difficulty: 1,
           translations: [
             { language: "zh", content: "从车道或小巷驶出时，在进入道路前您必须怎么做？", explanation: "从车道、小巷或私人道路驶出时，您必须停车并让行给道路上的所有车辆和行人，然后再继续行驶。" },
@@ -1462,7 +1462,7 @@ export const newYorkDMV = {
         {
           content: "Under what conditions is a U-turn prohibited in New York?",
           explanation: "U-turns are prohibited when drivers approaching cannot see you from 500 feet away (near hills or curves), in NYC business districts, where NO U-TURN signs are posted, on limited-access expressways, and in school zones.",
-          handbookSection: "Intersections & Turns — U-Turns",
+          handbookSection: "Intersections and Turns — U-Turns",
           difficulty: 2,
           translations: [
             { language: "zh", content: "在纽约州，什么情况下禁止掉头？", explanation: "在以下情况下禁止掉头：接近的驾驶员无法在500英尺外看到您（靠近山丘或弯道处）、纽约市商业区、张贴有「禁止掉头」标志的地方、限制通行的高速公路以及学校区域。" },
@@ -1506,7 +1506,7 @@ export const newYorkDMV = {
         {
           content: "From which lane must a U-turn be made?",
           explanation: "A U-turn must be made from the leftmost portion of the lane nearest to the centerline of the roadway. You cannot make a U-turn from the right lane.",
-          handbookSection: "Intersections & Turns — U-Turns",
+          handbookSection: "Intersections and Turns — U-Turns",
           difficulty: 2,
           translations: [
             { language: "zh", content: "掉头必须从哪条车道进行？", explanation: "掉头必须从最靠近道路中心线的车道的最左侧部分进行。您不能从右车道掉头。" },
@@ -1550,7 +1550,7 @@ export const newYorkDMV = {
         {
           content: "What does a blue flashing light on a non-emergency vehicle (such as a volunteer firefighter's personal car) mean?",
           explanation: "Volunteer firefighters may display blue lights on their personal vehicles. These are not authorized emergency vehicles; you are not required to yield but it is recommended if you can safely do so.",
-          handbookSection: "Intersections & Turns — Emergency Vehicles",
+          handbookSection: "Intersections and Turns — Emergency Vehicles",
           difficulty: 3,
           translations: [
             { language: "zh", content: "非紧急车辆（如志愿消防员的私人车辆）上的蓝色闪烁灯是什么意思？", explanation: "志愿消防员可以在其私人车辆上安装蓝色灯。这些不是授权的紧急车辆；您没有义务让行，但如果可以安全让行，建议您这样做。" },
@@ -1594,7 +1594,7 @@ export const newYorkDMV = {
         {
           content: "You cannot enter an intersection even when the light is green if:",
           explanation: "You cannot enter an intersection if traffic is backed up and you cannot completely clear the intersection. Blocking an intersection is illegal and creates gridlock.",
-          handbookSection: "Intersections & Turns — Intersection Rules",
+          handbookSection: "Intersections and Turns — Intersection Rules",
           difficulty: 2,
           translations: [
             { language: "zh", content: "即使是绿灯，在什么情况下您也不能进入交叉路口？", explanation: "如果车辆拥堵导致您无法完全通过交叉路口，您不能进入交叉路口。堵塞交叉路口是违法的，会造成交通堵塞。" },
@@ -1638,7 +1638,7 @@ export const newYorkDMV = {
         {
           content: "When turning left from a two-way street onto another two-way street, you should:",
           explanation: "When making a left turn from a two-way street, approach from the right half of the road closest to the center, and after turning, enter the destination road to the right of its center line as close to the center as possible.",
-          handbookSection: "Intersections & Turns — Turning",
+          handbookSection: "Intersections and Turns — Turning",
           difficulty: 2,
           translations: [
             { language: "zh", content: "从一条双向道路左转进入另一条双向道路时，您应该：", explanation: "从双向道路左转时，从最靠近中心线的道路右半部分接近，转弯后进入目的地道路中心线右侧，尽量靠近中心线。" },
@@ -1682,7 +1682,7 @@ export const newYorkDMV = {
         {
           content: "A vehicle is already in the intersection when the light turns red. What should the driver do?",
           explanation: "A driver who is already in the intersection when the light changes must clear the intersection safely. Traffic law requires you to clear the intersection you are already in.",
-          handbookSection: "Intersections & Turns — Intersection Rules",
+          handbookSection: "Intersections and Turns — Intersection Rules",
           difficulty: 2,
           translations: [
             { language: "zh", content: "当红灯亮起时，一辆车已经在交叉路口内。驾驶员应该怎么做？", explanation: "当灯变红时已经在交叉路口内的驾驶员必须安全通过交叉路口。交通法规要求您必须通过已经进入的交叉路口。" },
@@ -2500,7 +2500,7 @@ export const newYorkDMV = {
         {
           content: "At what blood alcohol content (BAC) level is a driver considered legally intoxicated (DWI) in New York?",
           explanation: "A BAC of 0.08% or higher is legal evidence of intoxication (DWI) in New York. At this level, a driver can be charged with Driving While Intoxicated.",
-          handbookSection: "Alcohol & Drugs — BAC Limits",
+          handbookSection: "Alcohol and Other Drugs — BAC Limits",
           difficulty: 1,
           translations: [
             { language: "zh", content: "在纽约州，驾驶员血液酒精浓度（BAC）达到多少即被视为法定醉酒驾驶（DWI）？", explanation: "在纽约州，BAC达到0.08%或更高即构成醉酒驾驶（DWI）的法定证据。达到此水平时，驾驶员可被指控「醉酒驾驶」。" },
@@ -2544,7 +2544,7 @@ export const newYorkDMV = {
         {
           content: "What BAC triggers an Aggravated DWI charge in New York?",
           explanation: "Aggravated DWI (Agg-DWI) applies when a driver's BAC is 0.18% or higher. This carries more severe penalties than a standard DWI.",
-          handbookSection: "Alcohol & Drugs — BAC Limits",
+          handbookSection: "Alcohol and Other Drugs — BAC Limits",
           difficulty: 2,
           translations: [
             { language: "zh", content: "在纽约州，BAC达到多少会触发加重醉酒驾驶（Agg-DWI）指控？", explanation: "当驾驶员的BAC达到0.18%或更高时，适用加重醉酒驾驶（Agg-DWI）指控。此罪名的处罚比标准DWI更为严厉。" },
@@ -2588,7 +2588,7 @@ export const newYorkDMV = {
         {
           content: "What BAC range results in a DWAI (Driving While Ability Impaired) charge?",
           explanation: "A BAC of 0.05% to 0.07% is legal evidence of impairment (DWAI) in New York. DWAI is a less severe charge than DWI but still carries serious penalties.",
-          handbookSection: "Alcohol & Drugs — BAC Limits",
+          handbookSection: "Alcohol and Other Drugs — BAC Limits",
           difficulty: 2,
           translations: [
             { language: "zh", content: "BAC在什么范围内会导致「能力受损驾驶」（DWAI）指控？", explanation: "在纽约州，BAC在0.05%至0.07%之间构成能力受损（DWAI）的法定证据。DWAI的指控比DWI轻，但仍会受到严重处罚。" },
@@ -2632,7 +2632,7 @@ export const newYorkDMV = {
         {
           content: "Under New York's Zero Tolerance Law, what BAC is prohibited for drivers under age 21?",
           explanation: "The Zero Tolerance Law prohibits drivers under 21 from having any measurable BAC (0.02% to 0.07%). Even a small amount of alcohol is a violation for underage drivers.",
-          handbookSection: "Alcohol & Drugs — Zero Tolerance",
+          handbookSection: "Alcohol and Other Drugs — Zero Tolerance",
           difficulty: 1,
           translations: [
             { language: "zh", content: "根据纽约州「零容忍法」，21岁以下的驾驶员禁止达到多少BAC？", explanation: "「零容忍法」禁止21岁以下的驾驶员体内有任何可测量的BAC（0.02%至0.07%）。即使是少量酒精，对于未成年驾驶员也属于违法。" },
@@ -2676,7 +2676,7 @@ export const newYorkDMV = {
         {
           content: "What is the penalty for a first Zero Tolerance violation for an underage driver?",
           explanation: "A first Zero Tolerance violation results in a 6-month license suspension. The driver must also pay a $100 suspension termination fee and a $125 civil penalty to have the license reinstated.",
-          handbookSection: "Alcohol & Drugs — Zero Tolerance",
+          handbookSection: "Alcohol and Other Drugs — Zero Tolerance",
           difficulty: 2,
           translations: [
             { language: "zh", content: "未成年驾驶员首次违反「零容忍法」的处罚是什么？", explanation: "首次违反「零容忍法」将导致驾照被吊销6个月。驾驶员还须支付100美元的吊销终止费和125美元的民事罚款才能恢复驾照。" },
@@ -2720,7 +2720,7 @@ export const newYorkDMV = {
         {
           content: "What does New York's Implied Consent Law mean?",
           explanation: "By driving in New York, you automatically agree to submit to a chemical test (breath, blood, or urine) if asked by law enforcement. Refusing the test results in immediate license suspension.",
-          handbookSection: "Alcohol & Drugs — Implied Consent",
+          handbookSection: "Alcohol and Other Drugs — Implied Consent",
           difficulty: 1,
           translations: [
             { language: "zh", content: "纽约州的「默示同意法」是什么意思？", explanation: "在纽约州驾驶即表示您自动同意在执法人员要求时接受化学测试（呼气、血液或尿液测试）。拒绝测试将导致驾照立即被吊销。" },
@@ -2764,7 +2764,7 @@ export const newYorkDMV = {
         {
           content: "What happens if you refuse a chemical test under New York's Implied Consent Law?",
           explanation: "Refusing a chemical test results in your license being suspended at arraignment. The refusal can also be presented as evidence in court. If a DMV hearing confirms the refusal, your license is revoked even if you are acquitted of the DWI charge.",
-          handbookSection: "Alcohol & Drugs — Implied Consent",
+          handbookSection: "Alcohol and Other Drugs — Implied Consent",
           difficulty: 2,
           translations: [
             { language: "zh", content: "如果您根据纽约州「默示同意法」拒绝化学测试会发生什么？", explanation: "拒绝化学测试将导致您的驾照在提审时被吊销。拒绝行为也可作为法庭证据。如果DMV听证会确认您的拒绝，即使您被判DWI指控无罪，驾照仍会被吊销。" },
@@ -2808,7 +2808,7 @@ export const newYorkDMV = {
         {
           content: "What is the minimum fine range for a first DWI offense in New York?",
           explanation: "A first DWI offense carries a fine of $500 to $1,000. It also results in a minimum 6-month license revocation and possible jail time of up to one year.",
-          handbookSection: "Alcohol & Drugs — Penalties",
+          handbookSection: "Alcohol and Other Drugs — Penalties",
           difficulty: 2,
           translations: [
             { language: "zh", content: "在纽约州，首次DWI违规的最低罚款范围是多少？", explanation: "首次DWI违规的罚款为500至1,000美元。还将导致驾照至少被吊销6个月，并可能面临最长一年的监禁。" },
@@ -2852,7 +2852,7 @@ export const newYorkDMV = {
         {
           content: "What is the fine range for a first DWAI offense in New York?",
           explanation: "A first DWAI (0.05%-0.07% BAC) offense carries a fine of $300 to $500. It is classified as a traffic infraction (not a criminal offense) for the first offense.",
-          handbookSection: "Alcohol & Drugs — Penalties",
+          handbookSection: "Alcohol and Other Drugs — Penalties",
           difficulty: 2,
           translations: [
             { language: "zh", content: "在纽约州，首次DWAI违规的罚款范围是多少？", explanation: "首次DWAI（BAC 0.05%-0.07%）违规的罚款为300至500美元。首次违规被归类为交通违章（非刑事犯罪）。" },
@@ -2896,7 +2896,7 @@ export const newYorkDMV = {
         {
           content: "What is the minimum license revocation for a first Aggravated DWI offense?",
           explanation: "A first Aggravated DWI (0.18% or higher BAC) offense results in a minimum 1-year license revocation, a fine of $1,000 to $2,500, and possible jail time of up to one year.",
-          handbookSection: "Alcohol & Drugs — Penalties",
+          handbookSection: "Alcohol and Other Drugs — Penalties",
           difficulty: 2,
           translations: [
             { language: "zh", content: "首次加重醉酒驾驶（Agg-DWI）违规的最低驾照吊销期限是多少？", explanation: "首次加重醉酒驾驶（BAC 0.18%或更高）违规将导致驾照至少被吊销1年，罚款1,000至2,500美元，并可能面临最长一年的监禁。" },
@@ -2940,7 +2940,7 @@ export const newYorkDMV = {
         {
           content: "What does Leandra's Law require for driving while intoxicated with a child in the vehicle?",
           explanation: "Leandra's Law makes it a Class E felony to drive while intoxicated (DWI) with a child under age 16 in the vehicle. This charge carries up to 4 years in prison.",
-          handbookSection: "Alcohol & Drugs — Leandra's Law",
+          handbookSection: "Alcohol and Other Drugs — Leandra's Law",
           difficulty: 2,
           translations: [
             { language: "zh", content: "「利安德拉法」对车内载有儿童时醉酒驾驶有何规定？", explanation: "「利安德拉法」规定，在车内载有16岁以下儿童时醉酒驾驶（DWI）构成E级重罪。此罪名最高可判处4年监禁。" },
@@ -2984,7 +2984,7 @@ export const newYorkDMV = {
         {
           content: "When must courts order the installation of an ignition interlock device?",
           explanation: "New York courts must order ignition interlock device installation for all DWI and Aggravated DWI convictions. The minimum requirement is 12 months. The device prevents the vehicle from starting unless an acceptable breath sample is provided.",
-          handbookSection: "Alcohol & Drugs — Ignition Interlock",
+          handbookSection: "Alcohol and Other Drugs — Ignition Interlock",
           difficulty: 2,
           translations: [
             { language: "zh", content: "法院在什么情况下必须下令安装点火联锁装置？", explanation: "纽约州法院必须对所有DWI和加重DWI定罪下令安装点火联锁装置，最低要求为12个月。该装置要求提供合格的呼气样本后车辆才能启动。" },
@@ -3028,7 +3028,7 @@ export const newYorkDMV = {
         {
           content: "What is the penalty for a first open container violation in New York?",
           explanation: "Possessing or drinking from an open alcoholic beverage container while driving is a traffic infraction. The first conviction carries a fine of up to $150 plus a mandatory surcharge, and possible jail time of up to 15 days.",
-          handbookSection: "Alcohol & Drugs — Open Container",
+          handbookSection: "Alcohol and Other Drugs — Open Container",
           difficulty: 2,
           translations: [
             { language: "zh", content: "在纽约州，首次违反开放容器法的处罚是什么？", explanation: "在驾驶时持有或饮用开封的酒精饮料容器属于交通违章。首次定罪将被处以最高150美元的罚款加强制附加费，并可能面临最长15天的监禁。" },
@@ -3072,7 +3072,7 @@ export const newYorkDMV = {
         {
           content: "Under what circumstances may a driver's license be permanently denied in New York?",
           explanation: "New York permanently denies a license to applicants with four or more alcohol/drug-related driving convictions in their lifetime, or three convictions within a 25-year period combined with one serious driving offense.",
-          handbookSection: "Alcohol & Drugs — Repeat Offenders",
+          handbookSection: "Alcohol and Other Drugs — Repeat Offenders",
           difficulty: 3,
           translations: [
             { language: "zh", content: "在什么情况下纽约州可能永久拒绝发放驾照？", explanation: "纽约州将永久拒绝向终身有四次或以上酒精/药物相关驾驶定罪的申请人发放驾照，或在25年内有三次定罪且有一次严重驾驶违规的申请人。" },
@@ -3116,7 +3116,7 @@ export const newYorkDMV = {
         {
           content: "Alcohol begins to impair driving ability:",
           explanation: "Alcohol starts to affect judgment, reaction time, and vision long before a person feels intoxicated. The New York DMV manual states that impairment begins with the very first drink.",
-          handbookSection: "Alcohol & Drugs — Effects of Alcohol",
+          handbookSection: "Alcohol and Other Drugs — Effects of Alcohol",
           difficulty: 1,
           translations: [
             { language: "zh", content: "酒精何时开始影响驾驶能力？", explanation: "酒精在人感到醉意之前很久就开始影响判断力、反应时间和视力。纽约州DMV手册指出，从第一杯酒开始就会产生影响。" },

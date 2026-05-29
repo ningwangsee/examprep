@@ -370,10 +370,16 @@ These require manual browser testing:
 
   | State | Topic | Required prefix |
   |---|---|---|
+  | California | Traffic Signs & Signals | `Introduction to Driving` |
+  | California | Right-of-Way Rules | `Laws and Rules of the Road` |
+  | California | Speed Limits | `Safe Driving` |
+  | California | DUI & Alcohol Laws | `Alcohol and Drugs` |
+  | California | Lane Usage & Passing | `Navigating the Roads` |
+  | California | Safe Driving & Parking | `Safe Driving` |
   | New York | Traffic Control & Road Signs | `Traffic Control` |
-  | New York | Right-of-Way, Intersections & Turns | `Intersections & Turns` |
+  | New York | Right-of-Way, Intersections & Turns | `Intersections and Turns` |
   | New York | Speed, Space & Defensive Driving | `Defensive Driving` |
-  | New York | Alcohol & Other Drugs | `Alcohol & Drugs` |
+  | New York | Alcohol & Other Drugs | `Alcohol and Other Drugs` |
   | New York | Driver Licensing & Vehicle Laws | `Driver Licenses` |
   | New York | Sharing the Road & Crash Procedures | `Sharing the Road` |
   | Pennsylvania | Traffic Signals, Signs & Markings | `Signals, Signs & Markings` |

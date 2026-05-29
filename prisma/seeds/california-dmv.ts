@@ -40,7 +40,7 @@ export const californiaDMV = {
         {
           content: "A five-sided (pentagon) shaped sign indicates:",
           explanation: "Pentagon-shaped signs are used exclusively for school zones and school crossings. Their unique shape helps drivers recognize school areas even at a distance or in poor visibility.",
-          handbookSection: "Traffic Controls — Sign Shapes",
+          handbookSection: "Introduction to Driving — Sign Shapes",
           difficulty: 1,
           options: [
             { content: "A school zone or school crossing", isCorrect: true },
@@ -52,7 +52,7 @@ export const californiaDMV = {
         {
           content: "What does a blue curb indicate?",
           explanation: "Blue curbs mark parking spaces reserved for people with disabilities. Only vehicles displaying a valid disabled person placard or license plate may park at a blue curb.",
-          handbookSection: "Traffic Controls — Curb Colors",
+          handbookSection: "Introduction to Driving — Curb Colors",
           difficulty: 1,
           options: [
             { content: "No parking at any time", isCorrect: false },
@@ -64,7 +64,7 @@ export const californiaDMV = {
         {
           content: "Double solid white lines on the road mean:",
           explanation: "Double solid white lines indicate that changing lanes is not permitted. These lines separate lanes of traffic moving in the same direction where lane changes would be dangerous.",
-          handbookSection: "Traffic Controls — Pavement Markings",
+          handbookSection: "Introduction to Driving — Pavement Markings",
           difficulty: 2,
           options: [
             { content: "You may cross them to pass slow vehicles", isCorrect: false },
@@ -76,7 +76,7 @@ export const californiaDMV = {
         {
           content: "A flashing yellow traffic light means:",
           explanation: "A flashing yellow light is a warning signal. You should slow down and proceed with caution, but you are not required to stop.",
-          handbookSection: "Traffic Controls — Traffic Signals",
+          handbookSection: "Introduction to Driving — Traffic Signals",
           difficulty: 1,
           options: [
             { content: "Stop and wait for a green light", isCorrect: false },
@@ -88,7 +88,7 @@ export const californiaDMV = {
         {
           content: "What must you do when you see a solid red arrow at a traffic light?",
           explanation: "A solid red arrow means you must stop completely and do not turn in the direction the arrow is pointing. Unlike a circular red light, you may NOT turn on red when there is a red arrow, unless a sign specifically permits it.",
-          handbookSection: "Traffic Controls — Traffic Signals",
+          handbookSection: "Introduction to Driving — Traffic Signals",
           difficulty: 2,
           options: [
             { content: "You may turn after yielding to oncoming traffic", isCorrect: false },
@@ -100,7 +100,7 @@ export const californiaDMV = {
         {
           content: "A green arrow pointing left while the regular traffic light is also green means:",
           explanation: "A green arrow indicates a protected turn — oncoming traffic is stopped by a red light, so you may turn safely in the direction of the arrow. You still must yield to pedestrians in the crosswalk.",
-          handbookSection: "Traffic Controls — Traffic Signals",
+          handbookSection: "Introduction to Driving — Traffic Signals",
           difficulty: 2,
           options: [
             { content: "You must yield to oncoming traffic before turning", isCorrect: false },
@@ -112,7 +112,7 @@ export const californiaDMV = {
         {
           content: "You may turn right on a red light ONLY if:",
           explanation: "A right turn on red is permitted after a complete stop, when there is no 'No Turn on Red' sign posted, and when you yield to pedestrians and cross traffic. You must stop first — rolling through is illegal.",
-          handbookSection: "Traffic Controls — Traffic Signals",
+          handbookSection: "Introduction to Driving — Traffic Signals",
           difficulty: 1,
           options: [
             { content: "You slow down and no cars are coming", isCorrect: false },
@@ -124,7 +124,7 @@ export const californiaDMV = {
         {
           content: "An octagon (8-sided) shaped sign always means:",
           explanation: "The octagon shape is used exclusively for STOP signs. This unique shape allows drivers to recognize a stop sign even if the color or lettering is obscured.",
-          handbookSection: "Traffic Controls — Sign Shapes",
+          handbookSection: "Introduction to Driving — Sign Shapes",
           difficulty: 1,
           options: [
             { content: "Yield to oncoming traffic", isCorrect: false },
@@ -136,7 +136,7 @@ export const californiaDMV = {
         {
           content: "A triangular (three-sided) shaped sign means:",
           explanation: "Triangular signs are yield signs. You must slow down and be prepared to stop to let vehicles with the right-of-way pass. Unlike a stop sign, you do not have to come to a complete stop unless necessary.",
-          handbookSection: "Traffic Controls — Sign Shapes",
+          handbookSection: "Introduction to Driving — Sign Shapes",
           difficulty: 1,
           options: [
             { content: "Stop completely before proceeding", isCorrect: false },
@@ -148,7 +148,7 @@ export const californiaDMV = {
         {
           content: "What does a red curb indicate?",
           explanation: "A red curb means no stopping, standing, or parking at any time. These are typically found near fire hydrants, bus stops, or intersections where stopping would create a hazard.",
-          handbookSection: "Traffic Controls — Curb Colors",
+          handbookSection: "Introduction to Driving — Curb Colors",
           difficulty: 1,
           options: [
             { content: "No parking, but you may stop briefly to load/unload", isCorrect: false },
@@ -160,7 +160,7 @@ export const californiaDMV = {
         {
           content: "A yellow curb means:",
           explanation: "A yellow curb indicates a loading and unloading zone for commercial vehicles. The driver must stay with the vehicle.",
-          handbookSection: "Traffic Controls — Curb Colors",
+          handbookSection: "Introduction to Driving — Curb Colors",
           difficulty: 2,
           options: [
             { content: "Parking for disabled persons only", isCorrect: false },
@@ -172,7 +172,7 @@ export const californiaDMV = {
         {
           content: "A white curb means:",
           explanation: "A white curb is for passenger loading and unloading only. You may stop briefly to pick up or drop off passengers but must remain in or near the vehicle.",
-          handbookSection: "Traffic Controls — Curb Colors",
+          handbookSection: "Introduction to Driving — Curb Colors",
           difficulty: 2,
           options: [
             { content: "Parking for any vehicle for up to 5 minutes", isCorrect: false },
@@ -184,7 +184,7 @@ export const californiaDMV = {
         {
           content: "What does a pennant-shaped sign indicate?",
           explanation: "The pennant sign is placed on the left side of the road and warns drivers they are entering a no-passing zone. It is always yellow with black text.",
-          handbookSection: "Traffic Controls — Sign Shapes",
+          handbookSection: "Introduction to Driving — Sign Shapes",
           difficulty: 2,
           options: [
             { content: "Keep right — passing allowed on left only", isCorrect: false },
@@ -196,7 +196,7 @@ export const californiaDMV = {
         {
           content: "When approaching a railroad crossing, you must stop at least:",
           explanation: "California law requires you to stop at least 15 feet from the nearest rail when a train is approaching or crossing gates are down.",
-          handbookSection: "Traffic Controls — Railroad Crossings",
+          handbookSection: "Introduction to Driving — Railroad Crossings",
           difficulty: 2,
           options: [
             { content: "5 feet from the tracks", isCorrect: false },
@@ -208,7 +208,7 @@ export const californiaDMV = {
         {
           content: "Orange-colored signs on the highway typically indicate:",
           explanation: "Orange signs are used in construction and maintenance work zones. Fines are doubled in these zones.",
-          handbookSection: "Traffic Controls — Sign Colors",
+          handbookSection: "Introduction to Driving — Sign Colors",
           difficulty: 1,
           options: [
             { content: "School zones with children present", isCorrect: false },
@@ -220,7 +220,7 @@ export const californiaDMV = {
         {
           content: "A steady yellow traffic light means:",
           explanation: "A steady yellow light warns that the signal is about to turn red. Stop if you can do so safely. If too close to stop safely, you may cautiously continue through.",
-          handbookSection: "Traffic Controls — Traffic Signals",
+          handbookSection: "Introduction to Driving — Traffic Signals",
           difficulty: 1,
           options: [
             { content: "Speed up to get through before it turns red", isCorrect: false },
@@ -232,7 +232,7 @@ export const californiaDMV = {
         {
           content: "Broken white lines between lanes of traffic mean:",
           explanation: "Broken white lines separate lanes of traffic moving in the same direction. You may cross broken white lines to change lanes when it is safe.",
-          handbookSection: "Traffic Controls — Pavement Markings",
+          handbookSection: "Introduction to Driving — Pavement Markings",
           difficulty: 1,
           options: [
             { content: "Two-way traffic — passing is prohibited", isCorrect: false },
@@ -244,7 +244,7 @@ export const californiaDMV = {
         {
           content: "A solid yellow line on your side of the center line means:",
           explanation: "A solid yellow line on your side means no passing is permitted from your side. Passing is only allowed from the side with a broken yellow line.",
-          handbookSection: "Traffic Controls — Pavement Markings",
+          handbookSection: "Introduction to Driving — Pavement Markings",
           difficulty: 2,
           options: [
             { content: "You may pass when oncoming traffic is clear", isCorrect: false },
@@ -256,7 +256,7 @@ export const californiaDMV = {
         {
           content: "When a school bus displays flashing red lights, you must:",
           explanation: "All traffic from both directions must stop when a school bus has flashing red lights (except on divided highways with a physical barrier). Remain stopped until the lights stop and the bus moves.",
-          handbookSection: "Traffic Controls — School Buses",
+          handbookSection: "Introduction to Driving — School Buses",
           difficulty: 1,
           options: [
             { content: "Slow to 15 mph and pass with caution", isCorrect: false },
@@ -268,7 +268,7 @@ export const californiaDMV = {
         {
           content: "What does it mean when both a green light AND a green left-turn arrow are displayed?",
           explanation: "When both are displayed, left-turning vehicles have a protected turn (oncoming traffic is stopped). After the arrow turns off, you may still turn left on the green light but must yield to oncoming traffic.",
-          handbookSection: "Traffic Controls — Traffic Signals",
+          handbookSection: "Introduction to Driving — Traffic Signals",
           difficulty: 2,
           options: [
             { content: "You must wait for oncoming traffic to clear before turning", isCorrect: false },
@@ -280,7 +280,7 @@ export const californiaDMV = {
         {
           content: "You are driving on a two-lane road and a school bus ahead stops with flashing red lights. What must you do?",
           explanation: "On a two-lane road, ALL traffic in BOTH directions must stop when a school bus displays flashing red lights. You must remain stopped until the red lights stop flashing and the stop sign arm is retracted.",
-          handbookSection: "Traffic Controls — School Buses",
+          handbookSection: "Introduction to Driving — School Buses",
           difficulty: 1,
           translations: [
             { language: "zh", content: "您正在一条双车道道路上行驶，前方一辆校车停下并亮起红色闪光灯。您应该怎么做？", explanation: "在双车道道路上，当校车亮起红色闪光灯时，两个方向的所有车辆均须停车。必须保持停止状态，直到红色闪光灯停止闪烁且停车标志臂收回为止。" },
@@ -296,7 +296,7 @@ export const californiaDMV = {
         {
           content: "You are on a divided highway with a raised median. A school bus on the OTHER side of the median stops with flashing red lights. You must:",
           explanation: "On a divided highway with a physical barrier (raised median or divider), only traffic behind the bus and traffic approaching from the front must stop. Traffic on the opposite side of a physical barrier may continue.",
-          handbookSection: "Traffic Controls — School Buses",
+          handbookSection: "Introduction to Driving — School Buses",
           difficulty: 3,
           translations: [
             { language: "zh", content: "您正在一条有中央隔离带的分隔式公路上行驶。对向车道的一辆校车停下并亮起红色闪光灯。您应该：", explanation: "在设有实体隔离带（隆起的中央隔离带或隔离墩）的分隔式公路上，只有校车后方及正面来车方向的车辆须停车。实体隔离带另一侧的车辆可继续行驶。" },
@@ -312,7 +312,7 @@ export const californiaDMV = {
         {
           content: "How far must you stop from a school bus that has its red lights flashing?",
           explanation: "Under California Vehicle Code §22454, you must stop at least 20 feet from a school bus with flashing red lights. This distance gives children a safe space to cross in front of or behind the bus without being in your blind spot.",
-          handbookSection: "Traffic Controls — School Buses",
+          handbookSection: "Introduction to Driving — School Buses",
           difficulty: 2,
           translations: [
             { language: "zh", content: "当校车亮起红色闪光灯时，您必须停在距校车多远处？", explanation: "当校车亮起红色闪光灯时，您必须停在距校车至少 20 英尺处。这段距离为儿童在校车前方或后方穿越道路提供了安全空间，避免其进入驾驶人的盲区。" },
@@ -342,7 +342,7 @@ export const californiaDMV = {
         {
           content: "At a four-way stop, two cars arrive at exactly the same time. Who has the right-of-way?",
           explanation: "When two vehicles arrive at a four-way stop simultaneously, the vehicle on the RIGHT has the right-of-way. This is the standard rule whenever arrival times are equal.",
-          handbookSection: "Laws and Rules — Right-of-Way at Intersections",
+          handbookSection: "Laws and Rules of the Road — Right-of-Way at Intersections",
           difficulty: 1,
           options: [
             { content: "The vehicle on the left", isCorrect: false },
@@ -354,7 +354,7 @@ export const californiaDMV = {
         {
           content: "At an uncontrolled intersection, who has the right-of-way?",
           explanation: "The vehicle that arrives first has the right-of-way. If two vehicles arrive at the same time, yield to the vehicle on your right.",
-          handbookSection: "Laws and Rules — Right-of-Way at Intersections",
+          handbookSection: "Laws and Rules of the Road — Right-of-Way at Intersections",
           difficulty: 2,
           options: [
             { content: "Vehicles traveling on the wider road", isCorrect: false },
@@ -366,7 +366,7 @@ export const californiaDMV = {
         {
           content: "When turning left at an intersection on a green light (no arrow), you must yield to:",
           explanation: "On a green light without a green arrow, you must yield to oncoming vehicles and pedestrians. The green light gives permission to enter the intersection, not to turn unsafely.",
-          handbookSection: "Laws and Rules — Turning",
+          handbookSection: "Laws and Rules of the Road — Turning",
           difficulty: 1,
           options: [
             { content: "No one — a green light gives you the right-of-way", isCorrect: false },
@@ -378,7 +378,7 @@ export const californiaDMV = {
         {
           content: "A pedestrian using a white cane or guide dog is at a crosswalk. You must:",
           explanation: "Blind pedestrians using a white cane or guide dog have the right-of-way at all times and in all locations. You must wait until they have completely crossed the road.",
-          handbookSection: "Laws and Rules — Pedestrians",
+          handbookSection: "Laws and Rules of the Road — Pedestrians",
           difficulty: 2,
           options: [
             { content: "Slow down and proceed if they are not in your lane", isCorrect: false },
@@ -390,7 +390,7 @@ export const californiaDMV = {
         {
           content: "At a T-intersection, which vehicles have the right-of-way?",
           explanation: "Vehicles on the through road (the top of the T) have the right-of-way over vehicles on the terminating road (the stem of the T).",
-          handbookSection: "Laws and Rules — Right-of-Way at Intersections",
+          handbookSection: "Laws and Rules of the Road — Right-of-Way at Intersections",
           difficulty: 2,
           options: [
             { content: "The vehicle that arrives first", isCorrect: false },
@@ -402,7 +402,7 @@ export const californiaDMV = {
         {
           content: "On a mountain road with only room for one car, who has the right-of-way?",
           explanation: "The vehicle heading uphill has the right-of-way. The vehicle going downhill must pull over or back up. It is more difficult and dangerous to control a vehicle while backing uphill.",
-          handbookSection: "Laws and Rules — Right-of-Way on Mountain Roads",
+          handbookSection: "Laws and Rules of the Road — Right-of-Way on Mountain Roads",
           difficulty: 2,
           options: [
             { content: "The vehicle going downhill", isCorrect: false },
@@ -414,7 +414,7 @@ export const californiaDMV = {
         {
           content: "When an emergency vehicle with flashing lights approaches, you must:",
           explanation: "You must immediately pull to the right side of the road and stop. Remain stopped until the vehicle passes. Never drive in the same path as the emergency vehicle.",
-          handbookSection: "Laws and Rules — Emergency Vehicles",
+          handbookSection: "Laws and Rules of the Road — Emergency Vehicles",
           difficulty: 1,
           options: [
             { content: "Speed up to get out of its way", isCorrect: false },
@@ -426,7 +426,7 @@ export const californiaDMV = {
         {
           content: "You must NEVER do what when another vehicle has stopped at a crosswalk?",
           explanation: "You may never drive past a vehicle stopped at a crosswalk for a pedestrian. The stopped vehicle may be blocking your view of someone crossing. You must also stop.",
-          handbookSection: "Laws and Rules — Pedestrians",
+          handbookSection: "Laws and Rules of the Road — Pedestrians",
           difficulty: 2,
           options: [
             { content: "Stop behind it", isCorrect: false },
@@ -438,7 +438,7 @@ export const californiaDMV = {
         {
           content: "Who has the right-of-way when you are merging onto a freeway?",
           explanation: "Vehicles already on the freeway have the right-of-way. You must yield when merging and match the speed of freeway traffic.",
-          handbookSection: "Laws and Rules — Freeway Driving",
+          handbookSection: "Laws and Rules of the Road — Freeway Driving",
           difficulty: 1,
           options: [
             { content: "You do, because you are entering the freeway", isCorrect: false },
@@ -450,7 +450,7 @@ export const californiaDMV = {
         {
           content: "Before turning right from a two-lane road, you should be in:",
           explanation: "Before turning right, move into the lane closest to the right curb. Signal about 100 feet before the turn. Turning from another lane is illegal.",
-          handbookSection: "Laws and Rules — Turning",
+          handbookSection: "Laws and Rules of the Road — Turning",
           difficulty: 1,
           options: [
             { content: "Either lane — right turns can be made from any lane", isCorrect: false },
@@ -462,7 +462,7 @@ export const californiaDMV = {
         {
           content: "When backing out of a driveway, you must yield to:",
           explanation: "When backing out of a driveway, yield to all pedestrians on the sidewalk and to all vehicles on the street. You are entering the flow of traffic.",
-          handbookSection: "Laws and Rules — Right-of-Way",
+          handbookSection: "Laws and Rules of the Road — Right-of-Way",
           difficulty: 1,
           options: [
             { content: "Only vehicles coming from the left", isCorrect: false },
@@ -474,7 +474,7 @@ export const californiaDMV = {
         {
           content: "A bicyclist is in front of you. California law requires you to give at least how much clearance when passing?",
           explanation: "California's Three Feet for Safety Act requires drivers to give cyclists at least 3 feet of clearance when passing. Do not honk immediately behind the cyclist as it can cause them to swerve.",
-          handbookSection: "Laws and Rules — Sharing the Road",
+          handbookSection: "Laws and Rules of the Road — Sharing the Road",
           difficulty: 2,
           options: [
             { content: "1 foot", isCorrect: false },
@@ -486,7 +486,7 @@ export const californiaDMV = {
         {
           content: "You want to enter a green-light intersection to turn left, but it is blocked with traffic. You should:",
           explanation: "Never enter an intersection if you cannot completely cross it before the light turns red ('blocking the box'). Wait before the intersection until there is room to complete your turn.",
-          handbookSection: "Laws and Rules — Intersections",
+          handbookSection: "Laws and Rules of the Road — Intersections",
           difficulty: 2,
           options: [
             { content: "Enter the intersection and wait in the center", isCorrect: false },
@@ -498,7 +498,7 @@ export const californiaDMV = {
         {
           content: "When must you yield to a pedestrian in California?",
           explanation: "In California, drivers must always yield to pedestrians in crosswalks, marked or unmarked, at intersections. Pedestrians always have the right-of-way in a crosswalk.",
-          handbookSection: "Laws and Rules — Pedestrians",
+          handbookSection: "Laws and Rules of the Road — Pedestrians",
           difficulty: 1,
           options: [
             { content: "Only when they are in a marked crosswalk", isCorrect: false },
@@ -510,7 +510,7 @@ export const californiaDMV = {
         {
           content: "You are waiting to turn left at an intersection. The light turns yellow. Should you turn?",
           explanation: "Only turn if oncoming vehicles are actually stopping and it is genuinely safe. A yellow light to oncoming traffic means they should stop, but confirm they are stopping before proceeding.",
-          handbookSection: "Laws and Rules — Turning",
+          handbookSection: "Laws and Rules of the Road — Turning",
           difficulty: 3,
           options: [
             { content: "Yes, turn quickly because the light is changing", isCorrect: false },
@@ -522,7 +522,7 @@ export const californiaDMV = {
         {
           content: "When entering a roundabout, you must yield to:",
           explanation: "Always yield to traffic already circulating inside the roundabout before you enter. Once inside, you have the right-of-way over vehicles waiting to enter.",
-          handbookSection: "Laws and Rules — Roundabouts",
+          handbookSection: "Laws and Rules of the Road — Roundabouts",
           difficulty: 1,
           translations: [
             { language: "zh", content: "进入环形交叉路口时，您必须让行于：", explanation: "进入环形路口前，必须始终让已在路口内环行的车辆先行。一旦进入路口，您对等待驶入的车辆享有优先通行权。" },
@@ -538,7 +538,7 @@ export const californiaDMV = {
         {
           content: "In a roundabout, traffic flows in which direction?",
           explanation: "In the United States, traffic in a roundabout always flows counterclockwise (to the right as you enter). You must turn right to enter and travel around the central island.",
-          handbookSection: "Laws and Rules — Roundabouts",
+          handbookSection: "Laws and Rules of the Road — Roundabouts",
           difficulty: 1,
           translations: [
             { language: "zh", content: "在环形交叉路口，车辆沿哪个方向行驶？", explanation: "在美国，环形交叉路口内的车辆始终沿逆时针方向行驶（进入时向右转）。驾驶人须右转进入，并绕中央岛行驶。" },
@@ -554,7 +554,7 @@ export const californiaDMV = {
         {
           content: "When should you NOT enter a roundabout?",
           explanation: "If an emergency vehicle with lights and sirens is approaching, do not enter the roundabout. If you are already in the roundabout, exit at the nearest opportunity and pull to the right to allow the emergency vehicle to pass.",
-          handbookSection: "Laws and Rules — Roundabouts",
+          handbookSection: "Laws and Rules of the Road — Roundabouts",
           difficulty: 2,
           translations: [
             { language: "zh", content: "在什么情况下不应进入环形交叉路口？", explanation: "若有开启警灯和警报器的紧急车辆正在驶近，不得进入环形路口。若您已在路口内，应在最近的出口驶出，并靠右停车，为紧急车辆让路。" },

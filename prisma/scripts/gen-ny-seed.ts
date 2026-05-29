@@ -289,7 +289,7 @@ const topicsEn: TopicEn[] = [
       {
         content: "At an uncontrolled intersection where two vehicles arrive at the same time, who has the right-of-way?",
         explanation: "At an uncontrolled intersection where vehicles arrive simultaneously, the driver on the left must yield to the driver on the right. This is the standard right-of-way rule at intersections without signals or signs.",
-        handbookSection: "Intersections & Turns — Right-of-Way",
+        handbookSection: "Intersections and Turns — Right-of-Way",
         difficulty: 1,
         options: [
           { content: "The driver on the right has the right-of-way", isCorrect: true },
@@ -301,7 +301,7 @@ const topicsEn: TopicEn[] = [
       {
         content: "When two vehicles approach from opposite directions and one driver wants to turn left, who must yield?",
         explanation: "A driver turning left must yield to all oncoming traffic going straight or turning right. Left-turning drivers must wait until it is safe to complete the turn.",
-        handbookSection: "Intersections & Turns — Right-of-Way",
+        handbookSection: "Intersections and Turns — Right-of-Way",
         difficulty: 1,
         options: [
           { content: "The driver turning left must yield to traffic going straight or turning right", isCorrect: true },
@@ -313,7 +313,7 @@ const topicsEn: TopicEn[] = [
       {
         content: "How far in advance must you signal before turning or changing lanes?",
         explanation: "New York law requires drivers to signal at least 100 feet (30 meters) before turning or changing lanes. This gives other drivers and pedestrians adequate warning of your intended movement.",
-        handbookSection: "Intersections & Turns — Signaling",
+        handbookSection: "Intersections and Turns — Signaling",
         difficulty: 1,
         options: [
           { content: "At least 100 feet (30 m) ahead", isCorrect: true },
@@ -325,7 +325,7 @@ const topicsEn: TopicEn[] = [
       {
         content: "What is the correct hand signal for a left turn?",
         explanation: "The correct hand signal for a left turn is to extend your left arm straight out horizontally through the window. This is the universal signal for a left turn.",
-        handbookSection: "Intersections & Turns — Hand Signals",
+        handbookSection: "Intersections and Turns — Hand Signals",
         difficulty: 1,
         options: [
           { content: "Left arm extended horizontally out the window", isCorrect: true },
@@ -337,7 +337,7 @@ const topicsEn: TopicEn[] = [
       {
         content: "What is the correct hand signal for a right turn?",
         explanation: "The correct hand signal for a right turn is to extend your left arm out the window and bend it upward at a 90-degree angle. This indicates a right turn to drivers behind you.",
-        handbookSection: "Intersections & Turns — Hand Signals",
+        handbookSection: "Intersections and Turns — Hand Signals",
         difficulty: 1,
         options: [
           { content: "Left arm bent upward at 90 degrees", isCorrect: true },
@@ -349,7 +349,7 @@ const topicsEn: TopicEn[] = [
       {
         content: "When making a right turn at an intersection, you should:",
         explanation: "When turning right, get as far to the right as possible before turning. Turn into the right lane of the destination road. Do not make wide, sweeping right turns that enter the left lane.",
-        handbookSection: "Intersections & Turns — Turning",
+        handbookSection: "Intersections and Turns — Turning",
         difficulty: 1,
         options: [
           { content: "Get as far right as possible and turn into the right lane", isCorrect: true },
@@ -361,7 +361,7 @@ const topicsEn: TopicEn[] = [
       {
         content: "When must you yield to pedestrians in a crosswalk?",
         explanation: "Drivers must yield to pedestrians who are legally crossing at marked or unmarked crosswalks. You must slow down or stop if necessary to allow pedestrians to cross safely.",
-        handbookSection: "Intersections & Turns — Pedestrian Right-of-Way",
+        handbookSection: "Intersections and Turns — Pedestrian Right-of-Way",
         difficulty: 1,
         options: [
           { content: "Whenever pedestrians are legally crossing at marked or unmarked crosswalks", isCorrect: true },
@@ -373,7 +373,7 @@ const topicsEn: TopicEn[] = [
       {
         content: "Why should you keep your wheels pointing straight ahead while waiting to make a left turn?",
         explanation: "Keeping your wheels straight while waiting prevents your car from being pushed into oncoming traffic if you are struck from behind. If your wheels are turned left and you are rear-ended, you could be pushed into oncoming traffic.",
-        handbookSection: "Intersections & Turns — Turning",
+        handbookSection: "Intersections and Turns — Turning",
         difficulty: 2,
         options: [
           { content: "If hit from behind, you will not be pushed into oncoming traffic", isCorrect: true },
@@ -385,7 +385,7 @@ const topicsEn: TopicEn[] = [
       {
         content: "What must you do when you hear or see an emergency vehicle approaching with flashing lights and a siren?",
         explanation: "When an emergency vehicle approaches with lights and siren, you must safely pull over to the right edge of the road and stop. Remain stopped until the emergency vehicle has passed.",
-        handbookSection: "Intersections & Turns — Emergency Vehicles",
+        handbookSection: "Intersections and Turns — Emergency Vehicles",
         difficulty: 1,
         options: [
           { content: "Pull over to the right edge and stop immediately", isCorrect: true },
@@ -397,7 +397,7 @@ const topicsEn: TopicEn[] = [
       {
         content: "What does New York's Move Over Law require on multi-lane highways?",
         explanation: "The Move Over Law requires drivers on multi-lane parkways and interstates to move from the lane immediately adjacent to a stopped emergency vehicle that has its lights activated, unless it is unsafe to do so.",
-        handbookSection: "Intersections & Turns — Emergency Vehicles",
+        handbookSection: "Intersections and Turns — Emergency Vehicles",
         difficulty: 2,
         options: [
           { content: "Move from the lane adjacent to the stopped emergency vehicle if safe", isCorrect: true },
@@ -409,7 +409,7 @@ const topicsEn: TopicEn[] = [
       {
         content: "When must you yield to vehicles already in a traffic circle (roundabout)?",
         explanation: "Vehicles already circulating inside a roundabout have the right-of-way. Drivers entering the roundabout must yield to all traffic already in the circle before merging.",
-        handbookSection: "Intersections & Turns — Roundabouts",
+        handbookSection: "Intersections and Turns — Roundabouts",
         difficulty: 1,
         options: [
           { content: "Always — yield to all vehicles already circulating in the roundabout", isCorrect: true },
@@ -421,7 +421,7 @@ const topicsEn: TopicEn[] = [
       {
         content: "When exiting a driveway or alley, what must you do before entering the roadway?",
         explanation: "When exiting a driveway, alley, or private road, you must stop and yield the right-of-way to all traffic on the roadway and to pedestrians before proceeding.",
-        handbookSection: "Intersections & Turns — Right-of-Way",
+        handbookSection: "Intersections and Turns — Right-of-Way",
         difficulty: 1,
         options: [
           { content: "Stop and yield to all roadway traffic and pedestrians", isCorrect: true },
@@ -433,7 +433,7 @@ const topicsEn: TopicEn[] = [
       {
         content: "Under what conditions is a U-turn prohibited in New York?",
         explanation: "U-turns are prohibited when drivers approaching cannot see you from 500 feet away (near hills or curves), in NYC business districts, where NO U-TURN signs are posted, on limited-access expressways, and in school zones.",
-        handbookSection: "Intersections & Turns — U-Turns",
+        handbookSection: "Intersections and Turns — U-Turns",
         difficulty: 2,
         options: [
           { content: "When drivers approaching cannot see you from 500 feet, in NYC business districts, or where prohibited by signs", isCorrect: true },
@@ -445,7 +445,7 @@ const topicsEn: TopicEn[] = [
       {
         content: "From which lane must a U-turn be made?",
         explanation: "A U-turn must be made from the leftmost portion of the lane nearest to the centerline of the roadway. You cannot make a U-turn from the right lane.",
-        handbookSection: "Intersections & Turns — U-Turns",
+        handbookSection: "Intersections and Turns — U-Turns",
         difficulty: 2,
         options: [
           { content: "From the left portion of the lane nearest to the center line", isCorrect: true },
@@ -457,7 +457,7 @@ const topicsEn: TopicEn[] = [
       {
         content: "What does a blue flashing light on a non-emergency vehicle (such as a volunteer firefighter's personal car) mean?",
         explanation: "Volunteer firefighters may display blue lights on their personal vehicles. These are not authorized emergency vehicles; you are not required to yield but it is recommended if you can safely do so.",
-        handbookSection: "Intersections & Turns — Emergency Vehicles",
+        handbookSection: "Intersections and Turns — Emergency Vehicles",
         difficulty: 3,
         options: [
           { content: "Not an emergency vehicle; yield only if you can safely do so", isCorrect: true },
@@ -469,7 +469,7 @@ const topicsEn: TopicEn[] = [
       {
         content: "You cannot enter an intersection even when the light is green if:",
         explanation: "You cannot enter an intersection if traffic is backed up and you cannot completely clear the intersection. Blocking an intersection is illegal and creates gridlock.",
-        handbookSection: "Intersections & Turns — Intersection Rules",
+        handbookSection: "Intersections and Turns — Intersection Rules",
         difficulty: 2,
         options: [
           { content: "Traffic is backed up and you cannot completely clear the intersection", isCorrect: true },
@@ -481,7 +481,7 @@ const topicsEn: TopicEn[] = [
       {
         content: "When turning left from a two-way street onto another two-way street, you should:",
         explanation: "When making a left turn from a two-way street, approach from the right half of the road closest to the center, and after turning, enter the destination road to the right of its center line as close to the center as possible.",
-        handbookSection: "Intersections & Turns — Turning",
+        handbookSection: "Intersections and Turns — Turning",
         difficulty: 2,
         options: [
           { content: "Approach from near the center line and enter to the right of the center line of the new road", isCorrect: true },
@@ -493,7 +493,7 @@ const topicsEn: TopicEn[] = [
       {
         content: "A vehicle is already in the intersection when the light turns red. What should the driver do?",
         explanation: "A driver who is already in the intersection when the light changes must clear the intersection safely. Traffic law requires you to clear the intersection you are already in.",
-        handbookSection: "Intersections & Turns — Intersection Rules",
+        handbookSection: "Intersections and Turns — Intersection Rules",
         difficulty: 2,
         options: [
           { content: "Clear the intersection — the driver may continue through safely", isCorrect: true },
@@ -729,7 +729,7 @@ const topicsEn: TopicEn[] = [
       {
         content: "At what blood alcohol content (BAC) level is a driver considered legally intoxicated (DWI) in New York?",
         explanation: "A BAC of 0.08% or higher is legal evidence of intoxication (DWI) in New York. At this level, a driver can be charged with Driving While Intoxicated.",
-        handbookSection: "Alcohol & Drugs — BAC Limits",
+        handbookSection: "Alcohol and Other Drugs — BAC Limits",
         difficulty: 1,
         options: [
           { content: "0.08% or higher", isCorrect: true },
@@ -741,7 +741,7 @@ const topicsEn: TopicEn[] = [
       {
         content: "What BAC triggers an Aggravated DWI charge in New York?",
         explanation: "Aggravated DWI (Agg-DWI) applies when a driver's BAC is 0.18% or higher. This carries more severe penalties than a standard DWI.",
-        handbookSection: "Alcohol & Drugs — BAC Limits",
+        handbookSection: "Alcohol and Other Drugs — BAC Limits",
         difficulty: 2,
         options: [
           { content: "0.18% or higher", isCorrect: true },
@@ -753,7 +753,7 @@ const topicsEn: TopicEn[] = [
       {
         content: "What BAC range results in a DWAI (Driving While Ability Impaired) charge?",
         explanation: "A BAC of 0.05% to 0.07% is legal evidence of impairment (DWAI) in New York. DWAI is a less severe charge than DWI but still carries serious penalties.",
-        handbookSection: "Alcohol & Drugs — BAC Limits",
+        handbookSection: "Alcohol and Other Drugs — BAC Limits",
         difficulty: 2,
         options: [
           { content: "0.05% to 0.07%", isCorrect: true },
@@ -765,7 +765,7 @@ const topicsEn: TopicEn[] = [
       {
         content: "Under New York's Zero Tolerance Law, what BAC is prohibited for drivers under age 21?",
         explanation: "The Zero Tolerance Law prohibits drivers under 21 from having any measurable BAC (0.02% to 0.07%). Even a small amount of alcohol is a violation for underage drivers.",
-        handbookSection: "Alcohol & Drugs — Zero Tolerance",
+        handbookSection: "Alcohol and Other Drugs — Zero Tolerance",
         difficulty: 1,
         options: [
           { content: "Any measurable BAC (0.02% to 0.07%)", isCorrect: true },
@@ -777,7 +777,7 @@ const topicsEn: TopicEn[] = [
       {
         content: "What is the penalty for a first Zero Tolerance violation for an underage driver?",
         explanation: "A first Zero Tolerance violation results in a 6-month license suspension. The driver must also pay a $100 suspension termination fee and a $125 civil penalty to have the license reinstated.",
-        handbookSection: "Alcohol & Drugs — Zero Tolerance",
+        handbookSection: "Alcohol and Other Drugs — Zero Tolerance",
         difficulty: 2,
         options: [
           { content: "6-month license suspension", isCorrect: true },
@@ -789,7 +789,7 @@ const topicsEn: TopicEn[] = [
       {
         content: "What does New York's Implied Consent Law mean?",
         explanation: "By driving in New York, you automatically agree to submit to a chemical test (breath, blood, or urine) if asked by law enforcement. Refusing the test results in immediate license suspension.",
-        handbookSection: "Alcohol & Drugs — Implied Consent",
+        handbookSection: "Alcohol and Other Drugs — Implied Consent",
         difficulty: 1,
         options: [
           { content: "Driving in NY means you consent to chemical testing if asked by police", isCorrect: true },
@@ -801,7 +801,7 @@ const topicsEn: TopicEn[] = [
       {
         content: "What happens if you refuse a chemical test under New York's Implied Consent Law?",
         explanation: "Refusing a chemical test results in your license being suspended at arraignment. The refusal can also be presented as evidence in court. If a DMV hearing confirms the refusal, your license is revoked even if you are acquitted of the DWI charge.",
-        handbookSection: "Alcohol & Drugs — Implied Consent",
+        handbookSection: "Alcohol and Other Drugs — Implied Consent",
         difficulty: 2,
         options: [
           { content: "Immediate license suspension and the refusal can be used as evidence in court", isCorrect: true },
@@ -813,7 +813,7 @@ const topicsEn: TopicEn[] = [
       {
         content: "What is the minimum fine range for a first DWI offense in New York?",
         explanation: "A first DWI offense carries a fine of $500 to $1,000. It also results in a minimum 6-month license revocation and possible jail time of up to one year.",
-        handbookSection: "Alcohol & Drugs — Penalties",
+        handbookSection: "Alcohol and Other Drugs — Penalties",
         difficulty: 2,
         options: [
           { content: "$500 to $1,000", isCorrect: true },
@@ -825,7 +825,7 @@ const topicsEn: TopicEn[] = [
       {
         content: "What is the fine range for a first DWAI offense in New York?",
         explanation: "A first DWAI (0.05%-0.07% BAC) offense carries a fine of $300 to $500. It is classified as a traffic infraction (not a criminal offense) for the first offense.",
-        handbookSection: "Alcohol & Drugs — Penalties",
+        handbookSection: "Alcohol and Other Drugs — Penalties",
         difficulty: 2,
         options: [
           { content: "$300 to $500", isCorrect: true },
@@ -837,7 +837,7 @@ const topicsEn: TopicEn[] = [
       {
         content: "What is the minimum license revocation for a first Aggravated DWI offense?",
         explanation: "A first Aggravated DWI (0.18% or higher BAC) offense results in a minimum 1-year license revocation, a fine of $1,000 to $2,500, and possible jail time of up to one year.",
-        handbookSection: "Alcohol & Drugs — Penalties",
+        handbookSection: "Alcohol and Other Drugs — Penalties",
         difficulty: 2,
         options: [
           { content: "Minimum 1-year revocation", isCorrect: true },
@@ -849,7 +849,7 @@ const topicsEn: TopicEn[] = [
       {
         content: "What does Leandra's Law require for driving while intoxicated with a child in the vehicle?",
         explanation: "Leandra's Law makes it a Class E felony to drive while intoxicated (DWI) with a child under age 16 in the vehicle. This charge carries up to 4 years in prison.",
-        handbookSection: "Alcohol & Drugs — Leandra's Law",
+        handbookSection: "Alcohol and Other Drugs — Leandra's Law",
         difficulty: 2,
         options: [
           { content: "It is a Class E felony — up to 4 years imprisonment", isCorrect: true },
@@ -861,7 +861,7 @@ const topicsEn: TopicEn[] = [
       {
         content: "When must courts order the installation of an ignition interlock device?",
         explanation: "New York courts must order ignition interlock device installation for all DWI and Aggravated DWI convictions. The minimum requirement is 12 months. The device prevents the vehicle from starting unless an acceptable breath sample is provided.",
-        handbookSection: "Alcohol & Drugs — Ignition Interlock",
+        handbookSection: "Alcohol and Other Drugs — Ignition Interlock",
         difficulty: 2,
         options: [
           { content: "For all DWI and Aggravated DWI convictions — minimum 12 months", isCorrect: true },
@@ -873,7 +873,7 @@ const topicsEn: TopicEn[] = [
       {
         content: "What is the penalty for a first open container violation in New York?",
         explanation: "Possessing or drinking from an open alcoholic beverage container while driving is a traffic infraction. The first conviction carries a fine of up to $150 plus a mandatory surcharge, and possible jail time of up to 15 days.",
-        handbookSection: "Alcohol & Drugs — Open Container",
+        handbookSection: "Alcohol and Other Drugs — Open Container",
         difficulty: 2,
         options: [
           { content: "Fine up to $150 plus mandatory surcharge", isCorrect: true },
@@ -885,7 +885,7 @@ const topicsEn: TopicEn[] = [
       {
         content: "Under what circumstances may a driver's license be permanently denied in New York?",
         explanation: "New York permanently denies a license to applicants with four or more alcohol/drug-related driving convictions in their lifetime, or three convictions within a 25-year period combined with one serious driving offense.",
-        handbookSection: "Alcohol & Drugs — Repeat Offenders",
+        handbookSection: "Alcohol and Other Drugs — Repeat Offenders",
         difficulty: 3,
         options: [
           { content: "Four convictions in a lifetime, or three in 25 years plus a serious driving offense", isCorrect: true },
@@ -897,7 +897,7 @@ const topicsEn: TopicEn[] = [
       {
         content: "Alcohol begins to impair driving ability:",
         explanation: "Alcohol starts to affect judgment, reaction time, and vision long before a person feels intoxicated. The New York DMV manual states that impairment begins with the very first drink.",
-        handbookSection: "Alcohol & Drugs — Effects of Alcohol",
+        handbookSection: "Alcohol and Other Drugs — Effects of Alcohol",
         difficulty: 1,
         options: [
           { content: "With the very first drink", isCorrect: true },

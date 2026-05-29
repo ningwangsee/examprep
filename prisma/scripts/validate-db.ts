@@ -27,6 +27,14 @@ const prisma = new PrismaClient({ adapter });
 // PDF-based states (TX, FL) have no strict chapter title to enforce.
 // Leave a topic out of this map to skip the prefix check for it.
 const CHAPTER_TITLES: Record<string, string> = {
+  // ── California (online chapter pages) ────────────────────────────────────
+  "California Driver's License::Traffic Signs & Signals":       "Introduction to Driving",
+  "California Driver's License::Right-of-Way Rules":            "Laws and Rules of the Road",
+  "California Driver's License::Speed Limits":                  "Safe Driving",
+  "California Driver's License::DUI & Alcohol Laws":            "Alcohol and Drugs",
+  "California Driver's License::Lane Usage & Passing":          "Navigating the Roads",
+  "California Driver's License::Safe Driving & Parking":        "Safe Driving",
+
   // ── Pennsylvania (online chapter pages) ──────────────────────────────────
   "Pennsylvania Driver's License::Traffic Signals, Signs & Markings":  "Signals, Signs & Markings",
   "Pennsylvania Driver's License::Right-of-Way, Turns & Intersections": "Everyday Driving Skills",
@@ -37,9 +45,9 @@ const CHAPTER_TITLES: Record<string, string> = {
 
   // ── New York (online chapter pages) ──────────────────────────────────────
   "New York Driver's License::Traffic Control & Road Signs":            "Traffic Control",
-  "New York Driver's License::Right-of-Way, Intersections & Turns":    "Intersections & Turns",
+  "New York Driver's License::Right-of-Way, Intersections & Turns":    "Intersections and Turns",
   "New York Driver's License::Speed, Space & Defensive Driving":        "Defensive Driving",
-  "New York Driver's License::Alcohol & Other Drugs":                   "Alcohol & Drugs",
+  "New York Driver's License::Alcohol & Other Drugs":                   "Alcohol and Other Drugs",
   "New York Driver's License::Driver Licensing & Vehicle Laws":         "Driver Licenses",
   "New York Driver's License::Sharing the Road & Crash Procedures":     "Sharing the Road",
 };
