@@ -1156,19 +1156,19 @@ const pennsylvaniaDMV: ExamGuide = {
       emoji: "🚫",
     },
     {
-      title: { en: "Choosing Safety First", zh: "优先安全", es: "Elegir la Seguridad Primero" },
+      title: { en: "Choosing Safety First", zh: "优先安全驾驶", es: "Elegir la Seguridad Primero" },
       url: "https://www.pa.gov/agencies/dmv/driver-services/pennsylvania-drivers-manual/online-drivers-manual/choosing-safety-first",
       emoji: "🛡️",
     },
     {
-      title: { en: "Sharing the Road", zh: "共享道路", es: "Compartir la Vía" },
-      url: "https://www.pa.gov/agencies/dmv/driver-services/pennsylvania-drivers-manual/online-drivers-manual/#sharing",
-      emoji: "🚶",
+      title: { en: "Driving Record Information", zh: "驾驶记录信息", es: "Información del Historial de Conducción" },
+      url: "https://www.pa.gov/agencies/dmv/driver-services/pennsylvania-drivers-manual/online-drivers-manual/chapter-4-driving-record-information",
+      emoji: "📊",
     },
     {
-      title: { en: "Vehicle Inspection & Insurance", zh: "车辆检验与保险", es: "Inspección del Vehículo y Seguro" },
-      url: "https://www.pa.gov/agencies/dmv/driver-services/pennsylvania-drivers-manual/online-drivers-manual/#insurance",
-      emoji: "📋",
+      title: { en: "Laws & Related Issues", zh: "法律及相关事项", es: "Leyes y Asuntos Relacionados" },
+      url: "https://www.pa.gov/agencies/dmv/driver-services/pennsylvania-drivers-manual/online-drivers-manual/chapter-5-laws-and-related-issues",
+      emoji: "⚖️",
     },
   ],
 

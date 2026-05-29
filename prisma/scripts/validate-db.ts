@@ -36,6 +36,7 @@ const CHAPTER_TITLES: Record<string, string> = {
   "California Driver's License::Safe Driving & Parking":        "Safe Driving",
 
   // ── Pennsylvania (online chapter pages) ──────────────────────────────────
+  "Pennsylvania Driver's License::Driver License":                           "Driver License",
   "Pennsylvania Driver's License::Signals, Signs and Pavement Markings":    "Signals, Signs & Markings",
   "Pennsylvania Driver's License::Choosing Safety First":                    "Choosing Safety First",
   "Pennsylvania Driver's License::Everyday Driving Skills":                  "Everyday Driving Skills",

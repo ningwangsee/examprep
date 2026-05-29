@@ -38,7 +38,297 @@ export const pennsylvaniaDMV = {
   },
   topics: [
 
-    // ─── TOPIC 1: SIGNALS, SIGNS AND PAVEMENT MARKINGS (Ch.2) ──────────────────
+    // ─── TOPIC 1: DRIVER LICENSE (Ch.1) ────────────────────────────────────────
+    {
+      name: "Driver License",
+      nameEn: "Driver License",
+      description: "License classes, Graduated Driver License (GDL) system, permit requirements, and junior driver restrictions",
+      handbookUrl: `${BASE}/applying-for-a-learners-permit`,
+      translations: [
+        { language: "zh", name: "驾照申请与分级驾照制度", description: "驾照类别、分级驾照（GDL）制度、学习许可证要求及青少年驾驶员限制" },
+        { language: "es", name: "Licencia de Conducir", description: "Clases de licencia, sistema de Licencia de Conducir Graduada (GDL), requisitos del permiso y restricciones para conductores jóvenes" },
+      ],
+      questions: [
+
+        {
+          content: "What is the minimum age to apply for a Class C (standard passenger vehicle) learner's permit in Pennsylvania?",
+          explanation: "In Pennsylvania, applicants must be at least 16 years old to apply for a Class C learner's permit. Class A and Class B licenses (for large commercial vehicles) require a minimum age of 18. Class M (motorcycle) also requires age 16.",
+          handbookSection: "Driver License — License Classes",
+          difficulty: 1,
+          translations: [
+            {
+              language: "zh",
+              content: "在宾夕法尼亚州，申请C类（标准乘用车）学习许可证的最低年龄是多少？",
+              explanation: "在宾夕法尼亚州，申请C类学习许可证的最低年龄为16岁。A类和B类驾照（大型商业车辆）要求最低年龄18岁。M类（摩托车）也要求年满16岁。",
+            },
+            {
+              language: "es",
+              content: "¿Cuál es la edad mínima para solicitar un permiso de aprendizaje Clase C (vehículo de pasajeros estándar) en Pennsylvania?",
+              explanation: "En Pennsylvania, los solicitantes deben tener al menos 16 años para solicitar un permiso de aprendizaje Clase C. Las licencias Clase A y Clase B (para vehículos comerciales grandes) requieren una edad mínima de 18 años.",
+            },
+          ],
+          options: [
+            { content: "16 years old", isCorrect: true, translations: [{ language: "zh", content: "16岁" }, { language: "es", content: "16 años" }] },
+            { content: "15 years old", isCorrect: false, translations: [{ language: "zh", content: "15岁" }, { language: "es", content: "15 años" }] },
+            { content: "17 years old", isCorrect: false, translations: [{ language: "zh", content: "17岁" }, { language: "es", content: "17 años" }] },
+            { content: "18 years old", isCorrect: false, translations: [{ language: "zh", content: "18岁" }, { language: "es", content: "18 años" }] },
+          ],
+        },
+
+        {
+          content: "When driving with a Junior Learner's Permit in Pennsylvania, who must be seated in the front seat?",
+          explanation: "When driving with a Junior Learner's Permit, a licensed driver who is at least 21 years old (or an authorized parent or guardian) must be seated in the front seat at all times. The number of passengers may not exceed the number of available seat belts.",
+          handbookSection: "Driver License — Junior Learner's Permit",
+          difficulty: 1,
+          translations: [
+            {
+              language: "zh",
+              content: "在宾夕法尼亚州持青少年学习许可证驾驶时，谁必须坐在前排座位？",
+              explanation: "持青少年学习许可证驾驶时，至少21岁的持照驾驶员（或授权的父母或监护人）必须始终坐在前排座位。乘客人数不得超过可用安全带数量。",
+            },
+            {
+              language: "es",
+              content: "Al conducir con un Permiso de Aprendizaje Junior en Pennsylvania, ¿quién debe estar sentado en el asiento delantero?",
+              explanation: "Al conducir con un Permiso de Aprendizaje Junior, un conductor licenciado de al menos 21 años (o un padre o tutor autorizado) debe estar sentado en el asiento delantero en todo momento.",
+            },
+          ],
+          options: [
+            { content: "A licensed driver at least 21 years old (or authorized parent/guardian)", isCorrect: true, translations: [{ language: "zh", content: "至少21岁的持照驾驶员（或授权的父母/监护人）" }, { language: "es", content: "Un conductor licenciado de al menos 21 años (o padre/tutor autorizado)" }] },
+            { content: "Any licensed driver, regardless of age", isCorrect: false, translations: [{ language: "zh", content: "任何持照驾驶员，不限年龄" }, { language: "es", content: "Cualquier conductor licenciado, independientemente de la edad" }] },
+            { content: "A licensed driver at least 18 years old", isCorrect: false, translations: [{ language: "zh", content: "至少18岁的持照驾驶员" }, { language: "es", content: "Un conductor licenciado de al menos 18 años" }] },
+            { content: "No supervisor is required", isCorrect: false, translations: [{ language: "zh", content: "不需要监督员" }, { language: "es", content: "No se requiere supervisor" }] },
+          ],
+        },
+
+        {
+          content: "How many total hours of supervised behind-the-wheel driving must a Junior Learner's Permit holder complete before taking the road test?",
+          explanation: "Before taking the road test, a Junior Learner's Permit holder must complete at least 65 hours of supervised behind-the-wheel driving. Of those 65 hours, at least 10 must be nighttime driving and at least 5 must be in bad weather conditions. There is also a mandatory 6-month waiting period before the road test.",
+          handbookSection: "Driver License — Junior Learner's Permit",
+          difficulty: 2,
+          translations: [
+            {
+              language: "zh",
+              content: "青少年学习许可证持有人在参加路考前必须完成多少小时的监督驾驶？",
+              explanation: "参加路考前，青少年学习许可证持有人必须完成至少65小时的监督驾驶。其中至少10小时为夜间驾驶，至少5小时为恶劣天气驾驶。此外还有强制性6个月等待期。",
+            },
+            {
+              language: "es",
+              content: "¿Cuántas horas totales de conducción supervisada debe completar un titular de Permiso de Aprendizaje Junior antes de tomar el examen de manejo?",
+              explanation: "Antes de tomar el examen de manejo, un titular de Permiso de Aprendizaje Junior debe completar al menos 65 horas de conducción supervisada. De esas 65 horas, al menos 10 deben ser de conducción nocturna y al menos 5 en condiciones de mal tiempo. También hay un período de espera obligatorio de 6 meses.",
+            },
+          ],
+          options: [
+            { content: "65 hours", isCorrect: true, translations: [{ language: "zh", content: "65小时" }, { language: "es", content: "65 horas" }] },
+            { content: "50 hours", isCorrect: false, translations: [{ language: "zh", content: "50小时" }, { language: "es", content: "50 horas" }] },
+            { content: "40 hours", isCorrect: false, translations: [{ language: "zh", content: "40小时" }, { language: "es", content: "40 horas" }] },
+            { content: "80 hours", isCorrect: false, translations: [{ language: "zh", content: "80小时" }, { language: "es", content: "80 horas" }] },
+          ],
+        },
+
+        {
+          content: "Of the required 65 supervised driving hours, how many must be completed at night?",
+          explanation: "Of the 65 required supervised driving hours, at least 10 must be nighttime driving hours. Additionally, at least 5 of the 65 hours must be driven in bad weather conditions (rain, snow, fog, etc.). These requirements ensure new drivers gain experience in challenging conditions before driving independently.",
+          handbookSection: "Driver License — Junior Learner's Permit",
+          difficulty: 2,
+          translations: [
+            {
+              language: "zh",
+              content: "在65小时的监督驾驶要求中，至少需要多少小时的夜间驾驶？",
+              explanation: "在65小时的监督驾驶要求中，至少10小时必须是夜间驾驶。此外，至少5小时必须在恶劣天气条件下（雨、雪、雾等）驾驶。这些要求确保新驾驶员在独立驾驶前获得在困难条件下驾驶的经验。",
+            },
+            {
+              language: "es",
+              content: "De las 65 horas de conducción supervisada requeridas, ¿cuántas deben completarse de noche?",
+              explanation: "De las 65 horas de conducción supervisada requeridas, al menos 10 deben ser horas de conducción nocturna. Además, al menos 5 de las 65 horas deben conducirse en condiciones de mal tiempo (lluvia, nieve, niebla, etc.).",
+            },
+          ],
+          options: [
+            { content: "At least 10 hours", isCorrect: true, translations: [{ language: "zh", content: "至少10小时" }, { language: "es", content: "Al menos 10 horas" }] },
+            { content: "At least 5 hours", isCorrect: false, translations: [{ language: "zh", content: "至少5小时" }, { language: "es", content: "Al menos 5 horas" }] },
+            { content: "At least 15 hours", isCorrect: false, translations: [{ language: "zh", content: "至少15小时" }, { language: "es", content: "Al menos 15 horas" }] },
+            { content: "At least 20 hours", isCorrect: false, translations: [{ language: "zh", content: "至少20小时" }, { language: "es", content: "Al menos 20 horas" }] },
+          ],
+        },
+
+        {
+          content: "How long must a Junior Learner's Permit holder wait before being eligible to take the road test?",
+          explanation: "There is a mandatory 6-month waiting period after receiving a Junior Learner's Permit before a young driver is eligible to take the road test. This waiting period, combined with the 65 supervised hours requirement, ensures new drivers have adequate experience before testing for independence.",
+          handbookSection: "Driver License — Junior Learner's Permit",
+          difficulty: 2,
+          translations: [
+            {
+              language: "zh",
+              content: "青少年学习许可证持有人必须等待多久才能参加路考？",
+              explanation: "获得青少年学习许可证后，年轻驾驶员必须经过强制性6个月等待期才能参加路考。这个等待期加上65小时监督驾驶要求，确保新驾驶员在独立驾驶测试前有足够的经验。",
+            },
+            {
+              language: "es",
+              content: "¿Cuánto tiempo debe esperar un titular de Permiso de Aprendizaje Junior antes de poder tomar el examen de manejo?",
+              explanation: "Hay un período de espera obligatorio de 6 meses después de recibir un Permiso de Aprendizaje Junior antes de que un conductor joven sea elegible para tomar el examen de manejo.",
+            },
+          ],
+          options: [
+            { content: "6 months", isCorrect: true, translations: [{ language: "zh", content: "6个月" }, { language: "es", content: "6 meses" }] },
+            { content: "3 months", isCorrect: false, translations: [{ language: "zh", content: "3个月" }, { language: "es", content: "3 meses" }] },
+            { content: "1 year", isCorrect: false, translations: [{ language: "zh", content: "1年" }, { language: "es", content: "1 año" }] },
+            { content: "30 days", isCorrect: false, translations: [{ language: "zh", content: "30天" }, { language: "es", content: "30 días" }] },
+          ],
+        },
+
+        {
+          content: "Under the Pennsylvania Junior Driver's License, during what hours is nighttime driving prohibited?",
+          explanation: "Holders of a Pennsylvania Junior Driver's License may not drive between 11 p.m. and 5 a.m. Exceptions exist for employment, volunteer service with an emergency agency, or religious activity — but only with a signed note from the employer, volunteer organization, or religious institution.",
+          handbookSection: "Driver License — Junior Driver's License",
+          difficulty: 1,
+          translations: [
+            {
+              language: "zh",
+              content: "根据宾夕法尼亚州青少年驾照规定，哪些时段禁止夜间驾驶？",
+              explanation: "宾夕法尼亚州青少年驾照持有人不得在晚上11点至凌晨5点期间驾驶。就业、紧急机构志愿服务或宗教活动例外——但需要有雇主、志愿组织或宗教机构签署的书面说明。",
+            },
+            {
+              language: "es",
+              content: "Bajo la Licencia de Conducir Junior de Pennsylvania, ¿durante qué horas está prohibida la conducción nocturna?",
+              explanation: "Los titulares de una Licencia de Conducir Junior de Pennsylvania no pueden conducir entre las 11 p.m. y las 5 a.m. Existen excepciones para empleo, servicio voluntario con una agencia de emergencias o actividad religiosa.",
+            },
+          ],
+          options: [
+            { content: "11 p.m. to 5 a.m.", isCorrect: true, translations: [{ language: "zh", content: "晚上11点至凌晨5点" }, { language: "es", content: "11 p.m. a 5 a.m." }] },
+            { content: "10 p.m. to 6 a.m.", isCorrect: false, translations: [{ language: "zh", content: "晚上10点至早上6点" }, { language: "es", content: "10 p.m. a 6 a.m." }] },
+            { content: "Midnight to 6 a.m.", isCorrect: false, translations: [{ language: "zh", content: "午夜至早上6点" }, { language: "es", content: "Medianoche a 6 a.m." }] },
+            { content: "9 p.m. to 5 a.m.", isCorrect: false, translations: [{ language: "zh", content: "晚上9点至凌晨5点" }, { language: "es", content: "9 p.m. a 5 a.m." }] },
+          ],
+        },
+
+        {
+          content: "During the first 6 months of holding a Junior Driver's License, how many non-family passengers under age 18 may ride in the vehicle?",
+          explanation: "For the first 6 months of holding a Junior Driver's License, the driver may carry only ONE non-family passenger under age 18. After 6 months of violation-free driving, this limit increases to three non-family passengers under 18. The total number of passengers may never exceed the number of available seat belts.",
+          handbookSection: "Driver License — Junior Driver's License",
+          difficulty: 2,
+          translations: [
+            {
+              language: "zh",
+              content: "持青少年驾照的前6个月内，车内最多可以载多少名18岁以下的非家庭成员乘客？",
+              explanation: "持青少年驾照的前6个月内，驾驶员只能携带一名18岁以下的非家庭成员乘客。6个月无违规驾驶后，此限制增加至三名18岁以下的非家庭成员乘客。乘客总数不得超过可用安全带数量。",
+            },
+            {
+              language: "es",
+              content: "Durante los primeros 6 meses de tener una Licencia de Conducir Junior, ¿cuántos pasajeros menores de 18 años que no sean familia pueden viajar en el vehículo?",
+              explanation: "Durante los primeros 6 meses de tener una Licencia de Conducir Junior, el conductor solo puede llevar UN pasajero menor de 18 años que no sea de la familia. Después de 6 meses de conducción sin infracciones, este límite aumenta a tres pasajeros menores de 18 que no sean familia.",
+            },
+          ],
+          options: [
+            { content: "One non-family passenger under 18", isCorrect: true, translations: [{ language: "zh", content: "一名18岁以下的非家庭成员乘客" }, { language: "es", content: "Un pasajero menor de 18 años que no sea de la familia" }] },
+            { content: "No passengers under 18", isCorrect: false, translations: [{ language: "zh", content: "不能载任何18岁以下乘客" }, { language: "es", content: "Sin pasajeros menores de 18 años" }] },
+            { content: "Three non-family passengers under 18", isCorrect: false, translations: [{ language: "zh", content: "三名18岁以下的非家庭成员乘客" }, { language: "es", content: "Tres pasajeros menores de 18 años que no sean de la familia" }] },
+            { content: "Unlimited passengers as long as seat belts are available", isCorrect: false, translations: [{ language: "zh", content: "只要有安全带，乘客数量不限" }, { language: "es", content: "Pasajeros ilimitados siempre que haya cinturones de seguridad disponibles" }] },
+          ],
+        },
+
+        {
+          content: "What automatic penalty does a junior driver face for accumulating 6 or more points OR for driving 26 mph or more over the speed limit?",
+          explanation: "A junior driver who accumulates 6 or more points, or is convicted of driving 26 mph or more over the speed limit, faces an automatic 90-day license suspension. This is in addition to any points assessed for individual violations. The 90-day suspension is mandatory and cannot be reduced.",
+          handbookSection: "Driver License — Junior Driver's License",
+          difficulty: 2,
+          translations: [
+            {
+              language: "zh",
+              content: "青少年驾驶员因累积6分或以上，或超速26英里/小时或以上会面临什么自动处罚？",
+              explanation: "累积6分或以上，或因超速26英里/小时或以上被定罪的青少年驾驶员，将面临自动90天驾照暂扣。这是在个人违规积分之外的额外处罚。90天暂扣是强制性的，不能减少。",
+            },
+            {
+              language: "es",
+              content: "¿Qué penalización automática enfrenta un conductor junior por acumular 6 o más puntos O por conducir a 26 mph o más sobre el límite de velocidad?",
+              explanation: "Un conductor junior que acumula 6 o más puntos, o es condenado por conducir a 26 mph o más sobre el límite de velocidad, enfrenta una suspensión automática de licencia de 90 días. Esto es además de cualquier punto evaluado por infracciones individuales.",
+            },
+          ],
+          options: [
+            { content: "Automatic 90-day license suspension", isCorrect: true, translations: [{ language: "zh", content: "自动90天驾照暂扣" }, { language: "es", content: "Suspensión automática de licencia de 90 días" }] },
+            { content: "A $300 fine and 3-point reduction", isCorrect: false, translations: [{ language: "zh", content: "300美元罚款和减少3分" }, { language: "es", content: "Una multa de $300 y reducción de 3 puntos" }] },
+            { content: "30-day suspension", isCorrect: false, translations: [{ language: "zh", content: "30天暂扣" }, { language: "es", content: "Suspensión de 30 días" }] },
+            { content: "Required to retake the knowledge test only", isCorrect: false, translations: [{ language: "zh", content: "仅需重新参加笔试" }, { language: "es", content: "Solo se requiere volver a tomar el examen de conocimientos" }] },
+          ],
+        },
+
+        {
+          content: "How does a Junior Driver's License automatically become a full unrestricted license in Pennsylvania?",
+          explanation: "In Pennsylvania, a Junior Driver's License automatically becomes a full unrestricted (Class C) license when the driver turns 18 years old — no additional test or application is required. Alternatively, a junior driver may upgrade before age 18 by maintaining a clean driving record (no crashes or violations) for one year.",
+          handbookSection: "Driver License — Junior Driver's License",
+          difficulty: 1,
+          translations: [
+            {
+              language: "zh",
+              content: "在宾夕法尼亚州，青少年驾照如何自动升级为完全无限制驾照？",
+              explanation: "在宾夕法尼亚州，当驾驶员年满18岁时，青少年驾照自动升级为完全无限制（C类）驾照——不需要额外的考试或申请。或者，青少年驾驶员也可以在18岁前通过保持一年无违规记录来提前升级。",
+            },
+            {
+              language: "es",
+              content: "¿Cómo se convierte automáticamente una Licencia de Conducir Junior en una licencia completa sin restricciones en Pennsylvania?",
+              explanation: "En Pennsylvania, una Licencia de Conducir Junior se convierte automáticamente en una licencia completa sin restricciones (Clase C) cuando el conductor cumple 18 años — no se requiere examen ni solicitud adicional. Alternativamente, un conductor junior puede actualizarla antes de los 18 años manteniendo un historial de conducción limpio por un año.",
+            },
+          ],
+          options: [
+            { content: "When the driver turns 18 years old", isCorrect: true, translations: [{ language: "zh", content: "当驾驶员年满18岁时" }, { language: "es", content: "Cuando el conductor cumple 18 años" }] },
+            { content: "After completing a defensive driving course", isCorrect: false, translations: [{ language: "zh", content: "完成防御性驾驶课程后" }, { language: "es", content: "Después de completar un curso de manejo defensivo" }] },
+            { content: "By passing a second road test at age 17", isCorrect: false, translations: [{ language: "zh", content: "在17岁时通过第二次路考" }, { language: "es", content: "Al aprobar un segundo examen de manejo a los 17 años" }] },
+            { content: "After 2 years of holding the Junior Driver's License", isCorrect: false, translations: [{ language: "zh", content: "持有青少年驾照2年后" }, { language: "es", content: "Después de 2 años de tener la Licencia de Conducir Junior" }] },
+          ],
+        },
+
+        {
+          content: "How many attempts at the Pennsylvania knowledge test are allowed per day?",
+          explanation: "Pennsylvania only allows ONE knowledge test attempt per day, regardless of which driver's license center you visit. If you fail, you must return on a different day to try again. There is no limit on the total number of attempts across different days.",
+          handbookSection: "Driver License — Knowledge Test",
+          difficulty: 1,
+          translations: [
+            {
+              language: "zh",
+              content: "宾夕法尼亚州每天允许参加几次驾照笔试？",
+              explanation: "无论您去哪个驾照中心，宾夕法尼亚州每天只允许一次笔试机会。如果不及格，必须改天再来重试。跨不同日期的总尝试次数没有限制。",
+            },
+            {
+              language: "es",
+              content: "¿Cuántos intentos del examen de conocimientos de Pennsylvania se permiten por día?",
+              explanation: "Pennsylvania solo permite UN intento del examen de conocimientos por día, independientemente del centro de licencias de conducir que visite. Si falla, debe regresar otro día para intentarlo nuevamente.",
+            },
+          ],
+          options: [
+            { content: "One attempt per day", isCorrect: true, translations: [{ language: "zh", content: "每天一次" }, { language: "es", content: "Un intento por día" }] },
+            { content: "Two attempts per day", isCorrect: false, translations: [{ language: "zh", content: "每天两次" }, { language: "es", content: "Dos intentos por día" }] },
+            { content: "Unlimited attempts on the same day", isCorrect: false, translations: [{ language: "zh", content: "同一天可以无限次尝试" }, { language: "es", content: "Intentos ilimitados el mismo día" }] },
+            { content: "Three attempts before a waiting period", isCorrect: false, translations: [{ language: "zh", content: "需要等待期前可尝试三次" }, { language: "es", content: "Tres intentos antes de un período de espera" }] },
+          ],
+        },
+
+        {
+          content: "What form is required to apply for a Pennsylvania learner's permit?",
+          explanation: "To apply for a Pennsylvania learner's permit, you must complete form DL-180. If you are under 18 years of age, a parent or guardian must also sign form DL-180TD (parental consent). These forms, along with proof of identity, Social Security card, and applicable fees, are submitted at a PennDOT Driver License Center.",
+          handbookSection: "Driver License — Application Requirements",
+          difficulty: 2,
+          translations: [
+            {
+              language: "zh",
+              content: "申请宾夕法尼亚州学习许可证需要填写什么表格？",
+              explanation: "申请宾夕法尼亚州学习许可证必须填写DL-180表格。如果未满18岁，父母或监护人还必须签署DL-180TD表格（家长同意书）。这些表格连同身份证明、社会安全卡和相关费用一起提交至宾州交通部驾照中心。",
+            },
+            {
+              language: "es",
+              content: "¿Qué formulario se requiere para solicitar un permiso de aprendizaje de Pennsylvania?",
+              explanation: "Para solicitar un permiso de aprendizaje de Pennsylvania, debe completar el formulario DL-180. Si tiene menos de 18 años, un padre o tutor también debe firmar el formulario DL-180TD (consentimiento parental). Estos formularios se presentan en un Centro de Licencias de Conducir de PennDOT.",
+            },
+          ],
+          options: [
+            { content: "DL-180 (plus DL-180TD parental consent if under 18)", isCorrect: true, translations: [{ language: "zh", content: "DL-180（18岁以下还需DL-180TD家长同意书）" }, { language: "es", content: "DL-180 (más DL-180TD consentimiento parental si es menor de 18)" }] },
+            { content: "DL-80 application form", isCorrect: false, translations: [{ language: "zh", content: "DL-80申请表" }, { language: "es", content: "Formulario de solicitud DL-80" }] },
+            { content: "No form needed — apply online only", isCorrect: false, translations: [{ language: "zh", content: "不需要表格——仅网上申请" }, { language: "es", content: "No se necesita formulario — solo se aplica en línea" }] },
+            { content: "DL-500 new driver registration", isCorrect: false, translations: [{ language: "zh", content: "DL-500新驾驶员注册" }, { language: "es", content: "Registro de nuevo conductor DL-500" }] },
+          ],
+        },
+
+      ], // end Topic 1 questions
+    }, // end Topic 1
+
+    // ─── TOPIC 2: SIGNALS, SIGNS AND PAVEMENT MARKINGS (Ch.2) ──────────────────
     {
       name: "Signals, Signs and Pavement Markings",
       nameEn: "Signals, Signs and Pavement Markings",
