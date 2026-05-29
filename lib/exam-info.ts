@@ -875,42 +875,42 @@ const floridaDMV: ExamGuide = {
   handbookChapters: [
     {
       title: { en: "Road Signs & Traffic Controls", zh: "道路标志与交通控制", es: "Señales Viales y Controles de Tráfico" },
-      url: "https://www.flhsmv.gov/resources/handbooks-manuals/#signs",
+      url: "https://www.flhsmv.gov/resources/handbooks-manuals/",
       emoji: "🚦",
     },
     {
       title: { en: "Rules of the Road", zh: "道路行驶规则", es: "Reglas de la Vía" },
-      url: "https://www.flhsmv.gov/resources/handbooks-manuals/#rules",
+      url: "https://www.flhsmv.gov/resources/handbooks-manuals/",
       emoji: "⚖️",
     },
     {
       title: { en: "Speed Limits & Special Zones", zh: "限速与特殊路段", es: "Límites de Velocidad y Zonas Especiales" },
-      url: "https://www.flhsmv.gov/resources/handbooks-manuals/#speed",
+      url: "https://www.flhsmv.gov/resources/handbooks-manuals/",
       emoji: "🛣️",
     },
     {
       title: { en: "Alcohol, Drugs & DUI", zh: "酒精、药物与醉驾", es: "Alcohol, Drogas y DUI" },
-      url: "https://www.flhsmv.gov/resources/handbooks-manuals/#dui",
+      url: "https://www.flhsmv.gov/driver-licenses-id-cards/dui/",
       emoji: "🚫",
     },
     {
       title: { en: "Driver Licensing & Penalties", zh: "驾照申领与违章处罚", es: "Licencias de Conducir y Sanciones" },
-      url: "https://www.flhsmv.gov/resources/handbooks-manuals/#license",
+      url: "https://www.flhsmv.gov/driver-licenses-id-cards/",
       emoji: "🪪",
     },
     {
       title: { en: "Safe Driving & Crash Prevention", zh: "安全驾驶与事故预防", es: "Conducción Segura y Prevención de Accidentes" },
-      url: "https://www.flhsmv.gov/resources/handbooks-manuals/#safety",
+      url: "https://www.flhsmv.gov/safety-center/",
       emoji: "🛡️",
     },
     {
       title: { en: "Sharing the Road", zh: "共享道路", es: "Compartir la Vía" },
-      url: "https://www.flhsmv.gov/resources/handbooks-manuals/#sharing",
+      url: "https://www.flhsmv.gov/safety-center/consumer-education/",
       emoji: "🚶",
     },
     {
       title: { en: "Vehicle Equipment & Maintenance", zh: "车辆设备与维护", es: "Equipamiento y Mantenimiento del Vehículo" },
-      url: "https://www.flhsmv.gov/resources/handbooks-manuals/#vehicle",
+      url: "https://www.flhsmv.gov/motor-vehicles-tags-titles/",
       emoji: "🔧",
     },
   ],
