@@ -53,9 +53,6 @@ async function main() {
     for (const link of guide.officialLinks) {
       tasks.push({ url: link.url, source: `${state} / officialLinks / ${link.label.en}` });
     }
-    for (const step of guide.howToSchedule) {
-      if (step.url) tasks.push({ url: step.url, source: `${state} / howToSchedule` });
-    }
   }
 
   // Deduplicate URLs but keep all sources for reporting
