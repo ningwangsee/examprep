@@ -207,6 +207,7 @@ Tailwind CSS v4 — uses `@import "tailwindcss"` in `globals.css` (not `@tailwin
 | State | Questions | Topics | Status |
 |---|---|---|---|
 | California | 111 | 6 | ✅ Live |
+| Texas | 38 | 6 | 🔧 In progress (Topics 1–2 complete) |
 
 **CA DMV topics breakdown:**
 | Topic | nameEn | Questions |
@@ -218,9 +219,17 @@ Tailwind CSS v4 — uses `@import "tailwindcss"` in `globals.css` (not `@tailwin
 | 5 | License Requirements | ~10 |
 | 6 | Safe Driving & Parking | ~31 |
 
-**Target question count:** ~150 per state (≈3× the actual 46-question test). Current 111 provides good but not full coverage.
+**TX DMV topics breakdown (DL-7 Jan 2026):**
+| Topic | nameEn | Questions | Status |
+|---|---|---|---|
+| 1 | Road Signs & Markers | 20 | ✅ |
+| 2 | Traffic Laws & Right-of-Way | 18 | ✅ |
+| 3 | Speed Limits & Special Situations | 0 | 🔧 Next |
+| 4 | Alcohol & Drugs | 0 | pending |
+| 5 | Licensing & Responsibilities | 0 | pending |
+| 6 | Safety: Pedestrians, Bicycles & Crashes | 0 | pending |
 
-Next planned: Texas DMV
+**Target question count:** ~90–100 per state (≈3× the actual 30-question TX test). Current 38 provides partial coverage.
 
 ## Known Gotchas & Lessons Learned
 
@@ -265,7 +274,9 @@ Next planned: Texas DMV
 
 All one-off insertion scripts live in `prisma/scripts/`. Existing scripts (for reference):
 
-| Script | Knowledge point | Topic |
+**CA scripts** (all in `prisma/scripts/`):
+
+| Script | Knowledge point | CA Topic |
 |---|---|---|
 | `add-distracted-driving.ts` | Cell phone / distracted driving | 6 |
 | `add-seat-belts.ts` | Seat belts & child passenger safety | 6 |
@@ -273,8 +284,15 @@ All one-off insertion scripts live in `prisma/scripts/`. Existing scripts (for r
 | `add-roundabouts.ts` | Roundabout rules | 2 |
 | `add-headlights.ts` | Headlight requirements | 6 |
 | `add-accidents.ts` | Accident reporting | 6 |
+| `fix-content-accuracy.ts` | Fix "Since 2008" + school bus VC §22454 citation | — |
 | `populate-translations.ts` | Backfill zh/es for all questions | all |
 | `fix-handbook-url.ts` | Fix Topic 1 handbookUrl | — |
+
+**TX scripts** (all in `prisma/scripts/`):
+
+| Script | Knowledge point | TX Topic |
+|---|---|---|
+| `add-tx-topic2.ts` | Traffic Laws & Right-of-Way (18 questions) | 2 |
 
 ## GitHub
 
