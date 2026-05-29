@@ -39,7 +39,7 @@ const californiaDMV: ExamGuide = {
     },
     {
       label: { en: "To Pass", zh: "通过标准", es: "Para Aprobar" },
-      value: "38 / 46 (83%)",
+      value: "38 / 46 (80%)",
     },
     {
       label: { en: "Time Limit", zh: "时间限制", es: "Límite de Tiempo" },

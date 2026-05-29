@@ -311,7 +311,7 @@ export const californiaDMV = {
         },
         {
           content: "How far must you stop from a school bus that has its red lights flashing?",
-          explanation: "You must stop at least 20 feet from a school bus with flashing red lights. This distance gives children a safe space to cross in front of or behind the bus without being in your blind spot.",
+          explanation: "Under California Vehicle Code §22454, you must stop at least 20 feet from a school bus with flashing red lights. This distance gives children a safe space to cross in front of or behind the bus without being in your blind spot.",
           handbookSection: "Traffic Controls — School Buses",
           difficulty: 2,
           translations: [
@@ -1465,7 +1465,7 @@ export const californiaDMV = {
         },
         {
           content: "California law requires you to use headlights whenever you use your windshield wipers due to:",
-          explanation: "Since 2008, California law requires drivers to turn on headlights whenever windshield wipers are in use due to rain, snow, or other precipitation. This increases vehicle visibility to others in low-visibility conditions.",
+          explanation: "California law requires drivers to turn on headlights whenever windshield wipers are in use due to rain, snow, or other precipitation. This increases vehicle visibility to others in low-visibility conditions.",
           handbookSection: "Safe Driving — Headlights",
           difficulty: 2,
           translations: [

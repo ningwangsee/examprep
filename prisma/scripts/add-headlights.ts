@@ -40,7 +40,7 @@ const newQuestions = [
   },
   {
     content: "California law requires you to use headlights whenever you use your windshield wipers due to:",
-    explanation: "Since 2008, California law requires drivers to turn on headlights whenever windshield wipers are in use due to rain, snow, or other precipitation. This increases vehicle visibility to others in low-visibility conditions.",
+    explanation: "California law requires drivers to turn on headlights whenever windshield wipers are in use due to rain, snow, or other precipitation. This increases vehicle visibility to others in low-visibility conditions.",
     handbookSection: "Safe Driving — Headlights",
     difficulty: 2,
     translations: [
