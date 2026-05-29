@@ -36,12 +36,13 @@ const CHAPTER_TITLES: Record<string, string> = {
   "California Driver's License::Safe Driving & Parking":        "Safe Driving",
 
   // ── Pennsylvania (online chapter pages) ──────────────────────────────────
-  "Pennsylvania Driver's License::Traffic Signals, Signs & Markings":  "Signals, Signs & Markings",
-  "Pennsylvania Driver's License::Right-of-Way, Turns & Intersections": "Everyday Driving Skills",
-  "Pennsylvania Driver's License::Speed, Space & Defensive Driving":    "Everyday Driving Skills",
-  "Pennsylvania Driver's License::Alcohol, Drugs & DUI":                "Driver Factors",
-  "Pennsylvania Driver's License::Driver License & PA Laws":            "Driver License",
-  "Pennsylvania Driver's License::Safe Driving & Sharing the Road":     "Choosing Safety First",
+  "Pennsylvania Driver's License::Signals, Signs and Pavement Markings":    "Signals, Signs & Markings",
+  "Pennsylvania Driver's License::Choosing Safety First":                    "Choosing Safety First",
+  "Pennsylvania Driver's License::Everyday Driving Skills":                  "Everyday Driving Skills",
+  "Pennsylvania Driver's License::Special Circumstances and Emergencies":    "Special Circumstances and Emergencies",
+  "Pennsylvania Driver's License::Driver Factors":                           "Driver Factors",
+  "Pennsylvania Driver's License::Driving Record Information":               "Driving Record Information",
+  "Pennsylvania Driver's License::Laws and Related Issues":                  "Laws and Related Issues",
 
   // ── New York (online chapter pages) ──────────────────────────────────────
   "New York Driver's License::Traffic Control & Road Signs":            "Traffic Control",
