@@ -311,9 +311,140 @@ const californiaDMV: ExamGuide = {
   ],
 };
 
+// ─── Texas DPS ────────────────────────────────────────────────────────────────
+
+const texasDMV: ExamGuide = {
+  stats: [
+    {
+      label: { en: "Questions", zh: "题目数", es: "Preguntas" },
+      value: "30 (2 × 15)",
+    },
+    {
+      label: { en: "To Pass", zh: "通过标准", es: "Para Aprobar" },
+      value: "11 / 15 per section (70%)",
+    },
+    {
+      label: { en: "Time Limit", zh: "时间限制", es: "Límite de Tiempo" },
+      value: "30 min / section",
+    },
+    {
+      label: { en: "Languages", zh: "考试语言", es: "Idiomas" },
+      value: "EN / ES",
+    },
+    {
+      label: { en: "Retakes", zh: "重考次数", es: "Intentos" },
+      value: "3× before repay",
+    },
+    {
+      label: { en: "Fee", zh: "费用", es: "Tarifa" },
+      value: "$33 (included)",
+    },
+  ],
+
+  whatToBring: [
+    {
+      item: { en: "Proof of U.S. citizenship or lawful presence", zh: "美国公民身份或合法居留证明", es: "Prueba de ciudadanía o presencia legal en EE.UU." },
+      note: { en: "U.S. passport, birth certificate, or permanent resident card", zh: "美国护照、出生证明或永久居留卡", es: "Pasaporte de EE.UU., certificado de nacimiento o tarjeta de residente permanente" },
+    },
+    {
+      item: { en: "Proof of Texas residency (2 documents)", zh: "德州居住证明（2份）", es: "Prueba de residencia en Texas (2 documentos)" },
+      note: { en: "Utility bill, bank statement, or lease agreement showing your Texas address", zh: "水电账单、银行对账单或租赁合同，需显示德州地址", es: "Factura de servicios, estado de cuenta bancario o contrato de arrendamiento con dirección en Texas" },
+    },
+    {
+      item: { en: "Proof of Social Security Number", zh: "社会安全号码证明", es: "Prueba de Número de Seguro Social" },
+      note: { en: "Social Security card, W-2 form, or SSA letter showing your full SSN", zh: "社安卡、W-2 表格或显示完整 SSN 的社安局函件", es: "Tarjeta del Seguro Social, formulario W-2 o carta de la SSA con su número completo" },
+    },
+    {
+      item: { en: "$33 application fee", zh: "$33 申请费", es: "Tarifa de solicitud de $33" },
+      note: { en: "Cash, check, money order, or major credit/debit card accepted", zh: "接受现金、支票、汇票或主要信用/借记卡", es: "Se acepta efectivo, cheque, giro postal o tarjeta de crédito/débito principal" },
+    },
+    {
+      item: { en: "Completed DL-14A form (if applicable)", zh: "填写完整的 DL-14A 表格（如适用）", es: "Formulario DL-14A completado (si aplica)" },
+      note: { en: "Required for applicants under 18 — must be signed by a parent or guardian", zh: "18岁以下申请人需提供，须由父母或监护人签署", es: "Requerido para menores de 18 años — debe estar firmado por un padre o tutor" },
+    },
+  ],
+
+  howToSchedule: [
+    {
+      step: { en: "Schedule online (recommended)", zh: "在线预约（推荐）", es: "Programar en línea (recomendado)" },
+      detail: { en: "Visit txdps.state.tx.us and book a knowledge test appointment — often faster than walk-in.", zh: "访问 txdps.state.tx.us 预约笔试，通常比现场排队更快。", es: "Visite txdps.state.tx.us y reserve una cita para el examen de conocimientos — generalmente más rápido que ir sin cita." },
+    },
+    {
+      step: { en: "Walk in at a DPS Driver License office", zh: "直接前往 DPS 驾照办理处", es: "Presentarse en una oficina de Licencias de Conducir del DPS" },
+      detail: { en: "Arrive early — offices open at 8:00 AM. Wait times vary by location and day of week.", zh: "建议早些到达——办公室早上8点开门，各地点及不同日期等待时间不同。", es: "Llegue temprano — las oficinas abren a las 8:00 AM. Los tiempos de espera varían según la ubicación y el día." },
+    },
+    {
+      step: { en: "Check wait times before going", zh: "出发前查看等待时间", es: "Consulte los tiempos de espera antes de ir" },
+      detail: { en: "Visit texas.gov/txapp or check the DPS website to see current wait times at your nearest office.", zh: "访问 texas.gov/txapp 或 DPS 官网，查看最近办公室的当前等待时间。", es: "Visite texas.gov/txapp o el sitio web del DPS para ver los tiempos de espera actuales en la oficina más cercana." },
+    },
+  ],
+
+  tips: [
+    { en: "The test is split into 2 sections: 15 road signs questions and 15 traffic laws questions.", zh: "考试分为两节：15道道路标志题和15道交通法规题，每节各自计分。", es: "El examen se divide en 2 secciones: 15 preguntas de señales viales y 15 de leyes de tránsito." },
+    { en: "You must pass each section separately with at least 70% (11 out of 15).", zh: "每节须单独通过，正确率至少70%（15题中答对11题）。", es: "Debe aprobar cada sección por separado con al menos el 70% (11 de 15 respuestas correctas)." },
+    { en: "You have 3 attempts before you must pay the fee again and reapply.", zh: "有3次机会，3次均未通过需重新缴费申请。", es: "Tiene 3 intentos antes de tener que volver a pagar la tarifa y presentar una nueva solicitud." },
+    { en: "The test is available in English and Spanish.", zh: "考试提供英语和西班牙语两种语言。", es: "El examen está disponible en inglés y español." },
+    { en: "Read the Texas Driver Handbook (DL-7) thoroughly — all questions come from it.", zh: "仔细阅读《德州驾驶员手册》（DL-7），所有考题均来源于此。", es: "Lea minuciosamente el Manual del Conductor de Texas (DL-7) — todas las preguntas provienen de él." },
+    { en: "Pay special attention to Texas-specific rules: FM roads, 85 mph speed limit on SH-130, and the ALR 15-day window.", zh: "特别注意德州特有规定：FM农场路、130号州道85英里限速以及 ALR 15天申请窗口。", es: "Preste especial atención a las reglas específicas de Texas: caminos FM, límite de 85 mph en SH-130 y la ventana de 15 días del ALR." },
+  ],
+
+  handbookChapters: [
+    { title: { en: "Your License to Drive", zh: "您的驾驶执照", es: "Su Licencia para Conducir" }, url: "https://www.dps.texas.gov/internetforms/Forms/DL-7.pdf", emoji: "🪪" },
+    { title: { en: "Signals, Signs & Markers", zh: "信号、标志与标记", es: "Señales y Marcas Viales" }, url: "https://www.dps.texas.gov/internetforms/Forms/DL-7.pdf", emoji: "🚦" },
+    { title: { en: "Right-of-Way", zh: "优先通行权", es: "Derecho de Paso" }, url: "https://www.dps.texas.gov/internetforms/Forms/DL-7.pdf", emoji: "🔄" },
+    { title: { en: "Turning, Passing & Lanes", zh: "转弯、超车与车道", es: "Giros, Adelantamiento y Carriles" }, url: "https://www.dps.texas.gov/internetforms/Forms/DL-7.pdf", emoji: "↪️" },
+    { title: { en: "Speed & Speed Limits", zh: "速度与限速规定", es: "Velocidad y Límites" }, url: "https://www.dps.texas.gov/internetforms/Forms/DL-7.pdf", emoji: "🛣️" },
+    { title: { en: "Special Driving Situations", zh: "特殊驾驶情况", es: "Situaciones Especiales" }, url: "https://www.dps.texas.gov/internetforms/Forms/DL-7.pdf", emoji: "⚠️" },
+    { title: { en: "Alcohol & Drugs", zh: "酒精与药物", es: "Alcohol y Drogas" }, url: "https://www.dps.texas.gov/internetforms/Forms/DL-7.pdf", emoji: "🚫" },
+    { title: { en: "Motor Vehicle Crashes", zh: "交通事故处理", es: "Accidentes de Tránsito" }, url: "https://www.dps.texas.gov/internetforms/Forms/DL-7.pdf", emoji: "🚗" },
+    { title: { en: "Pedestrian & Bicycle Safety", zh: "行人与自行车安全", es: "Seguridad Peatonal y Ciclista" }, url: "https://www.dps.texas.gov/internetforms/Forms/DL-7.pdf", emoji: "🚶" },
+    { title: { en: "Additional Safety Tips", zh: "额外安全提示", es: "Consejos de Seguridad Adicionales" }, url: "https://www.dps.texas.gov/internetforms/Forms/DL-7.pdf", emoji: "🛡️" },
+  ],
+
+  officialLinks: [
+    {
+      label: { en: "Texas DPS Official Site", zh: "德州 DPS 官网", es: "Sitio Oficial del DPS de Texas" },
+      url: "https://www.dps.texas.gov/section/driver-license",
+      description: { en: "Texas Department of Public Safety — Driver License Division", zh: "德克萨斯州公共安全局——驾照管理部门", es: "Departamento de Seguridad Pública de Texas — División de Licencias de Conducir" },
+      emoji: "🏛️",
+    },
+    {
+      label: { en: "Driver Handbook (Online)", zh: "驾驶员手册（PDF）", es: "Manual del Conductor (PDF)" },
+      url: "https://www.dps.texas.gov/internetforms/Forms/DL-7.pdf",
+      description: { en: "Texas Driver Handbook DL-7 (PDF) — official study guide for the knowledge test", zh: "德州驾驶员手册 DL-7（PDF）——知识考试官方学习指南", es: "Manual del Conductor de Texas DL-7 (PDF) — guía oficial de estudio para el examen de conocimientos" },
+      emoji: "📖",
+    },
+    {
+      label: { en: "Schedule Appointment", zh: "预约考试", es: "Programar Cita" },
+      url: "https://www.txdpsscheduler.com/",
+      description: { en: "Book your knowledge test appointment online via the Texas DPS Scheduler", zh: "通过德州 DPS 在线预约系统预约笔试", es: "Reserve su cita para el examen de conocimientos en línea a través del Programador del DPS de Texas" },
+      emoji: "📅",
+    },
+    {
+      label: { en: "Find a DPS Office", zh: "查找 DPS 办公室", es: "Encontrar una Oficina DPS" },
+      url: "https://www.dps.texas.gov/section/driver-license/driver-license-office-locations",
+      description: { en: "Find the DPS Driver License office nearest to you", zh: "查找离您最近的 DPS 驾照办理处", es: "Encuentre la oficina de Licencias de Conducir del DPS más cercana a usted" },
+      emoji: "📍",
+    },
+    {
+      label: { en: "Check Wait Times", zh: "查看等待时间", es: "Ver Tiempos de Espera" },
+      url: "https://www.dps.texas.gov/section/driver-license/driver-license-office-locations",
+      description: { en: "Check current wait times at DPS offices before you go", zh: "出发前查看各 DPS 办公室的当前等待时间", es: "Consulte los tiempos de espera actuales en las oficinas del DPS antes de ir" },
+      emoji: "⏱️",
+    },
+    {
+      label: { en: "Texas Driving Laws (TxDOT)", zh: "德州交通法规（TxDOT）", es: "Leyes de Tránsito de Texas (TxDOT)" },
+      url: "https://www.txdot.gov/safety/driving-laws.html",
+      description: { en: "Official Texas traffic laws and road safety information from TxDOT", zh: "德州交通局（TxDOT）官方交通法规与道路安全信息", es: "Leyes de tránsito oficiales de Texas e información de seguridad vial del TxDOT" },
+      emoji: "⚖️",
+    },
+  ],
+};
+
 // ─── Registry ─────────────────────────────────────────────────────────────────
 
 /** Look up exam guide by category.nameEn — returns undefined if not found. */
 export const examGuides: Record<string, ExamGuide> = {
   "California Driver's License": californiaDMV,
+  "Texas Driver's License": texasDMV,
 };
