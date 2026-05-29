@@ -389,16 +389,16 @@ const texasDMV: ExamGuide = {
   ],
 
   handbookChapters: [
-    { title: { en: "Your License to Drive", zh: "您的驾驶执照", es: "Su Licencia para Conducir" }, url: "https://www.dps.texas.gov/internetforms/Forms/DL-7.pdf", emoji: "🪪" },
-    { title: { en: "Signals, Signs & Markers", zh: "信号、标志与标记", es: "Señales y Marcas Viales" }, url: "https://www.dps.texas.gov/internetforms/Forms/DL-7.pdf", emoji: "🚦" },
-    { title: { en: "Right-of-Way", zh: "优先通行权", es: "Derecho de Paso" }, url: "https://www.dps.texas.gov/internetforms/Forms/DL-7.pdf", emoji: "🔄" },
-    { title: { en: "Turning, Passing & Lanes", zh: "转弯、超车与车道", es: "Giros, Adelantamiento y Carriles" }, url: "https://www.dps.texas.gov/internetforms/Forms/DL-7.pdf", emoji: "↪️" },
-    { title: { en: "Speed & Speed Limits", zh: "速度与限速规定", es: "Velocidad y Límites" }, url: "https://www.dps.texas.gov/internetforms/Forms/DL-7.pdf", emoji: "🛣️" },
-    { title: { en: "Special Driving Situations", zh: "特殊驾驶情况", es: "Situaciones Especiales" }, url: "https://www.dps.texas.gov/internetforms/Forms/DL-7.pdf", emoji: "⚠️" },
-    { title: { en: "Alcohol & Drugs", zh: "酒精与药物", es: "Alcohol y Drogas" }, url: "https://www.dps.texas.gov/internetforms/Forms/DL-7.pdf", emoji: "🚫" },
-    { title: { en: "Motor Vehicle Crashes", zh: "交通事故处理", es: "Accidentes de Tránsito" }, url: "https://www.dps.texas.gov/internetforms/Forms/DL-7.pdf", emoji: "🚗" },
-    { title: { en: "Pedestrian & Bicycle Safety", zh: "行人与自行车安全", es: "Seguridad Peatonal y Ciclista" }, url: "https://www.dps.texas.gov/internetforms/Forms/DL-7.pdf", emoji: "🚶" },
-    { title: { en: "Additional Safety Tips", zh: "额外安全提示", es: "Consejos de Seguridad Adicionales" }, url: "https://www.dps.texas.gov/internetforms/Forms/DL-7.pdf", emoji: "🛡️" },
+    { title: { en: "Ch.1 Your License to Drive", zh: "第1章：驾驶执照", es: "Cap.1 Su Licencia para Conducir" }, url: "https://www.dps.texas.gov/internetforms/Forms/DL-7.pdf#page=1", emoji: "🪪" },
+    { title: { en: "Ch.4 Right-of-Way", zh: "第4章：优先通行权", es: "Cap.4 Derecho de Paso" }, url: "https://www.dps.texas.gov/internetforms/Forms/DL-7.pdf#page=23", emoji: "🔄" },
+    { title: { en: "Ch.5 Signals, Signs & Markers", zh: "第5章：信号、标志与标记", es: "Cap.5 Señales y Marcas Viales" }, url: "https://www.dps.texas.gov/internetforms/Forms/DL-7.pdf#page=28", emoji: "🚦" },
+    { title: { en: "Ch.6 Turning, Passing & Lanes", zh: "第6章：转弯、超车与车道", es: "Cap.6 Giros, Adelantamiento y Carriles" }, url: "https://www.dps.texas.gov/internetforms/Forms/DL-7.pdf#page=41", emoji: "↪️" },
+    { title: { en: "Ch.7 Parking & Stopping", zh: "第7章：停车规定", es: "Cap.7 Estacionamiento y Paradas" }, url: "https://www.dps.texas.gov/internetforms/Forms/DL-7.pdf#page=45", emoji: "🅿️" },
+    { title: { en: "Ch.8 Speed & Speed Limits", zh: "第8章：速度与限速规定", es: "Cap.8 Velocidad y Límites" }, url: "https://www.dps.texas.gov/internetforms/Forms/DL-7.pdf#page=48", emoji: "🛣️" },
+    { title: { en: "Ch.9 Special Driving Situations", zh: "第9章：特殊驾驶情况", es: "Cap.9 Situaciones Especiales" }, url: "https://www.dps.texas.gov/internetforms/Forms/DL-7.pdf#page=50", emoji: "⚠️" },
+    { title: { en: "Ch.10 Alcohol & Drugs", zh: "第10章：酒精与药物", es: "Cap.10 Alcohol y Drogas" }, url: "https://www.dps.texas.gov/internetforms/Forms/DL-7.pdf#page=58", emoji: "🚫" },
+    { title: { en: "Ch.11 Motor Vehicle Crashes", zh: "第11章：交通事故处理", es: "Cap.11 Accidentes de Tránsito" }, url: "https://www.dps.texas.gov/internetforms/Forms/DL-7.pdf#page=62", emoji: "🚗" },
+    { title: { en: "Ch.12–13 Pedestrian & Bicycle Safety", zh: "第12-13章：行人与自行车安全", es: "Cap.12–13 Seguridad Peatonal y Ciclista" }, url: "https://www.dps.texas.gov/internetforms/Forms/DL-7.pdf#page=64", emoji: "🚶" },
   ],
 
   officialLinks: [
@@ -422,13 +422,13 @@ const texasDMV: ExamGuide = {
     },
     {
       label: { en: "Find a DPS Office", zh: "查找 DPS 办公室", es: "Encontrar una Oficina DPS" },
-      url: "https://www.dps.texas.gov/section/driver-license/driver-license-office-locations",
+      url: "https://www.dps.texas.gov/apps/DriverLicense/OfficeLocations",
       description: { en: "Find the DPS Driver License office nearest to you", zh: "查找离您最近的 DPS 驾照办理处", es: "Encuentre la oficina de Licencias de Conducir del DPS más cercana a usted" },
       emoji: "📍",
     },
     {
       label: { en: "Check Wait Times", zh: "查看等待时间", es: "Ver Tiempos de Espera" },
-      url: "https://www.dps.texas.gov/section/driver-license/driver-license-office-locations",
+      url: "https://www.dps.texas.gov/apps/DriverLicense/OfficeLocations",
       description: { en: "Check current wait times at DPS offices before you go", zh: "出发前查看各 DPS 办公室的当前等待时间", es: "Consulte los tiempos de espera actuales en las oficinas del DPS antes de ir" },
       emoji: "⏱️",
     },
