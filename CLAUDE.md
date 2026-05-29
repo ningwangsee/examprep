@@ -207,7 +207,7 @@ Tailwind CSS v4 — uses `@import "tailwindcss"` in `globals.css` (not `@tailwin
 | State | Questions | Topics | Status |
 |---|---|---|---|
 | California | 111 | 6 | ✅ Live |
-| Texas | 68 | 6 | 🔧 In progress (Topics 1–4 complete) |
+| Texas | 83 | 6 | 🔧 In progress (Topics 1–5 complete) |
 
 **CA DMV topics breakdown:**
 | Topic | nameEn | Questions |
@@ -226,10 +226,10 @@ Tailwind CSS v4 — uses `@import "tailwindcss"` in `globals.css` (not `@tailwin
 | 2 | Traffic Laws & Right-of-Way | 18 | ✅ |
 | 3 | Speed Limits & Special Situations | 15 | ✅ |
 | 4 | Alcohol & Drugs | 15 | ✅ |
-| 5 | Licensing & Responsibilities | 0 | 🔧 Next |
-| 6 | Safety: Pedestrians, Bicycles & Crashes | 0 | pending |
+| 5 | Licensing & Responsibilities | 15 | ✅ |
+| 6 | Safety: Pedestrians, Bicycles & Crashes | 0 | 🔧 Next |
 
-**Target question count:** ~90–100 per state (≈3× the actual 30-question TX test). Current 68 provides partial coverage.
+**Target question count:** ~90–100 per state (≈3× the actual 30-question TX test). Current 83 provides partial coverage.
 
 ## Known Gotchas & Lessons Learned
 
@@ -295,6 +295,7 @@ All one-off insertion scripts live in `prisma/scripts/`. Existing scripts (for r
 | `add-tx-topic2.ts` | Traffic Laws & Right-of-Way (18 questions) | 2 |
 | `add-tx-topic3.ts` | Speed Limits & Special Situations (15 questions) | 3 |
 | `add-tx-topic4.ts` | Alcohol & Drugs (15 questions) | 4 |
+| `add-tx-topic5.ts` | Licensing & Responsibilities (15 questions) | 5 |
 
 ## GitHub
 
