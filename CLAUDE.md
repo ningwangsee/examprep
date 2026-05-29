@@ -208,6 +208,7 @@ Tailwind CSS v4 — uses `@import "tailwindcss"` in `globals.css` (not `@tailwin
 |---|---|---|---|
 | California | 111 | 6 | ✅ Live |
 | Texas | 98 | 6 | ✅ Live |
+| New York | 100 | 6 | ✅ Live |
 
 **CA DMV topics breakdown:**
 | Topic | nameEn | Questions |
@@ -229,7 +230,17 @@ Tailwind CSS v4 — uses `@import "tailwindcss"` in `globals.css` (not `@tailwin
 | 5 | Licensing & Responsibilities | 15 | ✅ |
 | 6 | Safety: Pedestrians, Bicycles & Crashes | 15 | ✅ |
 
-**Target question count:** ~90–100 per state (≈3× the actual 30-question TX test). TX complete at 98 questions.
+**NY DMV topics breakdown (NY State Driver's Manual):**
+| Topic | nameEn | Questions | Status |
+|---|---|---|---|
+| 1 | Traffic Control & Road Signs | 20 | ✅ |
+| 2 | Right-of-Way, Intersections & Turns | 18 | ✅ |
+| 3 | Speed, Space & Defensive Driving | 17 | ✅ |
+| 4 | Alcohol & Other Drugs | 15 | ✅ |
+| 5 | Driver Licensing & Vehicle Laws | 15 | ✅ |
+| 6 | Sharing the Road & Crash Procedures | 15 | ✅ |
+
+**Target question count:** ~90–100 per state (≈3–5× the actual test length). TX complete at 98 questions. NY complete at 100 questions.
 
 ## Known Gotchas & Lessons Learned
 
@@ -268,7 +279,8 @@ Tailwind CSS v4 — uses `@import "tailwindcss"` in `globals.css` (not `@tailwin
 - **Optimal count**: ~3× the actual test length. CA test = 46 questions, target = ~150 questions.
 - **Difficulty spread**: aim for ~40% easy (difficulty=1), ~40% medium (difficulty=2), ~20% hard (difficulty=3).
 - **handbookSection format**: `"Topic Name — Subtopic"` e.g. `"Traffic Controls — School Buses"`. Shown to users after wrong answers.
-- **Translation workflow**: Generate English questions → translate externally (Anthropic Chat / ChatGPT) → paste back translations → run insertion script → update seed file.
+- **Translation workflow (new states)**: Use `prisma/scripts/gen-ny-seed.ts` as a template. Script defines English questions → calls Claude API (`claude-opus-4-5`) to translate all topics in batches → writes complete trilingual seed file. Set `$env:ANTHROPIC_API_KEY` before running. See `gen-ny-seed.ts` for the pattern.
+- **Translation workflow (CA/TX legacy)**: Generate English questions → translate externally (Anthropic Chat / ChatGPT) → paste back translations → run insertion script → update seed file.
 
 ### Incremental Script File Locations
 
@@ -287,6 +299,12 @@ All one-off insertion scripts live in `prisma/scripts/`. Existing scripts (for r
 | `fix-content-accuracy.ts` | Fix "Since 2008" + school bus VC §22454 citation | — |
 | `populate-translations.ts` | Backfill zh/es for all questions | all |
 | `fix-handbook-url.ts` | Fix Topic 1 handbookUrl | — |
+
+**NY scripts** (all in `prisma/scripts/`):
+
+| Script | Purpose |
+|---|---|
+| `gen-ny-seed.ts` | Generates `new-york-dmv.ts` seed via Claude API auto-translation (100 questions, 6 topics) |
 
 **TX scripts** (all in `prisma/scripts/`):
 
