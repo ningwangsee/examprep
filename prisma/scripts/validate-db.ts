@@ -34,6 +34,7 @@ const CHAPTER_TITLES: Record<string, string> = {
   "California Driver's License::DUI & Alcohol Laws":            "Alcohol and Drugs",
   "California Driver's License::Lane Usage & Passing":          "Navigating the Roads",
   "California Driver's License::Safe Driving & Parking":        "Safe Driving",
+  "California Driver's License::Getting Your License":          "Getting Your License",
 
   // ── Pennsylvania (online chapter pages) ──────────────────────────────────
   "Pennsylvania Driver's License::Driver License":                           "Driver License",

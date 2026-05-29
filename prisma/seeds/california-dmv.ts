@@ -1529,5 +1529,259 @@ export const californiaDMV = {
         },
       ],
     },
+
+    // ─── TOPIC 7: Getting Your License ─────────────────────────────────────────
+    {
+      name: "Getting Your License",
+      nameEn: "Getting Your License",
+      description: "Instruction permits, provisional license rules, age requirements, REAL ID",
+      handbookUrl: "https://www.dmv.ca.gov/portal/handbook/california-driver-handbook/getting-an-instruction-permit-and-drivers-license/",
+      translations: [
+        { language: "zh", name: "驾照申请与要求", description: "驾车许可、临时驾照规定、年龄要求、真实身份证" },
+        { language: "es", name: "Obtención de su Licencia", description: "Permisos de instrucción, reglas de licencia provisional, requisitos de edad, Real ID" },
+      ],
+      questions: [
+        {
+          content: "What is the minimum age to apply for an instruction permit in California?",
+          explanation: "You must be at least 15½ years old to apply for a California instruction permit. You must also complete a driver education program and have parental or guardian approval.",
+          handbookSection: "Getting Your License — Instruction Permit",
+          difficulty: 1,
+          translations: [
+            { language: "zh", content: "在加利福尼亚州，申请驾车许可的最低年龄是多少？", explanation: "您必须年满 15 岁半才能申请加州驾车许可。此外，您还须完成驾驶教育课程，并获得父母或监护人的批准。" },
+            { language: "es", content: "¿Cuál es la edad mínima para solicitar un permiso de instrucción en California?", explanation: "Debe tener al menos 15 años y medio para solicitar un permiso de instrucción en California. También debe completar un programa de educación vial y obtener la aprobación de sus padres o tutor." },
+          ],
+          options: [
+            { content: "15½ years old", isCorrect: true, translations: [{ language: "zh", content: "15 岁半" }, { language: "es", content: "15 años y medio" }] },
+            { content: "15 years old", isCorrect: false, translations: [{ language: "zh", content: "15 岁" }, { language: "es", content: "15 años" }] },
+            { content: "16 years old", isCorrect: false, translations: [{ language: "zh", content: "16 岁" }, { language: "es", content: "16 años" }] },
+            { content: "14 years old", isCorrect: false, translations: [{ language: "zh", content: "14 岁" }, { language: "es", content: "14 años" }] },
+          ],
+        },
+        {
+          content: "How many total hours of supervised driving practice are required before a minor can get a driver's license in California?",
+          explanation: "Drivers under 18 must complete at least 50 hours of supervised driving practice with a California-licensed driver who is at least 25 years old. Ten of those 50 hours must be at night.",
+          handbookSection: "Getting Your License — Supervised Driving",
+          difficulty: 1,
+          translations: [
+            { language: "zh", content: "在加州，未成年人在获得驾照之前，需要完成多少小时的有监督驾驶练习？", explanation: "18 岁以下驾驶人必须在至少 25 岁的加州持照驾驶人陪同下，完成至少 50 小时的有监督驾驶练习。其中 10 小时必须在夜间进行。" },
+            { language: "es", content: "¿Cuántas horas totales de práctica de manejo supervisado se requieren antes de que un menor obtenga una licencia de conducir en California?", explanation: "Los conductores menores de 18 años deben completar al menos 50 horas de práctica de manejo supervisado con un conductor autorizado de California de al menos 25 años. Diez de esas 50 horas deben ser de noche." },
+          ],
+          options: [
+            { content: "50 hours (including 10 at night)", isCorrect: true, translations: [{ language: "zh", content: "50 小时（含 10 小时夜间练习）" }, { language: "es", content: "50 horas (incluyendo 10 de noche)" }] },
+            { content: "25 hours total", isCorrect: false, translations: [{ language: "zh", content: "共 25 小时" }, { language: "es", content: "25 horas en total" }] },
+            { content: "40 hours (including 5 at night)", isCorrect: false, translations: [{ language: "zh", content: "40 小时（含 5 小时夜间）" }, { language: "es", content: "40 horas (incluyendo 5 de noche)" }] },
+            { content: "60 hours total", isCorrect: false, translations: [{ language: "zh", content: "共 60 小时" }, { language: "es", content: "60 horas en total" }] },
+          ],
+        },
+        {
+          content: "Of the required 50 hours of supervised driving practice for a minor in California, how many must be at night?",
+          explanation: "Out of the 50 required practice hours, at least 10 must be completed during nighttime driving. Night driving experience is important for safety because visibility and conditions differ from daytime driving.",
+          handbookSection: "Getting Your License — Supervised Driving",
+          difficulty: 2,
+          translations: [
+            { language: "zh", content: "加州未成年人所需的 50 小时有监督驾驶练习中，有多少小时必须在夜间进行？", explanation: "在 50 小时必修练习中，至少需要有 10 小时在夜间完成。夜间驾驶经验对安全非常重要，因为夜间能见度和驾驶条件与白天不同。" },
+            { language: "es", content: "De las 50 horas requeridas de práctica de manejo supervisado para un menor en California, ¿cuántas deben ser de noche?", explanation: "De las 50 horas de práctica requeridas, al menos 10 deben completarse durante la conducción nocturna. La experiencia de manejo nocturno es importante para la seguridad porque la visibilidad y las condiciones difieren de las diurnas." },
+          ],
+          options: [
+            { content: "10 hours", isCorrect: true, translations: [{ language: "zh", content: "10 小时" }, { language: "es", content: "10 horas" }] },
+            { content: "5 hours", isCorrect: false, translations: [{ language: "zh", content: "5 小时" }, { language: "es", content: "5 horas" }] },
+            { content: "15 hours", isCorrect: false, translations: [{ language: "zh", content: "15 小时" }, { language: "es", content: "15 horas" }] },
+            { content: "20 hours", isCorrect: false, translations: [{ language: "zh", content: "20 小时" }, { language: "es", content: "20 horas" }] },
+          ],
+        },
+        {
+          content: "Under California's provisional license rules, teen drivers (under 18) may NOT drive between which hours during the first 12 months?",
+          explanation: "During the first 12 months of holding a provisional license, drivers under 18 may not drive between 11 p.m. and 5 a.m. Exceptions exist for medical necessity, school, employment, or family needs with appropriate documentation.",
+          handbookSection: "Getting Your License — Provisional License",
+          difficulty: 1,
+          translations: [
+            { language: "zh", content: "根据加州临时驾照规定，持照未满 12 个月的青少年驾驶人（18 岁以下）不得在哪个时段驾车？", explanation: "持有临时驾照的 18 岁以下驾驶人，在持照最初 12 个月内不得于晚上 11 点至凌晨 5 点之间驾车。医疗必要、上学、工作或家庭需要等情况可凭相关书面文件获得豁免。" },
+            { language: "es", content: "Según las reglas de la licencia provisional de California, ¿entre qué horas NO pueden conducir los conductores menores de 18 años durante los primeros 12 meses?", explanation: "Durante los primeros 12 meses de tener una licencia provisional, los conductores menores de 18 años no pueden conducir entre las 11 p.m. y las 5 a.m. Hay excepciones por necesidad médica, escuela, empleo o necesidades familiares con documentación adecuada." },
+          ],
+          options: [
+            { content: "11 p.m. to 5 a.m.", isCorrect: true, translations: [{ language: "zh", content: "晚上 11 点至凌晨 5 点" }, { language: "es", content: "11 p.m. a 5 a.m." }] },
+            { content: "10 p.m. to 6 a.m.", isCorrect: false, translations: [{ language: "zh", content: "晚上 10 点至早上 6 点" }, { language: "es", content: "10 p.m. a 6 a.m." }] },
+            { content: "Midnight to 6 a.m.", isCorrect: false, translations: [{ language: "zh", content: "午夜至早上 6 点" }, { language: "es", content: "Medianoche a 6 a.m." }] },
+            { content: "9 p.m. to 5 a.m.", isCorrect: false, translations: [{ language: "zh", content: "晚上 9 点至凌晨 5 点" }, { language: "es", content: "9 p.m. a 5 a.m." }] },
+          ],
+        },
+        {
+          content: "During the first 12 months of a California provisional license, a teen driver may NOT carry passengers under age:",
+          explanation: "During the first 12 months with a provisional license, drivers under 18 may not transport passengers under age 20, unless accompanied by a parent/guardian or a licensed driver aged 25 or older. Exceptions apply with written permission for specific circumstances.",
+          handbookSection: "Getting Your License — Provisional License",
+          difficulty: 2,
+          translations: [
+            { language: "zh", content: "在加州临时驾照有效期的最初 12 个月内，青少年驾驶人不得搭载几岁以下的乘客？", explanation: "持有临时驾照的 18 岁以下驾驶人，在持照最初 12 个月内，不得搭载 20 岁以下的乘客，除非有父母/监护人或 25 岁以上持照驾驶人陪同。特定情况下可凭书面许可获得豁免。" },
+            { language: "es", content: "Durante los primeros 12 meses de una licencia provisional de California, un conductor menor no puede llevar pasajeros menores de:", explanation: "Durante los primeros 12 meses con licencia provisional, los conductores menores de 18 años no pueden transportar pasajeros menores de 20 años, a menos que vayan acompañados de un padre/tutor o un conductor autorizado de 25 años o más. Se aplican excepciones con permiso escrito para circunstancias específicas." },
+          ],
+          options: [
+            { content: "20 years old", isCorrect: true, translations: [{ language: "zh", content: "20 岁" }, { language: "es", content: "20 años" }] },
+            { content: "18 years old", isCorrect: false, translations: [{ language: "zh", content: "18 岁" }, { language: "es", content: "18 años" }] },
+            { content: "16 years old", isCorrect: false, translations: [{ language: "zh", content: "16 岁" }, { language: "es", content: "16 años" }] },
+            { content: "25 years old", isCorrect: false, translations: [{ language: "zh", content: "25 岁" }, { language: "es", content: "25 años" }] },
+          ],
+        },
+        {
+          content: "A California Class C driver's license covers vehicles with a Gross Vehicle Weight Rating (GVWR) of up to:",
+          explanation: "A Class C license allows you to operate vehicles with a GVWR of 26,000 lbs or less. This covers standard passenger cars, pickups, vans, and SUVs. Heavier commercial vehicles require a Class A or B license.",
+          handbookSection: "Getting Your License — License Classes",
+          difficulty: 2,
+          translations: [
+            { language: "zh", content: "加州 C 类驾照允许驾驶总车重额定值（GVWR）不超过多少磅的车辆？", explanation: "C 类驾照允许您驾驶 GVWR 不超过 26,000 磅的车辆，涵盖普通轿车、皮卡、厢式货车和 SUV。更重的商用车辆需要 A 类或 B 类驾照。" },
+            { language: "es", content: "Una licencia Clase C de California cubre vehículos con un Peso Bruto del Vehículo (GVWR) de hasta:", explanation: "Una licencia Clase C le permite operar vehículos con un GVWR de 26,000 libras o menos. Esto incluye autos de pasajeros estándar, camionetas, furgonetas y SUV. Los vehículos comerciales más pesados requieren una licencia Clase A o B." },
+          ],
+          options: [
+            { content: "26,000 lbs", isCorrect: true, translations: [{ language: "zh", content: "26,000 磅" }, { language: "es", content: "26,000 libras" }] },
+            { content: "10,000 lbs", isCorrect: false, translations: [{ language: "zh", content: "10,000 磅" }, { language: "es", content: "10,000 libras" }] },
+            { content: "40,000 lbs", isCorrect: false, translations: [{ language: "zh", content: "40,000 磅" }, { language: "es", content: "40,000 libras" }] },
+            { content: "16,000 lbs", isCorrect: false, translations: [{ language: "zh", content: "16,000 磅" }, { language: "es", content: "16,000 libras" }] },
+          ],
+        },
+        {
+          content: "How long must a minor hold an instruction permit before applying for a California driver's license?",
+          explanation: "A driver under 18 must hold an instruction permit for at least 6 months before applying for a driver's license. This requirement ensures adequate supervised driving practice before solo driving.",
+          handbookSection: "Getting Your License — Instruction Permit",
+          difficulty: 2,
+          translations: [
+            { language: "zh", content: "未成年人在申请加州驾照之前，必须持有驾车许可多少个月？", explanation: "18 岁以下驾驶人在申请驾照前，必须持有驾车许可至少 6 个月。此要求旨在确保青少年在独自驾车前获得足够的有监督驾驶练习。" },
+            { language: "es", content: "¿Cuánto tiempo debe tener un menor un permiso de instrucción antes de solicitar una licencia de conducir en California?", explanation: "Un conductor menor de 18 años debe tener un permiso de instrucción por al menos 6 meses antes de solicitar una licencia de conducir. Este requisito asegura una práctica de manejo supervisado adecuada antes de conducir solo." },
+          ],
+          options: [
+            { content: "At least 6 months", isCorrect: true, translations: [{ language: "zh", content: "至少 6 个月" }, { language: "es", content: "Al menos 6 meses" }] },
+            { content: "At least 3 months", isCorrect: false, translations: [{ language: "zh", content: "至少 3 个月" }, { language: "es", content: "Al menos 3 meses" }] },
+            { content: "At least 1 year", isCorrect: false, translations: [{ language: "zh", content: "至少 1 年" }, { language: "es", content: "Al menos 1 año" }] },
+            { content: "30 days", isCorrect: false, translations: [{ language: "zh", content: "30 天" }, { language: "es", content: "30 días" }] },
+          ],
+        },
+        {
+          content: "To apply for a California instruction permit, you must first pass which tests?",
+          explanation: "To receive an instruction permit, you must pass a knowledge (written) test covering California traffic laws and safe driving, and a vision test. You do not take the behind-the-wheel drive test until you apply for the actual license.",
+          handbookSection: "Getting Your License — Instruction Permit",
+          difficulty: 1,
+          translations: [
+            { language: "zh", content: "申请加州驾车许可，首先需要通过哪些测试？", explanation: "要获得驾车许可，您必须通过涵盖加州交通法规和安全驾驶的知识（笔试）测试，以及视力测试。驾车（路考）测试在申请正式驾照时才需要进行。" },
+            { language: "es", content: "Para solicitar un permiso de instrucción de California, primero debe aprobar qué pruebas?", explanation: "Para obtener un permiso de instrucción, debe aprobar un examen de conocimientos (escrito) sobre las leyes de tránsito de California y la conducción segura, y un examen de visión. No realiza la prueba de manejo hasta que solicita la licencia real." },
+          ],
+          options: [
+            { content: "A knowledge test and a vision test", isCorrect: true, translations: [{ language: "zh", content: "知识测试（笔试）和视力测试" }, { language: "es", content: "Un examen de conocimientos y un examen de visión" }] },
+            { content: "A behind-the-wheel drive test only", isCorrect: false, translations: [{ language: "zh", content: "仅路考（驾驶测试）" }, { language: "es", content: "Solo una prueba de manejo" }] },
+            { content: "A knowledge test and a drive test", isCorrect: false, translations: [{ language: "zh", content: "知识测试和路考" }, { language: "es", content: "Un examen de conocimientos y una prueba de manejo" }] },
+            { content: "A vision test only", isCorrect: false, translations: [{ language: "zh", content: "仅视力测试" }, { language: "es", content: "Solo un examen de visión" }] },
+          ],
+        },
+        {
+          content: "A provisional license restriction for teen drivers can be waived if the teen must drive after 11 p.m. for work purposes. What is required to prove this?",
+          explanation: "Exceptions to provisional license restrictions (such as driving after 11 p.m. for work) require written documentation from the relevant authority. For employment, the teen must carry a note signed by their employer.",
+          handbookSection: "Getting Your License — Provisional License",
+          difficulty: 3,
+          translations: [
+            { language: "zh", content: "如果青少年驾驶人因工作需要在晚上 11 点后驾车，临时驾照限制可以豁免。需要提供什么证明？", explanation: "临时驾照限制（例如因工作需要在晚上 11 点后驾车）的豁免需要相关机构出具书面文件。就工作情况而言，青少年必须随身携带雇主签署的说明信。" },
+            { language: "es", content: "Una restricción de la licencia provisional para conductores jóvenes puede eximirse si el joven debe conducir después de las 11 p.m. por razones laborales. ¿Qué se requiere para probarlo?", explanation: "Las excepciones a las restricciones de la licencia provisional (como conducir después de las 11 p.m. por trabajo) requieren documentación escrita de la autoridad correspondiente. Para el empleo, el joven debe llevar una nota firmada por su empleador." },
+          ],
+          options: [
+            { content: "A signed note from the employer", isCorrect: true, translations: [{ language: "zh", content: "雇主签署的说明信" }, { language: "es", content: "Una nota firmada por el empleador" }] },
+            { content: "A note from the DMV", isCorrect: false, translations: [{ language: "zh", content: "DMV 出具的证明信" }, { language: "es", content: "Una nota del DMV" }] },
+            { content: "Proof of insurance only", isCorrect: false, translations: [{ language: "zh", content: "仅需提供保险证明" }, { language: "es", content: "Solo comprobante de seguro" }] },
+            { content: "No documentation is needed if the teen is 17 or older", isCorrect: false, translations: [{ language: "zh", content: "17 岁或以上的青少年无需任何文件" }, { language: "es", content: "No se necesita documentación si el joven tiene 17 años o más" }] },
+          ],
+        },
+        {
+          content: "What is the minimum age to obtain a full (non-provisional) California driver's license?",
+          explanation: "In California, a driver must be at least 18 years old to receive a full (unrestricted) driver's license. Drivers between 16 and 18 receive a provisional license with restrictions.",
+          handbookSection: "Getting Your License — License Classes",
+          difficulty: 1,
+          translations: [
+            { language: "zh", content: "在加州，获得完整（非临时）驾照的最低年龄是多少？", explanation: "在加州，驾驶人必须年满 18 岁才能获得完整（无限制）驾照。16 至 18 岁之间的驾驶人将获得带有限制条件的临时驾照。" },
+            { language: "es", content: "¿Cuál es la edad mínima para obtener una licencia de conducir completa (no provisional) de California?", explanation: "En California, un conductor debe tener al menos 18 años para recibir una licencia de conducir completa (sin restricciones). Los conductores entre 16 y 18 años reciben una licencia provisional con restricciones." },
+          ],
+          options: [
+            { content: "18 years old", isCorrect: true, translations: [{ language: "zh", content: "18 岁" }, { language: "es", content: "18 años" }] },
+            { content: "16 years old", isCorrect: false, translations: [{ language: "zh", content: "16 岁" }, { language: "es", content: "16 años" }] },
+            { content: "17 years old", isCorrect: false, translations: [{ language: "zh", content: "17 岁" }, { language: "es", content: "17 años" }] },
+            { content: "21 years old", isCorrect: false, translations: [{ language: "zh", content: "21 岁" }, { language: "es", content: "21 años" }] },
+          ],
+        },
+        {
+          content: "For how many years is a standard California driver's license valid?",
+          explanation: "A standard California driver's license is valid for 5 years. The DMV sends a renewal notice before expiration. Renewal can be done online, by mail, or in person at a DMV office.",
+          handbookSection: "Getting Your License — License Renewal",
+          difficulty: 2,
+          translations: [
+            { language: "zh", content: "加州标准驾照的有效期是多少年？", explanation: "加州标准驾照有效期为 5 年。DMV 会在驾照到期前发送更新通知。可以在线、邮寄或亲自前往 DMV 办公室办理续期。" },
+            { language: "es", content: "¿Por cuántos años es válida una licencia de conducir estándar de California?", explanation: "Una licencia de conducir estándar de California es válida por 5 años. El DMV envía un aviso de renovación antes del vencimiento. La renovación se puede hacer en línea, por correo o en persona en una oficina del DMV." },
+          ],
+          options: [
+            { content: "5 years", isCorrect: true, translations: [{ language: "zh", content: "5 年" }, { language: "es", content: "5 años" }] },
+            { content: "2 years", isCorrect: false, translations: [{ language: "zh", content: "2 年" }, { language: "es", content: "2 años" }] },
+            { content: "4 years", isCorrect: false, translations: [{ language: "zh", content: "4 年" }, { language: "es", content: "4 años" }] },
+            { content: "8 years", isCorrect: false, translations: [{ language: "zh", content: "8 年" }, { language: "es", content: "8 años" }] },
+          ],
+        },
+        {
+          content: "A REAL ID-compliant California driver's license is distinguished by:",
+          explanation: "A REAL ID-compliant California driver's license displays a gold bear and gold star in the upper right corner. Starting May 7, 2025, a REAL ID (or passport) is required to board domestic flights and access certain federal facilities.",
+          handbookSection: "Getting Your License — REAL ID",
+          difficulty: 2,
+          translations: [
+            { language: "zh", content: "符合 REAL ID 标准的加州驾照有什么特征？", explanation: "符合 REAL ID 标准的加州驾照在右上角印有金色熊和金色星标。自 2025 年 5 月 7 日起，乘坐国内航班和进入某些联邦设施需要出示 REAL ID（或护照）。" },
+            { language: "es", content: "Una licencia de conducir de California compatible con REAL ID se distingue por:", explanation: "Una licencia de conducir de California compatible con REAL ID muestra un oso dorado y una estrella dorada en la esquina superior derecha. A partir del 7 de mayo de 2025, se requiere una REAL ID (o pasaporte) para abordar vuelos domésticos y acceder a ciertas instalaciones federales." },
+          ],
+          options: [
+            { content: "A gold bear and gold star in the upper right corner", isCorrect: true, translations: [{ language: "zh", content: "右上角的金色熊和金色星标" }, { language: "es", content: "Un oso dorado y una estrella dorada en la esquina superior derecha" }] },
+            { content: "A blue stripe across the front", isCorrect: false, translations: [{ language: "zh", content: "正面的蓝色条纹" }, { language: "es", content: "Una franja azul al frente" }] },
+            { content: "The letters \"RID\" printed in red", isCorrect: false, translations: [{ language: "zh", content: "红色印刷的字母「RID」" }, { language: "es", content: "Las letras \"RID\" impresas en rojo" }] },
+            { content: "A holographic seal over the photo", isCorrect: false, translations: [{ language: "zh", content: "照片上的全息印章" }, { language: "es", content: "Un sello holográfico sobre la foto" }] },
+          ],
+        },
+        {
+          content: "When a driver under 18 applies for an instruction permit, who must give approval?",
+          explanation: "A parent or guardian must approve the application. If the minor is under joint custody, both parents must approve. The approving adult takes legal responsibility for the teen's driving.",
+          handbookSection: "Getting Your License — Instruction Permit",
+          difficulty: 2,
+          translations: [
+            { language: "zh", content: "当 18 岁以下的驾驶人申请驾车许可时，谁必须给予批准？", explanation: "父母或监护人必须批准申请。若未成年人处于共同监护状态，则双方父母均须批准。批准的成年人须对青少年驾驶行为承担法律责任。" },
+            { language: "es", content: "Cuando un conductor menor de 18 años solicita un permiso de instrucción, ¿quién debe dar su aprobación?", explanation: "Un padre o tutor debe aprobar la solicitud. Si el menor está bajo custodia compartida, ambos padres deben aprobar. El adulto que aprueba asume la responsabilidad legal por la conducción del joven." },
+          ],
+          options: [
+            { content: "A parent or guardian (both parents if joint custody)", isCorrect: true, translations: [{ language: "zh", content: "父母或监护人（共同监护情况下须双方父母批准）" }, { language: "es", content: "Un padre o tutor (ambos padres si hay custodia compartida)" }] },
+            { content: "A licensed driving instructor", isCorrect: false, translations: [{ language: "zh", content: "持证驾驶教练" }, { language: "es", content: "Un instructor de manejo autorizado" }] },
+            { content: "The local school principal", isCorrect: false, translations: [{ language: "zh", content: "当地学校校长" }, { language: "es", content: "El director de la escuela local" }] },
+            { content: "No approval is needed if the teen has a birth certificate", isCorrect: false, translations: [{ language: "zh", content: "若青少年持有出生证明，则无需任何人批准" }, { language: "es", content: "No se necesita aprobación si el joven tiene un certificado de nacimiento" }] },
+          ],
+        },
+        {
+          content: "Which of the following is NOT a required document to apply for a California driver's license or ID?",
+          explanation: "To apply, you need: proof of identity, two proofs of California residency, your Social Security number (with possible exceptions), and a legal full name document if names on your documents don't match. A vehicle registration is not required.",
+          handbookSection: "Getting Your License — Required Documents",
+          difficulty: 3,
+          translations: [
+            { language: "zh", content: "以下哪项不是申请加州驾照或身份证的必要文件？", explanation: "申请所需文件包括：身份证明、两份加州居住证明、社会安全号码（可能有例外）以及（如证件上姓名不一致）合法全名文件。车辆登记证不在要求之列。" },
+            { language: "es", content: "¿Cuál de los siguientes NO es un documento requerido para solicitar una licencia de conducir o identificación de California?", explanation: "Para solicitar, necesita: prueba de identidad, dos pruebas de residencia en California, número de Seguro Social (con posibles excepciones) y un documento de nombre legal completo si los nombres en sus documentos no coinciden. El registro del vehículo no es requerido." },
+          ],
+          options: [
+            { content: "Vehicle registration", isCorrect: true, translations: [{ language: "zh", content: "车辆登记证" }, { language: "es", content: "Registro del vehículo" }] },
+            { content: "Proof of identity", isCorrect: false, translations: [{ language: "zh", content: "身份证明文件" }, { language: "es", content: "Prueba de identidad" }] },
+            { content: "Two proofs of California residency", isCorrect: false, translations: [{ language: "zh", content: "两份加州居住证明" }, { language: "es", content: "Dos pruebas de residencia en California" }] },
+            { content: "Social Security number", isCorrect: false, translations: [{ language: "zh", content: "社会安全号码" }, { language: "es", content: "Número de Seguro Social" }] },
+          ],
+        },
+        {
+          content: "A teen with a California provisional license may legally drive after 11 p.m. without an adult in the car if:",
+          explanation: "A provisional license holder may drive after 11 p.m. for certain exempted purposes (medical necessity, school activity, employment, or transporting an immediate family member) only if they carry a signed note from the appropriate authority (physician, principal, employer, or parent/guardian).",
+          handbookSection: "Getting Your License — Provisional License",
+          difficulty: 3,
+          translations: [
+            { language: "zh", content: "持有加州临时驾照的青少年在哪种情况下可以在没有成年人陪同的情况下在晚上 11 点后合法驾车？", explanation: "临时驾照持有人可以出于某些豁免目的（医疗必要、学校活动、工作需要或接送直系家庭成员）在晚上 11 点后驾车，但前提是必须随身携带相应机构（医生、校长、雇主或父母/监护人）出具的签名说明信。" },
+            { language: "es", content: "Un joven con licencia provisional de California puede conducir legalmente después de las 11 p.m. sin un adulto en el auto si:", explanation: "Un titular de licencia provisional puede conducir después de las 11 p.m. para ciertos propósitos exentos (necesidad médica, actividad escolar, empleo o transporte de un familiar inmediato) solo si lleva una nota firmada de la autoridad correspondiente (médico, director, empleador o padre/tutor)." },
+          ],
+          options: [
+            { content: "They carry a signed note from a physician, employer, principal, or parent for a specific exempted reason", isCorrect: true, translations: [{ language: "zh", content: "他们持有医生、雇主、校长或家长为特定豁免原因出具的签名说明信" }, { language: "es", content: "Llevan una nota firmada de un médico, empleador, director o padre por una razón exenta específica" }] },
+            { content: "They are at least 17 years old", isCorrect: false, translations: [{ language: "zh", content: "他们至少年满 17 岁" }, { language: "es", content: "Tienen al menos 17 años" }] },
+            { content: "They have held the provisional license for more than 6 months", isCorrect: false, translations: [{ language: "zh", content: "他们持有临时驾照已超过 6 个月" }, { language: "es", content: "Han tenido la licencia provisional por más de 6 meses" }] },
+            { content: "They are driving on a freeway only", isCorrect: false, translations: [{ language: "zh", content: "他们仅在高速公路上行驶" }, { language: "es", content: "Solo conducen en autopista" }] },
+          ],
+        },
+      ],
+    },
   ],
 };
