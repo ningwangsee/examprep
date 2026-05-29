@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-**DMV Practice** — a free driver's license written test preparation platform. Currently covers California DMV (111 questions, 6 topics). Built with Next.js 16, Prisma 7, SQLite, and Tailwind CSS v4. Supports multilingual content (English, Spanish, Chinese) via translation tables.
+**DMV Practice** — a free driver's license written test preparation platform. Covers CA, TX, NY, FL, PA (5 states, 500+ questions total). Built with Next.js 16, Prisma 7, SQLite, and Tailwind CSS v4. Supports multilingual content (English, Spanish, Chinese) via translation tables.
 
 **Scope:** Driver's license exams only (no AI tutoring — wrong answers show handbook section references instead). Professional certification exams (AWS, FINRA, etc.) may be added later with AI tutoring.
 
@@ -213,7 +213,7 @@ Tailwind CSS v4 — uses `@import "tailwindcss"` in `globals.css` (not `@tailwin
 | Texas | 98 | 6 | ✅ Live |
 | New York | 100 | 6 | ✅ Live |
 | Florida | 73 | 6 | ✅ Live |
-| Pennsylvania | 65 | 6 | ✅ Live |
+| Pennsylvania | 136 | 8 | ✅ Live |
 
 **CA DMV topics breakdown:**
 | Topic | nameEn | Questions |
@@ -258,14 +258,16 @@ Tailwind CSS v4 — uses `@import "tailwindcss"` in `globals.css` (not `@tailwin
 **PA PennDOT topics breakdown (Pennsylvania Driver's Manual):**
 | Topic | nameEn | Questions | Status |
 |---|---|---|---|
-| 1 | Traffic Signals, Signs & Markings | 15 | ✅ |
-| 2 | Right-of-Way, Turns & Intersections | 10 | ✅ |
-| 3 | Speed, Space & Defensive Driving | 10 | ✅ |
-| 4 | Alcohol, Drugs & DUI | 10 | ✅ |
-| 5 | Driver License & PA Laws | 10 | ✅ |
-| 6 | Safe Driving & Sharing the Road | 10 | ✅ |
+| 1 | Driver License | 17 | ✅ |
+| 2 | Signals, Signs and Pavement Markings | 23 | ✅ |
+| 3 | Choosing Safety First | 17 | ✅ |
+| 4 | Everyday Driving Skills | 17 | ✅ |
+| 5 | Special Circumstances and Emergencies | 16 | ✅ |
+| 6 | Driver Factors | 14 | ✅ |
+| 7 | Driving Record Information | 16 | ✅ |
+| 8 | Laws and Related Issues | 16 | ✅ |
 
-**Target question count:** ~90–100 per state (≈3–5× the actual test length). TX complete at 98 questions. NY complete at 100 questions. FL complete at 73 questions. PA complete at 65 questions.
+**Target question count:** 90–140 per state (≈3–5× the actual test length). TX: 98q ✅. NY: 100q ✅. CA: 111q ✅. FL: 73q (needs expansion to 90+). PA: 136q ✅.
 
 ## Quality & Validation
 
@@ -356,6 +358,8 @@ These require manual browser testing:
 - The CA DMV website restructures URLs periodically. Verify `topic.handbookUrl` links are still valid before adding a new state.
 - Topic 1 CA URL was fixed: `/traffic-controls/` → `/introduction-to-driving/` (outdated as of 2025).
 - If a handbook link 404s, update both the seed file and the DB directly via a one-off script in `prisma/scripts/`.
+- **PA online manual**: Sub-chapter pages are at the **manual root** (not nested). Example: `/pennsylvanias-point-system` is correct; `/chapter-4-driving-record-information/pennsylvanias-point-system` returns 404. Always fetch the index page first to discover the real child URLs.
+- **Online vs. PDF handbooks**: CA, NY, PA have online chapter pages (use page URL as handbookUrl). TX, FL use PDFs (use `PDF-url#page=N` as handbookUrl). Online pages give cleaner anchor links and better user experience.
 
 ### Question Bank Design
 
@@ -410,9 +414,14 @@ Workflow for any new state or new chapter:
 
 **Pennsylvania** (online: `pa.gov/agencies/dmv/.../online-drivers-manual/`)
 
+⚠️ PA sub-chapter pages are at the **manual root** level, NOT nested under chapter paths.
+Example: correct is `/pennsylvanias-point-system`, NOT `/chapter-4-driving-record-information/pennsylvanias-point-system`.
+
 | Topic nameEn | URL slug | handbookSection prefix |
 |---|---|---|
+| Driver License | `applying-for-a-learners-permit` | `Driver License` |
 | Signals, Signs and Pavement Markings | `chapter-2-signals-signs-and-pavement-markings` | `Signals, Signs & Markings` |
+| Choosing Safety First | `choosing-safety-first` | `Choosing Safety First` |
 | Everyday Driving Skills | `everyday-driving-skills` | `Everyday Driving Skills` |
 | Special Circumstances and Emergencies | `special-circumstances-and-emergencies` | `Special Circumstances and Emergencies` |
 | Driver Factors | `driver-factors` | `Driver Factors` |
@@ -442,19 +451,42 @@ Workflow for any new state or new chapter:
 | Your Driving Privilege | Ch.9 | `englishdriverhandbook.pdf#page=57` | `Your Driving Privilege` |
 | Getting Your License | Ch.10 | `englishdriverhandbook.pdf#page=69` | `Getting Your License` |
 
+#### Handbook content — save locally before writing questions
+
+**Always save fetched handbook content to `prisma/handbook/[state]/` as markdown files.**
+This avoids repeated web fetching and provides a permanent offline reference for future question edits.
+
+File naming convention: `ch1-topic-name.md`, `ch2-topic-name.md`, etc.
+Each file should include: source URL at top, then all key facts, numbers, and rules extracted from that chapter.
+
+These files are committed to git and are the authoritative source for question accuracy checks.
+
+#### Workflow: expanding an existing state's question bank
+
+When a topic has fewer than 15 questions:
+1. Read the corresponding handbook file from `prisma/handbook/[state]/`
+2. Identify knowledge points not yet covered by existing questions
+3. Write new questions directly in `prisma/seeds/[state]-dmv.ts` before the `], // end Topic N questions` marker
+4. `npx tsx prisma/scripts/delete-[state].ts` (if exists) OR manually delete via Prisma Studio
+5. `npx tsx prisma/seeds/import.ts`
+6. `npm run db:shuffle`
+7. `npx tsx prisma/scripts/validate-db.ts`
+8. Commit (pre-commit hook re-runs validate:db automatically)
+
 #### Checklist: adding or rebuilding a state
 
 - [ ] 1. Read all handbook chapters. Note exact titles and URLs/page numbers.
-- [ ] 2. Decide which chapters warrant 15–20 questions. Merge thin chapters.
-- [ ] 3. Create `prisma/seeds/[state]-dmv.ts` — one topic block per chapter.
+- [ ] 2. Save each chapter as `prisma/handbook/[state]/ch[N]-topic.md` with source URL at top.
+- [ ] 3. Decide which chapters warrant 15–20 questions. Merge thin chapters.
+- [ ] 4. Create `prisma/seeds/[state]-dmv.ts` — one topic block per chapter.
       `topic.nameEn` ≈ chapter title | `topic.handbookUrl` = chapter URL or `PDF#page=N`
-- [ ] 4. Write 15–20 questions per chapter inline (EN + ZH + ES). No gen scripts.
-- [ ] 5. Add/update `ExamGuide` entry in `lib/exam-info.ts`.
-- [ ] 6. Add mappings to `CHAPTER_TITLES` in `prisma/scripts/validate-db.ts`.
-- [ ] 7. `npm run db:import` then `npm run validate:db`
-- [ ] 8. `npm run db:shuffle` if answer bias detected
-- [ ] 9. `npm run validate:links`
-- [ ] 10. Open quiz — answer wrong — verify "Review this section" opens the correct chapter.
+- [ ] 5. Write 15–20 questions per chapter inline (EN + ZH + ES). No gen scripts.
+- [ ] 6. Add/update `ExamGuide` entry in `lib/exam-info.ts`.
+- [ ] 7. Add mappings to `CHAPTER_TITLES` in `prisma/scripts/validate-db.ts`.
+- [ ] 8. `npm run db:import` then `npm run validate:db`
+- [ ] 9. `npm run db:shuffle` if answer bias detected
+- [ ] 10. `npm run validate:links`
+- [ ] 11. Open quiz — answer wrong — verify "Review this section" opens the correct chapter.
 ### Incremental Script File Locations
 
 All one-off insertion scripts live in `prisma/scripts/`. Existing scripts (for reference):
@@ -489,7 +521,10 @@ All one-off insertion scripts live in `prisma/scripts/`. Existing scripts (for r
 
 | Script | Purpose |
 |---|---|
-| `gen-pa-seed.ts` | Generates `pennsylvania-dmv.ts` seed via Claude API auto-translation (65 questions, 6 topics) |
+| `gen-pa-seed.ts` | Legacy: originally generated `pennsylvania-dmv.ts` via Claude API (65 questions, 6 topics). Now replaced by manual expansion to 136 questions, 8 topics |
+| `delete-pa.ts` | Deletes PA category and all related data for clean reimport |
+| `fix-pa-handbook-urls.ts` | One-off fix for PA topic handbookUrl values |
+| `fix-pa-handbook-sections.ts` | One-off fix for PA question handbookSection prefixes |
 
 **TX scripts** (all in `prisma/scripts/`):
 
