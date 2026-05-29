@@ -53,6 +53,14 @@ const CHAPTER_TITLES: Record<string, string> = {
   "New York Driver's License::Alcohol & Other Drugs":                   "Alcohol and Other Drugs",
   "New York Driver's License::Driver Licensing & Vehicle Laws":         "Driver Licenses",
   "New York Driver's License::Sharing the Road & Crash Procedures":     "Sharing the Road",
+
+  // ── Texas (PDF-based: DL-7.pdf) ──────────────────────────────────────────
+  "Texas Driver's License::Road Signs & Markers":                      "Road Signs",
+  "Texas Driver's License::Traffic Laws & Right-of-Way":              "Traffic Laws",
+  "Texas Driver's License::Speed Limits & Special Situations":        "Speed Limits",
+  "Texas Driver's License::Alcohol & Drugs":                          "Alcohol & Drugs",
+  "Texas Driver's License::Licensing & Responsibilities":             "Licensing",
+  "Texas Driver's License::Safety: Pedestrians, Bicycles & Crashes":  "Safety",
 };
 
 function checkUrl(url: string, depth = 0): Promise<{ status: number | string; ok: boolean }> {
