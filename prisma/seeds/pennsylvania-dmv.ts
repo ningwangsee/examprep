@@ -1158,7 +1158,7 @@ export const pennsylvaniaDMV = {
       name: "Speed, Space & Defensive Driving",
       nameEn: "Speed, Space & Defensive Driving",
       description: "Speed limits, following distances, school buses, and defensive driving techniques",
-      handbookUrl: "https://www.pa.gov/agencies/dmv/driver-services/pennsylvania-drivers-manual/online-drivers-manual/special-circumstances-and-emergencies",
+      handbookUrl: "https://www.pa.gov/agencies/dmv/driver-services/pennsylvania-drivers-manual/online-drivers-manual/everyday-driving-skills",
       translations: [
         { language: "zh", name: "车速、空间管理与防御性驾驶", description: "限速、跟车距离、校车规则及防御性驾驶技术" },
         { language: "es", name: "Velocidad, Espacio y Manejo Defensivo", description: "Límites de velocidad, distancia de seguimiento, autobuses escolares y técnicas de manejo defensivo" },
