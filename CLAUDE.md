@@ -209,6 +209,7 @@ Tailwind CSS v4 — uses `@import "tailwindcss"` in `globals.css` (not `@tailwin
 | California | 111 | 6 | ✅ Live |
 | Texas | 98 | 6 | ✅ Live |
 | New York | 100 | 6 | ✅ Live |
+| Florida | 73 | 6 | ✅ Live |
 
 **CA DMV topics breakdown:**
 | Topic | nameEn | Questions |
@@ -240,7 +241,17 @@ Tailwind CSS v4 — uses `@import "tailwindcss"` in `globals.css` (not `@tailwin
 | 5 | Driver Licensing & Vehicle Laws | 15 | ✅ |
 | 6 | Sharing the Road & Crash Procedures | 15 | ✅ |
 
-**Target question count:** ~90–100 per state (≈3–5× the actual test length). TX complete at 98 questions. NY complete at 100 questions.
+**FL DHSMV topics breakdown (Florida Driver License Handbook):**
+| Topic | nameEn | Questions | Status |
+|---|---|---|---|
+| 1 | Road Signs & Traffic Controls | 15 | ✅ |
+| 2 | Right-of-Way & Intersections | 12 | ✅ |
+| 3 | Speed Limits & Special Zones | 10 | ✅ |
+| 4 | Alcohol, Drugs & DUI | 12 | ✅ |
+| 5 | Driver License & Florida Laws | 12 | ✅ |
+| 6 | Safe Driving & Crash Prevention | 12 | ✅ |
+
+**Target question count:** ~90–100 per state (≈3–5× the actual test length). TX complete at 98 questions. NY complete at 100 questions. FL complete at 73 questions.
 
 ## Known Gotchas & Lessons Learned
 
@@ -305,6 +316,12 @@ All one-off insertion scripts live in `prisma/scripts/`. Existing scripts (for r
 | Script | Purpose |
 |---|---|
 | `gen-ny-seed.ts` | Generates `new-york-dmv.ts` seed via Claude API auto-translation (100 questions, 6 topics) |
+
+**FL scripts** (all in `prisma/scripts/`):
+
+| Script | Purpose |
+|---|---|
+| `gen-fl-seed.ts` | Generates `florida-dmv.ts` seed via Claude API auto-translation (73 questions, 6 topics) |
 
 **TX scripts** (all in `prisma/scripts/`):
 
